@@ -1,0 +1,6 @@
+name : Parsing_xml_example
+environment:
+  sdk: ">2.0.0"
+dependencies: 
+  xml: ^5.3.1
+

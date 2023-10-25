@@ -1,0 +1,21 @@
+
+(new) EdgeInsets EdgeInsets.all(double value)
+
+(new) EdgeInsets EdgeInsets.only({
+  double left = 0.0,
+  double top = 0.0,
+  double right = 0.0,
+  double bottom = 0.0,
+})
+
+(new) EdgeInsets EdgeInsets.fromLTRB(
+  double left,
+  double top,
+  double right,
+  double bottom,
+)
+
+
+*package:flutter/src/painting/edge_insets.dart*
+
+

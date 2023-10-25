@@ -1,0 +1,25 @@
+## Column
+(new) Column Column({
+  Key? key,
+  MainAxisAlignment mainAxisAlignment = MainAxisAlignment.start,
+  MainAxisSize mainAxisSize = MainAxisSize.max,
+  CrossAxisAlignment crossAxisAlignment = CrossAxisAlignment.center,
+  TextDirection? textDirection,
+  VerticalDirection verticalDirection = VerticalDirection.down,
+  TextBaseline? textBaseline,
+  List<Widget> children = const <Widget>[],
+})
+package:flutter/src/widgets/basic.dart
+
+## Row
+(new) Row Row({
+  Key? key,
+  MainAxisAlignment mainAxisAlignment = MainAxisAlignment.start,
+  MainAxisSize mainAxisSize = MainAxisSize.max,
+  CrossAxisAlignment crossAxisAlignment = CrossAxisAlignment.center,
+  TextDirection? textDirection,
+  VerticalDirection verticalDirection = VerticalDirection.down,
+  TextBaseline? textBaseline,
+  List<Widget> children = const <Widget>[],
+})
+package:flutter/src/widgets/basic.dart

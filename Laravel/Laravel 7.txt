@@ -1,0 +1,538 @@
+[TOC]
+
+
+
+
+
+### Create Project
+
+```js
+ //Specific  version
+> composer create-project --prefer-dist laravel/laravel:^7.0 blog
+//lated
+> composer create-project --prefer-dist laravel/laravel blog 
+
+//Via Laravel Installer
+> composer global require laravel/installer 
+```
+
+
+
+### Connect DB in .env file
+
+```js
+DB_CONNECTION=mysql  //.evn
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=skyviewhotel
+DB_USERNAME=root
+DB_PASSWORD=""
+```
+
+
+
+### Create Model with Migration File
+
+````js
+php artisan make:model Post -m
+//Tabel name should be plural,but not model 
+````
+
+
+
+### Create Model
+
+```js
+php artisan make:model Post
+```
+
+
+
+### Migration  File
+
+```js
+$table->id(); 
+$table->text("title");
+$table->integer("...");            
+$table->timestamps();
+```
+
+
+
+### To Migrate
+
+```js
+php artisan migrate
+```
+
+
+
+### Create Controller with Resources
+
+```js
+php artisan make:controller PostController -r
+//table name and model should be the same 
+```
+
+
+
+### Create Controller without Resources
+
+```js
+php artisan make:controller PostController
+```
+
+
+
+### See Route List
+
+```js
+php artisan route:list
+```
+
+
+
+### Register Controller in web.php with Resources
+
+```js
+Route::resources("/post",'Post/PostController')
+
+Route::get('/', function () {
+    return view('home');
+});
+```
+
+
+
+### Return View fine in web.php and Controller file
+
+```js
+Route::get('/', function () { //web.php
+    return view('home');
+});
+
+public function index(){ //controller
+    return view('post.index');
+}
+```
+
+
+
+### Insert CSRF Token in Form
+
+```js
+@csrf //or
+{{ csrf_field() }}
+//In the blade form we need to insert CSRF Token in form due to security
+```
+
+
+
+### Mass Asiignment in Model
+
+```js
+class Post extends Model{
+    protected $fillable = [
+        'titel',
+        'text',
+    ];
+}
+```
+
+
+
+### Form in blade file
+
+```js
+<form action="/booking" method="POST">
+    @csrf // or {{ csrf_field() }}
+  	<label for="name" >Your Name *</label>
+    <input type="text" name="title" value="{{old("title")}}" class="form-control @error('title') is-invalid 		@enderror" id="name" placeholder="Name">
+	@error('title')
+		<span class="invalid-feedback">{{ $message }}</span>
+	@enderror
+	<input type="text" name="text" value="{{old("text")}}" class="form-control @error('text') is-invalid @enderror" 	id="name" placeholder="Name">
+    @error('text')
+		<span class="invalid-feedback">{{ $message }}</span>
+	@enderror
+</form>
+```
+
+
+
+### Data Validation in Controller File
+
+```js
+public function store(Request $request){
+    $request->validate([
+        'title'=>'required',
+        'text'=>'required',
+    ]);
+}        
+```
+
+
+
+### Inset
+
+```js
+use App\Post;
+public function store(Request $request){
+    $request->validate([
+        'title'=>'required',
+        'text'=>'required',
+    ]);
+    Booking::create([
+        'name' => $request->title,
+        'text'=>  $request->text,
+    ]);
+    return redirect('/post')->with('successAlert','Success');
+}        
+```
+
+
+
+### Read Data from DB
+
+```js
+use App\Post;
+public function index(Request $request){
+	$posts = Post::all()
+    return view("post.index",compact('posts'));
+}        
+```
+
+
+
+### Passing Data To bView 
+
+```js
+//Controller File
+use App\Post;
+public function index(Request $request){
+	$posts = Post::all()
+    return view("post.index",compact('posts')); //compact
+    return view("post.index")->with('posts',$posts); //with(key,value)
+    //return view("post.index")->with(array('posts'=>$post,'other'=>$other));// return multiple values
+}   
+
+//Blade file
+{{$posts}}
+{{$other}}
+
+```
+
+
+
+
+
+### Looping Data in Blade file
+
+```js
+@foreach($posts as post)
+	{{post->title}}
+	{{post->text}}
+@endforeach
+```
+
+
+
+### Find  Specific  Row
+
+```js
+use App\Post;
+public function show($id){
+    $post = Post::find($id);
+    return view('post.show',compact('post'));
+}
+```
+
+
+
+### Edit 
+
+```js
+ public function edit($id){
+     $post = Post::find($id);
+     return view('post.edit',compact('post'));
+ }
+```
+
+
+
+### Update Data
+
+```js
+use App\Post;
+public function update(Request $request, $id)
+	$post = Post::find(3);
+	$post->title = "Updated title";
+	$post->save();
+	//or
+   	$affectedRows = Post::where("id", 3)->update(["title" => "Updated title"]);
+    return redirect('/post')->with('successAlert','Success');
+}
+```
+
+
+
+### Destroy Table's Data and relate file
+
+```js
+use App\Post;
+public function destroy($id){
+    $post = Post::find($id);
+    $status = Post::destroy($id); // destroy 
+    //$status = Post::find($id)->delete(); // destroy 
+    
+   //if deleted post, delete related file
+    if($status){
+        foreach (unserialize($news->file) as $item){
+                \File::delete(public_path('news_files/'.$item));
+    	}
+    	return redirect('/post')->with('status','Successfully');
+    }
+    return back()->with('status','Fail');
+}
+```
+
+
+
+### Upload file
+
+```js
+use App\Post;
+public function store(Request $request){
+        $this->validate($request,[
+           'title'=>'required',
+           'text'=>'required',
+           'file' =>'max:2048',
+           'file.*'=>'mimes:jpg,png,,jpeg,pdf',
+        ]);
+
+        $file_ary = [];
+        if($request->file('file')){
+            foreach ($request->file('file') as $item) {
+                 $file_name = 'FolderName'.uniqid().'.'.$item->getClientOriginalExtension();
+                 $item->move(public_path().'/news_files/',$file_name);
+                 array_push($file_ary,$file_name);
+            }
+        }
+        $status = Post::create([
+            'title' =>$request->title,
+            'text'=>$request->text,
+            'file'=>serialize($file_ary),
+        ]);
+        return $status ?
+            back()->with('status','Successfully added'):
+            back()->with('status','Fail');
+    }
+```
+
+
+
+### Pagination 
+
+```js
+use App\Post;
+public function pagination($id){
+    $post = Post::paginate(5);
+    return view('post.paginate',compact('post'));
+}
+
+//in blade file
+{{ $post->link() }}
+```
+
+
+
+### Using route name
+
+```js
+<form action="{{ route('post.store') }}" method="POST"></form>    
+<a href="{{ route('post.index') }}">Post</a>
+//other ways
+<form action="{{ url('post')}}" method="POST"></form>    
+<a href="{{ url('post')}}">Post</a>
+
+<form action="/post" method="POST"></form>    
+<a href="post">Post</a>
+```
+
+
+
+### Route Group
+
+```js
+Route::group(['prefix'=>'admin','namespace'=>'admin','middleware'=>'auth'],function (){
+    Route::resource(...);
+	Route::get(...);
+}
+```
+
+
+
+### Namespace Route
+
+```JS
+Route::namespace('guest')->group(function () {
+    Route::resource(...);
+	Route::get(...);
+}
+```
+
+
+
+### Session
+
+```js
+//Controller
+public function set(Request $request){
+    $request->session()->put('name','Spidey') //set single
+    $request->session()->put(['1'=>"one",'2'=>'two','3'=>'Three']); //set multiple
+}
+public function get(Request $request){
+    $singleSes = $request->session()->get('name') //get single
+    $getAllSes = $request->session()->all(); //get All
+}
+public function del(Request $request){
+    $request->session()->flush();
+}
+
+```
+
+
+
+### Auth Scaffolding
+
+```js
+// install laravle ui
+composer require laravle/ui
+
+//Gengearl Scaffolding
+php artisan ui bootstrap
+php artisan ui vue
+php artisan ui react
+
+//Gengearl login / register Scaffolding...
+php artisan ui bootstrap --auth
+php artisan ui vue --auth
+php artisan ui react --auth
+```
+
+
+
+
+
+
+
+## Eloquent Relatioship
+
+- One To One
+- One To Many
+- Many To Many
+- Has Many Through
+- Polymorphic Relations
+- Many To Many Polymorphic Relations
+
+
+
+#### Post Table
+
+| id   | user_id | title  | content       |
+| ---- | ------- | ------ | ------------- |
+| 1    | 1       | Post 1 | content one   |
+| 2    | 2       | Post 2 | content two   |
+| 3    | 3       | Post 3 | content three |
+| 4    | 1       | Post 4 | content four  |
+| 5    | 3       | Post 5 | content five  |
+
+#### User Table
+
+| id   | name    | age  |
+| ---- | ------- | ---- |
+| 1    | Wailian | 25   |
+| 2    | Julian  | 23   |
+| 3    | Peter   | 24   |
+
+#### Cities
+
+| id   | user_id | City         |
+| ---- | ------- | ------------ |
+| 1    | 1       | Yangon       |
+| 2    | 2       | Mandalay     |
+| 3    | 3       | Pyin Oo Lwin |
+
+
+
+
+
+### One To One  Relationship
+
+```js
+//Post model
+class Post extends Model{
+    protected $fillable = [....];
+    public function user(){
+        return $this->belongsTo("App\User")
+    }
+	
+}
+//PostController
+public function show($id){ 
+     $post = Post::find(1);
+     $post->user->name; 
+     //Wailian
+ }
+```
+
+
+
+
+
+### One To Many Relationship (hasMany)
+
+```js
+//User model
+class User extends Model{
+    protected $fillable = [....];
+    public function posts(){
+        return $this->hasMany("App\Post")
+    }
+	
+}
+//UserController
+public function show($id){ 
+     $user = User::where('id',1)->firstOrfail();
+     foreach($user->posts as $post){
+         echo $post->title;
+     }
+     //Post 1 Post 4
+ }
+```
+
+
+
+### Has One Relations
+
+```js
+//User model
+class User extends Model{
+    protected $fillable = [....];
+    public function city(){
+        return $this->hasOne("App\City")
+    }
+	
+}
+//UserController
+public function show($id){ 
+    $user = User::where('id',2)->firstOrfail();
+    echo $user->name; //Julian
+    echo $user->city->name; //Mandalay
+ }
+```
+
+
+
+
+

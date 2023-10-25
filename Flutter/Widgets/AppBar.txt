@@ -1,0 +1,76 @@
+### AppBar Widget
+
+>  package:flutter/src/material/app_bar.dart
+
+
+
+| Name                      | Type                  | Default Value | *                        |
+| ------------------------- | --------------------- | ------------- | ------------------------ |
+| key,                      | Key?                  |               |                          |
+| leading                   | Widget?               |               | Icon(),Image()           |
+| automaticallyImplyLeading | bool                  | true          |                          |
+| title                     | Widget?               |               | Text()                   |
+| actions                   | List<Widget>?         |               | IconButton               |
+| flexibleSpace             | Widget?               |               |                          |
+| bottom                    | PreferredSizeWidget?  |               |                          |
+| elevation                 | double?               |               |                          |
+| shadowColor               | Color?                |               |                          |
+| shape,                    | ShapeBorder?          |               | RoundedRectangleBorder() |
+| backgroundColor           | Color?                |               |                          |
+| foregroundColor           | Color?                |               |                          |
+| brightness                | Brightness?           |               |                          |
+| iconTheme,                | IconThemeData?        |               |                          |
+| actionsIconTheme          | IconThemeData?        |               |                          |
+| textTheme                 | TextTheme?            |               |                          |
+| primary                   | bool                  | true          |                          |
+| centerTitle               | bool?                 |               |                          |
+| excludeHeaderSemantics    | bool                  |               | false                    |
+| titleSpacing              | double?               |               |                          |
+| toolbarOpacity            | double                |               | 1.0                      |
+| bottomOpacity             | double                | 1.0           |                          |
+| toolbarHeight             | double?               |               |                          |
+| leadingWidth              | double?               |               |                          |
+| backwardsCompatibility    | bool?                 |               |                          |
+| toolbarTextStyle          | TextStyle?            |               |                          |
+| titleTextStyle            | TextStyle?            |               |                          |
+| systemOverlayStyle,       | SystemUiOverlayStyle? |               |                          |
+|                           |                       |               |                          |
+
+
+
+
+
+```dart
+(new) AppBar AppBar({
+  Key? key,
+  Widget? leading,
+  bool automaticallyImplyLeading = true,
+  Widget? title,
+  List<Widget>? actions,
+  Widget? flexibleSpace,
+  PreferredSizeWidget? bottom,
+  double? elevation,
+  Color? shadowColor,
+  ShapeBorder? shape,
+  Color? backgroundColor,
+  Color? foregroundColor,
+  Brightness? brightness,
+  IconThemeData? iconTheme,
+  IconThemeData? actionsIconTheme,
+  TextTheme? textTheme,
+  bool primary = true,
+  bool? centerTitle,
+  bool excludeHeaderSemantics = false,
+  double? titleSpacing,
+  double toolbarOpacity = 1.0,
+  double bottomOpacity = 1.0,
+  double? toolbarHeight,
+  double? leadingWidth,
+  bool? backwardsCompatibility,
+  TextStyle? toolbarTextStyle,
+  TextStyle? titleTextStyle,
+  SystemUiOverlayStyle? systemOverlayStyle,
+})
+package:flutter/src/material/app_bar.dart
+```
+

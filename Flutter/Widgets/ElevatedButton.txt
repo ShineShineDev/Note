@@ -1,0 +1,39 @@
+(new) ElevatedButton ElevatedButton({
+  Key? key,
+  required void Function()? onPressed,
+  void Function()? onLongPress,
+  ButtonStyle? style,
+  FocusNode? focusNode,
+  bool autofocus = false,
+  Clip clipBehavior = Clip.none,
+  required Widget? child,
+})
+
+package:flutter/src/material/elevated_button.dart
+
+
+
+
+ElevatedButton.styleFrom({
+  Color? primary,
+  Color? onPrimary,
+  Color? onSurface,
+  Color? shadowColor,
+  double? elevation,
+  TextStyle? textStyle,
+  EdgeInsetsGeometry? padding,
+  Size? minimumSize,
+  Size? fixedSize,
+  Size? maximumSize,
+  BorderSide? side,
+  OutlinedBorder? shape,
+  MouseCursor? enabledMouseCursor,
+  MouseCursor? disabledMouseCursor,
+  VisualDensity? visualDensity,
+  MaterialTapTargetSize? tapTargetSize,
+  Duration? animationDuration,
+  bool? enableFeedback,
+  AlignmentGeometry? alignment,
+  InteractiveInkFeatureFactory? splashFactory,
+})
+package:flutter/src/material/elevated_button.dart

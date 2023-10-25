@@ -1,0 +1,98 @@
+    {{-- Image Compressing  --}}
+    <script>
+    
+        const photo = document.querySelector('.photo');
+        initCompressImg(photo, "preview_photo");
+
+        const nrc_front = document.querySelector('.nrc_front');
+        initCompressImg(nrc_front, "preview_nrc_front");
+
+        const nrc_back = document.querySelector('.nrc_back');
+        initCompressImg(nrc_back, "preview_nrc_back");
+
+
+        function initCompressImg(ele, preview_container) {
+
+            // current html file ကို နှိပ်သောအခါ (change event)
+            ele.addEventListener('change', async (e) => {
+
+                // print current image size
+                console.log("orginal size : " + e.target.files[0].size);
+
+                //1200000 byte = 1.2 MB
+                //current image size သည် 1MB ထက် ကျော်ရင် size လျှော့
+                if (1200000 < e.target.files[0].size) {
+                    // alert('Chose Other Photo or resize Photo');
+
+                    // Get the files
+                    const {
+                        files
+                    } = e.target;
+
+                    // No files selected
+                    if (!files.length) return;
+
+                    // We'll store the files in this data transfer object
+                    const dataTransfer = new DataTransfer();
+
+                    // For every file in the files list
+                    for (const file of files) {
+                        // We don't have to compress files that aren't images
+                        if (!file.type.startsWith('image')) {
+                            // Ignore this file, but do add it to our result
+                            dataTransfer.items.add(file);
+                            continue;
+                        }
+
+                        // We compress the file by 50%
+                        const compressedFile = await compressImage(file, {
+                            quality: 0.5,
+                            type: 'image/jpeg',
+                        });
+
+                        // Save back the compressed file instead of the original file
+                        dataTransfer.items.add(compressedFile);
+                    }
+
+                    // Set value of the file input to our new files list
+                    e.target.files = dataTransfer.files;
+                    console.log("compressed size : " + e.target.files[0].size);
+
+                }
+
+                //chose လုပ်လိုက် သော photo ကို user အား ပြရန်
+                let preview_img = document.getElementById(preview_container);
+                preview_img.src = URL.createObjectURL(e.target.files[0]);
+                
+                //resize photo
+                preview_img.style.width = '100px';
+                preview_img.style.height = '80px'
+            });
+        }
+
+        // compress Image 
+        const compressImage = async (file, {
+            quality = 1,
+            type = file.type
+        }) => {
+            // Get as image data
+            const imageBitmap = await createImageBitmap(file);
+
+            // Draw to canvas
+            const canvas = document.createElement('canvas');
+            canvas.width = imageBitmap.width;
+            canvas.height = imageBitmap.height;
+            const ctx = canvas.getContext('2d');
+            ctx.drawImage(imageBitmap, 0, 0);
+
+            // Turn into Blob
+            const blob = await new Promise((resolve) =>
+                canvas.toBlob(resolve, type, quality)
+            );
+
+            // Turn Blob into File
+            return new File([blob], file.name, {
+                type: blob.type,
+            });
+        };
+    </script>

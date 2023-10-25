@@ -1,0 +1,16 @@
+## Install Mysql 
+
+```js
+$ sudo apt update
+$ sudo apt install mysql-server //instll
+$ sudo systemctl start mysql.service //start mysql
+$ sudo systemctl status mysql.service //  mysql running status
+$ sudo systemctl stop mysql.service //stop mysql
+
+// systemctl start  command will start on server or computer started
+
+$ sudo mysql //go mysql shell
+$ mysql -u root -p
+```
+
+https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-20-04

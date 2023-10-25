@@ -1,0 +1,6 @@
+ <?xml version = "1.0"?> 
+<post>
+     <title>Post One</title>
+     <desc>Description</desc>
+     <like>32</like>
+  </post>

@@ -1,0 +1,91 @@
+#### Downlaod Xampp
+
+```
+https://www.apachefriends.org/download.html
+```
+
+
+
+#### Make Executable File
+
+```js
+ $ sudo chmod 755 xampp.run 
+```
+
+
+
+#### Launch the Setup Wizard
+
+```
+$ sudo ./xampp.run
+```
+
+
+
+#### Launch XAMPP Control Panel through the Terminal
+
+```js
+$ sudo /opt/lampp/manager-linux-x64.run //64-bit system
+$ sudo /opt/lampp/manager-linux.run //32-bit system
+```
+
+
+
+#### Start Apache & MySQL & ProFTPD from Terminal
+
+```js
+$ sudo /opt/lampp/lampp start
+```
+
+
+
+#### Stop Apache & MySQL & ProFTPD 
+
+```js
+$ sudo /opt/lampp/lampp stop
+```
+
+
+
+ #### Install Net Tools
+
+- `If you get the following output after starting XAMPP, it means that Net Tools are not installed on your system`
+
+> XAMPP: Starting Apache.../opt/lampp/share/xampp/xampplib: line 22: netstat: command not found
+> /opt/lampp/share/xampp/xampplib: line 22: netstat: command not found
+> ok.
+
+    $ sudo apt install net-tools
+
+
+
+
+
+#### Verify Installation
+
+```js
+http://localhost
+http://localhost/phpmyadmin
+```
+
+
+
+
+
+#### Uninstall XAMPP
+
+- `Open your Ubuntu Terminal and move to the directory where XAMPP is installed`
+
+```js
+$ cd /opt/lampp
+$ sudo ./uninstall
+```
+
+
+
+#### Remove the director
+
+```js
+$ sudo rm -r /opt/lampp
+```
+

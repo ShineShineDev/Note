@@ -1,0 +1,682 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: https://mongoosejs.com/docs/enterprise.html
+Subject: Mongoose v5.12.5: Mongoose for Enterprise
+Date: Sun, 24 Apr 2021 11:59:53 -0000
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--TYTsvH2HBXcOcNq1dl3YTN1hkgpp8BQ3JlZJ7CQCnd----"
+
+
+------MultipartBoundary--TYTsvH2HBXcOcNq1dl3YTN1hkgpp8BQ3JlZJ7CQCnd----
+Content-Type: text/html
+Content-ID: <frame-5EC6C603A5341F23320F0D2863581E47@mhtml.blink>
+Content-Transfer-Encoding: binary
+Content-Location: https://mongoosejs.com/docs/enterprise.html
+
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>Mongoose v5.12.5: Mongoose for Enterprise</title><link rel="apple-touch-icon" sizes="57x57" href="https://mongoosejs.com/docs/images/favicon/apple-icon-57x57.png"><link rel="apple-touch-icon" sizes="60x60" href="https://mongoosejs.com/docs/images/favicon/apple-icon-60x60.png"><link rel="apple-touch-icon" sizes="72x72" href="https://mongoosejs.com/docs/images/favicon/apple-icon-72x72.png"><link rel="apple-touch-icon" sizes="76x76" href="https://mongoosejs.com/docs/images/favicon/apple-icon-76x76.png"><link rel="apple-touch-icon" sizes="114x114" href="https://mongoosejs.com/docs/images/favicon/apple-icon-114x114.png"><link rel="apple-touch-icon" sizes="120x120" href="https://mongoosejs.com/docs/images/favicon/apple-icon-120x120.png"><link rel="apple-touch-icon" sizes="144x144" href="https://mongoosejs.com/docs/images/favicon/apple-icon-144x144.png"><link rel="apple-touch-icon" sizes="152x152" href="https://mongoosejs.com/docs/images/favicon/apple-icon-152x152.png"><link rel="apple-touch-icon" sizes="180x180" href="https://mongoosejs.com/docs/images/favicon/apple-icon-180x180.png"><link rel="icon" type="image/png" sizes="192x192" href="https://mongoosejs.com/docs/images/favicon/android-icon-192x192.png"><link rel="icon" type="image/png" sizes="32x32" href="https://mongoosejs.com/docs/images/favicon/favicon-32x32.png"><link rel="icon" type="image/png" sizes="96x96" href="https://mongoosejs.com/docs/images/favicon/favicon-96x96.png"><link rel="icon" type="image/png" sizes="16x16" href="https://mongoosejs.com/docs/images/favicon/favicon-16x16.png"><link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans"><link rel="stylesheet" href="https://mongoosejs.com/docs/css/github.css"><link rel="stylesheet" href="https://mongoosejs.com/docs/css/mongoose5.css"><link rel="apple-touch-icon" sizes="57x57" href="https://mongoosejs.com/docs/images/favicon/apple-icon-57x57.png"><link rel="apple-touch-icon" sizes="60x60" href="https://mongoosejs.com/docs/images/favicon/apple-icon-60x60.png"><link rel="apple-touch-icon" sizes="72x72" href="https://mongoosejs.com/docs/images/favicon/apple-icon-72x72.png"><link rel="apple-touch-icon" sizes="76x76" href="https://mongoosejs.com/docs/images/favicon/apple-icon-76x76.png"><link rel="apple-touch-icon" sizes="114x114" href="https://mongoosejs.com/docs/images/favicon/apple-icon-114x114.png"><link rel="apple-touch-icon" sizes="120x120" href="https://mongoosejs.com/docs/images/favicon/apple-icon-120x120.png"><link rel="apple-touch-icon" sizes="144x144" href="https://mongoosejs.com/docs/images/favicon/apple-icon-144x144.png"><link rel="apple-touch-icon" sizes="152x152" href="https://mongoosejs.com/docs/images/favicon/apple-icon-152x152.png"><link rel="apple-touch-icon" sizes="180x180" href="https://mongoosejs.com/docs/images/favicon/apple-icon-180x180.png"><link rel="icon" type="image/png" sizes="192x192" href="https://mongoosejs.com/docs/images/favicon/android-icon-192x192.png"><link rel="icon" type="image/png" sizes="32x32" href="https://mongoosejs.com/docs/images/favicon/favicon-32x32.png"><link rel="icon" type="image/png" sizes="96x96" href="https://mongoosejs.com/docs/images/favicon/favicon-96x96.png"><link rel="icon" type="image/png" sizes="16x16" href="https://mongoosejs.com/docs/images/favicon/favicon-16x16.png"><link rel="manifest" href="https://mongoosejs.com/docs/images/favicon/manifest.json"><meta name="msapplication-TileColor" content="#ffffff"><meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png"><meta name="theme-color" content="#ffffff"><style>button {
+  border-radius: 3px;
+  padding: 3px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+button.btn-white {
+  border: 1px solid #800;
+  color: #800;
+}
+
+button.btn-color {
+  border: 1px solid transparent;
+  color: white;
+  background-color: #800;
+}
+</style><link rel="stylesheet" href="https://mongoosejs.com/docs/css/inlinecpc.css"><div id="_bsa_srv-CK7DT53U_0"></div></head><body><div id="layout"><div id="mobile-menu"><a class="menu-link" id="menuLink" href="https://mongoosejs.com/docs/enterprise.html#menu"><span></span></a><div id="mobile-logo-container"><a href="https://mongoosejs.com/"><img id="logo" src="https://mongoosejs.com/docs/images/mongoose5_62x30_transparent.png"><span class="logo-text">mongoose</span></a></div></div><div id="menu"><div class="pure-menu"><div class="pure-menu-heading" id="logo-container"><a href="https://mongoosejs.com/"><img id="logo" src="https://mongoosejs.com/docs/images/mongoose5_62x30_transparent.png"><span class="logo-text">mongoose</span></a></div><ul class="pure-menu-list" id="navbar"><li class="pure-menu-horizontal pure-menu-item pure-menu-has-children pure-menu-allow-hover version"><a class="pure-menu-link" href="https://mongoosejs.com/docs/enterprise.html#">Version 5.12.5</a><ul class="pure-menu-children"><li class="pure-menu-item"><a class="pure-menu-link" href="https://mongoosejs.com/docs/4.x">Version 4.13.21</a></li><li class="pure-menu-item"><a class="pure-menu-link" href="https://mongoosejs.com/docs/3.8.x">Version 3.8.40</a></li></ul></li><li class="pure-menu-item search"><input id="search-input-nav" type="text" placeholder="Search"><button id="search-button-nav"><img src="https://mongoosejs.com/docs/images/search.svg"></button></li><li class="pure-menu-item"><a class="pure-menu-link" href="https://mongoosejs.com/docs/index.html">Quick Start</a></li><li class="pure-menu-item"><a class="pure-menu-link" href="https://mongoosejs.com/docs/guides.html">Guides</a></li><li class="pure-menu-item sub-item"><a class="pure-menu-link" href="https://mongoosejs.com/docs/guide.html">Schemas</a></li><li class="pure-menu-item sub-item"><a class="pure-menu-link" href="https://mongoosejs.com/docs/schematypes.html">SchemaTypes</a></li><li class="pure-menu-item sub-item"><a class="pure-menu-link" href="https://mongoosejs.com/docs/connections.html">Connections</a></li><li class="pure-menu-item sub-item"><a class="pure-menu-link" href="https://mongoosejs.com/docs/models.html">Models</a></li><li class="pure-menu-item sub-item"><a class="pure-menu-link" href="https://mongoosejs.com/docs/documents.html">Documents</a></li><li class="pure-menu-item sub-item"><a class="pure-menu-link" href="https://mongoosejs.com/docs/subdocs.html">Subdocuments</a></li><li class="pure-menu-item sub-item"><a class="pure-menu-link" href="https://mongoosejs.com/docs/queries.html">Queries</a></li><li class="pure-menu-item sub-item"><a class="pure-menu-link" href="https://mongoosejs.com/docs/validation.html">Validation</a></li><li class="pure-menu-item sub-item"><a class="pure-menu-link" href="https://mongoosejs.com/docs/middleware.html">Middleware</a></li><li class="pure-menu-item sub-item"><a class="pure-menu-link" href="https://mongoosejs.com/docs/populate.html">Populate</a></li><li class="pure-menu-item sub-item"><a class="pure-menu-link" href="https://mongoosejs.com/docs/discriminators.html">Discriminators</a></li><li class="pure-menu-item sub-item"><a class="pure-menu-link" href="https://mongoosejs.com/docs/plugins.html">Plugins</a></li><li class="pure-menu-item"><a class="pure-menu-link" href="https://mongoosejs.com/docs/api.html">API</a></li><li class="pure-menu-item sub-item"><a class="pure-menu-link" href="https://mongoosejs.com/docs/api/mongoose.html">Mongoose</a></li><li class="pure-menu-item sub-item"><a class="pure-menu-link" href="https://mongoosejs.com/docs/api/schema.html">Schema</a></li><li class="pure-menu-item sub-item"><a class="pure-menu-link" href="https://mongoosejs.com/docs/api/connection.html">Connection</a></li><li class="pure-menu-item sub-item"><a class="pure-menu-link" href="https://mongoosejs.com/docs/api/document.html">Document</a></li><li class="pure-menu-item sub-item"><a class="pure-menu-link" href="https://mongoosejs.com/docs/api/model.html">Model</a></li><li class="pure-menu-item sub-item"><a class="pure-menu-link" href="https://mongoosejs.com/docs/api/query.html">Query</a></li><li class="pure-menu-item sub-item"><a class="pure-menu-link" href="https://mongoosejs.com/docs/api/aggregate.html">Aggregate</a></li><li class="pure-menu-item sub-item"><a class="pure-menu-link" href="https://mongoosejs.com/docs/api/schematype.html">SchemaType</a></li><li class="pure-menu-item sub-item"><a class="pure-menu-link" href="https://mongoosejs.com/docs/api/virtualtype.html">VirtualType</a></li><li class="pure-menu-item"><a class="pure-menu-link" href="https://mongoosejs.com/docs/compatibility.html">Version Compatibility</a></li><li class="pure-menu-item"><a class="pure-menu-link" href="https://mongoosejs.com/docs/faq.html">FAQ</a></li><li class="pure-menu-item"><a class="pure-menu-link" href="https://mongoosejs.com/docs/further_reading.html">Further Reading</a></li><li class="pure-menu-item"><a class="pure-menu-link selected" href="https://mongoosejs.com/docs/enterprise.html">For Enterprise</a></li><li class="pure-menu-item"><a class="pure-menu-link" href="https://mongoosejs.com/docs/built-with-mongoose.html">Built with Mongoose</a></li></ul><div class="cpc-ad"></div></div></div><div class="container"><div id="content"><h2 id="mongoose-for-enterprise">Mongoose for Enterprise</h2>
+<link rel="stylesheet" href="https://mongoosejs.com/docs/css/inlinecpc.css"><div id="native-direct"></div><h3 id="available-as-part-of-the-tidelift-subscription">Available as part of the Tidelift Subscription</h3>
+<p>Tidelift is working with the maintainers of Mongoose and thousands of other
+open source projects to deliver commercial support and maintenance for the
+open source dependencies you use to build your applications. Save time,
+reduce risk, and improve code health, while paying the maintainers of the
+exact dependencies you use.</p>
+<a href="https://tidelift.com/subscription/pkg/npm-mongoose?utm_source=npm-mongoose&amp;utm_medium=referral&amp;utm_campaign=enterprise">
+  <button class="btn-white">Learn More</button>
+</a>
+<a href="https://tidelift.com/subscription/request-a-demo?utm_source=npm-mongoose&amp;utm_medium=referral&amp;utm_campaign=enterprise">
+  <button class="btn-color">Request a Demo</button>
+</a>
+
+<h3 id="enterprise-ready-open-source-softwaremanaged-for-you">Enterprise-ready open source softwareâ€”managed for you</h3>
+<p>The Tidelift Subscription is a managed open source subscription for application
+dependencies covering millions of open source projects across JavaScript,
+Python, Java, PHP, Ruby, .NET, and more.</p>
+<p>Your subscription includes:</p>
+<ul>
+<li>Security updates</li>
+</ul>
+<p>Tideliftâ€™s security response team coordinates patches for new breaking security
+vulnerabilities and alerts immediately through a private channel, so your
+software supply chain is always secure.</p>
+<ul>
+<li>Licensing verification and indemnification</li>
+</ul>
+<p>Tidelift verifies license information to enable easy policy enforcement and
+adds intellectual property indemnification to cover creators and users in case
+something goes wrong. You always have a 100% up-to-date bill of materials for
+your dependencies to share with your legal team, customers, or partners.</p>
+<ul>
+<li>Maintenance and code improvement</li>
+</ul>
+<p>Tidelift ensures the software you rely on keeps working as long as you need it
+to work. Your managed dependencies are actively maintained and we recruit
+additional maintainers where required.</p>
+<ul>
+<li>Package selection and version guidance</li>
+</ul>
+<p>We help you choose the best open source packages from the startâ€”and then
+guide you through updates to stay on the best releases as new issues arise.</p>
+<ul>
+<li>Roadmap input</li>
+</ul>
+<p>Take a seat at the table with the creators behind the software you use.
+Tideliftâ€™s participating maintainers earn more income as their software is
+used by more subscribers, so theyâ€™re interested in knowing what you need.</p>
+<ul>
+<li>Tooling and cloud integration</li>
+</ul>
+<p>Tidelift works with GitHub, GitLab, BitBucket, and more. We support every
+cloud platform (and other deployment targets, too).</p>
+<p>The end result? All of the capabilities you expect from commercial-grade
+software, for the full breadth of open source you use. That means less time
+grappling with esoteric open source trivia, and more time building your own
+applicationsâ€”and your business.</p>
+<a href="https://tidelift.com/subscription/pkg/npm-mongoose?utm_source=npm-mongoose&amp;utm_medium=referral&amp;utm_campaign=enterprise">
+  <button class="btn-white">Learn More</button>
+</a>
+<a href="https://tidelift.com/subscription/request-a-demo?utm_source=npm-mongoose&amp;utm_medium=referral&amp;utm_campaign=enterprise">
+  <button class="btn-color">Request a Demo</button>
+</a></div></div></div></body></html>
+------MultipartBoundary--TYTsvH2HBXcOcNq1dl3YTN1hkgpp8BQ3JlZJ7CQCnd----
+Content-Type: text/css
+Content-Transfer-Encoding: binary
+Content-Location: https://unpkg.com/purecss@1.0.0/build/pure-min.css
+
+@charset "utf-8";
+
+.pure-button:focus, a:active, a:hover { outline: 0px; }
+
+.pure-table, table { border-collapse: collapse; border-spacing: 0px; }
+
+html { font-family: sans-serif; text-size-adjust: 100%; }
+
+body { margin: 0px; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary { display: block; }
+
+audio, canvas, progress, video { display: inline-block; vertical-align: baseline; }
+
+audio:not([controls]) { display: none; height: 0px; }
+
+[hidden], template { display: none; }
+
+a { background-color: transparent; }
+
+abbr[title] { border-bottom: 1px dotted; }
+
+b, optgroup, strong { font-weight: 700; }
+
+dfn { font-style: italic; }
+
+h1 { font-size: 2em; margin: 0.67em 0px; }
+
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+
+small { font-size: 80%; }
+
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+
+sup { top: -0.5em; }
+
+sub { bottom: -0.25em; }
+
+img { border: 0px; }
+
+svg:not(:root) { overflow: hidden; }
+
+figure { margin: 1em 40px; }
+
+hr { box-sizing: content-box; height: 0px; }
+
+pre, textarea { overflow: auto; }
+
+code, kbd, pre, samp { font-family: monospace, monospace; font-size: 1em; }
+
+button, input, optgroup, select, textarea { color: inherit; font: inherit; margin: 0px; }
+
+.pure-button, input { line-height: normal; }
+
+button { overflow: visible; }
+
+button, select { text-transform: none; }
+
+button, html input[type="button"], input[type="reset"], input[type="submit"] { -webkit-appearance: button; cursor: pointer; }
+
+button[disabled], html input[disabled] { cursor: default; }
+
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; padding: 0px; }
+
+input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button { height: auto; }
+
+input[type="search"] { -webkit-appearance: textfield; box-sizing: content-box; }
+
+.pure-button, .pure-form input:not([type]), .pure-menu { box-sizing: border-box; }
+
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
+
+fieldset { border: 1px solid silver; margin: 0px 2px; padding: 0.35em 0.625em 0.75em; }
+
+legend, td, th { padding: 0px; }
+
+legend { border: 0px; }
+
+.hidden, [hidden] { display: none !important; }
+
+.pure-img { max-width: 100%; height: auto; display: block; }
+
+.pure-g { letter-spacing: -0.31em; text-rendering: optimizeSpeed; font-family: FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif; display: flex; flex-flow: row wrap; align-content: flex-start; }
+
+@media not all, not all {
+  table .pure-g { display: block; }
+}
+
+.pure-u, .pure-u-1, .pure-u-1-1, .pure-u-1-12, .pure-u-1-2, .pure-u-1-24, .pure-u-1-3, .pure-u-1-4, .pure-u-1-5, .pure-u-1-6, .pure-u-1-8, .pure-u-10-24, .pure-u-11-12, .pure-u-11-24, .pure-u-12-24, .pure-u-13-24, .pure-u-14-24, .pure-u-15-24, .pure-u-16-24, .pure-u-17-24, .pure-u-18-24, .pure-u-19-24, .pure-u-2-24, .pure-u-2-3, .pure-u-2-5, .pure-u-20-24, .pure-u-21-24, .pure-u-22-24, .pure-u-23-24, .pure-u-24-24, .pure-u-3-24, .pure-u-3-4, .pure-u-3-5, .pure-u-3-8, .pure-u-4-24, .pure-u-4-5, .pure-u-5-12, .pure-u-5-24, .pure-u-5-5, .pure-u-5-6, .pure-u-5-8, .pure-u-6-24, .pure-u-7-12, .pure-u-7-24, .pure-u-7-8, .pure-u-8-24, .pure-u-9-24 { letter-spacing: normal; word-spacing: normal; vertical-align: top; text-rendering: auto; display: inline-block; zoom: 1; }
+
+.pure-g [class*="pure-u"] { font-family: sans-serif; }
+
+.pure-u-1-24 { width: 4.1667%; }
+
+.pure-u-1-12, .pure-u-2-24 { width: 8.3333%; }
+
+.pure-u-1-8, .pure-u-3-24 { width: 12.5%; }
+
+.pure-u-1-6, .pure-u-4-24 { width: 16.6667%; }
+
+.pure-u-1-5 { width: 20%; }
+
+.pure-u-5-24 { width: 20.8333%; }
+
+.pure-u-1-4, .pure-u-6-24 { width: 25%; }
+
+.pure-u-7-24 { width: 29.1667%; }
+
+.pure-u-1-3, .pure-u-8-24 { width: 33.3333%; }
+
+.pure-u-3-8, .pure-u-9-24 { width: 37.5%; }
+
+.pure-u-2-5 { width: 40%; }
+
+.pure-u-10-24, .pure-u-5-12 { width: 41.6667%; }
+
+.pure-u-11-24 { width: 45.8333%; }
+
+.pure-u-1-2, .pure-u-12-24 { width: 50%; }
+
+.pure-u-13-24 { width: 54.1667%; }
+
+.pure-u-14-24, .pure-u-7-12 { width: 58.3333%; }
+
+.pure-u-3-5 { width: 60%; }
+
+.pure-u-15-24, .pure-u-5-8 { width: 62.5%; }
+
+.pure-u-16-24, .pure-u-2-3 { width: 66.6667%; }
+
+.pure-u-17-24 { width: 70.8333%; }
+
+.pure-u-18-24, .pure-u-3-4 { width: 75%; }
+
+.pure-u-19-24 { width: 79.1667%; }
+
+.pure-u-4-5 { width: 80%; }
+
+.pure-u-20-24, .pure-u-5-6 { width: 83.3333%; }
+
+.pure-u-21-24, .pure-u-7-8 { width: 87.5%; }
+
+.pure-u-11-12, .pure-u-22-24 { width: 91.6667%; }
+
+.pure-u-23-24 { width: 95.8333%; }
+
+.pure-u-1, .pure-u-1-1, .pure-u-24-24, .pure-u-5-5 { width: 100%; }
+
+.pure-button { display: inline-block; zoom: 1; white-space: nowrap; vertical-align: middle; text-align: center; cursor: pointer; -webkit-user-drag: none; user-select: none; }
+
+.pure-button-group { letter-spacing: -0.31em; text-rendering: optimizeSpeed; }
+
+.pure-button { font-family: inherit; font-size: 100%; padding: 0.5em 1em; color: rgba(0, 0, 0, 0.8); border: transparent; background-color: rgb(230, 230, 230); text-decoration: none; border-radius: 2px; }
+
+.pure-button-hover, .pure-button:focus, .pure-button:hover { background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.05) 40%, rgba(0, 0, 0, 0.1)); }
+
+.pure-button-active, .pure-button:active { box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.2) 0px 0px 6px inset; }
+
+.pure-button-disabled, .pure-button-disabled:active, .pure-button-disabled:focus, .pure-button-disabled:hover, .pure-button[disabled] { border: none; background-image: none; opacity: 0.4; cursor: not-allowed; box-shadow: none; pointer-events: none; }
+
+.pure-button-hidden { display: none; }
+
+.pure-button-primary, .pure-button-selected, a.pure-button-primary, a.pure-button-selected { background-color: rgb(0, 120, 231); color: rgb(255, 255, 255); }
+
+.pure-button-group .pure-button { letter-spacing: normal; word-spacing: normal; vertical-align: top; text-rendering: auto; margin: 0px; border-radius: 0px; border-right: 1px solid rgba(0, 0, 0, 0.2); }
+
+.pure-button-group .pure-button:first-child { border-top-left-radius: 2px; border-bottom-left-radius: 2px; }
+
+.pure-button-group .pure-button:last-child { border-top-right-radius: 2px; border-bottom-right-radius: 2px; border-right: none; }
+
+.pure-form input[type="password"], .pure-form input[type="email"], .pure-form input[type="url"], .pure-form input[type="date"], .pure-form input[type="month"], .pure-form input[type="time"], .pure-form input[type="datetime"], .pure-form input[type="datetime-local"], .pure-form input[type="week"], .pure-form input[type="tel"], .pure-form input[type="color"], .pure-form input[type="number"], .pure-form input[type="search"], .pure-form input[type="text"], .pure-form select, .pure-form textarea { padding: 0.5em 0.6em; display: inline-block; border: 1px solid rgb(204, 204, 204); box-shadow: rgb(221, 221, 221) 0px 1px 3px inset; border-radius: 4px; vertical-align: middle; box-sizing: border-box; }
+
+.pure-form input:not([type]) { padding: 0.5em 0.6em; display: inline-block; border: 1px solid rgb(204, 204, 204); box-shadow: rgb(221, 221, 221) 0px 1px 3px inset; border-radius: 4px; }
+
+.pure-form input[type="color"] { padding: 0.2em 0.5em; }
+
+.pure-form input:not([type]):focus, .pure-form input[type="password"]:focus, .pure-form input[type="email"]:focus, .pure-form input[type="url"]:focus, .pure-form input[type="date"]:focus, .pure-form input[type="month"]:focus, .pure-form input[type="time"]:focus, .pure-form input[type="datetime"]:focus, .pure-form input[type="datetime-local"]:focus, .pure-form input[type="week"]:focus, .pure-form input[type="tel"]:focus, .pure-form input[type="color"]:focus, .pure-form input[type="number"]:focus, .pure-form input[type="search"]:focus, .pure-form input[type="text"]:focus, .pure-form select:focus, .pure-form textarea:focus { outline: 0px; border-color: rgb(18, 159, 234); }
+
+.pure-form input[type="file"]:focus, .pure-form input[type="checkbox"]:focus, .pure-form input[type="radio"]:focus { outline: rgb(18, 159, 234) auto 1px; }
+
+.pure-form .pure-checkbox, .pure-form .pure-radio { margin: 0.5em 0px; display: block; }
+
+.pure-form input:not([type])[disabled], .pure-form input[type="password"][disabled], .pure-form input[type="email"][disabled], .pure-form input[type="url"][disabled], .pure-form input[type="date"][disabled], .pure-form input[type="month"][disabled], .pure-form input[type="time"][disabled], .pure-form input[type="datetime"][disabled], .pure-form input[type="datetime-local"][disabled], .pure-form input[type="week"][disabled], .pure-form input[type="tel"][disabled], .pure-form input[type="color"][disabled], .pure-form input[type="number"][disabled], .pure-form input[type="search"][disabled], .pure-form input[type="text"][disabled], .pure-form select[disabled], .pure-form textarea[disabled] { cursor: not-allowed; background-color: rgb(234, 237, 237); color: rgb(202, 210, 211); }
+
+.pure-form input[readonly], .pure-form select[readonly], .pure-form textarea[readonly] { background-color: rgb(238, 238, 238); color: rgb(119, 119, 119); border-color: rgb(204, 204, 204); }
+
+.pure-form input:focus:invalid, .pure-form select:focus:invalid, .pure-form textarea:focus:invalid { color: rgb(185, 74, 72); border-color: rgb(233, 50, 45); }
+
+.pure-form input[type="file"]:focus:invalid:focus, .pure-form input[type="checkbox"]:focus:invalid:focus, .pure-form input[type="radio"]:focus:invalid:focus { outline-color: rgb(233, 50, 45); }
+
+.pure-form select { height: 2.25em; border: 1px solid rgb(204, 204, 204); background-color: rgb(255, 255, 255); }
+
+.pure-form select[multiple] { height: auto; }
+
+.pure-form label { margin: 0.5em 0px 0.2em; }
+
+.pure-form fieldset { margin: 0px; padding: 0.35em 0px 0.75em; border: 0px; }
+
+.pure-form legend { display: block; width: 100%; padding: 0.3em 0px; margin-bottom: 0.3em; color: rgb(51, 51, 51); border-bottom: 1px solid rgb(229, 229, 229); }
+
+.pure-form-stacked input:not([type]), .pure-form-stacked input[type="password"], .pure-form-stacked input[type="email"], .pure-form-stacked input[type="url"], .pure-form-stacked input[type="date"], .pure-form-stacked input[type="month"], .pure-form-stacked input[type="time"], .pure-form-stacked input[type="datetime"], .pure-form-stacked input[type="datetime-local"], .pure-form-stacked input[type="week"], .pure-form-stacked input[type="tel"], .pure-form-stacked input[type="color"], .pure-form-stacked input[type="file"], .pure-form-stacked input[type="number"], .pure-form-stacked input[type="search"], .pure-form-stacked input[type="text"], .pure-form-stacked label, .pure-form-stacked select, .pure-form-stacked textarea { display: block; margin: 0.25em 0px; }
+
+.pure-form-aligned .pure-help-inline, .pure-form-aligned input, .pure-form-aligned select, .pure-form-aligned textarea, .pure-form-message-inline { display: inline-block; vertical-align: middle; }
+
+.pure-form-aligned textarea { vertical-align: top; }
+
+.pure-form-aligned .pure-control-group { margin-bottom: 0.5em; }
+
+.pure-form-aligned .pure-control-group label { text-align: right; display: inline-block; vertical-align: middle; width: 10em; margin: 0px 1em 0px 0px; }
+
+.pure-form-aligned .pure-controls { margin: 1.5em 0px 0px 11em; }
+
+.pure-form .pure-input-rounded, .pure-form input.pure-input-rounded { border-radius: 2em; padding: 0.5em 1em; }
+
+.pure-form .pure-group fieldset { margin-bottom: 10px; }
+
+.pure-form .pure-group input, .pure-form .pure-group textarea { display: block; padding: 10px; margin: 0px 0px -1px; border-radius: 0px; position: relative; top: -1px; }
+
+.pure-form .pure-group input:focus, .pure-form .pure-group textarea:focus { z-index: 3; }
+
+.pure-form .pure-group input:first-child, .pure-form .pure-group textarea:first-child { top: 1px; border-radius: 4px 4px 0px 0px; margin: 0px; }
+
+.pure-form .pure-group input:first-child:last-child, .pure-form .pure-group textarea:first-child:last-child { top: 1px; border-radius: 4px; margin: 0px; }
+
+.pure-form .pure-group input:last-child, .pure-form .pure-group textarea:last-child { top: -2px; border-radius: 0px 0px 4px 4px; margin: 0px; }
+
+.pure-form .pure-group button { margin: 0.35em 0px; }
+
+.pure-form .pure-input-1 { width: 100%; }
+
+.pure-form .pure-input-3-4 { width: 75%; }
+
+.pure-form .pure-input-2-3 { width: 66%; }
+
+.pure-form .pure-input-1-2 { width: 50%; }
+
+.pure-form .pure-input-1-3 { width: 33%; }
+
+.pure-form .pure-input-1-4 { width: 25%; }
+
+.pure-form .pure-help-inline, .pure-form-message-inline { display: inline-block; padding-left: 0.3em; color: rgb(102, 102, 102); vertical-align: middle; font-size: 0.875em; }
+
+.pure-form-message { display: block; color: rgb(102, 102, 102); font-size: 0.875em; }
+
+@media only screen and (max-width: 480px) {
+  .pure-form button[type="submit"] { margin: 0.7em 0px 0px; }
+  .pure-form input:not([type]), .pure-form input[type="password"], .pure-form input[type="email"], .pure-form input[type="url"], .pure-form input[type="date"], .pure-form input[type="month"], .pure-form input[type="time"], .pure-form input[type="datetime"], .pure-form input[type="datetime-local"], .pure-form input[type="week"], .pure-form input[type="tel"], .pure-form input[type="color"], .pure-form input[type="number"], .pure-form input[type="search"], .pure-form input[type="text"], .pure-form label { margin-bottom: 0.3em; display: block; }
+  .pure-group input:not([type]), .pure-group input[type="password"], .pure-group input[type="email"], .pure-group input[type="url"], .pure-group input[type="date"], .pure-group input[type="month"], .pure-group input[type="time"], .pure-group input[type="datetime"], .pure-group input[type="datetime-local"], .pure-group input[type="week"], .pure-group input[type="tel"], .pure-group input[type="color"], .pure-group input[type="number"], .pure-group input[type="search"], .pure-group input[type="text"] { margin-bottom: 0px; }
+  .pure-form-aligned .pure-control-group label { margin-bottom: 0.3em; text-align: left; display: block; width: 100%; }
+  .pure-form-aligned .pure-controls { margin: 1.5em 0px 0px; }
+  .pure-form .pure-help-inline, .pure-form-message, .pure-form-message-inline { display: block; font-size: 0.75em; padding: 0.2em 0px 0.8em; }
+}
+
+.pure-menu-fixed { position: fixed; left: 0px; top: 0px; z-index: 3; }
+
+.pure-menu-item, .pure-menu-list { position: relative; }
+
+.pure-menu-list { list-style: none; margin: 0px; padding: 0px; }
+
+.pure-menu-item { padding: 0px; margin: 0px; height: 100%; }
+
+.pure-menu-heading, .pure-menu-link { display: block; text-decoration: none; white-space: nowrap; }
+
+.pure-menu-horizontal { width: 100%; white-space: nowrap; }
+
+.pure-menu-horizontal .pure-menu-list { display: inline-block; }
+
+.pure-menu-horizontal .pure-menu-heading, .pure-menu-horizontal .pure-menu-item, .pure-menu-horizontal .pure-menu-separator { display: inline-block; zoom: 1; vertical-align: middle; }
+
+.pure-menu-item .pure-menu-item { display: block; }
+
+.pure-menu-children { display: none; position: absolute; left: 100%; top: 0px; margin: 0px; padding: 0px; z-index: 3; }
+
+.pure-menu-horizontal .pure-menu-children { left: 0px; top: auto; width: inherit; }
+
+.pure-menu-active > .pure-menu-children, .pure-menu-allow-hover:hover > .pure-menu-children { display: block; position: absolute; }
+
+.pure-menu-has-children > .pure-menu-link::after { padding-left: 0.5em; content: "â–¸"; font-size: small; }
+
+.pure-menu-horizontal .pure-menu-has-children > .pure-menu-link::after { content: "â–¾"; }
+
+.pure-menu-scrollable { overflow-y: scroll; overflow-x: hidden; }
+
+.pure-menu-scrollable .pure-menu-list { display: block; }
+
+.pure-menu-horizontal.pure-menu-scrollable .pure-menu-list { display: inline-block; }
+
+.pure-menu-horizontal.pure-menu-scrollable { white-space: nowrap; overflow-y: hidden; overflow-x: auto; padding: 0.5em 0px; }
+
+.pure-menu-horizontal.pure-menu-scrollable::-webkit-scrollbar { display: none; }
+
+.pure-menu-horizontal .pure-menu-children .pure-menu-separator, .pure-menu-separator { background-color: rgb(204, 204, 204); height: 1px; margin: 0.3em 0px; }
+
+.pure-menu-horizontal .pure-menu-separator { width: 1px; height: 1.3em; margin: 0px 0.3em; }
+
+.pure-menu-horizontal .pure-menu-children .pure-menu-separator { display: block; width: auto; }
+
+.pure-menu-heading { text-transform: uppercase; color: rgb(86, 93, 100); }
+
+.pure-menu-link { color: rgb(119, 119, 119); }
+
+.pure-menu-children { background-color: rgb(255, 255, 255); }
+
+.pure-menu-disabled, .pure-menu-heading, .pure-menu-link { padding: 0.5em 1em; }
+
+.pure-menu-disabled { opacity: 0.5; }
+
+.pure-menu-disabled .pure-menu-link:hover { background-color: transparent; }
+
+.pure-menu-active > .pure-menu-link, .pure-menu-link:focus, .pure-menu-link:hover { background-color: rgb(238, 238, 238); }
+
+.pure-menu-selected .pure-menu-link, .pure-menu-selected .pure-menu-link:visited { color: rgb(0, 0, 0); }
+
+.pure-table { empty-cells: show; border: 1px solid rgb(203, 203, 203); }
+
+.pure-table caption { color: rgb(0, 0, 0); font: italic 85%/1 arial, sans-serif; padding: 1em 0px; text-align: center; }
+
+.pure-table td, .pure-table th { border-left: 1px solid rgb(203, 203, 203); border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; font-size: inherit; margin: 0px; overflow: visible; padding: 0.5em 1em; }
+
+.pure-table td:first-child, .pure-table th:first-child { border-left-width: 0px; }
+
+.pure-table thead { background-color: rgb(224, 224, 224); color: rgb(0, 0, 0); text-align: left; vertical-align: bottom; }
+
+.pure-table td { background-color: transparent; }
+
+.pure-table-odd td, .pure-table-striped tr:nth-child(2n-1) td { background-color: rgb(242, 242, 242); }
+
+.pure-table-bordered td { border-bottom: 1px solid rgb(203, 203, 203); }
+
+.pure-table-bordered tbody > tr:last-child > td { border-bottom-width: 0px; }
+
+.pure-table-horizontal td, .pure-table-horizontal th { border-width: 0px 0px 1px; border-bottom-style: solid; border-bottom-color: rgb(203, 203, 203); }
+
+.pure-table-horizontal tbody > tr:last-child > td { border-bottom-width: 0px; }
+------MultipartBoundary--TYTsvH2HBXcOcNq1dl3YTN1hkgpp8BQ3JlZJ7CQCnd----
+Content-Type: text/css
+Content-Transfer-Encoding: binary
+Content-Location: https://fonts.googleapis.com/css?family=Open+Sans
+
+@charset "utf-8";
+
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 400; src: url("https://fonts.gstatic.com/s/opensans/v18/mem8YaGs126MiZpBA-UFWJ0bf8pkAp6a.woff2") format("woff2"); unicode-range: U+460-52F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; }
+
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 400; src: url("https://fonts.gstatic.com/s/opensans/v18/mem8YaGs126MiZpBA-UFUZ0bf8pkAp6a.woff2") format("woff2"); unicode-range: U+400-45F, U+490-491, U+4B0-4B1, U+2116; }
+
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 400; src: url("https://fonts.gstatic.com/s/opensans/v18/mem8YaGs126MiZpBA-UFWZ0bf8pkAp6a.woff2") format("woff2"); unicode-range: U+1F00-1FFF; }
+
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 400; src: url("https://fonts.gstatic.com/s/opensans/v18/mem8YaGs126MiZpBA-UFVp0bf8pkAp6a.woff2") format("woff2"); unicode-range: U+370-3FF; }
+
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 400; src: url("https://fonts.gstatic.com/s/opensans/v18/mem8YaGs126MiZpBA-UFWp0bf8pkAp6a.woff2") format("woff2"); unicode-range: U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 400; src: url("https://fonts.gstatic.com/s/opensans/v18/mem8YaGs126MiZpBA-UFW50bf8pkAp6a.woff2") format("woff2"); unicode-range: U+100-24F, U+259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 400; src: url("https://fonts.gstatic.com/s/opensans/v18/mem8YaGs126MiZpBA-UFVZ0bf8pkAg.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+------MultipartBoundary--TYTsvH2HBXcOcNq1dl3YTN1hkgpp8BQ3JlZJ7CQCnd----
+Content-Type: font/woff2
+Content-Transfer-Encoding: binary
+Content-Location: https://fonts.gstatic.com/s/opensans/v18/mem8YaGs126MiZpBA-UFVZ0bf8pkAg.woff2
+
+wOF2     #¬     Bô  #V                       t` ‚
+ë@ÔUƒN 6$‡ ƒZ„xÆ4EE]`½£(œÓDQ¦'Aö•À™ úà Ã„(Ê®B8ÎğYRrÒ_;ğ+œÕt‡}Zl•ıÓjÂÕûş»&—‡p­¯W•Jzfİ*TÈ–È’P'ä·§@±r€èw`›âtmæ¦ löDAÄHlfF:{¢˜‰ÌÙÃ*d®Õ…±TçÜú•.êS].º˜@ç‘'j·ÖòÀ=	]£ª	ôB	ÆJ‹Â‚ıç$K…«ÎQ&AÇypÍ}íø©M¿7@’æ=Â_·£öè204é/5]1ä]†tµY±“¨^U‘5ñùÖ*mÕâôQ€IØacL×o¨©®\è9ì™%è>ÂÌ;@·rg $º°ç¢èùhVQ‰°&>ğ÷Nÿ@»qsiV8EÃ±ÙÊ!lÊÄü£Âw¾ZŸ|cešC]Â'RœYİæ/Ëå©¼LVS,…İG ØCÉ¹ïˆ°Ø¥Uïˆ’kR·HâíÌd@‚8À§K/»?6<LÇõeHy72 K•}Oˆ…»Ç|›‹?ˆŠ;W—¹Û.c?šBLüÍ¨ƒ¸¶ó:.t†µU1ñy#š»Çh½2ë5p
+p5p*àÌ+©D @Í‡Æ*«xS'H' (]œD@€ØÚGˆ‹ˆK´Ÿ^â ŠÂI¾«nú_Ô<›Wò~><IµEíFA)£ÔQZ(]e‰"¡˜¨‘“Z{şûîÌ‰“8qÖåš[ïwF)¢TŸÒeñıÚüw>óäç¹Y5WÍ¿ş}õ/\3ñ˜GüÁ£<ÂƒÌçcÜÂÕÉ×'“¤ğĞ"PÃ……İàğÁüZTõ½×ÈÏ¡½Ê¡#y¡Ö>2)µ)³±†“ÅQÚQšÑ¼£y²ˆ÷µà×Ï®§lWşYèÁùº®%ÿ¯Mò‰@sò*ü§gÖ·Ö8^ üÂƒN|Dî¹Q˜5Ï´À,¶£€ Ö8â$Aß£ªjû—±¼‡®²’$çŠn.€¬ãßUj³4£¯Y±Zv\K»hKš+TàË˜}9Èø*=Á’-ÎcÉ±,ûö’#7œ|ƒíŒXo×LàC2›&M¤°ªiPrqölØ)²dEÁAµ´÷3d xtcì(µ3Z{nèşÂM[„cEˆòöûŞ*”•m!@Ïà¬¯'p,Áq4RÈ‘'!+nP€b—"Q#YC"Œu¨ªÄj®UÏØ>í
+˜³Òlæ@J‡„yDØäåè8©ÈGgÃ6º=Ÿè•ê;\(nšÑ[Û_-ÿÜjú%QÕñşÉNĞTÙ{»Ÿ¶A„¨v/†sÓjG£=?d	®…¶+¤M‹U™¦Ñ#!A—êĞ‘#5¶Hog ¹lìHÁN´¾÷KıB_E«´Ï@¬¶Í¨¨h—UKàÃ$êR–]¨9iv\Ğ$#–;Âh¡í	¦.¹v©±ZXãI¦DÀt³³C%>xq›ì4R¤©¡Vd=_" š³–{ Èx…æu„å~±ûi£ªâ] ¸›ùÖŞnŒ…0Â*µ'ğ×•d±ĞàSèE[a|ö{.C–s'˜Ä¨Lrk•,E±*UU ±*JÓx,j5ù0Óêíğÿ!ùWR*¬ÚÎğ¿TökÖ—ÚU:ä>C/F¦|cØD'fyWC‘ø×b_–PsÇyL»wKë¯¨*jî–ªáqéÜğ»ªx§v}Šîj‚àY>x/qJ7²tª\*P‘a»ŒƒLNĞ¡xwK ?û¦ÜÀ>x“Šœ”ÒTÖ‡ À:ê"Ë|5öJã™PçCş˜µâŠæãSHvİ™8î-ÅcyÁ•³ÒŠÍa€dºññ:n,dn1Œ¥rµŒè¢‹#I¬„uí;»bp¹kÚQ“ºê4ÓdÊ° ÜL3Msp¥¾ÌëĞûàÆnnĞú&­¥êÌìZ”bOMìàZW;——KÎ±%»Bæn2‘ÍXS>cCgªñô€¹<×dbÔ¦gab¶³ä‰³~«FKPÈdA­TfÆÔö..ìå=M}Õ`%QÓh¨+½ŸMRÙ”c‰Ñ3O·ğêô‰ªh]“òKb·‹=Zìt!›$ƒzU­å|³ªe8˜‚üèb¢ÌMSà4Í~*qd‚N³Ò€Ìéı\³Ä>ËifŒœNÓëıMŸş\Íõ*-­ã†²©k„Œâ\"?Ú}
+«m8²òÒàoşGKÚô›?Vui¬m”“u´¾‘Ğvøê0®1Œ‡ mk®ïÏ“UU›ÅquÄ¢È´êsÓ¯˜àÀJ
+­	$¸Avêl4…TYîí­Cz:$”í3ûV[“˜Áºò«Ë™S“åq³èÍZ^¥µu\YBÎN¬ºş”9­Ê¹ş¢ÁšFXIˆÖÄÃjXF@ÔµÒh+µ;Í‚š&ôf9}™°qšˆÉ+á˜8‹dV#(yìèÖçfëóÅıbŒ†cIpmİ†°G´1P]š¤Ô‘!SÃ[UFX‘*^­-=#Šr†B÷-ˆ©‹V	+)ß”a¤æ™ 'ùµº+vşXÓ]H2–.¾bÜı$|pg.[™¹Ò-È~cÿAæ¿iãş%¿»ÿ,GSZ›‡1–tY¦-ÓŸ#Y—–ÕÊâuZvĞˆT³¾`óÔ4ÑÂœ`=­{Ä><îaéÇëÍ=¡ÛíJIDÓâÙÿŠ‹¢ï?ÌÇ­&¨ªËpuLSFÃ„ ı.Ì±÷…{½¡•ğ¯\¶'Yñ®^8šT=H‘NhRÊ¾UéVWçà¥huE/Ï]íûêè_et8hÛ^Ú¶#â¥<›S9ûåÙA~ìì  G:·ôÜ!Mîy†[/É:ÉÀA:ùœxGeaFo1–ÜŒ\ô}İ•e\¤9ğè+¹ ¡üv©±÷#º*Rì·OŒê>&@X£;èëíÊ¼K(e«wÖ\‹àò€&š‹tó—uGS¿ÆÈ$ıûÀ5Vµ´óB~.då3#7¢]ªµ¢1vˆ\yØœ]t‰“=Ã¿`-€¶¢Œí7" 1°%…¬¹hj¿÷DzC@h #ª\±5éšÚ ÎDğ`Æïc¨‚Q ç|pëg§‡{*Y99¢¬œóÃAŸªÆMI{QwnKğ„Ã$¸£(rQĞáB‡éß;°á›ØAáŞ8‹¡…Ú›ƒ¶ÆY,›P¸b“rE©|ù~ğ¬8ÏŠÜ×¤!™‹ÁA ÕÏõTÈ	 ¡}›õ2èbxí›;ä\ËXr°'Ø’-ğÄC°÷»Po']§IÜ`C-²£ªâ¨£åÆ²M¼FË<F%
+5ˆT¹#¯éJãZ,uºä— Y€ô1±£š a~¾ìê„Pşuá“ÔU-{õvo»Æ³×}ÃeE+ıüİÂBÁIñ!İdÙ¶mª{,Ä){0ŠP`Ä¹«¦…“t¤%ëEìŒ>;uD‡œ©}>Ş}T§şåÁçÜ×MU¼O5½h¨?öA9=ì4àããÁöàòqê[zf__Ãığ¸BMÇÛ]Ú(Óa£y.ƒÒóFÇ\?ÿ£ÎQùT·˜0¿ÀäP)Aäç6A2‘`mÇâ•‘³+§£}B¬Ãµé-ûÇ{Nñ›Jí‡[JòìùòDµ²FC­³“,úWZËæûu¼öxa¤x×ëG{jçê®Ûj\®8ÛÕ0Øv¤1’¼Ëõı]gW¶¾µ«}FOÃXÛ0—5¬¨NVšÉUÿé0<Nï¤v8¢®:S’lXúë
+ííC•C¼
+ŞH%x©Ä§å)Ç°24 Şå¾ãB+hM²°$ˆvv8ûC°F¨%'ä›ÿ—ökr>²~¼ÿŸÿ!íÛÇ…ØÏÉ¶ÍZ}ü&]+«&~_3
+®öìaK2H6ëÃşilÃ*@Ï×eO¦´šÕRYÕeù´«HwÿÔåş7Ş¬MUÛ¹qÓÖ¹‡‡TµOÖª!Çå§V5ÿfÎiu„ßÁ„ålë©«m^l)IhÈÊÄ%:PSÉo=Ùï€ÜíyÏ³Ós±Ş(òÑÄæ½#/k¥¦‘&¡Kå µ÷
+ù|ñJä¿Ÿ…î]ûnšFO,œ8nšÚ¡ê{ğàğf›“0]˜©ãîC”4ÂZWÅÈw?u¤-d’†?^~úáÚó_â·ŸIù¼]¬iŸ¬¯?QÔìPHõ˜lˆ5ô5µ¶ët4t8W—ŞœêKäL6P&}šOçÿ½ûèíß×Îş­,wË¤v¾=+É:Âç´6Ÿ¨Ì?Ö2On²åğööÆæUgFfuØÕXe”®Ë {*9ˆË$î­õPŠÙú¦¿ÍTæ ÷Œ_úÂ³W·ÿ'y«ù17SçIí±“}uµ}4®“™î5Ù=|=gJ3rJ_Å¥^ıXš™0”¥µØ×}±ŞÍPû“fÌŸV¢€$#¨¼§ÜR³Íë±e˜Ïd$YÍlÀE‡¨†ƒ,Ç–pji:™áÃNÎñhÖ	ÃX–œ¸qaıÌ°“n²KD^R”/!-TsRß6üÍK`ß«ñ×YçÇŠİæ‰Ôók
+i¸6qíİs¤aE’œâ†ü‡–vgd¦qç®†É'N³£~bíMÖşôå\ ~K¨«‰ßh®|›î¡+¡ûğoî6ß.î¸×—İ0a3·œ§oè ÏÖj?Ë£^BùjåÊ…ê§_™fáqm±Ñ³ìº
+Åm®æèKÈÿÛÖKRO-ÉOœû+E;9UÖP&,8¸Ügy‚‚†Œùï¶‹›[ÍŸCJéO¨‡NŞ}9Lu¬?á¾ì7ñeùiÍ€ÎùfeM¨«kªü¬»‰ÁÂ/@MZ9›!-!Ê`½Ÿ …ÖÀ/ü÷y‘¡ó	İášVõ\èç/xõvÙ×®ù2õ¤´‘²>
+«È­ÓZp¯-šÈ¹CÉ¢ÉC }4$¨¼×-2&3í• bàü…[ğfIö·Ô&Ë-·—]²a9n9ªxj v!··İî9n=T¿	‘jxá6Ö³ıRÃaP·`ûí*rç¦À6Ã>ÃŞ¾‚TŞ®£îØ	´§B#ê­‰!qÑ¡e$«ğZÊj˜Á?¦Ÿ¿şÄêıÀ|ùšäb™ÇÆ•Gl›_AÎ·çmO—ë»ëÏU/ŸÏıYPú“qİFÿ©ê^…¶ÿ%¨ß×oj¡£«ê–ÃC1õoı5µõCçA“3¯°¹%^ißˆ^7Š>Êpµ«ñªÇ]¥Œ-vş»¸z_èo¸—¶2b]ÍÂŠ=Ë0/¼FÎ@å 4n¶RZo‚W³pê¯ıjH$JãŸ±¡Ó'/.œZ¼4;„ËÂ“¨ïÂT|á	äÄ¦,z4Û´»-ºà°'ìa¬Ëp—ÅäŠLÚw?»> è+ì`”šœ“kSâÇvEf	vã
+Mx¨…=Õø«;"9h™/c×²/ş¾têl¼}’ıÌ¥i°¾Ï¹?«^T`6b¢Î(=¶8˜bîVÛîd«:$—Aâ¯åjM@<ÑéB­B¾B¦3ß²:î)Àèªhó"ÕÖy\Æk·×`ÑmÕQÔX{ÉÜä…|¹«¤4 ¼QÇ^1=”ìŞÙşc®{vB
+“³³ËG¨¦ùFsØğKgGçŞf›l‹<!qYb,‘”†Ïƒî~Ôİ±cËğNÂ„»•—ŒVU&HÈò³$£ŒŞ«CÍ¯^µ]jk~¼z§y¢÷~×‘Ù‹4úîq\óŠiUt¡ª©ûĞJÏfWy­ec’9Xt5J¥ó_l~DïÜùÉèÎ“Œîíîb®çù ![1Ä½¡ı†we¨÷ôæZÛäïıª¨')%nöğÆ§é_Åçf&GœšüÑí(©‹/ŠÛ‡··Ú¯äƒÁ³E…Eşâ%—‹V6MáşL-ÃâPuRH`n…£e)ô…)£TÇîæ°ıt3ßıN†ASç›k…Úç7_w6DÔ3”Ì=XÛ’|´âû›WüH{Õ¿C`3­ju)7!0‰Ä]LËK@ôZ3
+YÌ¯ïş`ååAÇå’¬"öhÇ™;6B|7ø›¾™Û0î‚ æòÒù[WÁOáOë[0õ›ÍÍ[ô3Àğ]è@)i/Ñâãÿ‹$í<İ9*fÄ?"<ãò™µûÌe6"7×²}f’éàWùŠ Â–‹RØÇ'OEñŸ»›Ù^wzÃ–O)UnF{Æ‹¸ŸBb|OEf=¿vµ…-#§î¤ğšzH»²}èÈZh™íû>6>+Ï•‘6üørE¬õ?èí¸¿¾:p÷Dï‰İ«;.êw‘øRùf¤mà Gòı÷Ûwlîxöl ù”È
+šTÓõbåz×}pËà·NŠ¯¡_[Òß«›Ü»¹·?Hoÿ´ÿÎŸG¥š‹@ÏßˆÚæ°=†¤ÃNÇäÛˆ;ğœ³›İ®|Jù¤uü0Ì°FmÏNÜ¸ŸEâ¹ë	öû°+½}	ÉA]6\ó£>‡\JîñÎO8Z–ôK22ìö]4«Æ/Ëja7sŸ—LFÁHÜ.ÃCUÇ=ÛIoÂş;TxˆLÙK”E`®í8³A¸¶\¡Aj{¾Ì¥+çV¯C—²8eê]¹Ç³íDdÓõªÉTå˜‚ÉÛw©7¦rãèÜeŒŞ<.éŒÀd—˜‚‹L³á½L$N«ùüƒ‘=ß(p“+Õ«Ñ{&¾ ë0gMÏ8s@‡2õ)Õ}cOrÁûÇ‹œ)5æ³§ye®N»8	¤aÊëc¤’†ôÃ¾*ÔyF†ûÒ1LZªHÕ9‘›ƒ<“¸¼€#Õ…"Z˜é±ÍaaåÄ¼Şæc]™Çº› şR¶âÕ uèy2êÍ?ETÎ®¶™†³‚
+Eª³óâLÚ®©JaĞbÒ“2S÷‚×Ò|{ßÖÈÄ:RªJ ÚN%\Ùä`m@KtR%å¨á¬¨ ÷‡ébxMï¿½4ËÚŠÌ_ÒC8[°ØŠ;Ğ€XâÜXÑ˜Ûõ×?•6#¥}Î¢Õ(	Le±iÒH÷Ú½Û+ıÕÕ–`xbùü Õº¸Íµ6'7§J_ÀE(u2Rá!ª¯{r¥àŠõÔ“kpr-Û)¾¤2˜VRKaDSÊŠChœr§ÔŒ"§v	VVM.(‰¤”ÓhÅ¥NñGsRÛ;™ÌãiéİéÌö^p|œ}gLYLT¢ÀfÈF÷–é“±.°ê¥iÑ)Œ.hdõ×j©j@Nøù–¹é8éQ“}³nT\éPÓÅ³ÃuK”]™K‚u6µíà)bsKBW•“>×³¡ê÷öıB“›Îü>ï’*Gãß	é†Õ8N ]Z}¸[QßZ´Ì#…Ú2kNÜã	{}Óğnhİ$¼i˜.š‹-T¡	úÔ³ÛÚy%£¼üî"¿Ü}¹_£TÈ7·î®>ü~á(ËÊ‚•`z°²´¼¼²¼¸¼ry>0øæ­›Á7ã.îÛ722f0:¦?16j ?6ñú9/h5¨´°ªĞäˆ˜˜¶¸>SLÓkjšfÆa—Åe]?•º,À†‹¥ˆÅ˜ƒ—®oK	Œ
+É û¶T(û·0IêÁê!L²Ø7*ì,ç˜WÀÚïDÏ0o‚‹/!8~²ÔÓ'ÛUíCÅÀğÒˆ¦ŸWh¿Ûªû„#+S ’ßÙ‚6{FPäãUSOõa¦ÓÙŞÌ4/ÏôÔ×_tjª75=ªœÇ½{àë†r9Hò ÙâÃÑ$¬?;™[ÜP˜êĞÒP>Ú7zøW^1Dùqã£'k¸³œbÎzOı+VBfl„;ÉÆƒH´O1L'¾¯<RÖŠM_şM× ¬ÈFÏ}Mß\‰ÿ†;ÎŞ&ğ)eJÛ’ù/ZüiÛ¤¨]>Hàù@O‰‰˜`àV}î®üş[üŞ¿¯÷Cëš½ÉÜ’@²ÆO÷iT8—Ş‚[Š_´òğÔ;häOÜå?™|0}ZäĞÂÚD‘†ô=\b
+FÏSú†„-§º{û­Ü¾‘îì ¬8:-+;‡Æ¢ÇÒX`É–ñoa’ÕCÔƒ™$ÿ¡â³
+nÃ¸lçÆ0êºµ³¢«yTQj¶g3:ÜÄ²äRè•ó›§†ÈZq¶^!QşF°Æ´ai–•É`G63ç]‹ÛWEŸŞš0:!\n%mªµ¨)“œç×ÎÏd€÷»Íœr^¯uÊ+'C@#X¼ÏiÉùq>,/qC#BÃƒCCWx-$*"íŒ
+‹&ïK³Teº'´M^N
+Ìj{pXI¦½ñÂòtü®¤6C1Aº×Ä×ŸX›zC‰¨6ƒõq:eÀCœİ±q×3ã³¶ŞîÍ°©$w!?ğt¹¦¯ù\ùÊ5°kúRZ“îï`f¯‰$›»™V†D·GwÍMŸ'ñ^3¦l
+]¼ã“ò½B³}lIt2ŞÙÜ6ğ€g©OìjêÁéÇ7şh‡`ãîŸSÿJD
+Ù™u=T\¾“ş|»ÏO?ï?š<÷jÛã„s’–´v-ªn“/º	­™ûÚ3ÿ½¤wvp´%4>  ¾€y\â”do¢ÕšiVÅ‰mÇ%Ûú¬…Sßÿó±¼ÌÓ—ˆ‡O#0Ì7®ßÁ£$¼.¦ÙcHÌc”hçå.ñ72Zkúªû§Û½âúÇ„=ã]K[U1_á¥`=rßai1Ãßøö2y}X^
+‰ÊLsfmv?ùxjÓ%¬8¿ù=Œ¾ÅqÆ§÷ØhYï3¼Å&›¦õÜ¹"]À {üæ'#i™­}wguÉ`%]m¯ò	ü5<"ĞQy õ¤È’ßw™Ll6Şòu~q!9 zïaÇ°²ø8‡(¿£ÕmS¯EOÙÍêÒñß€Ñ3 ÓŸ©~(–Ÿ†É¢sßÚ0ne”?‘Æ ¥FïŠ®eØ¤Y¤\8’¿üù”~O²Ì9¤KËO·É_·UÃí‹Åzëış^îíÕG¼Û'øM›¤Ô»u½ÒÇQE½°ëÒV~itA?0±8·P!Óÿ`1»”ãc€éÆTDvFLt&3"âHzTtNFB°¹5§`n~ÖO°,é‘—û>Š–©ÑÃ™#ée4c_·}:(ì_"e¤–×]îaîzÓYsÀQêüŒ\`¸´Ù‘»u~À^_á‹Ûı²T56!ÿÏ¿0»“%™£–n‰’	3H9£Ş†BP¨”YV^ı[f‡“9½ï²RóéŒœœÌô£ñ	il§üZP•Ös·şw¡9KX«Ó°3lİş+”Q$¨Ş,¼ 3½ri¨k×ROş€’ÙüB®Ò>naŸ®¸¶ö‡å¾0rÅ	_H}»¯¿î³dŒDË\=sÑxÅX°ZĞ‡(C®íS¶} FDÙ¼•ú•†èVûJ\Ş‹%g—Œ‡»ú¿ƒíKYË‹C~óïAËŞÁC›˜˜/J^@éé¶§ÌÈ^“A¶÷L`œP‰–)ÎVÊCl-Ù‘lO¡"8Rˆ’ã¿×_…D%ì©k€nƒ§èYÍ"@§ÅÉÅfSÛ9©Ù*_ÇŒæ¾ÓÅütùIË&%mS—hØÏ…ğ&‡s´¹@œtfÙ<…ªn–•¢`ªŸ]:ÙYl97ÿNéöL1c©*öÓ^ÈŠmœ#à^J·¡šÑ™,79'/¥ãN¬àÂÊÄÓ û×BÖ€¹ÏÃ…·ô¯ù¿&¹A8f<;F!ë:ÀÜ_}×äÜ:>V/YÅ¹µ?¥¯''³Rö©^ö‡u`nŸ°ğ‹C?ªú‡öïXs‡úÉ*M`²èÇÖvÎ¬iüwÕnoĞtwîÙì.´îñ6ëñ†Sğé’B!»·,ã+=¿(9QÜëIŠé.åÑšÓôO?Ç¹/ñôOÌEó3„oa€z†D-ùÿ}}õIûãµˆñ|pKÜKÛLGDü´ºÈôÕ.dÌôQv†f_>ííô]µ&µèY%ä­²u³_õíí´_Uè
+İv1‘7ß÷óZ0x×eh§©R0n*‡„¼v}hbt]ÇŒŒU¶UÖa¨HÖK0©c]ó>ˆÈpë HÓäœ&êKß‡52‘/RÂxÁ¢Ô"80Ü&úß‘’ĞÀdeÛõ—H’”Öß¢¬ˆ;Ÿõ1_p?l»•œx (Õ¡Aeº•Ú|4e¬5•~‰ :£faXKØÊ\$t„NóM@(}ÕÇ…î´ş)µQßöÑ¹ØJ“OÎ¸†ÿñv6¤z6ÀD ›ê°ù·æl{ˆÀæ>_×uó:KdÜ^mÜv §ÁU£¢Ñ"®oJ‹Ë8Â;vØT<?}ùqñƒm6òIMÜÜ"›Š¢gi¡F”eI'ã­ã4ÙÂÊäíh)T¬¬¾tË]F^ß°\Œ(4‰®“W®Ôaõ&%z®ÅÂò@R•¼ZeñEwG‰¯${ìÛwº.‚%Ju@Š¿ªwöàçšW~°­eşÓ·Œ(/†ze¢İÄ ‹$o™)¤Vôê‰”Ğ#gÖî "´¤Asj£ìÉD[Ÿë46Û×W¢`XP(,½B{‡wC²©¸øÈeİ¦çì ÎGjKs,îdiÒŠ:âÀ•Èí/Şvxô	ÿÿÕ’4/ÂF©¹ï7İFšÏ“bZ«ìÚ ®jñ6\5îTn)p~ÂÿÌõ%€ÿ>jí‹L</
+¼Ô`øî¼Ï,×_&<¤Ğx¤Q™<LJ‰ytPL£÷}]–æyQÀ0|÷ /X{Ù–!o)—VgC¦Şˆ¸nÚÄâ0%¼µíë” 4¯¨¾AÆı$×e
+ïş±m}¾f‘ Ç¶ÏR£~¹H¶à{Mğ8€[ò:‹…zÒ	H+Ë0=!@À÷*Èóƒ QØÅÄa;ü"" 6³KŠoW=î=Òï…P|—à5Ü%Z®Ü… E¯ï’ T@¥à($t±D™÷Í-
+êÒpLF³GJ‘*KºÆ5£Òm¦0°ÑıÔŒµOF‘b¹,Q´ réR‘KĞwMfÌCªèJ(Tá’1xËÛb±$v¥Ã2Î+¬è6;TDÃÎ¯ÊìGP¾r¨ká'Æ¥cÌ †áÙeÅz³»Ù’IS)ŒU‘Ed‡ˆXˆ%‘XÈÈL‚#Y¸+'DÜQ98%Œ¯Ó¢P?íŒ#ÿ=ˆ/Ù›?:û— Û@d`;ì€°Ën{ì%K<Š”(S¡J:(š´hÓ¦K>†ŒìgÌ–)¼2cÎ‚%+Ölb‹À="d(œ8sáÊ;¼x£òáË¿ ‚Ğ,D¨0áFô*ÆqN‹×JÔ¨tÜ ¾SâŠ4úâ«j­Ê\ôØg†|÷Í=F-[4&B¤:Q®Š¶dÅ1Öİ²j\¬-õî¸mCœw>(.A’DÉº¤H“*S†Lo‘-K<¹fu+ï¨Bï}tÚ¦	“îzä)Ó„NºD`Æe¥†ÃyœIU>2¶±+vÇØûbˆİ±'öÚç¦k®»QÉO'&J²¡c0v$©”g¢ÓÈ‘øeWDâçM–øÿgã„²=Ë)S™_B™¿­Ã!SŒZ‹*ûÈd²J‹„ë1¦öÄ›Èöœƒ¹ 
+------MultipartBoundary--TYTsvH2HBXcOcNq1dl3YTN1hkgpp8BQ3JlZJ7CQCnd----
+Content-Type: text/css
+Content-Transfer-Encoding: binary
+Content-Location: https://mongoosejs.com/docs/css/github.css
+
+@charset "utf-8";
+
+.hljs { display: block; overflow-x: auto; padding: 0.5em; color: rgb(51, 51, 51); background: rgb(248, 248, 248); text-size-adjust: none; }
+
+.hljs-comment, .diff .hljs-header, .hljs-javadoc { color: rgb(153, 153, 136); font-style: italic; }
+
+.hljs-keyword, .css .rule .hljs-keyword, .hljs-winutils, .nginx .hljs-title, .hljs-subst, .hljs-request, .hljs-status { color: rgb(51, 51, 51); font-weight: bold; }
+
+.hljs-number, .hljs-hexcolor, .ruby .hljs-constant { color: rgb(0, 128, 128); }
+
+.hljs-string, .hljs-tag .hljs-value, .hljs-phpdoc, .hljs-dartdoc, .tex .hljs-formula { color: rgb(221, 17, 68); }
+
+.hljs-title, .hljs-id, .scss .hljs-preprocessor { color: rgb(153, 0, 0); font-weight: bold; }
+
+.hljs-list .hljs-keyword, .hljs-subst { font-weight: normal; }
+
+.hljs-class .hljs-title, .hljs-type, .vhdl .hljs-literal, .tex .hljs-command { color: rgb(68, 85, 136); font-weight: bold; }
+
+.hljs-tag, .hljs-tag .hljs-title, .hljs-rules .hljs-property, .django .hljs-tag .hljs-keyword { color: rgb(0, 0, 128); font-weight: normal; }
+
+.hljs-attribute, .hljs-variable, .lisp .hljs-body { color: rgb(0, 128, 128); }
+
+.hljs-regexp { color: rgb(0, 153, 38); }
+
+.hljs-symbol, .ruby .hljs-symbol .hljs-string, .lisp .hljs-keyword, .clojure .hljs-keyword, .scheme .hljs-keyword, .tex .hljs-special, .hljs-prompt { color: rgb(153, 0, 115); }
+
+.hljs-built_in { color: rgb(0, 134, 179); }
+
+.hljs-preprocessor, .hljs-pragma, .hljs-pi, .hljs-doctype, .hljs-shebang, .hljs-cdata { color: rgb(153, 153, 153); font-weight: bold; }
+
+.hljs-deletion { background: rgb(255, 221, 221); }
+
+.hljs-addition { background: rgb(221, 255, 221); }
+
+.diff .hljs-change { background: rgb(0, 134, 179); }
+
+.hljs-chunk { color: rgb(170, 170, 170); }
+------MultipartBoundary--TYTsvH2HBXcOcNq1dl3YTN1hkgpp8BQ3JlZJ7CQCnd----
+Content-Type: text/css
+Content-Transfer-Encoding: binary
+Content-Location: https://mongoosejs.com/docs/css/mongoose5.css
+
+@charset "utf-8";
+
+html { font-family: "Open Sans"; }
+
+body { margin: 0px; }
+
+img { width: 100%; }
+
+a { text-decoration: none; color: rgb(9, 113, 178); }
+
+h2 a { color: rgb(0, 0, 0); }
+
+h2:hover::before { position: absolute; left: 22px; margin-top: 4px; background-image: url("/docs/images/link_64x64.png"); background-size: contain; height: 1em; width: 1em; content: " "; }
+
+h3 a { color: rgb(0, 0, 0); }
+
+h3:hover::before { position: absolute; left: 22px; margin-top: 4px; background-image: url("/docs/images/link_64x64.png"); background-size: contain; height: 1em; width: 1em; content: " "; }
+
+code { background-color: rgb(238, 238, 238); padding: 2px 4px; font-size: 0.9em; color: rgb(136, 0, 0); border-radius: 4px; }
+
+pre code { background-color: transparent; padding: 0px; font-size: 1em; color: rgb(34, 34, 34); }
+
+#logo { width: 62px; height: 30px; position: relative; top: 5px; }
+
+.logo-text { color: rgb(136, 0, 0); font-size: 20pt; position: relative; top: 0px; left: 10px; text-transform: none; }
+
+.pure-menu { padding-bottom: 180px; }
+
+.pure-menu-item { height: 28px; font-size: 12pt; padding-top: 0px; }
+
+.pure-menu-link { padding-top: 2px; }
+
+li.sub-item { height: 23px; font-size: 11pt; margin-left: 15px; }
+
+li.tertiary-item { height: 23px; font-size: 11pt; margin-left: 30px; }
+
+li.version { border-bottom: 1px solid rgb(221, 221, 221); padding-bottom: 4px; }
+
+li.version ul.pure-menu-children { border: 1px solid rgb(221, 221, 221); }
+
+#logo-container { position: relative; top: -4px; padding-bottom: 6px; border-bottom: 1px solid rgb(221, 221, 221); }
+
+#menu { z-index: 1; position: fixed; top: 0px; left: 0px; bottom: 0px; background-color: rgb(238, 238, 238); width: 250px; border-right: 1px solid rgb(221, 221, 221); overflow-y: auto; }
+
+.container { position: relative; left: 250px; padding-left: 50px; width: 850px; margin-bottom: 250px; }
+
+pre { display: block; padding: 9.5px; margin: 10px 0px; font-size: 13px; line-height: 1.42857; color: rgb(51, 51, 51); word-break: break-all; word-wrap: break-word; background-color: rgb(245, 245, 245); border: 1px solid rgb(204, 204, 204); border-radius: 4px; font-family: Menlo, Monaco, Consolas, "Courier New", monospace; }
+
+.search { margin-top: 0.25em; margin-bottom: 0.75em; }
+
+.search input { border: 1px solid rgb(221, 221, 221); margin-left: 1em; padding: 0.25em; width: 170px; border-radius: 3px; }
+
+.search button { background-color: rgb(119, 119, 119); color: white; border: 1px solid transparent; border-radius: 3px; height: 30px; width: 30px; padding: 0px; position: relative; top: 5px; left: 1px; }
+
+.search button img { width: 20px; height: 20px; margin-top: 5px; }
+
+.edit-docs-link { position: absolute; top: 0.125em; right: 0px; background-color: rgb(250, 250, 250); border: 1px solid rgb(221, 221, 221); padding: 5px 5px 0px; border-radius: 3px; }
+
+.edit-docs-link img { width: 1.25em; }
+
+.pure-menu-link.selected { font-weight: bold; }
+
+#mobile-menu { display: none; }
+
+@media (max-width: 1160px) {
+  h2:hover::before, h3:hover::before { position: static; display: inline-block; margin-right: 0.2em; }
+  .container { width: 100%; padding: 0px; left: 0px; margin: auto; }
+  #content { margin: 10px; }
+  #menu { display: none; position: absolute; top: 45px; border-top: 1px solid rgb(221, 221, 221); border-right: 1px solid rgb(221, 221, 221); border-bottom: 1px solid rgb(221, 221, 221); left: 0px; }
+  pre { margin: 10px 0px 0px; }
+  #mobile-menu { display: block; height: 45px; background-color: rgb(238, 238, 238); border-bottom: 1px solid rgb(221, 221, 221); }
+  #logo { border: 0px; }
+  #mobile-logo-container { padding: 3px 0px; border: 0px; width: 215px; margin-left: auto; margin-right: auto; }
+  #logo-container { display: none; }
+  .menu-link { position: absolute; display: block; top: 0px; left: 0px; background-color: rgb(238, 238, 238); font-size: 10px; z-index: 10; width: 2em; height: 3px; padding: 2.1em 1.6em; }
+  .menu-link:hover, .menu-link:focus { background: rgb(221, 221, 221); }
+  .menu-link span { position: relative; display: block; }
+  .menu-link span, .menu-link span::before, .menu-link span::after { background-color: rgb(51, 51, 51); width: 100%; height: 0.2em; }
+  .menu-link span::before, .menu-link span::after { position: absolute; margin-top: -0.6em; content: " "; }
+  .menu-link span::after { margin-top: 0.6em; }
+  .active { display: block !important; }
+  .edit-docs-link { display: none; }
+}
+
+.pure-menu-item:last-of-type { padding-bottom: 20px; }
+
+.cpc-ad #carbonads * { margin: initial; padding: initial; }
+
+.cpc-ad #carbonads { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif; position: fixed; bottom: 0px; }
+
+.cpc-ad #carbonads { display: flex; max-width: 250px; background-color: rgb(250, 250, 250); box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px 1px; z-index: 100; }
+
+.cpc-ad #carbonads a { color: inherit; text-decoration: none; }
+
+.cpc-ad #carbonads a:hover { color: inherit; }
+
+.cpc-ad #carbonads span { position: relative; display: block; overflow: hidden; }
+
+.cpc-ad #carbonads .carbon-wrap { display: flex; }
+
+.cpc-ad #carbonads .carbon-img { display: block; line-height: 1; }
+
+.cpc-ad #carbonads .carbon-img img { display: block; width: 110px; height: auto; }
+
+.cpc-ad #carbonads .carbon-text { font-size: 11px; padding: 10px; margin-bottom: 16px; line-height: 1.5; text-align: left; }
+
+.cpc-ad #carbonads .carbon-poweredby { display: block; padding: 6px 8px; background: rgb(241, 241, 242); text-align: center; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600; font-size: 8px; line-height: 1; border-top-left-radius: 3px; position: absolute; bottom: 0px; right: 0px; }
+------MultipartBoundary--TYTsvH2HBXcOcNq1dl3YTN1hkgpp8BQ3JlZJ7CQCnd----
+Content-Type: text/css
+Content-Transfer-Encoding: binary
+Content-Location: https://mongoosejs.com/docs/css/inlinecpc.css
+
+@charset "utf-8";
+
+.native-inline { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif; transition: all 0.25s ease-in-out; }
+
+.native-inline { display: block; margin-top: 1.5em; padding: 10px 20px; border-radius: 4px; background: repeating-linear-gradient(-45deg, transparent, transparent 5px, rgba(0, 0, 0, 0.03) 5px, rgba(0, 0, 0, 0.03) 10px) rgba(0, 0, 0, 0.03); }
+
+.native-inline a { display: block; text-decoration: none; line-height: 1.5; }
+
+.native-inline .sponsor { position: relative; top: -1px; margin-right: 4px; padding: 2px 6px 3px; border: 1px solid currentcolor; border-radius: 2px; color: currentcolor; content: "Sponsor"; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; font-size: 11px; line-height: 1; }
+------MultipartBoundary--TYTsvH2HBXcOcNq1dl3YTN1hkgpp8BQ3JlZJ7CQCnd----
+Content-Type: image/png
+Content-Transfer-Encoding: binary
+Content-Location: https://mongoosejs.com/docs/images/mongoose5_62x30_transparent.png
+
+‰PNG
+
+   IHDR   >      tm­r   bKGD ÿ ÿ ÿ ½§“   	pHYs     šœ   tIMEâ
+'{lõ)  EIDATXGí×kˆeğßzi7µÍRŠ$»QY–ÑL*„>t#’(""+¢èkM‚Jd"£„TFi%]„ÀÌÊÌ¢[YQZº­{éÃ3sœsöê	Â?³óÎóÙÿÿ¹¾ÄAÄÿ-CŒÒì”‹kÍÆ'jL.e2ÚÅöaOÂŞ:ö»`ãJ¼É”q&à'lÅ&œ›p(zdÄ±¿áì@¶%ñ®ø»£a\‰çH9³„'{ÇpAÁ¬;»şœ…ãF¯cŸæg¼‹w°>¡«bÏñ²ºixiÎÃÕ¸³+¶¾†£q$VcEkÁ¦ODÃHÑ×³ëkì-ŠQ/"†E¼¢8$¼w%.3@ÖŠoÍI˜iu;–4Úˆ~üŠB¼l;±QDÄV|‘‹Pæ0$ñ¢b)gà\ŒSênŒ-X»q]Â+2ãUèÇXƒgù9X€…2!+Ğ‰m"%^L¢®Ôø4$¥‘«+…—Ú‡ÚW7ãa‚s¾Ë¼>÷bJ£ÍÃÓøJˆv”pÀJœXgOvám,Ë#`’‡ÛD8¯ÂaeÛ¢à%|ˆ+„ˆ[²ûÆB€}X0 ˜”HŸ‹7DX•4Qé/ÅrQ^î£F›Æ½8Ç`òÄ|µDúA<‰yƒ¶g
+Õ×àz,}ù„{ÆyŠ>‘°¾…¹<U¡ó.‡‹¼Œ;E6]˜šĞW#—F•\'ªk—]Â#íB”Ib´lS-LOÅÚ¤Šµ¼g¯i´Ó+ìê!Ÿğ&ˆáh¦(šõl»EU_š°9•ıóY_¾Ûñ1v$|_ÜÆGæ`>.ÄE¢½åèÃ
+GÊÜŠ“kŸâÑû[…À­ÂûC‘ß)Æ×>1ÒN-­­`³[´²üÚ‚Ş§ĞÎ²Æ>Mú”PÌıÒúl1{?„#Éé	—ì–ˆôÉ1?á³’Í<Ñnf©Âó„‡gë¿`³ôs1Ûw¢3‰ˆ­¡ÈeÄy\*‚-b¾^'¼?3‰Ğ+ÚOár¬J¸M	iTÖªO|³À¼'¾¹ßˆ°ïN*R­ãªò¯!J?ÒŸğmÊR1+WÙïIcâZ„ªl†vœ.Ráş$R
+õ‰å¨÷n4‡‚²N ‰*}—Š#c†MÂã¿W¼.‰z0 Å6"İ#öx2òËë™0mIÌÚµâ‚Ö„Êöl¡ü¥¨=öO»ì6ÆL<÷z<…[
+!¹L¼EH®Å›è©ÊYöo´Şn
+R:S®Éş^œÒ•–OY˜F­X=pŒÙãÃ@îK#lŸ¡[î&Š³ù'C«ñB3ˆ÷‰ı-ÑújZ}Ø.®¦aLU}˜€ããüß,4Ãã½Âë}…çşüe1¬›â9šA|…˜Şr²{ùÿÿÄ’qJ}ù    IEND®B`‚
+------MultipartBoundary--TYTsvH2HBXcOcNq1dl3YTN1hkgpp8BQ3JlZJ7CQCnd----
+Content-Type: image/svg+xml
+Content-Transfer-Encoding: binary
+Content-Location: https://mongoosejs.com/docs/images/search.svg
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22"><path d="m132.77 118.03l-27.945-27.945c6.735-9.722 10.1-20.559 10.1-32.508 0-7.767-1.508-15.195-4.523-22.283-3.01-7.089-7.088-13.199-12.221-18.332-5.133-5.133-11.242-9.207-18.33-12.221-7.09-3.01-14.518-4.522-22.285-4.522-7.767 0-15.195 1.507-22.283 4.522-7.089 3.01-13.199 7.088-18.332 12.221-5.133 5.133-9.207 11.244-12.221 18.332-3.01 7.089-4.522 14.516-4.522 22.283 0 7.767 1.507 15.193 4.522 22.283 3.01 7.088 7.088 13.197 12.221 18.33 5.133 5.134 11.244 9.207 18.332 12.222 7.089 3.02 14.516 4.522 22.283 4.522 11.951 0 22.787-3.369 32.509-10.1l27.945 27.863c1.955 2.064 4.397 3.096 7.332 3.096 2.824 0 5.27-1.032 7.332-3.096 2.064-2.063 3.096-4.508 3.096-7.332.0001-2.877-1-5.322-3.01-7.331m-49.41-34.668c-7.143 7.143-15.738 10.714-25.787 10.714-10.05 0-18.643-3.572-25.786-10.714-7.143-7.143-10.714-15.737-10.714-25.786 0-10.05 3.572-18.644 10.714-25.786 7.142-7.143 15.738-10.714 25.786-10.714 10.05 0 18.643 3.572 25.787 10.714 7.143 7.142 10.715 15.738 10.715 25.786 0 10.05-3.573 18.643-10.715 25.786" transform="matrix(.11417.00745-.00745.11417 3.93 2.548)" fill="#fff"/></svg>
+
+------MultipartBoundary--TYTsvH2HBXcOcNq1dl3YTN1hkgpp8BQ3JlZJ7CQCnd------

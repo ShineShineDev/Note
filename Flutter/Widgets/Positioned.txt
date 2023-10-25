@@ -1,0 +1,11 @@
+(new) Positioned Positioned({
+  Key? key,
+  double? left,
+  double? top,
+  double? right,
+  double? bottom,
+  double? width,
+  double? height,
+  required Widget child,
+})
+package:flutter/src/widgets/basic.dart

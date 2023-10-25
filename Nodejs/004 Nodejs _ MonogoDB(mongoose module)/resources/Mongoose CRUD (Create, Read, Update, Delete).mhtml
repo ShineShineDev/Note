@@ -1,0 +1,2031 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: https://coursework.vschool.io/mongoose-crud/
+Subject: Mongoose CRUD (Create, Read, Update, Delete)
+Date: Sun, 24 Apr 2021 12:06:40 -0000
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--I7RRUqu0RCy2EphqmEJZ1oH8kF9bgCaD66OcPF4Ue1----"
+
+
+------MultipartBoundary--I7RRUqu0RCy2EphqmEJZ1oH8kF9bgCaD66OcPF4Ue1----
+Content-Type: text/html
+Content-ID: <frame-5EC6C603A5341F23320F0D2863581E47@mhtml.blink>
+Content-Transfer-Encoding: binary
+Content-Location: https://coursework.vschool.io/mongoose-crud/
+
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Mongoose CRUD (Create, Read, Update, Delete)</title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="https://coursework.vschool.io/assets/built/screen.css?v=d6ad5d14aa">
+
+    <link rel="icon" href="https://coursework.vschool.io/favicon.png" type="image/png">
+    <link rel="canonical" href="https://coursework.vschool.io/mongoose-crud/">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <link rel="amphtml" href="https://coursework.vschool.io/mongoose-crud/amp/">
+    
+    <meta property="og:site_name" content="V School | Better Humans, Better Outcomes">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Mongoose CRUD (Create, Read, Update, Delete)">
+    <meta property="og:description" content="We've covered the basics of making queries in the MongoDB Shell, but since we'll mostly be writing our queries in our server's JavaScript code using Mongoose, it makes sense to understand how Mongoose does queries. We'll be covering basic CRUD (Create, Read, Update, Delete) operations.  With Mongoose, you can perform">
+    <meta property="og:url" content="https://coursework.vschool.io/mongoose-crud/">
+    <meta property="og:image" content="https://coursework.vschool.io/content/images/2017/06/CRUD.jpg">
+    <meta property="article:published_time" content="2015-12-03T23:15:12.000Z">
+    <meta property="article:modified_time" content="2018-02-19T23:09:57.000Z">
+    <meta property="article:tag" content="Mongoose">
+    <meta property="article:tag" content="Database">
+    <meta property="article:tag" content="HTTP/API">
+    <meta property="article:tag" content="Level 4">
+    <meta property="article:tag" content="Lesson">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mongoose CRUD (Create, Read, Update, Delete)">
+    <meta name="twitter:description" content="We've covered the basics of making queries in the MongoDB Shell, but since we'll mostly be writing our queries in our server's JavaScript code using Mongoose, it makes sense to understand how Mongoose does queries. We'll be covering basic CRUD (Create, Read, Update, Delete) operations.  With Mongoose, you can perform">
+    <meta name="twitter:url" content="https://coursework.vschool.io/mongoose-crud/">
+    <meta name="twitter:image" content="https://coursework.vschool.io/content/images/2017/06/CRUD.jpg">
+    <meta name="twitter:label1" content="Written by">
+    <meta name="twitter:data1" content="Bob Ziroll">
+    <meta name="twitter:label2" content="Filed under">
+    <meta name="twitter:data2" content="Mongoose, Database, HTTP/API, Level 4, Lesson">
+    <meta property="og:image:width" content="520">
+    <meta property="og:image:height" content="209">
+    
+    
+
+    <meta name="generator" content="Ghost 3.42">
+    <link rel="alternate" type="application/rss+xml" title="V School | Better Humans, Better Outcomes" href="https://coursework.vschool.io/rss/">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+<style>
+    /*body, h1, h2, h3, h4, h5, h6,  
+    .main-nav a,
+    .subscribe-button,
+    .page-title,
+    .post-meta,
+    .read-next-story .post:before,
+    .pagination,
+    .site-footer,
+    [class^="icon-"]:before, [class*=" icon-"]:before {
+        font-family:"HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; /* }*/
+    .page-title {
+        background-color: rgba(68, 68, 68, 0.46);
+        font-family:"HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        font-weight: 200;
+    }
+    .page-description {
+        background-color: rgba(68, 68, 68, 0.46);
+    }
+    code {
+        color: #c25;
+    }
+
+    a {
+        color: #60B2B0;
+    }
+
+    hr {
+        border-top: #dedede 1px solid;    
+    }
+    
+    .search-container #search-field, .search-container .search-button {
+		color: black;
+    }
+
+</style>
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/themes/prism-solarizedlight.min.css" integrity="sha512-Vy5HEYgHKrCbVXD+O0e3cx/MCZpe8hEUA3KeF63QblnYWcDAJ9cgjUhAY85rNpum8r9yEr6mm+e7JtQ5g6MMng==" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/plugins/line-numbers/prism-line-numbers.min.css" integrity="sha512-vuo/WOGmEgVI6vDg9JYqetM/L1nwutIQoozlqSjIuqk0lkKyh+lFnH6MGfgDH6uHT3SBY3IqSf/YoOfy3RyHaQ==" crossorigin="anonymous">
+
+<style>
+    pre[class*=language-] {
+        margin: 1.75em 0;
+        font-size: 1.4rem;
+    }
+    .post-full-content pre ::selection {
+	    color: white;
+    }
+</style>
+
+</head>
+<body class="post-template tag-mongoose tag-database tag-http-api tag-level-4 tag-lesson">
+
+    <div class="site-wrapper">
+
+        
+
+<header class="site-header">
+    <div class="outer site-nav-main">
+    <div class="inner">
+        <nav class="site-nav">
+    <div class="site-nav-left-wrapper">
+        <div class="site-nav-left">
+                <a class="site-nav-logo" href="https://coursework.vschool.io/"><img src="https://coursework.vschool.io/content/images/2020/02/VS_Logo_Full_Black.png" alt="V School | Better Humans, Better Outcomes"></a>
+            <div class="site-nav-content">
+                    <ul class="nav">
+    <li class="nav-home"><a href="https://coursework.vschool.io/">Home</a></li>
+    <li class="nav-career"><a href="https://coursework.vschool.io/tag/career/">Career</a></li>
+</ul>
+
+                    <span class="nav-post-title ">Mongoose CRUD (Create, Read, Update, Delete)</span>
+            </div>
+        </div>
+    </div>
+    <div class="site-nav-right">
+            <div class="social-links">
+            </div>
+                <a class="rss-button" href="https://feedly.com/i/subscription/feed/https://coursework.vschool.io/rss/" title="RSS" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="6.18" cy="17.82" r="2.18"></circle><path d="M4 4.44v2.83c7.03 0 12.73 5.7 12.73 12.73h2.83c0-8.59-6.97-15.56-15.56-15.56zm0 5.66v2.83c3.9 0 7.07 3.17 7.07 7.07h2.83c0-5.47-4.43-9.9-9.9-9.9z"></path></svg>
+</a>
+
+    </div>
+</nav>
+    </div>
+</div></header>
+
+
+<main id="site-main" class="site-main outer">
+    <div class="inner">
+
+        <article class="post-full post tag-mongoose tag-database tag-http-api tag-level-4 tag-lesson ">
+
+            <header class="post-full-header">
+
+                <section class="post-full-tags">
+                    <a href="https://coursework.vschool.io/tag/mongoose/" target="_blank">Mongoose</a>
+                </section>
+
+                <h1 class="post-full-title">Mongoose CRUD (Create, Read, Update, Delete)</h1>
+
+
+                <div class="post-full-byline">
+
+                    <section class="post-full-byline-content">
+
+                        <ul class="author-list">
+                            <li class="author-list-item">
+
+                                <div class="author-card">
+                                    <img class="author-profile-image" src="https://www.gravatar.com/avatar/14d80373cc16819eeaae5286c67911ec?s=250&amp;d=mm&amp;r=x" alt="Bob Ziroll">
+                                    <div class="author-info">
+                                        <h2>Bob Ziroll</h2>
+                                        <p>Read <a href="https://coursework.vschool.io/author/bob/" target="_blank">more posts</a> by this author.</p>
+                                    </div>
+                                </div>
+
+                                <a href="https://coursework.vschool.io/author/bob/" class="author-avatar" target="_blank">
+                                    <img class="author-profile-image" src="https://www.gravatar.com/avatar/14d80373cc16819eeaae5286c67911ec?s=250&amp;d=mm&amp;r=x" alt="Bob Ziroll">
+                                </a>
+
+                            </li>
+                        </ul>
+
+                        <section class="post-full-byline-meta">
+                            <h4 class="author-name"><a href="https://coursework.vschool.io/author/bob/" target="_blank">Bob Ziroll</a></h4>
+                            <div class="byline-meta-content">
+                                <time class="byline-meta-date" datetime="2015-12-03">3 Dec 2015</time>
+                                <span class="byline-reading-time"><span class="bull">â€¢</span> 6 min read</span>
+                            </div>
+                        </section>
+
+                    </section>
+
+
+                </div>
+            </header>
+
+            <figure class="post-full-image">
+                <img sizes="(max-width: 800px) 400px,
+                        (max-width: 1170px) 1170px,
+                            2000px" src="https://coursework.vschool.io/content/images/size/w2000/2017/06/CRUD.jpg" alt="Mongoose CRUD (Create, Read, Update, Delete)" width="1000" height="402">
+            </figure>
+
+            <section class="post-full-content">
+                <div class="post-content">
+                    <!--kg-card-begin: markdown--><p>We've covered the basics of making queries in the <a href="https://coursework.vschool.io/mongodb-overview/" target="_blank">MongoDB Shell</a>, but since we'll mostly be writing our queries in our server's JavaScript code using Mongoose, it makes sense to understand how Mongoose does queries. We'll be covering basic CRUD (Create, Read, Update, Delete) operations.</p>
+<p>With Mongoose, you can perform these operations wherever you want to in your code. Usually when we talk about CRUD, we're talking about it in tandem with the 4 most common HTTP methods, <code>GET</code>, <code>POST</code>, <code>PUT</code>, and <code>DELETE</code>, which map to the CRUD operations like so:</p>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;border-color:#ccc;border-width:1px;border-style:solid;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#fff;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#f0f0f0;}
+.tg .tg-yw4l{vertical-align:top}
+</style>
+<table class="tg">
+  <tbody><tr>
+    <th class="tg-yw4l">HTTP Method</th>
+    <th class="tg-yw4l">CRUD Operation</th>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">GET</td>
+    <td class="tg-yw4l">Read</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">POST</td>
+    <td class="tg-yw4l">Create</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">PUT</td>
+    <td class="tg-yw4l">Update</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">DELETE</td>
+    <td class="tg-yw4l">Delete</td>
+  </tr>
+</tbody></table>
+<hr>
+<h3 id="read">Read</h3>
+<p>This is how we get items from MongoDB. Mongoose gives us 3 basic ways to get stuff from the database (<code>.find()</code>, <code>.findOne()</code>, and <code>.findById()</code> ), and one advanced way (<code>.where()</code>).</p>
+<h6 id="findquerycallback"><code>.find([query], [callback])</code></h6>
+<p>Finds all documents in the database that match the query. If no query is given, it returns everything.</p>
+<pre class=" line-numbers language-javascript"><code class="  language-javascript"><span class="token keyword">const</span> Person <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"../models/person"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// .find() finds all instances in the database that match the query you pass in.</span>
+<span class="token comment">// It returns an array, even if there is only one item in the array.</span>
+
+<span class="token comment">// No query passed in means "find everything"</span>
+Person<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">err<span class="token punctuation">,</span> people</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token comment">// Note that this error doesn't mean nothing was found,</span>
+    <span class="token comment">// it means the database had an error while searching, hence the 500 status</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token keyword">return</span> res<span class="token punctuation">.</span><span class="token function">status</span><span class="token punctuation">(</span><span class="token number">500</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span>
+    <span class="token comment">// send the list of all people</span>
+    <span class="token keyword">return</span> res<span class="token punctuation">.</span><span class="token function">status</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span>people<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// If query IS passed into .find(), filters by the query parameters</span>
+Person<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token punctuation">{</span>name<span class="token operator">:</span> <span class="token string">"John James"</span><span class="token punctuation">,</span> age<span class="token operator">:</span> <span class="token number">36</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">err<span class="token punctuation">,</span> people</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token keyword">return</span> res<span class="token punctuation">.</span><span class="token function">status</span><span class="token punctuation">(</span><span class="token number">500</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span>
+
+    <span class="token comment">// send the list of all people in database with name of "John James" and age of 36</span>
+    <span class="token comment">// Very possible this will be an array with just one Person object in it.</span>
+    <span class="token keyword">return</span> res<span class="token punctuation">.</span><span class="token function">status</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span>people<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h6 id="findonequeryfieldstoreturncallback"><code>.findOne([query], [fieldsToReturn], [callback])</code></h6>
+<p>Finds one object from the database. If your query matches more than one item in the database, it still only returns the first one it finds.</p>
+<pre class=" line-numbers language-javascript"><code class="  language-javascript">Kitten<span class="token punctuation">.</span><span class="token function">findOne</span><span class="token punctuation">(</span>
+    <span class="token comment">// query</span>
+    <span class="token punctuation">{</span>color<span class="token operator">:</span> <span class="token string">"white"</span><span class="token punctuation">,</span> name<span class="token operator">:</span> <span class="token string">"Dr. Miffles"</span><span class="token punctuation">,</span> age<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+    <span class="token comment">// Only return an object with the "name" and "owner" fields. "_id" </span>
+    <span class="token comment">// is included by default, so you'll need to remove it if you don't want it.</span>
+    <span class="token punctuation">{</span>name<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> owner<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+    <span class="token comment">// callback function</span>
+    <span class="token punctuation">(</span><span class="token parameter">err<span class="token punctuation">,</span> kitten</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token keyword">return</span> res<span class="token punctuation">.</span><span class="token function">status</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span>
+        <span class="token keyword">return</span> res<span class="token punctuation">.</span><span class="token function">status</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span>kitten<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>With <code>.findOne()</code>:</p>
+<ul>
+<li>If you don't provide a <code>query</code>, it will just return the first Kitten in the database.</li>
+<li>If you don't provide a <code>fieldsToReturn</code>, it will return the entire object.</li>
+<li><code>fieldsToReturn</code> can also be in the form of a string with spaces between the field names, e.g. <code>"name age owner"</code>, instead of an object.</li>
+</ul>
+<h6 id="findbyididfieldstoreturncallback"><code>.findById(id, [fieldsToReturn], [callback])</code></h6>
+<p>Finds a single object in the database by the provided <code>id</code>.</p>
+<pre class=" line-numbers language-javascript"><code class="  language-javascript"><span class="token comment">// Common RESTful way to get the Id is from the url params in req.params</span>
+Kitten<span class="token punctuation">.</span><span class="token function">findById</span><span class="token punctuation">(</span>req<span class="token punctuation">.</span>params<span class="token punctuation">.</span>kittenId<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">err<span class="token punctuation">,</span> kitten</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token keyword">return</span> res<span class="token punctuation">.</span><span class="token function">status</span><span class="token punctuation">(</span><span class="token number">500</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> res<span class="token punctuation">.</span><span class="token function">status</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span>kitten<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h6 id="whereselector"><code>.where(selector)</code></h6>
+<p>This one is powerful, but a bit more confusing. It allows us to do more complex queries to the database. So far we've done things like "find a Kitten whose name is Dr. Miffles"<strong>AND</strong> whose color is white <strong>AND</strong> who is 1 year old.</p>
+<p>But what if we wanted to query for all Kittens in the Database who were between the ages of 1 and 4? This is when <code>.where()</code> comes in.</p>
+<p>Calling <code>.where()</code> on a Mongoose Model (e.g. <code>Kitten</code>) actually returns a Mongoose "Query" object. In order to actually execute the query, we have to call the <code>.exec()</code> method and pass in our usual callback. Example:</p>
+<pre class=" line-numbers language-javascript"><code class="  language-javascript">Kitten<span class="token punctuation">.</span><span class="token function">where</span><span class="token punctuation">(</span><span class="token string">"age"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">gte</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">lte</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">exec</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">err<span class="token punctuation">,</span> kittens</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token comment">// Do stuff</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>What's nice about these queries is that it reads almost like English: "Find all Kittens where the age is greater than or equal to 1, and less than or equal to 4, then execute the query.</p>
+<hr>
+<h3 id="create">Create</h3>
+<p>This is how we can create new items in the database. This will commonly be from an HTTP <code>POST</code> request, although you can do this anywhere you want.</p>
+<pre class=" line-numbers language-javascript"><code class="  language-javascript"><span class="token keyword">const</span> Todo <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"../models/todo"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Assuming this is from a POST request and the body of the</span>
+<span class="token comment">// request contained the JSON of the new "todo" item to be saved</span>
+<span class="token keyword">const</span> newTodoObj <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Todo</span><span class="token punctuation">(</span>req<span class="token punctuation">.</span>body<span class="token punctuation">)</span><span class="token punctuation">;</span>
+newTodoObj<span class="token punctuation">.</span><span class="token function">save</span><span class="token punctuation">(</span><span class="token parameter">err</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token keyword">return</span> res<span class="token punctuation">.</span><span class="token function">status</span><span class="token punctuation">(</span><span class="token number">500</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> res<span class="token punctuation">.</span><span class="token function">status</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span>newTodoObj<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>That's about it! Create the new object just like you would if you were creating a JavaScript object from an <a href="http://www.javascriptkit.com/javatutors/oopjs2.shtml" target="_blank">object function constructor</a>, then call the <code>.save()</code> method on that object.</p>
+<p>One common operation apps will make is called <code>findOrCreate</code>, where it will look for an existing instance in the database and return it if it exists, and create it if it doesn't exist. Mongoose doesn't have a built-in method for doing that, but there is a third-party package called <a href="https://github.com/drudge/mongoose-findorcreate" target="_blank">mongoose-findorcreate</a> that you can install as a plugin to your model to include that as a static method on all models it is plugged in to.</p>
+<hr>
+<h3 id="update">Update</h3>
+<p>This is just a combination of "read" and "create", but instead of creating a new one with <code>const newTodoObj = new Todo(...)</code>, we query the database and send a change to be made using <code>findByIdAndUpdate</code>. Make sure to read the comments below explaining each of the parts:</p>
+<pre class=" line-numbers language-javascript"><code class="  language-javascript"><span class="token keyword">const</span> Todo <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"../models/todo"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// This would likely be inside of a PUT request, since we're updating an existing document, hence the req.params.todoId.</span>
+<span class="token comment">// Find the existing resource by ID</span>
+Todo<span class="token punctuation">.</span><span class="token function">findByIdAndUpdate</span><span class="token punctuation">(</span>
+    <span class="token comment">// the id of the item to find</span>
+    req<span class="token punctuation">.</span>params<span class="token punctuation">.</span>todoId<span class="token punctuation">,</span>
+    
+    <span class="token comment">// the change to be made. Mongoose will smartly combine your existing </span>
+    <span class="token comment">// document with this change, which allows for partial updates too</span>
+    req<span class="token punctuation">.</span>body<span class="token punctuation">,</span>
+    
+    <span class="token comment">// an option that asks mongoose to return the updated version </span>
+    <span class="token comment">// of the document instead of the pre-updated one.</span>
+    <span class="token punctuation">{</span><span class="token keyword">new</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+    
+    <span class="token comment">// the callback function</span>
+    <span class="token punctuation">(</span><span class="token parameter">err<span class="token punctuation">,</span> todo</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token comment">// Handle any possible database errors</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token keyword">return</span> res<span class="token punctuation">.</span><span class="token function">status</span><span class="token punctuation">(</span><span class="token number">500</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> res<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span>todo<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>There are a few different ways you could structure your <code>PUT</code> request. Above, we opted for the use of the Mongoose shortcut method <code>findByIdAndUpdate</code> (there's also a <code>findOneAndUpdate</code>).Check out the documentation here: <a href="http://mongoosejs.com/docs/api.html#model_Model.findOneAndUpdate" target="_blank">findOneAndUpdate()</a>, <a href="http://mongoosejs.com/docs/api.html#model_Model.findByIdAndUpdate" target="_blank">findByIdAndUpdate()</a>.</p>
+<p>Another option would be to use a <code>findOne</code> or <code>findById</code>, make the changes to the properties manually, then use <code>.save</code> to save the change. The benefit of doing it this way is that you have more control over the changes being made, but at the expense of having to make two trips to the database (one to retrieve the document, another to save it). Using <code>findByIdAndUpdate</code> combines these two trips into one, but also makes it a little harder to make granular modifications. It also bypasses any model "hooks", like a "pre-save" hook. But if that isn't a concern to you, <code>findByIdAndUpdate</code> and <code>findOneAndUpdate</code> are great shortcut methods to use.</p>
+<hr>
+<h3 id="delete">Delete</h3>
+<p>Similar to the "Update" section above, you can go about deleting a document from the database by first finding it, then running the <code>.remove()</code> method on the found document. Also similar to the updating section above, Mongoose v4.0 introduced some helper methods - <code>.findOneAndRemove()</code> and <code>.findByIdAndRemove()</code> - which is what we'll show in the example below.</p>
+<pre class=" line-numbers language-javascript"><code class="  language-javascript"><span class="token comment">// The "todo" in this callback function represents the document that was found.</span>
+<span class="token comment">// It allows you to pass a reference back to the client in case they need a reference for some reason.</span>
+Todo<span class="token punctuation">.</span><span class="token function">findByIdAndRemove</span><span class="token punctuation">(</span>req<span class="token punctuation">.</span>params<span class="token punctuation">.</span>todoId<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">err<span class="token punctuation">,</span> todo</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token comment">// As always, handle any potential errors:</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token keyword">return</span> res<span class="token punctuation">.</span><span class="token function">status</span><span class="token punctuation">(</span><span class="token number">500</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// We'll create a simple object to send back with a message and the id of the document that was removed</span>
+    <span class="token comment">// You can really do this however you want, though.</span>
+    <span class="token keyword">const</span> response <span class="token operator">=</span> <span class="token punctuation">{</span>
+        message<span class="token operator">:</span> <span class="token string">"Todo successfully deleted"</span><span class="token punctuation">,</span>
+        id<span class="token operator">:</span> todo<span class="token punctuation">.</span>_id
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> res<span class="token punctuation">.</span><span class="token function">status</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span>response<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<hr>
+<h3 id="conclusion">Conclusion</h3>
+<p>You should definitely spend some time researching different CRUD operations using Mongoose. There are a lot of nuances you will need to learn to become an expert at using it, and the only way you'll be able to learn those nuances is by spending time researching and using Mongoose in your own projects.</p>
+<p>Mongoose has lots of really fine-grained controls it allows, such as defining static methods for your models (so that every object created is able to run a specific method, similar to adding a method to a JavaScript "class", A.K.A. function constructor), adding pre/post hooks into your schema (so that you can run certain code before and/or after an item is created from the schema, deleted, updated, etc.), adding options like there's no tomorrow, etc. Check out some of the following Mongoose documentation to become more familiar with the intricacies it has.</p>
+<ul>
+<li><a href="http://mongoosejs.com/docs/api.html" target="_blank">Mongoose API Docs</a></li>
+<li><a href="http://mongoosejs.com/docs/guide.html" target="_blank">Mongoose Schema Guide</a></li>
+<li><a href="http://mongoosejs.com/docs/models.html" target="_blank">Mongoose Models Guide</a></li>
+<li><a href="http://mongoosejs.com/docs/documents.html" target="_blank">Mongoose Documents Guide</a></li>
+<li><a href="http://mongoosejs.com/docs/queries.html" target="_blank">Mongoose Queries Guide</a></li>
+</ul>
+<p>Good luck, and go create something awesome!</p>
+<!--kg-card-end: markdown-->
+                </div>
+            </section>
+
+
+
+        </article>
+
+    </div>
+</main>
+
+<aside class="read-next outer">
+    <div class="inner">
+        <div class="read-next-feed">
+                <article class="read-next-card">
+                    <header class="read-next-card-header">
+                        <h3><span>More in</span> <a href="https://coursework.vschool.io/tag/mongoose/">Mongoose</a></h3>
+                    </header>
+                    <div class="read-next-card-content">
+                        <ul>
+                            <li>
+                                <h4><a href="https://coursework.vschool.io/rock-the-vote-module-6/">Rock The Vote - Level 6</a></h4>
+                                <div class="read-next-card-meta">
+                                    <p><time datetime="2020-01-10">10 Jan 2020</time> â€“
+                                        2 min read</p>
+                                </div>
+                            </li>
+                            <li>
+                                <h4><a href="https://coursework.vschool.io/mongo-shell-practice/">Mongo Shell Practice</a></h4>
+                                <div class="read-next-card-meta">
+                                    <p><time datetime="2018-10-22">22 Oct 2018</time> â€“
+                                        1 min read</p>
+                                </div>
+                            </li>
+                            <li>
+                                <h4><a href="https://coursework.vschool.io/crud-store/">CRUD Store</a></h4>
+                                <div class="read-next-card-meta">
+                                    <p><time datetime="2017-10-27">27 Oct 2017</time> â€“
+                                        1 min read</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <footer class="read-next-card-footer">
+                        <a href="https://coursework.vschool.io/tag/mongoose/">See all 9 posts
+                            â†’</a>
+                    </footer>
+                </article>
+
+                <article class="post-card post tag-mongoose tag-database tag-level-3 tag-lesson ">
+
+    <a class="post-card-image-link" href="https://coursework.vschool.io/mongoose-schemas/" target="_blank">
+        <img class="post-card-image" sizes="(max-width: 1000px) 400px, 700px" loading="lazy" src="https://coursework.vschool.io/content/images/size/w600/2015/12/Blueprint_banner.jpg" alt="Mongoose Schema Basics" width="267" height="200">
+    </a>
+
+    <div class="post-card-content">
+
+        <a class="post-card-content-link" href="https://coursework.vschool.io/mongoose-schemas/" target="_blank">
+
+            <header class="post-card-header">
+                    <div class="post-card-primary-tag">Mongoose</div>
+                <h2 class="post-card-title">Mongoose Schema Basics</h2>
+            </header>
+
+            <section class="post-card-excerpt">
+                    <p>Understanding Schemas A "Schema" can be a tough thing to understand at first, but in reality it's pretty straightforward. A Schema for a database is akin to a</p>
+            </section>
+
+        </a>
+
+        <footer class="post-card-meta">
+            <ul class="author-list">
+                <li class="author-list-item">
+            
+                    <div class="author-name-tooltip">
+                        Bob Ziroll
+                    </div>
+            
+                    <a href="https://coursework.vschool.io/author/bob/" class="static-avatar" target="_blank">
+                        <img class="author-profile-image" src="https://www.gravatar.com/avatar/14d80373cc16819eeaae5286c67911ec?s=250&amp;d=mm&amp;r=x" alt="Bob Ziroll">
+                    </a>
+                </li>
+            </ul>
+            <div class="post-card-byline-content">
+                <span><a href="https://coursework.vschool.io/author/bob/" target="_blank">Bob Ziroll</a></span>
+                <span class="post-card-byline-date"><time datetime="2015-12-07">7 Dec 2015</time> <span class="bull">â€¢</span> 7 min read</span>
+            </div>
+        </footer>
+
+    </div>
+
+</article>
+
+                <article class="post-card post tag-express tag-web-applications tag-level-3 tag-http-api tag-level-4 tag-lesson ">
+
+    <a class="post-card-image-link" href="https://coursework.vschool.io/express-params-and-query/" target="_blank">
+        <img class="post-card-image" sizes="(max-width: 1000px) 400px, 700px" loading="lazy" src="https://coursework.vschool.io/content/images/size/w600/2015/12/banner4.jpg" alt="Express req.params and req.query" width="267" height="200">
+    </a>
+
+    <div class="post-card-content">
+
+        <a class="post-card-content-link" href="https://coursework.vschool.io/express-params-and-query/" target="_blank">
+
+            <header class="post-card-header">
+                    <div class="post-card-primary-tag">Express</div>
+                <h2 class="post-card-title">Express req.params and req.query</h2>
+            </header>
+
+            <section class="post-card-excerpt">
+                    <p>When you're first learning about the Request/Response cycle, there's a fairly confusing topic that you'll run into frequently: URL parameters and query parameters (also called query strings).  The reason</p>
+            </section>
+
+        </a>
+
+        <footer class="post-card-meta">
+            <ul class="author-list">
+                <li class="author-list-item">
+            
+                    <div class="author-name-tooltip">
+                        Bob Ziroll
+                    </div>
+            
+                    <a href="https://coursework.vschool.io/author/bob/" class="static-avatar" target="_blank">
+                        <img class="author-profile-image" src="https://www.gravatar.com/avatar/14d80373cc16819eeaae5286c67911ec?s=250&amp;d=mm&amp;r=x" alt="Bob Ziroll">
+                    </a>
+                </li>
+            </ul>
+            <div class="post-card-byline-content">
+                <span><a href="https://coursework.vschool.io/author/bob/" target="_blank">Bob Ziroll</a></span>
+                <span class="post-card-byline-date"><time datetime="2015-12-01">1 Dec 2015</time> <span class="bull">â€¢</span> 3 min read</span>
+            </div>
+        </footer>
+
+    </div>
+
+</article>
+        </div>
+    </div>
+</aside>
+
+
+
+
+        <footer class="site-footer outer">
+            <div class="site-footer-content inner">
+                <section class="copyright"><a href="https://coursework.vschool.io/">V School | Better Humans, Better Outcomes</a> Â© 2021</section>
+                <nav class="site-footer-nav">
+                    <a href="https://coursework.vschool.io/">Latest Posts</a>
+                    
+                    
+                    <a href="https://ghost.org/" target="_blank" rel="noopener">Ghost</a>
+                </nav>
+            </div>
+        </footer>
+
+    </div>
+
+
+    
+    
+
+    
+
+    
+
+
+    <!-- You can safely delete this line if your theme does not require jQuery -->
+
+
+ 
+
+
+
+
+
+
+
+
+</body></html>
+------MultipartBoundary--I7RRUqu0RCy2EphqmEJZ1oH8kF9bgCaD66OcPF4Ue1----
+Content-Type: text/css
+Content-Transfer-Encoding: binary
+Content-Location: https://coursework.vschool.io/assets/built/screen.css?v=d6ad5d14aa
+
+@charset "utf-8";
+
+:root { --blue:#3eb0ef; --green:#a4d037; --purple:#ad26b4; --yellow:#fecd35; --red:#f05230; --darkgrey:#15171a; --midgrey:#738a94; --lightgrey:#c5d2d9; --whitegrey:#e5eff5; --pink:#fa3a57; --brown:#a3821a; --darkmode:#1a1c20; }
+
+a, abbr, acronym, address, applet, article, aside, audio, big, blockquote, body, canvas, caption, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, ul, var, video { margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 100%; vertical-align: baseline; }
+
+body { line-height: 1; }
+
+ol, ul { list-style: none; }
+
+blockquote, q { quotes: none; }
+
+blockquote::after, blockquote::before, q::after, q::before { content: none; }
+
+img { max-width: 100%; }
+
+html { box-sizing: border-box; font-family: sans-serif; text-size-adjust: 100%; }
+
+*, ::after, ::before { box-sizing: inherit; }
+
+a { background-color: transparent; }
+
+a:active, a:hover { outline: 0px; }
+
+b, strong { font-weight: 700; }
+
+dfn, em, i { font-style: italic; }
+
+h1 { margin: 0.67em 0px; font-size: 2em; }
+
+small { font-size: 80%; }
+
+sub, sup { position: relative; font-size: 75%; line-height: 0; vertical-align: baseline; }
+
+sup { top: -0.5em; }
+
+sub { bottom: -0.25em; }
+
+img { border: 0px; }
+
+svg:not(:root) { overflow: hidden; }
+
+mark { background-color: rgb(253, 255, 182); }
+
+code, kbd, pre, samp { font-family: monospace, monospace; font-size: 1em; }
+
+button, input, optgroup, select, textarea { margin: 0px; color: inherit; font: inherit; }
+
+button { overflow: visible; border: none; }
+
+button, select { text-transform: none; }
+
+button, html input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; -webkit-appearance: button; }
+
+button[disabled], html input[disabled] { cursor: default; }
+
+input { line-height: normal; }
+
+input:focus { outline: none; }
+
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; padding: 0px; }
+
+input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button { height: auto; }
+
+input[type="search"] { box-sizing: content-box; -webkit-appearance: textfield; }
+
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
+
+legend { padding: 0px; border: 0px; }
+
+textarea { overflow: auto; }
+
+table { border-spacing: 0px; border-collapse: collapse; }
+
+td, th { padding: 0px; }
+
+html { overflow-y: scroll; font-size: 62.5%; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+
+body, html { overflow-x: hidden; }
+
+body { color: rgb(48, 58, 62); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; font-size: 1.6rem; line-height: 1.6em; font-weight: 400; font-style: normal; letter-spacing: 0px; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; }
+
+::selection { text-shadow: none; background: rgb(203, 234, 251); }
+
+hr { position: relative; display: block; width: 100%; margin: 2.5em 0px 3.5em; padding: 0px; height: 1px; border-width: 1px 0px 0px; border-right-style: initial; border-bottom-style: initial; border-left-style: initial; border-right-color: initial; border-bottom-color: initial; border-left-color: initial; border-image: initial; border-top-style: solid; border-top-color: rgb(228, 234, 237); }
+
+audio, canvas, iframe, img, svg, video { vertical-align: middle; }
+
+fieldset { margin: 0px; padding: 0px; border: 0px; }
+
+textarea { resize: vertical; }
+
+blockquote, dl, ol, p, ul { margin: 0px 0px 1.5em; }
+
+ol, ul { padding-left: 1.3em; padding-right: 1.5em; }
+
+ol ol, ol ul, ul ol, ul ul { margin: 0.5em 0px 1em; }
+
+ul { list-style: disc; }
+
+ol { list-style: decimal; }
+
+ol, ul { max-width: 100%; }
+
+li { margin: 0.5em 0px; padding-left: 0.3em; line-height: 1.6em; }
+
+dt { float: left; margin: 0px 20px 0px 0px; width: 120px; color: var(--darkgrey); font-weight: 500; text-align: right; }
+
+dd { margin: 0px 0px 5px; text-align: left; }
+
+blockquote { margin: 1.5em 0px; padding: 0px 1.6em; border-left: 0.5em solid var(--whitegrey); }
+
+blockquote p { margin: 0.8em 0px; font-size: 1.2em; font-weight: 300; }
+
+blockquote small { display: inline-block; margin: 0.8em 0px 0.8em 1.5em; font-size: 0.9em; opacity: 0.8; }
+
+blockquote small::before { content: "â€”Â "; }
+
+blockquote cite { font-weight: 700; }
+
+blockquote cite a { font-weight: 400; }
+
+a { color: rgb(38, 166, 237); text-decoration: none; }
+
+a:hover { text-decoration: underline; }
+
+h1, h2, h3, h4, h5, h6 { margin-top: 0px; line-height: 1.15; font-weight: 600; text-rendering: optimizeLegibility; }
+
+h1 { margin: 0px 0px 0.5em; font-size: 5.5rem; font-weight: 600; }
+
+@media (max-width: 500px) {
+  h1 { font-size: 2.2rem; }
+}
+
+h2 { margin: 1.5em 0px 0.5em; font-size: 2.2rem; }
+
+@media (max-width: 500px) {
+  h2 { font-size: 1.8rem; }
+}
+
+h3 { margin: 1.5em 0px 0.5em; font-size: 1.8rem; font-weight: 500; }
+
+@media (max-width: 500px) {
+  h3 { font-size: 1.7rem; }
+}
+
+h4 { margin: 1.5em 0px 0.5em; font-size: 1.6rem; font-weight: 500; }
+
+h5, h6 { margin: 1.5em 0px 0.5em; font-size: 1.4rem; font-weight: 500; }
+
+body { background: rgb(255, 255, 255); }
+
+.img { display: block; width: 100%; height: 100%; background-position: 50% center; background-size: cover; border-radius: 100%; }
+
+.hidden { visibility: hidden; position: absolute; text-indent: -9999px; }
+
+.site-wrapper { display: flex; flex-direction: column; min-height: 100vh; }
+
+.site-main { z-index: 100; flex-grow: 1; }
+
+.outer { position: relative; padding: 0px 5vw; }
+
+.inner { margin: 0px auto; max-width: 1040px; width: 100%; }
+
+@media (min-width: 900px) {
+  .author-template .post-feed, .home-template .post-feed, .tag-template .post-feed { padding: 40px 0px 5vw; border-top-left-radius: 3px; border-top-right-radius: 3px; }
+  .home-template .site-nav { position: relative; }
+}
+
+.site-header-background { position: relative; margin-top: 64px; padding-bottom: 12px; color: rgb(255, 255, 255); background: 50% center / cover no-repeat rgb(10, 11, 12); }
+
+.site-header-background::before { bottom: 0px; background: rgba(0, 0, 0, 0.18); }
+
+.site-header-background::after, .site-header-background::before { content: ""; position: absolute; top: 0px; right: 0px; left: 0px; z-index: 10; display: block; }
+
+.site-header-background::after { bottom: auto; height: 140px; background: linear-gradient(rgba(0, 0, 0, 0.15), transparent); }
+
+.site-header-background.no-image::after, .site-header-background.no-image::before { display: none; }
+
+.site-header-content { z-index: 100; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 6vw 3vw; min-height: 200px; max-height: 340px; }
+
+.site-title { z-index: 10; margin: 0px 0px 0px -2px; padding: 0px; font-size: 5rem; line-height: 1em; font-weight: 600; }
+
+.site-logo { max-height: 55px; }
+
+.site-description { z-index: 10; margin: 0px; padding: 5px 0px; font-size: 2.1rem; line-height: 1.4em; font-weight: 400; opacity: 0.8; }
+
+.site-home-header { z-index: 1000; }
+
+.site-home-header .site-header-background { margin-top: 0px; }
+
+.site-home-header .site-header-content { padding: 5vw 3vw 6vw; }
+
+.site-home-header .site-title { font-size: 5.5rem; text-align: center; }
+
+.site-home-header .site-description { font-size: 2.2rem; font-weight: 300; text-align: center; }
+
+.site-archive-header .site-header-content { position: relative; align-items: stretch; padding: 12vw 0px 20px; min-height: 200px; max-height: 600px; }
+
+.site-archive-header .no-image { padding-top: 0px; padding-bottom: 0px; color: var(--darkgrey); background: rgb(255, 255, 255); opacity: 1; }
+
+.site-archive-header .no-image .site-description { color: var(--midgrey); opacity: 1; }
+
+.site-archive-header .no-image .site-header-content { padding: 5vw 0px 10px; border-bottom: 1px solid rgb(234, 239, 241); }
+
+@media (max-width: 900px) {
+  .site-header-content { padding-bottom: 9vw; }
+}
+
+@media (max-width: 500px) {
+  .site-home-header .site-title { font-size: 4.2rem; }
+  .site-home-header .site-description { font-size: 1.8rem; }
+  .site-archive-header .site-header-content { flex-direction: column; align-items: center; min-height: unset; }
+  .site-archive-header .site-title { font-size: 4.2rem; text-align: center; }
+  .site-archive-header .no-image .site-header-content { padding: 12vw 0px 20px; }
+}
+
+.site-nav-main { position: fixed; top: 0px; right: 0px; left: 0px; z-index: 1000; background: rgb(10, 11, 12); }
+
+.site-nav { position: relative; z-index: 100; display: flex; justify-content: space-between; align-items: flex-start; overflow: hidden; height: 64px; font-size: 1.3rem; }
+
+.site-nav-left-wrapper { position: relative; flex: 1 0 auto; display: flex; }
+
+.site-header-background:not(.responsive-header-img) .site-nav-left-wrapper::after, .site-nav-main .site-nav-left-wrapper::after { content: ""; position: absolute; top: 0px; z-index: 1000; width: 40px; height: 100%; right: 0px; background: linear-gradient(90deg, rgba(10, 11, 12, 0) 0px, rgb(10, 11, 12)); }
+
+.site-nav-left { flex: 1 0 auto; display: flex; align-items: center; overflow-x: auto; overflow-y: hidden; margin-right: 10px; padding: 10px 0px 80px; font-weight: 500; letter-spacing: 0.2px; text-transform: uppercase; white-space: nowrap; }
+
+.site-nav-left .nav li:last-of-type { padding-right: 20px; }
+
+.site-nav-logo { position: relative; z-index: 100; flex-shrink: 0; display: inline-block; margin-right: 32px; padding: 12px 0px; color: rgb(255, 255, 255); font-size: 1.7rem; line-height: 1.8rem; font-weight: 700; letter-spacing: -0.5px; text-transform: none; }
+
+.site-nav-logo:hover { text-decoration: none; }
+
+.site-nav-logo img { display: block; width: auto; height: 21px; }
+
+.site-home-header .site-nav-logo { display: none; }
+
+.site-nav-content { position: relative; align-self: flex-start; }
+
+.nav { position: absolute; z-index: 1000; display: flex; margin: 0px 0px 0px -12px; padding: 0px; list-style: none; transition: all 1s cubic-bezier(0.19, 1, 0.22, 1); }
+
+.nav li { display: block; margin: 0px; padding: 0px; }
+
+.nav li a { position: relative; display: block; padding: 12px; color: rgb(255, 255, 255); opacity: 0.8; transition: opacity 0.35s ease-in-out; }
+
+.nav li a:hover { text-decoration: none; opacity: 1; }
+
+.nav li a::before { content: ""; position: absolute; right: 100%; bottom: 8px; left: 12px; height: 1px; background: rgb(255, 255, 255); opacity: 0.25; transition: all 0.35s ease-in-out; }
+
+.nav li a:hover::before { right: 12px; opacity: 0.5; }
+
+.nav-post-title-active .nav { visibility: hidden; opacity: 0; transform: translateY(-175%); }
+
+.nav-post-title { visibility: hidden; position: absolute; top: 9px; color: rgb(255, 255, 255); font-size: 1.7rem; font-weight: 400; text-transform: none; opacity: 0; transition: all 1s cubic-bezier(0.19, 1, 0.22, 1); transform: translateY(175%); }
+
+.nav-post-title.dash { left: -25px; }
+
+.nav-post-title.dash::before { content: "â€“ "; opacity: 0.5; }
+
+.nav-post-title-active .nav-post-title { visibility: visible; opacity: 1; transform: translateY(0px); }
+
+.site-nav-right { flex: 0 1 auto; display: flex; justify-content: flex-end; align-items: center; padding: 10px 0px; height: 64px; }
+
+.site-nav-right .nav { position: relative; margin: 0px; }
+
+.site-nav-right .nav a { white-space: nowrap; }
+
+.site-nav-right .nav a::before { display: none; }
+
+.site-nav-right .nav li:last-of-type a { margin-right: -12px; }
+
+.social-links { flex-shrink: 0; display: flex; align-items: center; }
+
+.social-link { display: inline-block; margin: 0px; padding: 10px; opacity: 0.8; }
+
+.social-link:hover { opacity: 1; }
+
+.social-link svg { height: 1.8rem; fill: rgb(255, 255, 255); }
+
+.social-link-fb svg, .social-link-wb svg { height: 1.6rem; }
+
+.social-link-wb svg path { stroke: rgb(255, 255, 255); }
+
+.social-link-rss svg { height: 1.9rem; }
+
+.subscribe-button { display: block; margin: 0px 0px 0px 10px; padding: 4px 10px; border: 1px solid rgb(255, 255, 255); color: rgb(255, 255, 255); line-height: 1em; border-radius: 10px; opacity: 0.8; }
+
+.subscribe-button:hover { text-decoration: none; opacity: 1; }
+
+.site-nav-right .nav + .subscribe-button { margin-left: 24px; }
+
+.rss-button { padding: 10px 8px; opacity: 0.8; }
+
+.rss-button:hover { opacity: 1; }
+
+.rss-button svg { margin-bottom: 1px; height: 2.1rem; fill: rgb(255, 255, 255); }
+
+.home-template .site-nav-main { z-index: 100; }
+
+.home-template .site-nav-main .site-nav { opacity: 0; transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1) 0s; }
+
+.home-template .site-nav-main .fixed-nav-active { opacity: 1; transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1) 0.05s; }
+
+@media (max-width: 700px) {
+  .site-home-header .site-nav { margin-left: -5vw; }
+  .site-nav-main { padding-right: 0px; padding-left: 0px; }
+  .site-nav-left { margin-right: 0px; padding-left: 5vw; }
+  .site-nav-right { display: none; }
+}
+
+.posts { overflow-x: hidden; }
+
+.post-feed { flex-wrap: wrap; margin: 0px -20px; padding: 50px 0px 0px; background: rgb(255, 255, 255); }
+
+.post-card, .post-feed { position: relative; display: flex; }
+
+.post-card { flex: 1 1 301px; flex-direction: column; overflow: hidden; margin: 0px 0px 40px; padding: 0px 20px 40px; min-height: 220px; border-bottom: 1px solid rgb(234, 239, 241); background-size: cover; }
+
+.post-card-image-link { position: relative; display: block; overflow: hidden; border-radius: 3px; }
+
+.post-card-image { width: 100%; height: 200px; background: var(--lightgrey) no-repeat 50%; object-fit: cover; }
+
+.post-card-content-link { position: relative; display: block; color: var(--darkgrey); }
+
+.post-card-content-link:hover { text-decoration: none; }
+
+.post-card-header { margin: 15px 0px 0px; }
+
+.post-feed .no-image .post-card-content-link { padding: 0px; }
+
+.no-image .post-card-header { margin-top: 0px; }
+
+.post-card-primary-tag { margin: 0px 0px 0.2em; color: var(--blue); font-size: 1.2rem; font-weight: 500; letter-spacing: 0.2px; text-transform: uppercase; }
+
+.post-card-title { margin: 0px 0px 0.4em; line-height: 1.15em; transition: color 0.2s ease-in-out; }
+
+.no-image .post-card-title { margin-top: 0px; }
+
+.post-card-content { flex-grow: 1; display: flex; flex-direction: column; }
+
+.post-card-excerpt { max-width: 56em; color: var(--midgrey); font-family: Georgia, serif; }
+
+.post-card-excerpt p { margin-bottom: 1em; }
+
+.post-card-meta { display: flex; align-items: flex-start; padding: 0px; }
+
+.author-profile-image, .avatar-wrapper { display: block; width: 100%; height: 100%; background: rgb(228, 234, 237); border-radius: 100%; object-fit: cover; }
+
+.post-card-meta .avatar-wrapper, .post-card-meta .profile-image-wrapper { position: relative; }
+
+.author-list { display: flex; flex-wrap: wrap; margin: 0px 0px 0px 4px; padding: 0px; list-style: none; }
+
+.author-list-item { position: relative; flex-shrink: 0; margin: 0px; padding: 0px; }
+
+.static-avatar { display: block; overflow: hidden; margin: 0px 0px 0px -6px; width: 34px; height: 34px; border: 2px solid rgb(255, 255, 255); border-radius: 100%; }
+
+.author-name-tooltip { position: absolute; bottom: 105%; z-index: 999; display: block; padding: 2px 8px; color: rgb(255, 255, 255); font-size: 1.2rem; letter-spacing: 0.2px; white-space: nowrap; background: var(--darkgrey); border-radius: 3px; box-shadow: rgba(39, 44, 49, 0.08) 0px 12px 26px, rgba(39, 44, 49, 0.03) 1px 3px 8px; opacity: 0; transition: all 0.35s cubic-bezier(0.4, 0.01, 0.165, 0.99); transform: translateY(6px); pointer-events: none; }
+
+.author-list-item:hover .author-name-tooltip { opacity: 1; transform: translateY(0px); }
+
+@media (max-width: 700px) {
+  .author-name-tooltip { display: none; }
+}
+
+.post-card-byline-content { flex: 1 1 50%; display: flex; flex-direction: column; margin: 2px 0px 0px 6px; color: rgb(144, 162, 170); font-size: 1.2rem; line-height: 1.4em; font-weight: 400; letter-spacing: 0.2px; text-transform: uppercase; }
+
+.post-card-byline-content span { margin: 0px; }
+
+.post-card-byline-content a { color: rgb(67, 73, 82); font-weight: 600; }
+
+.post-card-byline-date { font-size: 1.2rem; }
+
+.post-card-byline-date .bull { display: inline-block; margin: 0px 4px; opacity: 0.6; }
+
+.single-author-byline { display: flex; flex-direction: column; margin-left: 5px; color: rgb(92, 112, 120); font-size: 1.3rem; line-height: 1.4em; font-weight: 500; }
+
+.single-author { display: flex; align-items: center; }
+
+.single-author .static-avatar { margin-left: -2px; }
+
+.single-author-name { display: inline-block; }
+
+@media (min-width: 795px) {
+  .post-card-large { flex: 1 1 100%; flex-direction: row; padding-bottom: 40px; min-height: 280px; border-top: 0px; }
+  .post-card-large:hover { border-bottom-color: rgb(228, 234, 237); }
+  .post-card-large:not(.no-image) .post-card-header { margin-top: 0px; }
+  .post-card-large .post-card-image-link { position: relative; flex: 1 1 auto; margin-bottom: 0px; min-height: 380px; }
+  .post-card-large .post-card-image { position: absolute; width: 100%; height: 100%; }
+  .post-card-large .post-card-content { flex: 0 1 361px; justify-content: center; }
+  .post-card-large .post-card-title { margin-top: 0px; font-size: 3.2rem; }
+  .post-card-large .post-card-content-link, .post-card-large .post-card-meta { padding: 0px 0px 0px 40px; }
+  .post-card-large .post-card-excerpt p { margin-bottom: 1.5em; font-size: 1.8rem; line-height: 1.5em; }
+}
+
+@media (max-width: 1170px) {
+  .post-card { margin-bottom: 5vw; }
+}
+
+@media (max-width: 650px) {
+  .post-feed { padding-top: 5vw; }
+  .post-card { margin-bottom: 5vw; }
+}
+
+@media (max-width: 500px) {
+  .post-card-title { font-size: 1.9rem; }
+  .post-card-excerpt { font-size: 1.6rem; }
+}
+
+.page-template .site-main, .post-template .site-main { margin-top: 64px; padding-bottom: 4vw; background: rgb(255, 255, 255); }
+
+.post-full-header { position: relative; margin: 0px auto; padding: 70px 170px 50px; border-top-left-radius: 3px; border-top-right-radius: 3px; }
+
+.post-full-tags { display: flex; justify-content: flex-start; align-items: center; color: var(--midgrey); font-size: 1.3rem; line-height: 1.4em; font-weight: 600; text-transform: uppercase; }
+
+.post-full-meta-date { color: var(--midgrey); font-size: 1.2rem; font-weight: 400; }
+
+@media (max-width: 1170px) {
+  .post-full-header { padding: 60px 11vw 50px; }
+}
+
+@media (max-width: 800px) {
+  .post-full-header { padding-right: 5vw; padding-left: 5vw; }
+}
+
+@media (max-width: 500px) {
+  .post-full-header { padding: 20px 0px 35px; }
+}
+
+.post-full-title { margin: 0px 0px 0.2em; color: rgb(10, 11, 12); }
+
+.post-full-custom-excerpt { margin: 20px 0px 0px; color: var(--midgrey); font-family: Georgia, serif; font-size: 2.3rem; line-height: 1.4em; font-weight: 300; }
+
+.date-divider { display: inline-block; margin: 0px 6px 1px; font-weight: 300; }
+
+.post-full-image { display: flex; flex-direction: column; align-items: center; overflow: hidden; margin: 25px 0px 50px; background: rgb(228, 234, 237); border-radius: 3px; }
+
+.post-full-image img { max-width: 1040px; width: 100%; height: auto; }
+
+.post-full-content { position: relative; margin: 0px auto; padding: 0px 170px 6vw; min-height: 230px; font-family: Georgia, serif; font-size: 2rem; line-height: 1.6em; background: rgb(255, 255, 255); }
+
+@media (max-width: 1170px) {
+  .post-full-content { padding: 0px 11vw; }
+}
+
+@media (max-width: 800px) {
+  .post-full-content { padding: 0px 5vw; font-size: 1.8rem; }
+}
+
+@media (max-width: 500px) {
+  .post-full-custom-excerpt { font-size: 1.9rem; line-height: 1.5em; }
+}
+
+.no-image .post-full-content { padding-top: 0px; }
+
+.no-image .post-full-content::after, .no-image .post-full-content::before { display: none; }
+
+.footnotes, .post-full-comments, .post-full-content blockquote, .post-full-content dl, .post-full-content h1, .post-full-content h2, .post-full-content h3, .post-full-content h4, .post-full-content h5, .post-full-content h6, .post-full-content ol, .post-full-content p, .post-full-content pre, .post-full-content ul { margin: 0px 0px 1.5em; min-width: 100%; }
+
+@media (max-width: 500px) {
+  .footnotes, .post-full-comments, .post-full-content dl, .post-full-content ol, .post-full-content p, .post-full-content pre, .post-full-content ul { margin-bottom: 1.28em; }
+}
+
+.post-full-content li { word-break: break-word; }
+
+.post-full-content li p { margin: 0px; }
+
+.post-full-content a { color: var(--darkgrey); word-break: break-word; box-shadow: var(--darkgrey) 0 -1px 0 inset; transition: all 0.2s ease-in-out; }
+
+.post-full-content a:hover { color: var(--blue); text-decoration: none; box-shadow: var(--blue) 0 -1px 0 inset; }
+
+.post-full-content em, .post-full-content strong { color: rgb(10, 11, 12); }
+
+.post-full-content small { display: inline-block; line-height: 1.6em; }
+
+.post-full-content li:first-child { margin-top: 0px; }
+
+.post-full-content img, .post-full-content video { display: block; margin: 1.5em auto; max-width: 1040px; height: auto; }
+
+@media (max-width: 1040px) {
+  .post-full-content img, .post-full-content video { width: 100%; }
+}
+
+.post-full-content img[src$="#full"] { max-width: none; width: 100vw; }
+
+.post-full-content img + br + small { display: block; margin-top: -3em; margin-bottom: 1.5em; text-align: center; }
+
+.post-full-content iframe { margin: 0px auto !important; }
+
+.post-full-content blockquote { margin: 0px 0px 1.5em; padding: 0px 1.5em; border-left: 3px solid rgb(62, 176, 239); }
+
+@media (max-width: 500px) {
+  .post-full-content blockquote { padding: 0px 1.3em; }
+}
+
+.post-full-content blockquote p { margin: 0px 0px 1em; color: inherit; font-size: inherit; line-height: inherit; font-style: italic; }
+
+.post-full-content blockquote p:last-child { margin-bottom: 0px; }
+
+.post-full-content code { padding: 0px 5px 2px; font-size: 0.8em; line-height: 1em; background: var(--whitegrey); border-radius: 3px; font-weight: 400 !important; }
+
+.post-full-content p code { word-break: break-all; }
+
+.post-full-content pre { overflow-x: auto; margin: 1.5em 0px 3em; padding: 20px; max-width: 100%; border: 1px solid rgb(0, 0, 0); color: var(--whitegrey); font-size: 1.4rem; line-height: 1.5em; background: rgb(14, 16, 18); border-radius: 5px; }
+
+.post-full-content pre ::selection { color: rgb(59, 71, 77); }
+
+.post-full-content pre code { padding: 0px; font-size: inherit; line-height: inherit; background: transparent; }
+
+.post-full-content pre code :not(span) { color: inherit; }
+
+.post-full-content .fluid-width-video-wrapper { margin: 1.5em 0px 3em; }
+
+.post-full-content hr { margin: 2em 0px; }
+
+.post-full-content hr::after { content: ""; position: absolute; top: -15px; left: 50%; display: block; margin-left: -10px; width: 1px; height: 30px; background: rgb(228, 234, 237); box-shadow: rgb(255, 255, 255) 0px 0px 0px 5px; transform: rotate(45deg); }
+
+.post-full-content hr + p { margin-top: 1.2em; }
+
+.post-full-content h1, .post-full-content h2, .post-full-content h3, .post-full-content h4, .post-full-content h5, .post-full-content h6 { color: rgb(10, 11, 12); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; }
+
+.post-full-content h1 { margin: 0.5em 0px 0.4em; font-size: 4.2rem; line-height: 1.25em; font-weight: 600; }
+
+.post-full-content p + h1 { margin-top: 0.8em; }
+
+@media (max-width: 800px) {
+  .post-full-content h1 { font-size: 3.2rem; line-height: 1.25em; }
+}
+
+.post-full-content h2 { margin: 0.5em 0px 0.4em; font-size: 3.2rem; line-height: 1.25em; font-weight: 600; }
+
+.post-full-content p + h2 { margin-top: 0.8em; }
+
+@media (max-width: 800px) {
+  .post-full-content h2 { margin-bottom: 0.3em; font-size: 2.8rem; line-height: 1.25em; }
+}
+
+.post-full-content h3 { margin: 0.5em 0px 0.2em; font-size: 2.5rem; line-height: 1.3em; font-weight: 600; }
+
+.post-full-content h2 + h3 { margin-top: 0.7em; }
+
+@media (max-width: 800px) {
+  .post-full-content h3 { margin-bottom: 0.3em; font-size: 2.4rem; line-height: 1.3em; }
+}
+
+.post-full-content h4 { margin: 0.5em 0px 0.2em; font-size: 2.5rem; font-weight: 600; }
+
+.post-full-content h2 + h4 { margin-top: 0.7em; }
+
+.post-full-content h3 + h4 { margin-top: 0px; }
+
+@media (max-width: 800px) {
+  .post-full-content h4 { margin-bottom: 0.3em; font-size: 2.4rem; line-height: 1.3em; }
+}
+
+.post-full-content h5 { display: block; margin: 0.5em 0px; padding: 0.4em 1em 0.9em; border: 0px; color: var(--blue); font-family: Georgia, serif; font-size: 3.2rem; line-height: 1.35em; text-align: center; }
+
+@media (min-width: 1180px) {
+  .post-full-content h5 { max-width: 1060px; width: 100vw; }
+}
+
+@media (max-width: 800px) {
+  .post-full-content h5 { margin-bottom: 1em; margin-left: 1.3em; padding: 0px 0px 0.5em; font-size: 2.4rem; text-align: initial; }
+}
+
+.post-full-content h6 { margin: 0.5em 0px 0.2em; font-size: 2rem; font-weight: 700; }
+
+@media (max-width: 800px) {
+  .post-full-content h6 { font-size: 1.8rem; line-height: 1.4em; }
+}
+
+.footnotes-sep { margin-bottom: 30px; }
+
+.footnotes { font-size: 1.5rem; }
+
+.footnotes p { margin: 0px; }
+
+.footnote-backref { font-size: 1.2rem; font-weight: 700; color: var(--blue) !important; text-decoration: none !important; box-shadow: none !important; }
+
+@media (max-width: 1170px) {
+  .post-full-image { margin: 25px -6vw 50px; border-radius: 0px; }
+  .post-full-image img { max-width: 1170px; }
+}
+
+@media (max-width: 700px) {
+  .post-full-image { margin: 25px -5vw; }
+}
+
+@media (max-width: 500px) {
+  .post-full-meta { font-size: 1.2rem; line-height: 1.3em; }
+  .post-full-title { margin-top: 0.2em; font-size: 4.2rem; line-height: 1.05em; }
+  .post-full-image { margin-top: 5px; margin-bottom: 5vw; }
+  .post-full-content { padding: 0px; }
+  .post-full-content::after, .post-full-content::before { display: none; }
+}
+
+.post-full-content table { display: inline-block; overflow-x: auto; margin: 0.5em 0px 2.5em; max-width: 100%; width: auto; border-spacing: 0px; border-collapse: collapse; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; font-size: 1.6rem; white-space: nowrap; vertical-align: top; background: radial-gradient(at left center, rgba(0, 0, 0, 0.2) 0px, transparent 75%) 0px center / 10px 100% no-repeat scroll, radial-gradient(at right center, rgba(0, 0, 0, 0.2) 0px, transparent 75%) 100% center / 10px 100% scroll; }
+
+.post-full-content table td:first-child { background-image: linear-gradient(90deg, rgb(255, 255, 255) 50%, rgba(255, 255, 255, 0)); background-size: 20px 100%; background-repeat: no-repeat; }
+
+.post-full-content table td:last-child { background-image: linear-gradient(270deg, rgb(255, 255, 255) 50%, rgba(255, 255, 255, 0)); background-position: 100% 0px; background-size: 20px 100%; background-repeat: no-repeat; }
+
+.post-full-content table th { color: var(--darkgrey); font-size: 1.2rem; font-weight: 700; letter-spacing: 0.2px; text-align: left; text-transform: uppercase; background-color: rgb(244, 248, 251); }
+
+.post-full-content table td, .post-full-content table th { padding: 6px 12px; border: 1px solid rgb(226, 236, 243); }
+
+.post-full-byline { display: flex; justify-content: space-between; margin: 35px 0px 0px; padding-top: 15px; border-top: 1px solid rgb(228, 234, 237); }
+
+.post-full-byline-content { flex-grow: 1; display: flex; align-items: flex-start; }
+
+.post-full-byline-content .author-list { justify-content: flex-start; padding: 0px 12px 0px 0px; }
+
+.post-full-byline-meta { margin: 2px 0px 0px; color: rgb(144, 162, 170); font-size: 1.2rem; line-height: 1.2em; letter-spacing: 0.2px; text-transform: uppercase; }
+
+.post-full-byline-meta h4 { margin: 0px 0px 3px; font-size: 1.3rem; line-height: 1.4em; font-weight: 500; }
+
+.post-full-byline-meta h4 a { color: rgb(44, 48, 54); }
+
+.post-full-byline-meta h4 a:hover { color: var(--darkgrey); }
+
+.post-full-byline-meta .bull { display: inline-block; margin: 0px 4px; opacity: 0.6; }
+
+.author-avatar { display: block; overflow: hidden; margin: 0px -4px; width: 40px; height: 40px; border: 2px solid rgb(255, 255, 255); border-radius: 100%; transition: all 0.5s cubic-bezier(0.4, 0.01, 0.165, 0.99) 0.7s; }
+
+.author-list-item .author-card { position: absolute; bottom: 130%; left: 50%; z-index: 600; display: flex; justify-content: space-between; margin-left: -200px; width: 400px; font-size: 1.4rem; line-height: 1.5em; background: rgb(255, 255, 255); border-radius: 3px; box-shadow: rgba(39, 44, 49, 0.08) 0px 12px 26px, rgba(39, 44, 49, 0.06) 1px 3px 8px; opacity: 0; transition: all 0.35s cubic-bezier(0.4, 0.01, 0.165, 0.99); transform: scale(0.98) translateY(15px); pointer-events: none; }
+
+.author-list-item .author-card::before { content: ""; position: absolute; top: 100%; left: 50%; display: block; margin-left: -8px; width: 0px; height: 0px; border-top: 8px solid rgb(255, 255, 255); border-right: 8px solid transparent; border-left: 8px solid transparent; }
+
+.author-list-item .author-card.hovered { opacity: 1; transform: scale(1) translateY(0px); pointer-events: auto; }
+
+.author-card { padding: 20px 20px 22px; }
+
+.author-card .author-info { flex: 1 1 auto; padding: 0px 0px 0px 20px; }
+
+.author-card .author-info h2 { margin: 8px 0px 0px; font-size: 1.6rem; }
+
+.author-card .author-info p { margin: 4px 0px 0px; color: rgb(92, 112, 120); }
+
+.author-card .author-info .bio h2 { margin-top: 0px; }
+
+.author-card .author-info .bio p { margin-top: 0.8em; }
+
+.author-card .author-profile-image { flex: 0 0 60px; margin: 0px; width: 60px; height: 60px; border: none; }
+
+.basic-info .avatar-wrapper { position: relative; margin: 0px; width: 60px; height: 60px; border: none; background: rgba(229, 239, 245, 0.1); }
+
+.basic-info .avatar-wrapper svg { margin: 0px; width: 60px; height: 60px; opacity: 0.15; }
+
+@media (max-width: 1170px) {
+  .author-list-item .author-card { margin-left: -50px; width: 430px; }
+  .author-list-item .author-card::before { left: 50px; }
+}
+
+@media (max-width: 650px) {
+  .author-list-item .author-card { display: none; }
+}
+
+@media (max-width: 500px) {
+  .author-avatar { width: 36px; height: 36px; }
+  .post-full-byline { margin-top: 20px; }
+  .post-full-byline-meta { font-size: 1.2rem; }
+  .post-full-byline-meta h4 { margin-bottom: 2px; font-size: 1.2rem; }
+}
+
+.subscribe-form { margin: 1.5em 0px; padding: 6.5vw 7vw 8vw; border: 1px solid rgb(228, 234, 237); text-align: center; background: linear-gradient(rgb(251, 253, 254), rgb(244, 248, 251)); border-radius: 3px; }
+
+.subscribe-form-title { margin: 0px 0px 3px; padding: 0px; color: var(--darkgrey); font-size: 3.5rem; line-height: 1; font-weight: 600; }
+
+.subscribe-form-description { color: var(--midgrey); font-size: 2.1rem; line-height: 1.55em; }
+
+.subscribe-form form { display: flex; flex-direction: column; justify-content: center; align-items: center; margin: 0px auto; max-width: 460px; }
+
+.subscribe-form .form-group { align-self: stretch; display: flex; }
+
+.subscribe-email { display: block; padding: 10px; width: 100%; border: 1px solid rgb(219, 227, 231); color: var(--midgrey); font-size: 1.8rem; line-height: 1em; font-weight: 400; user-select: text; border-radius: 5px; transition: border-color 0.15s linear; -webkit-appearance: none; }
+
+.subscribe-form button { position: relative; display: inline-block; margin: 0px 0px 0px 10px; padding: 0px 20px; height: 43px; outline: none; color: rgb(255, 255, 255); font-size: 1.5rem; line-height: 39px; font-weight: 400; text-align: center; background: linear-gradient(rgb(80, 182, 239), rgb(41, 159, 224) 60%, rgb(41, 159, 224) 90%, rgb(55, 165, 226)); border-radius: 5px; -webkit-font-smoothing: subpixel-antialiased; }
+
+.subscribe-form button:active, .subscribe-form button:focus { background: rgb(32, 155, 223); }
+
+.subscribe-form .button-loader, .subscribe-form .message-error, .subscribe-form .message-success { display: none; }
+
+.subscribe-form .loading .button-content { visibility: hidden; }
+
+.subscribe-form .loading .button-loader { position: absolute; top: 0px; left: 50%; display: inline-block; margin-left: -19px; transform: scale(0.7); }
+
+.subscribe-form .button-loader svg path, .subscribe-form .button-loader svg rect { fill: rgb(255, 255, 255); }
+
+.subscribe-form .error .message-error, .subscribe-form .invalid .message-error, .subscribe-form .success .message-success { margin: 1em auto 0px; max-width: 400px; color: var(--red); font-size: 1.6rem; line-height: 1.5em; text-align: center; }
+
+.subscribe-form .success .message-success { display: block; color: rgb(150, 192, 45); }
+
+.subscribe-form .error .message-error, .subscribe-form .invalid .message-error { display: block; }
+
+@media (max-width: 650px) {
+  .subscribe-form-title { font-size: 2.4rem; }
+  .subscribe-form-description { font-size: 1.6rem; }
+}
+
+@media (max-width: 500px) {
+  .subscribe-form form { flex-direction: column; }
+  .subscribe-form .form-group { flex-direction: column; width: 100%; }
+  .subscribe-form button { margin: 10px 0px 0px; width: 100%; }
+}
+
+.post-full-comments { margin: 0px auto; max-width: 840px; }
+
+.read-next { border-bottom: 1px solid rgba(255, 255, 255, 0.1); background: rgb(10, 11, 12); }
+
+.read-next-feed { display: flex; flex-wrap: wrap; margin: 0px -25px; padding: 60px 0px 0px; }
+
+.read-next .post-card { padding-bottom: 0px; border-bottom: none; }
+
+.read-next .post-card::after { display: none; }
+
+.read-next .post-card-primary-tag { color: rgb(255, 255, 255); opacity: 0.6; }
+
+.read-next .post-card-title { color: rgb(255, 255, 255); opacity: 0.8; transition: all 0.2s ease-in-out; }
+
+.read-next .post-card:hover .post-card-image { opacity: 1; }
+
+.read-next .post-card-excerpt { color: rgba(255, 255, 255, 0.6); }
+
+.read-next .static-avatar { border-color: rgb(0, 0, 0); }
+
+.read-next .post-card-byline-content { color: rgba(255, 255, 255, 0.6); }
+
+.read-next .post-card-byline-content a { color: rgba(255, 255, 255, 0.8); }
+
+.read-next-card { position: relative; flex: 0 1 326px; display: flex; flex-direction: column; overflow: hidden; margin: 0px 25px 50px; padding: 25px; background: linear-gradient(rgb(26, 28, 32), rgb(10, 11, 12)); border-radius: 3px; }
+
+.read-next-card a { transition: all 0.2s ease-in-out; }
+
+.read-next-card a:hover { text-decoration: none; }
+
+.read-next-card-header h3 { margin: 0px; color: rgba(255, 255, 255, 0.6); font-size: 1.2rem; line-height: 1em; font-weight: 300; letter-spacing: 0.4px; text-transform: uppercase; }
+
+.read-next-card-header h3 a { color: rgb(255, 255, 255); font-weight: 500; text-decoration: none; opacity: 0.8; }
+
+.read-next-card-header h3 a:hover { opacity: 1; }
+
+.read-next-card-content { font-size: 1.7rem; }
+
+.read-next-card-content ul { display: flex; flex-direction: column; margin: 0px; padding: 0px; list-style: none; }
+
+.read-next-card-content li { display: flex; flex-direction: column; align-items: flex-start; margin: 0px; padding: 20px 0px; border-bottom: rgba(255, 255, 255, 0.1); }
+
+.read-next-card-content li:last-of-type { padding-bottom: 5px; border: none; }
+
+.read-next-card-content h4 { margin: 0px; font-size: 1.6rem; line-height: 1.35em; font-weight: 600; }
+
+.read-next-card-content li a { display: block; color: rgb(255, 255, 255); opacity: 0.8; }
+
+.read-next-card-content li a:hover { opacity: 1; }
+
+.read-next-card-excerpt { overflow: hidden; max-width: 100%; font-size: 1.4rem; line-height: 1.2em; text-overflow: ellipsis; }
+
+.read-next-card-meta { margin-top: 2px; font-size: 1.2rem; line-height: 1.4em; font-weight: 400; }
+
+.read-next-card-meta p { margin: 0px; color: rgba(255, 255, 255, 0.6); }
+
+.read-next-card-footer { position: relative; margin: 40px 0px 5px; }
+
+.read-next-card-footer a { padding: 7px 12px 8px 14px; border: 1px solid rgba(255, 255, 255, 0.6); color: rgba(255, 255, 255, 0.6); font-size: 1.3rem; border-radius: 999px; transition: all 0.35s ease-in-out; }
+
+.read-next-card-footer a:hover { border-color: var(--yellow); color: var(--yellow); text-decoration: none; }
+
+@media (max-width: 1170px) {
+  .read-next-card { flex: 1 1 261px; margin-bottom: 5vw; }
+}
+
+@media (max-width: 650px) {
+  .read-next-feed { flex-direction: column; padding: 25px 0px 0px; }
+  .read-next-card { flex: 1 1 auto; margin: 0px 25px; padding: 0px; background: none; }
+  .read-next .post-card { flex: 1 1 auto; margin: 25px; padding: 25px 0px 0px; border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+}
+
+.post-content { display: flex; flex-direction: column; align-items: center; }
+
+.post-full-content .kg-image { margin: 0px auto; max-width: 100%; }
+
+.post-full-image + .post-full-content .kg-content :first-child .kg-image { width: 100%; }
+
+.post-full-content .kg-width-wide .kg-image { max-width: 1040px; }
+
+.post-full-content .kg-width-full .kg-image { max-width: 100vw; }
+
+.post-full-content figure { margin: 0.8em 0px 2.3em; }
+
+.post-full-content h1 + figure, .post-full-content h2 + figure, .post-full-content h3 + figure, .post-full-content h4 + figure { margin-top: 2em; }
+
+.post-full-content figure img { margin: 0px; }
+
+.post-full-content figcaption { margin: 1em auto 0px; color: rgb(92, 112, 120); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; font-size: 75%; line-height: 1.5em; text-align: center; max-width: 1040px; }
+
+.kg-width-full figcaption { padding: 0px 1.5em; }
+
+.kg-embed-card { display: flex; flex-direction: column; align-items: center; width: 100%; }
+
+.kg-embed-card .fluid-width-video-wrapper { margin: 0px; }
+
+@media (max-width: 1040px) {
+  .post-full-content .kg-width-full .kg-image { width: 100vw; }
+}
+
+.kg-gallery-container { display: flex; flex-direction: column; max-width: 1040px; width: 100vw; }
+
+.kg-gallery-row { display: flex; flex-direction: row; justify-content: center; }
+
+.kg-gallery-image img { display: block; margin: 0px; width: 100%; height: 100%; }
+
+.kg-gallery-row:not(:first-of-type) { margin: 0.75em 0px 0px; }
+
+.kg-gallery-image:not(:first-of-type) { margin: 0px 0px 0px 0.75em; }
+
+.kg-gallery-card + .kg-gallery-card, .kg-gallery-card + .kg-image-card.kg-width-wide, .kg-image-card.kg-width-wide + .kg-gallery-card, .kg-image-card.kg-width-wide + .kg-image-card.kg-width-wide { margin: -2.25em 0px 3em; }
+
+.kg-code-card { width: 100%; }
+
+.kg-code-card pre { margin: 0px; }
+
+.kg-bookmark-card { width: 100%; }
+
+.kg-card + .kg-bookmark-card { margin-top: 0px; }
+
+.post-full-content .kg-bookmark-container { display: flex; min-height: 148px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; border-radius: 3px; }
+
+.post-full-content .kg-bookmark-container, .post-full-content .kg-bookmark-container:hover { color: var(--darkgrey); text-decoration: none; box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 5px -1px, rgba(0, 0, 0, 0.09) 0px 0px 1px; }
+
+.kg-bookmark-content { flex-grow: 1; display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; padding: 20px; }
+
+.kg-bookmark-title { color: rgb(48, 58, 62); font-size: 1.6rem; line-height: 1.5em; font-weight: 600; transition: color 0.2s ease-in-out; }
+
+.post-full-content .kg-bookmark-container:hover .kg-bookmark-title { color: var(--blue); }
+
+.kg-bookmark-description { display: -webkit-box; overflow-y: hidden; margin-top: 12px; max-height: 48px; color: rgb(92, 112, 120); font-size: 1.5rem; line-height: 1.5em; font-weight: 400; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+
+.kg-bookmark-thumbnail { position: relative; min-width: 33%; max-height: 100%; }
+
+.kg-bookmark-thumbnail img { position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; border-radius: 0px 3px 3px 0px; object-fit: cover; }
+
+.kg-bookmark-metadata { display: flex; flex-wrap: wrap; align-items: center; margin-top: 14px; color: var(--darkgrey); font-size: 1.5rem; font-weight: 500; }
+
+.post-full-content .kg-bookmark-icon { margin-right: 8px; width: 22px; height: 22px; }
+
+.kg-bookmark-author { line-height: 1.5em; }
+
+.kg-bookmark-author::after { content: "â€¢"; margin: 0px 6px; }
+
+.kg-bookmark-publisher { overflow: hidden; max-width: 240px; line-height: 1.5em; text-overflow: ellipsis; white-space: nowrap; color: rgb(92, 112, 120); font-weight: 400; }
+
+@media (max-width: 800px) {
+  .post-full-content figure { margin: 0.2em 0px 1.3em; }
+  .post-full-content h1 + figure, .post-full-content h2 + figure, .post-full-content h3 + figure, .post-full-content h4 + figure { margin-top: 0.9em; }
+}
+
+@media (max-width: 500px) {
+  .post-full-content .kg-width-full, .post-full-content .kg-width-wide { margin-right: -5vw; margin-left: -5vw; }
+  .post-full-content figcaption { margin-bottom: 0.4em; }
+  .post-full-content .kg-bookmark-container { flex-direction: column; }
+  .kg-bookmark-description, .kg-bookmark-metadata, .kg-bookmark-title { font-size: 1.4rem; line-height: 1.5em; }
+  .post-full-content .kg-bookmark-icon { width: 18px; height: 18px; }
+  .kg-bookmark-thumbnail { order: 1; min-height: 160px; width: 100%; }
+  .kg-bookmark-thumbnail img { border-radius: 3px 3px 0px 0px; }
+  .kg-bookmark-content { order: 2; }
+}
+
+.author-header { display: flex; flex-direction: row; justify-content: flex-start; align-items: flex-start; padding: 10vw 0px 10px; }
+
+.site-archive-header .author-header { align-items: center; }
+
+.site-archive-header .no-image .author-header { padding-bottom: 20px; }
+
+.author-header-content { display: flex; flex-direction: column; justify-content: center; margin: 5px 0px 0px 30px; }
+
+.site-header-content .author-profile-image { z-index: 10; flex-shrink: 0; margin: -4px 0px 0px; width: 110px; height: 110px; box-shadow: rgba(255, 255, 255, 0.1) 0px 0px 0px 6px; }
+
+.author-header-content .author-bio { z-index: 10; flex-shrink: 0; margin: 6px 0px 0px; max-width: 46em; font-size: 2rem; line-height: 1.3em; font-weight: 400; opacity: 0.8; }
+
+.author-header-content .author-meta { z-index: 10; flex-shrink: 0; display: flex; align-items: center; margin: 0px 0px 0px 1px; font-size: 1.2rem; font-weight: 400; letter-spacing: 0.2px; text-transform: uppercase; white-space: nowrap; }
+
+.author-header-content .social-link:first-of-type { padding-left: 4px; }
+
+.no-image .author-header-content .author-bio, .no-image .author-header-content .author-meta { color: var(--midgrey); opacity: 1; }
+
+.author-social-link a { color: rgb(255, 255, 255); font-weight: 600; }
+
+.no-image .author-social-link a { color: var(--darkgrey); }
+
+.author-social-link a:hover { opacity: 1; }
+
+.author-social-link { display: inline-block; margin: 0px; padding: 6px 0px; }
+
+.author-location + .author-stats::before, .author-social-link + .author-social-link::before, .author-stats + .author-social-link::before { content: "â€¢"; display: inline-block; margin: 0px 12px; color: rgb(255, 255, 255); opacity: 0.6; }
+
+.no-image .author-location + .author-stats::before, .no-image .author-social-link + .author-social-link::before, .no-image .author-stats + .author-social-link::before { color: var(--midgrey); }
+
+@media (max-width: 700px) {
+  .author-location, .author-stats, .author-stats + .author-social-link:first-of-type::before { display: none; }
+}
+
+@media (max-width: 500px) {
+  .author-header { padding: 10px 0px 0px; }
+  .no-image .author-header { padding-bottom: 10px; }
+  .author-header-content { align-items: center; margin: 16px 0px 0px; }
+  .site-header-content .author-profile-image { width: 96px; height: 96px; }
+  .author-header-content .author-bio { font-size: 1.8rem; line-height: 1.3em; letter-spacing: 0px; text-align: center; }
+  .author-header-content .author-meta { margin-top: 8px; }
+  .author-location + .author-stats::before, .author-social-link + .author-social-link::before, .author-stats + .author-social-link::before { display: inline; margin: 0px 6px; }
+}
+
+.error-content { padding: 14vw 4vw 6vw; }
+
+.site-nav-center { display: flex; justify-content: center; align-items: center; padding: 10px 0px; text-align: center; }
+
+.site-nav-center .site-nav-logo { margin-right: 0px; }
+
+.error-message { padding-bottom: 10vw; border-bottom: 1px solid rgb(228, 234, 237); text-align: center; }
+
+.error-code { margin: 0px; color: var(--lightgrey); font-size: 12vw; line-height: 1em; letter-spacing: -5px; opacity: 0.75; }
+
+.error-description { margin: 0px; color: var(--midgrey); font-size: 3rem; line-height: 1.3em; font-weight: 400; }
+
+.error-link { display: inline-block; margin-top: 5px; }
+
+@media (min-width: 940px) {
+  .error-content .post-card { margin-bottom: 0px; padding-bottom: 0px; border-bottom: none; }
+}
+
+@media (max-width: 800px) {
+  .error-content { padding-top: 24vw; }
+  .error-code { font-size: 11.2rem; }
+  .error-message { padding-bottom: 16vw; }
+  .error-description { margin: 5px 0px 0px; font-size: 1.8rem; }
+}
+
+@media (max-width: 500px) {
+  .error-content { padding-top: 28vw; }
+  .error-message { padding-bottom: 14vw; }
+}
+
+.subscribe-notification { position: fixed; top: 0px; right: 0px; left: 0px; z-index: 9000; padding: 20px 0px; color: rgb(255, 255, 255); text-align: center; background: var(--green); transition: all 0.35s cubic-bezier(0.19, 1, 0.22, 1) 0.5s; transform: translateY(-175%); }
+
+.subscribe-notification.subscribe-failure-message { background: var(--red); }
+
+.subscribe-failure .subscribe-failure-message, .subscribe-success .subscribe-success-message { visibility: visible; transform: translateY(0px); }
+
+.subscribe-notification.close { visibility: hidden; transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1); transform: translateY(-175%); }
+
+.subscribe-notification .subscribe-close-button { left: 0px; top: 0px; width: 100%; height: 100%; }
+
+.subscribe-notification .subscribe-close-button::after, .subscribe-notification .subscribe-close-button::before { top: 31px; right: 20px; width: 18px; height: 2px; }
+
+.subscribe-close-overlay { position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; display: block; }
+
+.subscribe-close-button { position: absolute; top: 16px; right: 20px; z-index: 2000; display: block; width: 40px; height: 40px; }
+
+.subscribe-close-button::before { transform: rotate(45deg); }
+
+.subscribe-close-button::after, .subscribe-close-button::before { content: ""; position: absolute; top: 20px; right: 4px; display: block; width: 32px; height: 1px; background: rgb(255, 255, 255); opacity: 0.8; }
+
+.subscribe-close-button::after { transform: rotate(-45deg); }
+
+.subscribe-close-button:hover, .subscribe-close-overlay:hover { cursor: default; }
+
+.subscribe-overlay { position: fixed; top: 0px; right: 0px; bottom: 0px; left: 0px; z-index: 2000; display: flex; justify-content: center; align-items: center; background: rgba(9, 10, 11, 0.97); opacity: 0; transition: opacity 0.2s ease-in; pointer-events: none; }
+
+.subscribe-overlay:target { z-index: 2001; opacity: 1; pointer-events: auto; }
+
+.subscribe-overlay-content { position: relative; margin: 0px 0px 5vw; padding: 4vw; color: rgb(255, 255, 255); text-align: center; }
+
+.subscribe-overlay .subscribe-form { border: none; color: rgb(255, 255, 255); background: none; }
+
+.subscribe-overlay-logo { position: fixed; top: 23px; left: 30px; height: 30px; }
+
+.subscribe-overlay-title { display: inline-block; margin: 0px 0px 10px; font-size: 5.2rem; line-height: 1.15em; }
+
+.subscribe-overlay-description { margin: 0px auto 50px; max-width: 650px; color: rgb(255, 255, 255); font-family: Georgia, serif; font-size: 2.4rem; line-height: 1.3em; font-weight: 300; opacity: 0.8; }
+
+.subscribe-overlay form { display: flex; justify-content: center; align-items: center; margin: 0px auto; max-width: 540px; }
+
+.subscribe-overlay .form-group { flex-grow: 1; }
+
+.subscribe-overlay .subscribe-email { display: block; padding: 14px 20px; width: 100%; border: none; color: var(--midgrey); font-size: 2rem; line-height: 1em; font-weight: 400; letter-spacing: 0.5px; user-select: text; border-radius: 8px; transition: border-color 0.15s linear; -webkit-appearance: none; }
+
+.subscribe-email:focus { outline: 0px; border-color: rgb(191, 205, 213); }
+
+.subscribe-overlay button { display: inline-block; margin: 0px 0px 0px 15px; padding: 0px 25px; height: 52px; outline: none; color: rgb(255, 255, 255); font-size: 1.7rem; line-height: 38px; font-weight: 400; text-align: center; background: linear-gradient(rgb(80, 182, 239), rgb(41, 159, 224) 60%, rgb(41, 159, 224) 90%, rgb(55, 165, 226)); border-radius: 8px; -webkit-font-smoothing: subpixel-antialiased; }
+
+.subscribe-overlay button:active, .subscribe-overlay button:focus { background: rgb(32, 155, 223); }
+
+.subscribe-overlay .loading .button-loader { top: 5px; }
+
+@media (max-width: 500px) {
+  .subscribe-overlay button { margin: 12px 0px 0px; }
+}
+
+.site-footer { position: relative; padding-top: 20px; padding-bottom: 60px; color: rgb(255, 255, 255); background: rgb(10, 11, 12); }
+
+.site-footer-content { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; font-size: 1.3rem; }
+
+.site-footer-content, .site-footer-content a { color: rgba(255, 255, 255, 0.7); }
+
+.site-footer-content a:hover { color: rgb(255, 255, 255); text-decoration: none; }
+
+.site-footer-nav { display: flex; }
+
+.site-footer-nav a { position: relative; margin-left: 20px; }
+
+.site-footer-nav a::before { content: ""; position: absolute; top: 11px; left: -11px; display: block; width: 2px; height: 2px; background: rgb(255, 255, 255); border-radius: 100%; }
+
+.site-footer-nav a:first-of-type::before { display: none; }
+
+@media (max-width: 650px) {
+  .site-footer-content { flex-direction: column; }
+  .site-footer-nav a:first-child { margin-left: 0px; }
+}
+
+@media not all {
+  body { color: rgba(255, 255, 255, 0.75); background: var(--darkmode); }
+  img { opacity: 0.9; }
+  .site-header-background::before { background: rgba(0, 0, 0, 0.6); }
+  .post-feed { background: var(--darkmode); }
+  .post-card, .post-card:hover { border-bottom-color: rgb(23, 25, 28); }
+  .author-profile-image { background: var(--darkmode); }
+  .post-card-byline-content a { color: rgba(255, 255, 255, 0.75); }
+  .post-card-byline-content a:hover { color: rgb(255, 255, 255); }
+  .post-card-image { background: var(--darkmode); }
+  .post-card-title { color: rgba(255, 255, 255, 0.85); }
+  .post-card-excerpt { color: rgb(144, 162, 170); }
+  .author-avatar, .static-avatar { border-color: rgb(26, 28, 32); }
+  .page-template .site-main, .post-full-content, .post-template .site-main, .site-main { background: var(--darkmode); }
+  .post-full-title { color: rgba(255, 255, 255, 0.9); }
+  .post-full-custom-excerpt { color: rgb(144, 162, 170); }
+  .post-full-image { background-color: rgb(23, 25, 28); }
+  .post-full-byline { border-top-color: rgb(39, 42, 48); }
+  .post-full-byline-meta h4 a { color: rgba(255, 255, 255, 0.75); }
+  .post-full-byline-meta h4 a:hover { color: rgb(255, 255, 255); }
+  .author-list-item .author-card { background: rgb(14, 15, 17); box-shadow: rgba(0, 0, 0, 0.4) 0px 12px 26px; }
+  .author-list-item .author-card::before { border-top-color: rgb(14, 15, 17); }
+  .no-image .author-social-link a { color: rgba(255, 255, 255, 0.75); }
+  .post-full-content h1, .post-full-content h2, .post-full-content h3, .post-full-content h4, .post-full-content h6 { color: rgba(255, 255, 255, 0.9); }
+  .post-full-content a { color: rgb(255, 255, 255); box-shadow: rgb(255, 255, 255) 0px -1px 0px inset; }
+  .post-full-content em, .post-full-content strong { color: rgb(255, 255, 255); }
+  .post-full-content code { color: rgb(255, 255, 255); background: rgb(0, 0, 0); }
+  hr { border-top-color: rgb(23, 25, 28); }
+  .post-full-content hr::after { background: rgb(23, 25, 28); box-shadow: var(--darkmode) 0 0 0 5px; }
+  .post-full-content figcaption { color: rgba(255, 255, 255, 0.6); }
+  .post-full-content table td:first-child { background-image: linear-gradient(90deg,var(--darkmode) 50%,rgba(5,5,6,0)); }
+  .post-full-content table td:last-child { background-image: linear-gradient(270deg,var(--darkmode) 50%,rgba(5,5,6,0)); }
+  .post-full-content table th { color: rgba(255, 255, 255, 0.85); background-color: rgb(23, 25, 28); }
+  .post-full-content table td, .post-full-content table th { border: 1px solid rgb(23, 25, 28); }
+  .post-full-content .kg-bookmark-container, .post-full-content .kg-bookmark-container:hover { color: rgba(255, 255, 255, 0.75); box-shadow: rgba(255, 255, 255, 0.9) 0px 0px 1px; }
+  .post-full-content input { color: rgb(48, 58, 62); }
+  .kg-bookmark-title { color: rgb(255, 255, 255); }
+  .kg-bookmark-description, .kg-bookmark-metadata { color: rgba(255, 255, 255, 0.75); }
+  .site-archive-header .no-image { color: rgba(255, 255, 255, 0.9); background: var(--darkmode); }
+  .site-archive-header .no-image .site-header-content { border-bottom-color: rgb(39, 42, 48); }
+  .site-header-content .author-profile-image { box-shadow: rgba(255, 255, 255, 0.04) 0px 0px 0px 6px; }
+  .subscribe-form { border: none; background: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0)); }
+  .subscribe-form-title { color: rgba(255, 255, 255, 0.9); }
+  .subscribe-form p { color: rgba(255, 255, 255, 0.7); }
+  .subscribe-email { border-color: rgb(18, 20, 23); color: rgba(255, 255, 255, 0.9); background: rgb(11, 12, 14); }
+  .subscribe-email:focus { border-color: rgb(62, 67, 76); }
+  .subscribe-form button { opacity: 0.9; }
+  .subscribe-form .error .message-error, .subscribe-form .invalid .message-error { color: rgb(237, 105, 77); }
+  .subscribe-form .success .message-success { color: rgb(171, 207, 81); }
+}
+------MultipartBoundary--I7RRUqu0RCy2EphqmEJZ1oH8kF9bgCaD66OcPF4Ue1----
+Content-Type: text/css
+Content-Transfer-Encoding: binary
+Content-Location: https://fonts.googleapis.com/css?family=Montserrat
+
+@charset "utf-8";
+
+@font-face { font-family: Montserrat; font-style: normal; font-weight: 400; src: url("https://fonts.gstatic.com/s/montserrat/v15/JTUSjIg1_i6t8kCHKm459WRhyzbi.woff2") format("woff2"); unicode-range: U+460-52F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; }
+
+@font-face { font-family: Montserrat; font-style: normal; font-weight: 400; src: url("https://fonts.gstatic.com/s/montserrat/v15/JTUSjIg1_i6t8kCHKm459W1hyzbi.woff2") format("woff2"); unicode-range: U+400-45F, U+490-491, U+4B0-4B1, U+2116; }
+
+@font-face { font-family: Montserrat; font-style: normal; font-weight: 400; src: url("https://fonts.gstatic.com/s/montserrat/v15/JTUSjIg1_i6t8kCHKm459WZhyzbi.woff2") format("woff2"); unicode-range: U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: Montserrat; font-style: normal; font-weight: 400; src: url("https://fonts.gstatic.com/s/montserrat/v15/JTUSjIg1_i6t8kCHKm459Wdhyzbi.woff2") format("woff2"); unicode-range: U+100-24F, U+259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: Montserrat; font-style: normal; font-weight: 400; src: url("https://fonts.gstatic.com/s/montserrat/v15/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+------MultipartBoundary--I7RRUqu0RCy2EphqmEJZ1oH8kF9bgCaD66OcPF4Ue1----
+Content-Type: text/css
+Content-Transfer-Encoding: binary
+Content-Location: https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/themes/prism-solarizedlight.min.css
+
+@charset "utf-8";
+
+code[class*="language-"], pre[class*="language-"] { color: rgb(101, 123, 131); font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace; font-size: 1em; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; word-wrap: normal; line-height: 1.5; tab-size: 4; hyphens: none; }
+
+code[class*="language-"] ::selection, code[class*="language-"]::selection, pre[class*="language-"] ::selection, pre[class*="language-"]::selection { background: rgb(7, 54, 66); }
+
+pre[class*="language-"] { padding: 1em; margin: 0.5em 0px; overflow: auto; border-radius: 0.3em; }
+
+:not(pre) > code[class*="language-"], pre[class*="language-"] { background-color: rgb(253, 246, 227); }
+
+:not(pre) > code[class*="language-"] { padding: 0.1em; border-radius: 0.3em; }
+
+.token.cdata, .token.comment, .token.doctype, .token.prolog { color: rgb(147, 161, 161); }
+
+.token.punctuation { color: rgb(88, 110, 117); }
+
+.token.namespace { opacity: 0.7; }
+
+.token.boolean, .token.constant, .token.deleted, .token.number, .token.property, .token.symbol, .token.tag { color: rgb(38, 139, 210); }
+
+.token.attr-name, .token.builtin, .token.char, .token.inserted, .token.selector, .token.string, .token.url { color: rgb(42, 161, 152); }
+
+.token.entity { color: rgb(101, 123, 131); background: rgb(238, 232, 213); }
+
+.token.atrule, .token.attr-value, .token.keyword { color: rgb(133, 153, 0); }
+
+.token.class-name, .token.function { color: rgb(181, 137, 0); }
+
+.token.important, .token.regex, .token.variable { color: rgb(203, 75, 22); }
+
+.token.bold, .token.important { font-weight: 700; }
+
+.token.italic { font-style: italic; }
+
+.token.entity { cursor: help; }
+------MultipartBoundary--I7RRUqu0RCy2EphqmEJZ1oH8kF9bgCaD66OcPF4Ue1----
+Content-Type: text/css
+Content-Transfer-Encoding: binary
+Content-Location: https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/plugins/line-numbers/prism-line-numbers.min.css
+
+@charset "utf-8";
+
+pre[class*="language-"].line-numbers { position: relative; padding-left: 3.8em; counter-reset: linenumber 0; }
+
+pre[class*="language-"].line-numbers > code { position: relative; white-space: inherit; }
+
+.line-numbers .line-numbers-rows { position: absolute; pointer-events: none; top: 0px; font-size: 100%; left: -3.8em; width: 3em; letter-spacing: -1px; border-right: 1px solid rgb(153, 153, 153); user-select: none; }
+
+.line-numbers-rows > span { pointer-events: none; display: block; counter-increment: linenumber 1; }
+
+.line-numbers-rows > span::before { content: counter(linenumber); color: rgb(153, 153, 153); display: block; padding-right: 0.8em; text-align: right; }
+------MultipartBoundary--I7RRUqu0RCy2EphqmEJZ1oH8kF9bgCaD66OcPF4Ue1----
+Content-Type: image/png
+Content-Transfer-Encoding: binary
+Content-Location: https://coursework.vschool.io/content/images/2020/02/VS_Logo_Full_Black.png
+
+‰PNG
+
+   IHDR  5  J   Ì²»’   	pHYs     šœ    IDATxÚíg¸TEÖ¶§9+ˆ
+(İMGŒ8f ê ‚Š9 ˜%ˆbÂœŠbAÁ&L1;(A‚JIó®Â’åœCwŸŞ{W­ºïëz®ïÇë7zÖZOíµW×®ú[6“~_ô?…úITõo ÉåÕ
+ktW2       P ÙLúL¥CM£ıÈ°Š­$ú^YmN•]       €ÈfÒë‹–*j$Ã*j´“ÂÚ¼ˆÌ       T€l&=JéPs¾¨ö¾>ïTX›2       P²™ôAŠ?AïF†½®Íj¢Ÿ•Õäd        ‚˜uD³•5&Ã^×æ
+k²'™       (ÙLú:¥CÍE¢:dØÛº|Xá‘µÈ,       @ÈfÒ[+ş½ö²&ëŠ~UV‹ÃÉ,       @‘ÈfÒ)ÑûJ‡š£È°—5ÙKa-îJf       ŠH6“>SéPs‰h2ì]=>­¬§ŠJÈ,       @ÉfÒë‹–*lE†½ªÅDË•ÕàEd        Ì§ÚJ‡šãÉ®WuxšÂÌY       €ÈfÒ)j.5$ÃŞÔákÊêï²
+       ÙLºªh¶ÒÁæ	dØ‹l¦°öz’Y       €ÉfÒ×)jN »^ÔßùÊên¾¨™       ˆl&½µÒ¡æ
+Q#2ìtí¥D+«»ád        bì`é}¥ƒÍÓÉ°Óµ×FaÍíJf       b ›IŸ©t¨ù*Ùuºî®PVoSE%d        ²™ôú¢¥J›i2ìdÍ•ˆ¾QVk‘Y       €ÉfÒ£”5û‘]'ëmW…µ–!³        1’Í¤R:ÔœLv¬·[•ÕÙd        f²™tUÑl¥ƒÍdØ¹Z›£¬Æz’Y       €ÈfÒ×)jOvª³ı”Õ×|Q-2        ÙLzk¥CÍ)d×©:{@Y}'«        	‘Í¤S¢÷•6[“a'j¬¶h¡²ÚÚ•Ì       $H6“>SéPs0Ùu¢¾WVWSE%d        A²™ôú¢¥
+‡šŸ›¨d8ñúzRY]]DV        ›IRº[sk²›h]5-SVS2       à ÙLº«Ò¡æåd7Ñº:IY=½@V       !›IWÍV8ÔœÆ'è‰ÖÕËÊê©'Y       pˆl&}½ÒİšíÉn"õ”VVGóEµÈ,       €Cd3é¶J‡š×’İDêéleut7Y       pó™¶è…CÍïE•Èpìõô¾²:ê@V       $›I÷Qº[“T¼u´¹²úùRTBf       $›Io Z¦p¨y3Ùµ.UV?È*       €Ãd3éÑ
+‡š³D•Én,õ“²·ÎkªŸ,™       p˜l&İUé'è{İXêgGeu3¬       8N6“®*š­p¨yÙ¥~nTV7½È*       €d3éë52[²iİTı¨¨fˆj“Y        ÈfÒm•~‚¾Ù´nöRV/w“U        O°—½| p¨9’ìFZ7÷*«—d       À#²™t…CÍù¢d7’z©iã«¥V¾•Y        ÈfÒˆ–)lv#»‘ÔË¡Êêd Y       ğl&=ZáPó2I­ŒRV'Y²
+       à!ÙLº«Â¡æ"Q²[Ô:©/Z¢¨F&U        OÉfÒUE³6{İ¢ÖÉqÊê£Y       ğ˜l&}½Â¡æ(2[Ô™ ¨6ˆj“U        ÉfÒm5Í§Òë’İ¢ÔÇF¢Šjãn²
+       à9ÙL:%ú@á`óh²[”úè«¬.:U        d3é>
+‡šãÉlQjãmE5ñ¥¨„¬       ( ›Io Z¦l¨iş†d·Bu±©²š@V       ‘Í¤G+Ü­y™­PMVVY²
+        ˆl&İUáPs™-¸R¢ÿR        à,ÙLºªh¶²¡¦¹µ»Ù-¨¶SV½È*       €B²™ôõ
+wkNfª…kÕÀQm²
+        l&İVáPs™Í»*‰f(ª»É*       €Rì9ŠS6Ód7¯:Ø]Yş;U        Åd3é¾
+‡šıÈl^50\Qî¿•U        Åd3éEË”5'“Ùœó_]ô‹¢Ü «        Í¤Ç(Ü­Ù’Ìæ”ûnÊò%«         p°et™Í)÷*Êù2
+       ÙLºšh²¡æ2»Ö¼¯#Z¬(ç½È*       @@d3éîÖlMfËÍùÑŠr½@T›¬       D6“n§p¨9˜Ì–›ógåú2
+       ÙL:e>ÙV6ÔüÜü]d·Ô|7-W”ëİÈ*       @€d3é¾
+wknMfKÍõŠrü•¨„¬       H6“ŞP´LÙPór2[j®ßP”ãd        `²™ôeCÍi|‚¾F[*Ëq3²
+       0ÙLº›ÂOĞÛ“Ù?åø"E¹HF       '›IWÍQ6Ô¼–Ì®ÊoJô©¢ÜEV       À¾nP6Ôü^T‰Ì®Ìm[Ey] ªMV       À¾Ú)ü½™]™Û«åô2
+        +±Ÿ(OQ6Ô¼…¼¦+‰¾S”Óİp+        ¬"›I÷U6Ôœ%ªxNwS”Ï¯D%8        V‘Í¤7-S6ØÜ#ğœŞ®(—q)        ¬A6“£l¨yWÀ¹4·Úÿ¤(—Íp(        ¬A6“î¦l¨i†zÕÍåŠò8w       @©Øİ}s”6»šË+ÊáQ¸        Ê$›Iß l¨92ÀÖıª$Dµq&        ”I6“n§l¨9_T#°©(÷àJ        (—l&MQ6ØìXÇ)Êİn¸        ÖJ6“î«l¨ùH@¹[_´LIŞ¾•àH        X+ÙLzCEƒ1£EæœÉ@rwŠ¢¼Äàç*‹j‰ê‹‰²¢ME›‹ZŠ65ÕU5»á‰      @t/êc”íÖìHŞ&)ÊY3œ1z§’¨‰¨­hoQ/QÑ0Ñ}¢gDï‹¾Í--/ ®WØZ~ı`w$*z×ş;Fˆ†ŠNuíd¼ÚÙÀ       …¾à¬l¨9:€œ5S”¯‰¸"òI=Ñv¢¢KDŠ>ıæ/Ì ôcÑó¢[E'‰ve':      @./şÕìn$-C²%¢u•çì<Eù:
+B<ÑÄîv¼F4ÁîŒüŸRM=& :ĞşÈÁ™´      ä@àFe/ıG+ÎUJô‘’<-ÕÆ§ªˆÚ‰N=(š®x€™«æÙOÚÏ´ç|r'      1$ØFÙşxÅ¹ÚRQîÁ}cİ›‹xúŠ^°g\ş•+s~çÍ¢.ær#*      ´Rö¬9-/ôæF÷†Jsu™¢<í†û Œ:7—ùì`ëıc†”’9CôYQ.å€"®ÓµígŞ‰ì  €ƒ½U-{‚wr%€g){‘?Qa‘—(úÔö+Î„¿Ôw»³ğNÑL†‘‘É\>t˜9O™ª€
+¬ÙŞ~åCö   €ŞJYo%ÿ!ìG-/îùÎŠò3el]7Í`à«æØ‹•6£
+€Æ   €ŞÊëŞJşcÆ*za_!j¬¬ÈoV”>ƒ{Á®*:Ø^nÃ€1y½*:Šó7€Æ   €ŞÊ×¡æÁÊ^ÔOWTàæÓÜÙJò2‘%+Ø…:mweòy¹›2kÌ9¢:T+ Ğx   Ğ[ù4Ô¬&š«è}’¢ßWQ^bÉ
+nŞXt«h)ƒCo†›g›‹@¨^  ñ    ·ò¢·’ÿ •½œ§•øıJò±€AIPscÑön†…şi–¨? o    z+†šÛ({)ï§ ¸k‰*ÉÇ–« äì%4¿2T3Ü<Ëœ…Ju 7    ½•«CÍ”èCE/ão+(î*ÊGG–+Õ±9Âb€hƒ@•2Ï†¨t  ñ    ·r²·²;r4½ˆ·ô¼¸Ç(ÉÃ4Q	Ë•ÚEx'ÑÇşÔk…=¦¤.U@ãMã   @oåZ0‰–)z	¿ÀãÂn èr•A,U*ßº¢›ö§oD]p  77    ½•k«èå{ŠÇ…}‚¢<4g©R·ğ ú–_ĞzØœ¡Š h¼i¼   è­\	èÁÊ^¼7÷´°_RÿY¦T-¸µE0ĞCVf°½Î  ñ¦ñ    ·r! æÂ¹Š^º/ö°¨›*ŠÿÑ,SjÛæf÷3ƒ<ô™›îÇ! 4Ş4Ş    ôV.õFE/ÜŸ››İ=+êşJb¿PT‡eJÅB»§²;Pñu…¨n ñ¦ñ    ·"¨ÅS[ÏŠú=%qÁåı›²CöåíP'Zç ĞxÓx   Ğ[%9ÈøPÑ‹öåtkEqïÈåõâZKôƒ:”§>¥q 77    ½UR=KÑKö4_>A—ÿÎ!Šb^Âåõ@s":T ¦Š6ÂI 4Ş4Ş    ôVI¶‘h™¢—ìösJô¥’xbyòvQ­)zÁ*ÂyÆp 77    ½UÁ«èûZâİ^Q¼›³<y¹ Ö=Ë@I‹ÖÇY 4Ş4Ş    ôVq÷`E/×ß»~3¯ü÷]¯$Ö/²4y¹˜V=Í Yˆà0 oo    z«8ƒ[M4WÑËu‡c]Y4SIœfiòn!5^ŠŠHïˆjã4 oo    z«8|£¢ë[óJb¼PT‡¥É«E4%ÎàE¬‡|¹° h¼   è­t5·QôR=Ëìˆt4Î#”ÄxË’w‹èqÜPL:ÇĞxÓx   Ğ[Åà”è#E/Õ{8cs9Ë|%ñíÈ²äİúÃ6“–ŠvÆy 4Ş4Ş    ôVq¹Ÿ¢—êáÆ·»’ØN•°,yãë6gÛPœúAÔĞxÓx   ½½UAn$Z®ä…ú's)Šcñ}\Il±$yãéÑ8l(!½$ª‚h¼i¼  €ŞŠŞ*@?©è…º‹Cq]WÑç¿ÍY’¼ñóÖPÂ:'ĞxÓx   ½½Uî®èez¤Cqí­$¦/²yãåMDKª¡„µH”Æ‘ 4Ş4Ş   @oEou «‹æ*y™6—òÔp$®/(‰éÑ,G^ø8%zšrD£p% 77   Ğ[Ñ[Åì›½Lws MD+Är¡¨Ë‘îÊ 9¦ıq& 77   Ğ[Ñ[Eìm½H?â@<û(‰å–"/ü[Kô5C4ä˜¦™ÚÄ¡ 4Ş4Ş   @oEoe°S¢”¼HÿšôîBù÷OVË,E^ø÷RhÈQ]ŠCh¼i¼  €ŞŠŞ*ê€÷Sô"İ#Á8¶R´Ëª„¥Èyßr9rıÒ †8€Æ›Æ   è­è­¢x#Ñr%/Ò£Œã@%1Ä2ä…o‡38C¬% @ã   @oto%ÿñO*y‰6;×ÖM ~)ÑçJbØœeÈy¿n(ú¡ÙZ5[4At¿è6Ñ03h³»ÓO):HôÑ¢-ìëvæÑöŸ9Et®h¨½\í^Ñs¢YÄ¸\ÍálM oo    ·¢·Š:èİ½HMÑ¬Y‚¼ğë fk|êlÎ³½Û^Öõ;øMEœ‡”¨‰h_Ñùæ²2ÑäãO:ÇĞxÓx   ½½U”A¯.š«ä%úéâwaˆÑ«?>(3»TGÛ]”-E•ËQ]Ñ.v]=WÓEUp. 77   Ğ[Ñ[Eø›”¼D/‹ó‚
+3Pı  n“¾=rª·ŞÇ–Šõ­ãQ¾ªˆö=ğÅNGâ\ oo    ·¢·Š2ğÛ*z‰>1Æ¸uV³{Y~œ÷hJôa`±‰¢cEä¯èTû©|H9œ„{h¼i¼  €ŞŠŞ*êÉGJ^¢'Ä·»”Ä¬ËóíĞ ìmÍ5)Û¢ïÊgc@ãMã   ôVôVQ¿Ÿ’èq¼DÛóVrî]	Ëóş¼>€á×4QêQşÆz¢[j‚ƒh¼i¼  €ŞŠŞ*Êà7-Wò}zñ:HI¬³ô8ïÍ”hªâ¡×OöæòjæÖ\*ô©ò¡æ¸€Æ›Æ   è­è­¢NÀ“œã–s¬Q«æ,=ÎûrSÅ¯ÿŠZ_³ë{ˆâ/ó7  ñ    ·
+s¨Ù]Ñ‹t:Â8Õ-V£—Xv¼ğe_¥Ã®·Dë“áUy>Eñ`³7 ñ¦ñ   z+z«(`vÍUòİ/Â8õR£cXv¼ğå…C®ñ¢Údw\÷W:Ô|ŠìĞxÓx   ½½UÔI¸IËÊÆèñY(ªÃ²ã¼Í…2K•¸U!»eæ| Â¡æÑ:d€Æ›Æ   è­è­¢LÂ¶Š^¤[FŸ•\¨t/K~ì¦l¸õÃôµæ<%ºRá`ó²@ãMã   ôVôVQ¿P¤ä%ú‚âsº’ØtbÉñÂ—*l@Vs^‡oU–ûÇÈ, 77   Ğ[Ñ[Eˆ~J^¢?Œ 6¯+ˆËtQ	K^|‚¡V°¹¯ao‡×’ÿE¢Zd€Æ›Æ   è­è­¢LD#%ŸXm^Ä¸4W“Á,7Şxñs%57OÔ„Œæÿ=”íÖ<˜¬ĞxÓx   ½½UÔÉxRÉKôÅEŒÉJbÒœåÆVWôãÂMd´à:xPÓ%Qd€Æ›Æ   è­è­¢NÆ!J^¢ÍN·Tâ‘}¢ /±ÔxãÁ­³v'£×Ù9ÿ‹’:ø©ë1 Ğx“=    ·¢·*/Õí¨†é¶EˆG%±8†¥ÆşSÑ «
+­P-œ¬hÀ&£ 4Ş4Ş   @oEouBnVò}ybq¥‚8,Õa©ñÆ+ñß}d³ÂµPIô†’z8€ŒĞxÓx   ½½UÔ	ÙNÉKôôŠ|òhn
+}« ÷²Ìxå¿‡”ø¯;Ù,J=h¹4è"²	@ãMã   ôVôVQ'$%úXÉ‹ôˆC%1èÄ2ã•ÿÆ+©»ÍÉfQêÁü¸ò¥‚zx”lĞxÓx   ½½UIé¯d°rmbp›’İª%,3^yïU%Ş«O6‹Vç*¨‡ÿ’I oo    ·¢·Š#)EË¼HoÎ¥+àï¯*š«àïÌã÷>PPw‹¹íº¨5±¡h©‚º¨K6ÕÕfÊ^0¸¨V!Ï[ ñ±ñ¶Ş©!ª'ªÆ3<®ãšö@àz+z+çó”’c
+øÛ»(ùÛ›³Äxç»¯Ôİ—d²èuñu±™tºÆÌÅTMíÑ+GÛKËî=/zİşè2U4C4¯Œ?—ˆ~ÍM}*zWô‚ıß»Ltš¨«h{ÑF¢Êd€Æ[Cãm_b7u!ºC4Fô¢è={œÈœR~¨Z!Zdÿoæ<÷/Do[ÿ™<Ïõ²ÿ»­ÌïT2¹vÍĞ¥¥=ËûÑPÑƒö}ĞÔï[öx2³®ÿh/"ı«G—ÙgÃ[ëSì…‡DOÚg€y¶ô6Çc‰š‰ª}ÀòÇ1øƒŞŠŞªx‰9DÉ`ï–şöüİ/±¼xé»9
+jï2YôºĞpaĞÉdÒ‰Zªa—gÙa‰9Ç÷s;ŒLª6Ìpô3Ñ¿Eçˆö4ƒ!²EãízãmwÒ%ºŞîgÅ‹ßD“E·‹N´—|Ö º!‡š­/ÚG4ÀQ^¶ƒô	®ÿÓí`h„¹XP´—ÙİF¶ ¬áñ½CÍüc>)ûIÁ‹ô¬|vÈ?[ÛşZîûß}Ë‹—¾[¢ ö>$“E¯İF&©¢ıEWˆ&y¶Æ|owA°CÎˆ¦ñva-ŞV4Ğ]ŠÙôšè|ÑV|ê¶^[‹İ%úÄ3Ïlÿ»µÏ ˆÊÃñĞ[éMÎÍJvkî‘Çß|„‚¿×ly¯Ãòâßª)ñÛd3’ú8¼CÔõ°—İ}¬dMYıGÊûìß×€lÓxÇ¯JöX¢áö³A_âõùZÉî:âˆ‡püİÒîx7»ğVö0ÏÓ¶jE¶àz+†š¹$g;%&Çß¬á,Ñ{YZ¼ô[}%~[Â‘Hê£çu±ˆ‹d"ıAä@ÑÃ¢_•5éei…İ•ÖGÔ* ñ Në‰Î¶g¤ùî—oíg‹p€JO›sV/½Èúÿ‡¦ØÏÕ7£
+ l¨?>ÀôV5ÿ¶êÀs;=ÌgôÕrø{ÚÏw|ÿ{;±´xé·ZŠ¤ì.~}˜Ïdæz^ür\¼z¨d’¿SánƒB~HyØ=ËçW4ŞO;Ñİ¢Å
+½²Ô]Û½÷ñfv`1%ğõõOq‰¶ ¶Áúc şÀôV5ÿHP%fî’Ãßz²‚¿s:/u^­´<<3d4’åùài_²XáÈˆ®}G“^ª¦Ùı&Tw1I‰°»CñÊD3ÀÅ^y×\ôv<ƒšµÊœxªÙ,@Õçs3ù‡x Ğ[1Ôük‚Û›·|7ğı9ü­¯(ø;³¬xí7-;C¶%›‘ÔG‡s¾ú÷Ø_È{‰vmÌ§çÎı¦öæËe4ä9ß}£h#ª‡Æ{-ñØÒŞ\ªWÌ9µã§=»İe5‹µ=/™¯[.5ï²T‘zÆøƒŞŠ¡æÚ’¤áœÉù¢šåü%Ts–¯½6WID6#©¶I_eoĞ~@t‰½qqw³îˆª’¡Hr¾µè{†$M8ÃMïâÅa}{¡Ör|²ò,ŞÁ¬ãÎyµµ½İø7j´Â_Š˜·¢ªğÂôVá5QbÚƒËùÏQğ÷½Ä’â½×´|RúÙŒ¤>*E|~âÑd;D»ÒÉ±·İ%XƒÄšëEOÒlu¸yƒÙÑAm…İx›Á¨¯è|±†ŞâÇq'<jÎ<G=F¢çÌ±Tş@øƒŞ*¼¡fu{ÙÚA‹½!Ì÷¿ï–ï½ö…’‡âlÎv¬FÆVpÇúölÎkEÿ²çÈ™Ï/ë]'òÛR4Æ:Ò‹{‡|P~È·½è3|P®æ‰şÉjœˆ7³¢G©ÁX4F´	Uç•?šáXıÑ’ª£·Ò˜¨›•|^S§”¿mÛBnœVá³÷=ùŒ!š9k-kÜ'öl³f÷u·ÚÜxèt^«ÙnÓLÇ¢	¡¾Ğ†ØxÛ‹€Næ3Å¼d>ë¬Îê‹'kÛ#]XÿãÿìÖ|•R*ÄĞ[…‘¨í”´G)ÛP½³œ¨ğ™¦›WûÑHj¤ı<äNÑùfM³Ÿ*7bw¬·9íÄî±D´Øz¨j`õTãm~ğ=H½¤g¹!7R/–ˆ}O­%ª™v?âT¶?xÇ ·R‘(ó+÷Ç
+Œ9º”sš‚¿«3Ë‰
+ŸıGÑCp2;ÊõûöæašædõfH·?‡ÔxÛ/q>¥Æ+¤WØ©‰·UöC¶½-Ú‰êtÆ¯S“Î½×íHuÒ[iHV%[©×]íoÚIÁßô5¿¨ñØ0eÀ.d T¯÷TrVµıh. ñÖÓxË?”hµ]´—ÙõX¹‹â?sáß¢åÔ•“Z!"ªLµâTª?.Æ5}OVc%‹ÌÑ«ıM7)ø{.f)Qã±Ó”=üŞeàğ'›³3o¥1vRËD§kßa®½ñ¶_ ‹®8»½(ïQÏSKŞìPnJÕÆî¨=/ô2ş`¨é{ÂR`Ä§íßRE4KÁßÓ‚¥D¿öWøàëFfVú{#>§òãŒjÍ¤hn¼í@óRj82=Æ•ûno»#œ:òGsER½±ùc5‡?è­jÆ•°C”ìÆhhPï)aQå¯->ô>í"€R¼İ‘Z¯4^TƒÆÛŸÆÛ4‡Q»‘ëBVô¼üVÕŞ Líø«4ÿĞå€?®¢Æ¼Öõøƒ¡¦	«®ä°•\ĞĞ›G¢*ÕS¼ó‰Kƒ DO›AK_ûcÍ¯_zFT“ÆÛıÆÛ^úx#5›öguÏÉkiÑÔ‹
+½Ç—q‘øãMjKÍqcÍj2Ôô-i7+0Ÿi2xş7˜ğëòXTç/­—‡pö+„æe³áAš]¯õ¼¶Á¦¶ÆËch¯    IDATÛ4ï VcÕ<Q–U¾\Ÿµ}K­¨ÒLÑÖTwÑüñ5…?è­j&™´í0®»ßx,ªô—æ_õ%ÃˆÍ…@cxN©ĞQ-o÷o»z85šˆäŒ2=ÖŞ7GèÓ/¢]©rüğCMÿ“fšÈ1nâêÌ£Q¥¿®S~»p/^„@¹‡«Û~Szô¸–R”5Ï¡6UWVü5jrÑBjCµ~å†‚ı±'şÂ]j2Ôô%qgcÚDõ57PªõÖaÔïæüP²JšãxF©Ô owoóÒ$ZA]&*óyuVşU5i.S]B]¡•?ÒSõyùãPü”?z2Ôd¨éCâšˆ–cZÎ'„¢{+HOíDÆA‘wkØËexFéU7ïäo{Û|êÑ	]Íê¿²&ObÈ¤úPıø•©3j2Ôô!yìFINÜÀ§×W)ÑÔ±ùad¨h]2û¶¦è9Mêe>›Û’Æ;¹Æ[şß¢©Ô¢S;r²¯ÿ'SA«]ş@eê,†š5]OŞ¡5½Ì#R½·ğ`éKDÉ>xè×Jœ¡”¾òùøŸoQ•ìï7ÒS‡néÆ€×ÿıør‰ºÓá®?jú<svØÏ5võæ1©Ş[ıŞ5LÔˆ* üzÏ¥àtw"ºÚsöbˆõ\ûÛqé	²Z,Ú‘ 2ı±CM†š.'ğŒ«‰êRyüÚÀÃo„ho³3‡Š ‡½zÏ¥`Õ‘çBaõ.oÓ€
+B¹i–¨9ş@áùƒ¡¦ÿ	Ü“Æªû¨º |•âÌ°Uš#º]ÔÙ|æKu€C>İÚşĞ„OÃ”Y£kÑx#´Rs³Ü„nŸM!ç¨}fÎı¼7Â¨<Ôg¨ÉPÓÕáË'˜46u¦ê‚ñÖPê}Í0gw‰öÕ¦J A6MÇ“Ák7B«tJ k¿9×õYrÊÑK¢jöFøé†š:’x6E_‹J¨¸ vQ÷eËÜ¸ú†èJQ—,7¨C¼Mû<ˆìmi¼Z©WXÿo"Ï(İh„?Pş`¨©#‰M¸ÙŒóŠ è¾J‰>§îsÖ
+Ñû¢D‡ŠZğ# DäÍ«ñZMci¼Z¥¦Š×ş½É/ÊCÖá¬?jêIä8Ì¹ZPiÁùêbê¾Bš'zQtèHÑæ¢ÊTTÀ“;ã+TŠÚÓx#´Rı”®ıõEß“_”‡fš£jéğ
+Ú5õ$òPÌ©^¦Ê‚ôUkj¿èúUôºèÑq¢v¡}yû±ºèS<„JÑÓ4Ş­Ô;J×ÿÉ-*@ÿ1_^Ğá´?jêzÙûsF¦ŞTY°Şzšú\KEï‰†‹NíÄEDPŠ‡àTv¦ñFh¥Z±q¡UêÁÆ&„tûƒ¡¦®EíŒ‰‰êRaÁúª#HìŒÎOD÷‹Îuâ2¢ }¸¥~ãT–^ ñFh¥ÎR´ö7Í!§¨úÉÔ‘ÒŞ üÁPSİÂ¶=ÆŒD÷Q]Aû*•ıı–o¼à†¾=*:ßŠ¾!UªŞƒ•EoQû¥å°Œ8üI-i¼JQÔ=E>×ªÅÄ`­§í3tü?ğCMÍÃ—O0fÑÕ™ê
+Ş[]ñÓ2‡£Íş~±ÓA¢tg(ä¿¾Ö´VN±;•ûÛ¾Ù­š±TYí¹¿¨¹h;ûÏacöX€ÇÒ¤ñFh¥ï+)Xû<æ²ÅIö‡Ü›DÚ³È»ˆ¶müÇ™äæÈQ‹ìï—élò1G¶Üiû£wù,}„²ŞàüÁPSíËßÙ4sEÕ×¢*+x_•pA‰wúÖ„7ç‹1äôÖ{Mí !Ôì|ÑHÑş¢EÜåÚŞ6û/ğ	ÿ®{¡f…õ›è;{ós¢‡ìyÌ‹^}œııV×Ğ_PÛx¾öWM,gKDÏÛ/QÌº]¹È1­+ÚWtµèƒ@¿ô©ª¤7Âø0ÔTıØD´œ¦·hº˜ªë­øÁkÍı[t²hs~¬ğÆw·P›¯ØÆ5bˆgÚN5Çs;oú%ûûÍ¬ÇÙ]ÈÍDurZ›Š¢­E}D£Üµ|†çkÿ¿ÊÕ§öìğ†1ÇØôB×‰æëS•ôF¡ù£/şÀ5Ã{	G3\4µ ¢ÀúÊìÖ|O¨Ñ,ûyîfGCN'=×LùÎÂ÷í®€T±5Íß¥q½–ÆÛ[M¶ŸîüÇEŒ{%{öü}ìâ|Ìãµ¿hv 9zZ´kÒ»Ëåß_]t¤hj 17»¸k{ŞáøıÑ0Ôd¨R¥1.Š^¦šà/ŞÚ’OÚTßş7Úş¼M±?k‚ü6\ñ´^IÒíyœû+ÜÁ6Ãeÿ2Ô\CsíÑIëÇüƒÉ-öSvµ/§¯ıC”×¼ù´uOã^Õî Ô~›ö÷Fø#™¸W³ş˜‹?è­jÆ÷‹ÂÏ4ÊVoª	Jñ×Ux#˜ÈÇÚİµ©üØ}ÖBéošŠc±ŞŞZ5Åyo/ÖØf×Q‚¹h,zBqŒ×ópío$Z¨4æ|è“\¿ÄIşûÖµ¨h>Úb=O{£FŠÏÇîø£CM†š®$öæ
+/¬u©$(Å[æ½oğHPZ`?YÜ#«àFYO|6Basõv{èş<E±Aãítu™+/MvÇr¥?¢ìÂû‹3úHÔÚ³\¦ì¹°º®ò´7º8“‹f¿àQc>®d¨ÉPÓ¥#
+×HªÊñWW<¬¾7{sNˆÌ_­^xwšqßQQƒnşš4Şî›E:š—öèMñ>Ş³µ¿¥Òáòİ®®G9äÄ|5ñ®Âœ,mìY.6ÁNúã=¥şØˆ¡&CMW~yş„DÁÚ*‚µxì|¼Ş·7–6ÆEõÖıŠjd…OG™ÈëáŠb(·32Ÿ÷ô ş7ıÈ¥Y‰ÅÿF…µEÒ!/æbšI
+ss‰gy¸	à5„¡&CMW’{6C‡‚ô5Ÿ˜Bş2g×¾…_İUøçoÅWMí PKmîá¢Ï)‰ıhog>+ÜÌ#üCÑô´Gq¯£ğSçÁ¾lş’Ÿ‰
+/•«êQüçã§óó¢BTa¨ÉPÓ…ä6Qø	¿L€k˜Yx•qşf	.ÉÛSÕÂEæÀ|â¦áVè¥¢Z4Ş‰êsCkù‘Ş£˜Ÿ¨¬ö*|>×T8ØìîIìOÂ^øCÛ`ó`†š5]Iğ8†y«%•yx¬3? 2ô±èQeœ’“—*‰¦+Éıã>µ—w¤ñNì<®£<_‹&(ÉEUâ²Ç¹h©ÿ‡µì@+%Wë‰¦)ÊÕsøãüá…?*êce¨ÉPÓ•Ê`!/½BÕ@>ëwP9šj.lUÃ-åúhOEÃì:ç¢º=ŠÅ÷\œJãˆQ°¥•ü`ÙĞƒXï¤¨ö§h?†Fş¾¶¢_ålÇã½3şÀlöb¨úK¢y1ù™¡BÎ:–ªE½ÿ µè[Ñ¾ŞòƒQr1Ğ¶Jò¡á\îá4Ş±k€¢5i¬‚|4÷ ÎZ.‡ûÅÜ†Èóº§¢5ë*Çcı şÀ	êJ†š5]Iò­rÒ"sƒl^…P‡o÷æÌÍ?ùg}Ñ¹½AQNêÛç¢ÏùxÆ;V=¤é³Bù[P“¶¬ı±©O`=¯–Kåf›M@Æyü?ğG5bÎP3 cµgˆ“FR-P„‡Ø0¼„rÔdÏüKÈ;}äó{m?ŒÉßs»‚Ë‚ª;S­CÍ7E5”ÕeëkŸóÒÑñŸ«¤ş¿íˆù{·¶_'hÈßÆø<ü?Ğá5jº2hù”ÂZµ;ÕEòÛ5ø	åóƒŠ¨	Ï(^ŠÌÍæ
+ò²w,Gk4Vº>ñ<7:ß•xà°@Ÿß÷*ÉßXGãû‘’øŠ?¼Ö†š5]Iô9Ê•¹¡•EÒÂW(-´;V*è—m•uª(ÍÏKçæxïÈµŸâõ)ëynz:ÛæŠv)§ş òw7-VÃ_];ïÜœ?©ÄoàüAoÅP³X‰n¢äÇ¨4„*|×U´ ¡<ôz(©¯æ“
+òvâüôó<7·ÒxGªqÚ_XåïûÆãüœæp\ÿ¥Ä»ŞëåÇ™Hâz¦’¸î‚?Täq_†š5]Iöxeª%ùÎ|¾9¡<dáÇ†òË¶İåâs¾Ì¯ğ•¯a^ï¢¢ñôÌÒV¬Qc<ÎÑÇõx‚>7]O4KA.oq,®Äôqü¡Æ73Ôd¨éJ²cXPª^¡: bï™[„ŸÁk(ßfP´rol  Ow)ÏQÊÑâóĞ¹ŠCñÔ4Ô¼2gøÅçè
+Gcº®h™çõ¿,„¡~ù<MÁzö+?&Û÷ü?\;ª/åpŒjd¨¢Ÿ¬¡c©ˆÁæÕvg¾C¹êÍŸ¶ÉßÖKAÚ°~İêy¶¤ñ.ºfˆêòüîæqns4¦=xàNºÛUù¬*š® §[9ÏÃÄòœ¡Î[:c†š™êV†Ò"³-œÊ€=¸¥h2ŞCyè7Óà*õÃ¿=ÏÍ‹¬[û{§£h¼õÆ4†œù|¡ÍCÆô!è@Wû§œ^® §çÓqÖ,şğïüx†šáª=‚?i$U	øĞìÚì¯äF<Ÿ.ÒtÎ¦õï_tdÍªïA.VØÏ£Ì9dwšæ[t¨h[—v*jşhüĞ3»D4Ï×‹œŒ§Ùµô‹ç˜)ªDGû§¼n§`m{ÍÌÃøÃAMb¨ÉPÓ•„§DŸ2X¥İ©
+HĞ­D/ãC”‡îUSRÿ»x‹ïì|ç@ÌŠ¦ˆF‰®*ÚÛ®¥Õ<‰£†¡æ>¯'yš«WŒeg¸•.¶ÔwÌ¯=ÏëŠ¤/ş3ï¦\º„?öÇzÆ—¡f€¦:‡ÁÀªoù	\xÈ,úO¢5QT[Aíõ<÷¶VñÙWí  èHÑN¢5ìTV2ÔÜ1ÀgõhOsõ¡ƒ±À¦µ>¹ZAn÷K8†Ä°3nPë}é­jº’ô&¢åÒC¨pÈ—æSÜcEßâM”ƒó}Ç¦Ç;ŸşĞÑ­QW)nKì8ãÌ?QÑ¢-Dµˆ£ïCÍišÁÈ#o÷ûz£³ƒ±ã¹f‹ªĞ¹–šÛôWáXş¨ŒÔúã"z+†š.%~<CtK*ôfÑY¢9x­EúÚ8Ú!ş"Ïãß,°µ)Ÿ›êÍúõ–½äRQoQGQÓĞ¿P0ÔhŞ|½hó{Çâ˜ÍàÖsµ>)qä¨’ŠhtÂş˜É­çøÃa¢·b¨éRâ|ğ
+U {´İÁ4•á*GÃ}Ü5%ÿÍ­=û·¡íV“¿·İj¿ùÚã+Ñó¢Ûí±6İí?³+¸ê¡æ–æí
+†šE‰ãÆ
+»{³’•›ã|?/;ÁØ5Uà½pş ·b¨Wâk(¸u¶":–* O¼ZÉœï#z†*CÃ|°Ùs}ùı®EÕD{ŠZ˜ÛYYƒj~â§ç6o2Ô,Jò|íÿ™õo­9î  ¯j”Pìºz·ŸğGşØŞŠ¡¦KÉ¿5Ğ€ùä± zvS{İyè/êíY-_ëy¼gE‚ ‡šOœ·1Ô,J/õ|í¿—Ul­9®¤àêıŠï(ÀAøc_ãÊP3`Sµôå$ÙÏ½[KÔÍ^\0²?Öüİ£~Éóx·b%‚ ‡š7œ·Ş5‹Gß¿:9‰U,§<û~Ô€„âö¬çq;‘êÇôV5ãN~Jôi€/ÿ»“}PäcóIè>æàzÑ,†{Aë}QujÖ”>ßã8Ïõ\~¨y^ÀyëÎP³(ïs=ÎîÂ*–S®}ßq8:!ü„?‚ğÇeøƒŞŠ¡fqàœÀ^ú¿ıæUPígs£ôn¢ëíE&úÂÓÔi+Ïcü0«:ÔìpŞög¨Yá6WğŒ­Ï*–S®à2”¼cÖã#ñ½CÍâ@{‹i(/üCÈ:âm³n{Ñå¢ÿ2ìJ:^›=øìjz©Î5jV †]<_û`Ë9×[+è¥ê²ÆàˆrİĞ[1Ô,~Œèe¿%‡ =ma†1¢wû!#D™Ï£ë8\—xß^¬*èP³UÀyc¨YñâùÚÿ+XÎ¹®¡ ×lsÌNÅÁø£¦hş ·b¨YÜ"8,ıWÈ6ÀJÏ×u/+šÍ P.q¸şîõ<¶XE Ğ¡fm†š5+ÃË=_û¯cË+ß_xï½b×ø#(üĞ[1Ô,ş¯i?ğ’,Ù(uH‰61ç¥‰n½ÇnNïµX”v´Ş&xÛ4«Ğx3Ôd¨™wô|í?,¯|?áy¾‹9^á ü1
+Ğ[1Ô,~!Üªü‘¨™ÈyM`7§ÿzÀÑÚòù×éeæB.V ñf¨ÉP3ï¾âù3u'V°¼òíûQ3ƒc×«ø#(\Š?è­j¿Ú+¹¿Ÿ,ThHÙİœ½ìnÎI¢W{ëh±ÇñüŠÕ h¼j2Ô,(†_{ş<]‡,¯|û~)àİ1Çëü”?ÇôV5£yÑüTñ‹ı?È2@Ñ×sÃzQ7ó‹ı”bƒD§ô¢c5³¾çñœ€óÆ›¡&CÍ¼ãWÙócm¾cõÊ;ç[qñMÎ±ª‚?‚óGüAoÅP3šb8WéK½ùå«ˆm-YG´‹½ÉñÑ›ö†ŒÉhk‡j£¿LCMo†šÁ5›z¾ö?Ëê•wÎ«{~Ãóg1Æ*?ğş ·‚âÃF›Ë»[€Z_*‰6bÏY«àS_4Ü¡:8ÀóXÀÍ@ãÍP“¡fŞñÛÙóµÿAV¯‚òş‹Ç9ÿÕ|ÉSœvÁAúcş ·Â	ÑÄÓ
+_è7!³ Î®9DEÿ2Ã7ÑÛŸ¹èêMèÉ÷©Çò(\4Ş5jæ?ßÏW¼Õ« ¼ëyŞ×‹)N‡ã ıñş ·Â	ÑÄ?•½Ì¿JV¼[‡ÌÙ[­íKĞå¢ñæÅŒád…t¶#¹½Ìó8€CÆ›¡&CÍ¼ãw²çkÿÕ¬^åİ÷ûšÇ§SğGşøĞ[á„h
+¢†çŸ
+üUÇ‘U 5ë“¹df;{M´”aeÎšîÂÙÂòßp+—ÎCMo†šÁ5Ïò|íÄêUPŞßò<ï›Ç§~ø#HLÆôV8!º¢¸MÉK¼9ë¡P»VÕ6C&ÑÑË¢%/ËÕ>äl„ç1Ü	ç7CM†šyÇïBÏ×ş~¬^å}‚çyß.¦8]„?‚ôÇDüAo…¢+Š”¼ÀßO6‚Z»ÌNóÎæle;Î‹¥ÛÈÑÃÜ$5i¼j7ÔêùÚ"«WAyíyŞ;àüaŞÇàz+œ]Q¤œñÀg‚ a¯c5í™œÏˆV0Ğ\©D%4pR+Ü4Ş5jæ¿k=_û`õ*(ïx÷½bŠÓuÇépªĞ[Ñ[¹h²s=7Ù7.œ N¬g‹Î}Á`3ÙOEäßÿœçñÛG7CM†šyÇïvÏ×şY½‚ÌûAÄ‰KÉ{²ş ·‚ŠÆFïnº„,À_ÖµQÏÀoR’p^õ<~õqĞx3Ôd¨™wüîó|íïÌêUPŞ‡y÷1Åi¤çqêDµãz+z+W6ÊKç£6!ƒ PÆÚf.l/m¨9%áØ¿ëyüªã  ñf¨ÉP3ïø=êùÚ¿=«WAyäyŞÅ~]ƒ?ôùƒŞ
+   ì`SçÙ¢l‚1ÿÔã¸™¯R8h¼j2ÔÌ;~OyşÜÜŒÕ« ¼ŸåyŞOÃ9éïT;ş ·¢· €ä„{Šæ4Ôì‘`¬§{·¸h¼j2Ô,(~=n6eõ*(ï'z÷şøƒóÆñG²ş ·  ÈíaØV43¡æ5	ÆùGã6§ 7CM†šÅï%ÏŸ›MX½
+Êû±çıü‘“SíøƒŞŠŞ
+  ’ 6ä†ô—ŒñÇm).o†š5Šß3?79«¿°¼ŸéyŞÏÀ9©%Õ?è­è­  À‡âú¢·”5Š*%ß¯<]\4Ş5jæ¿Ñ¯ımY½
+Êû…çıxü‘“¶¦Úñ½½  ¸ó`lh^•6['ÛO<[=4Ş5jæ¿{¾öïÊêUPŞ¯ğ<ïGàœ´Õ?è­è­  À­F££½íZëP³WBq}×ó¸5Â@ãÍP“¡fŞñáùÚ¿/«WAy¿Ùó¼wÃ9iªĞ[Ñ[ €{ÍÆ`ÅCÍëŠékÇ­Î o†š5óß­¯ı‡²z”÷ûÖáC¨vüAoEo  î5•Í¥:J‡š£ŠéDÏã¶9Î o†š5óßµ¯ı½Y½
+Êûãç}7ü‘“¡Úñ½½  ¸Ùp´-W8Ô|7¡x÷<nÛá
+ ñf¨ÉP3ïøå–ß }ó¬çyßä¤Ó©ö‚òşş ·Â	  Çƒr„Â¡æœ„bù¿JCMo†šÁ5x¾öŸÏêUPŞ_÷<ï[àœtÕ^PŞßÀôV8 *²ø5í¥@-ÈfäµÒB´Lá`³f±|ˆóƒ€¡&7CÍà†šı=_û‡²z”÷=Ï{ü‘“.¥ÚÊûGøƒŞ
+' @E¿.JS7‘ÍXêå.…CÍV	ÄñÏcÖ7 7CM†šyÇïtÏ×şY½
+ÊûtÏóŞä¤¨ö‚òş5ş ·Â	 P‘Åo{%ƒ©gÈf,õÒJáPs÷â8Ìó˜†€Æ›¡&CÍ¼ã×ÃóµÿV¯‚ò>Çãœ›/t*ãœt7Õ^PŞçâz+œ  Yü²JSÓÈfl5ó™²¡æ1	Äğ,ÏcvN o†š5ó_Ï×şÇX½òÎy‰h‰Ç9Ÿ?rÖ£T|AşXŠ?è­p Tdñ«¥d0µBTŒÆR3Ã”5û$ÃÃ=Ù#8h¼j2ÔÌ;~-<_ûßeõÊ;çÍ<Ïù+ø#g½CÅçóæøƒŞŠ¡& c\¨d8ÕšlÆR/”5ÏO †=Ù[8h¼j2ÔÌ;~5<_ûUbË+ç¾Ÿ]ÿ şÀø#yĞ[ ”¿ ~¥d8uÙŒ¥^ªŠæ+jI †›y³qĞx3Ôd¨YPçz¾ş7cË+ßçxïËñşÀnøƒŞ
+  ìğ%Ã©şd3¶šù@ÑPsXñ[WAÜjâ ñf¨ÉP3ïNñ|íß,¯|ßçy¾OÁø¸áz+ €²À1J†Sw’ÍØjæECÍ›ˆ_J´Øó¸mŠ€Æ›¡&CÍ¼c8ƒòÌÛç{ÿ˜ã5àüAo ï8\Épê%²[ÍŒP4Ô¼'¡ú~ìÃ^8h¼j2ÔÌ;†wòÌÆ/æfçEç»MÌ1»àüAo ïx™’áÔ²[Í\®h¨ùï„bøšçq;' 7CM†šyÇpçkÿ¬`9çº¹‚©~Ì1Œ?ğş · Èwì­h@µ¥f.PT3£ŠáÃÇm(N o†š5óáñ¯ıæ¢À«˜j¿ü¡yqçÚü`JÌğ¹¦· Èwl¯h@u!¥f®UT3%ÃÇí)œ 4Ş¼„2ÔÌ;†»)xnnÌ*–S®Ïõ<ÏˆYGşØˆêÇôVôV ïXWÑ€ê}2KÍÜ¯¨fîL(†{·_D•pĞx3Ôd¨™W×UğÜÜ“U,§\û~³óU	Ä¬¾ìAõãz+z+ ˆœ®hHÕ’ŒF^/Ï*ª—kŠáßÄ®n o†š5óã4Ï×ş>¬b9åyŠçy>Œw’‚t&Õ?è­è­  şEğIECªsÈhäõò¢z¹8¡VıæyìNØˆ^ğT×ÒxÓx3ÔL4Ox¾ö?M'´Ö7SĞµH(v£<Ûx„?š3Ô¤· ·Á+©&“ÑÈëå{Eõrv‚qüÀóØ=°:zœ·h¼i¼j&GßÏT^*Z‡n¨Ü÷õ<Ç?%u	Šü{áü?è­  ò]{*ReÉjdµRÙ6lZjå”cù€ç±û!Ô[>=¿¡u¨ñ£ñf¨òPó@ÏÎ#èˆÊÍñ$Ïóûl‚±;H?ÇøƒŞŠŞ
+ â]Û)jö%«‘ÕÊÊj¥W‚±<ŸÏÓ¼õÁÕçìDoo†š‰Æ1£`í”¨Ìü6Qß¡	Æ/« ~ÿÁ	ªıq)CMz+ po¬)Z¡hPõN¨;Èb¨•Ê†šû&K»uÔc=ÎÙŞ4Ş4Ş5cJô³çkÿBÓ;Ò•šßS<Û»%ì_ø£nPë®5é­ ÀÍ…ğ#eÃª’ÕHêd’²:Ù$ÁXfÄox >øÂãœµ¦ñ¦ñf¨™x,'*Xÿ¤+*5·ä6p_TÃpƒZ4e¨Io n.„×)V}+ªEf‹Z#ëŠ–+ª‘eæòã™}£Àg•óAU[;¾²Ál  òIDATæ¬677CÍÄc9LÁ3tÑym¨ OúÜ8^?ğ‡£úÌáøÒ[@ğš.Ê†šF“Ù¢ÖH7eõáBã~Ÿ‚8î˜Úzœ«94Ş4Ş5ˆå
+Öş¹Iş0è¨GS×«ˆã^ø8ª+jÒ[€»aÏw•¦ÅÜ„^Ô¡¬>Æ:ÓŞ
+â8>0\äq®^¤ñ¦ñf¨éD,kˆ~U°şïNwô§¼WÓ]ñşÀej†šôV àöÃæ…»5¹¡³8µÑJáĞûjâÚ\I,[ä…·¨yo†š5‹Ïq
+ÖşGèVåsK—nÎUÆø¸íz+ €²Ã
+‡šFÈn…kã1…uq¢qM)8WÓ‰ÏÕbÊW#Ïót77CMgâyº’gé6tI+óù”‚\ŞëP<ÏÀøĞ[ ä»î¬t¨9ET\;*­‹İ‰¯†s5ÍÙQ5ğÂ±çi3oo†šÎÄs%ÏÒçÍt{££’\ìPL[)‰és¼Gàz+z+ ˆo1¬"š¯t€5ÚÜZL–ó®‰”Òc	~se§ä\M££ğÃçg¡+7ÕÓx3Ôd¨¹êùú¥’õÀû¤7äp‰¨.şˆDÿÀ*Şê0Ô¤· ?>c”5WmãòY(ÖCW¥µ0Á¡7SÓ7•{¡¾úšŸWi¼i¼j:Ó›•¬ÿïˆJõEw%9|D¦·ñş ·¢·€øÄ£5Fº²[É“‡ã<¥up¡CqN‰>S×ûa°ç¹¹Æ›Æ›¡&1P‡è	ó…ÓJòw2şÀøÃĞ[ ”½ Ö-P>Ø¼3Ô_Ló¨ƒÖö–?­5°“cñ¤h7B%…~XWô‹ç¹éNãMãÍP“+Bı7´c~Ì CIî‰ÖÁøøãz+ €òÅ»•5n
+ı`ûròßÜ¼*Î½i«8óÍÅ÷$…ğ}è¼Üfi¼i¼j:×;­ÿ§ä‡º¢™Jòvş`·şğÏôV  e/Š»0Ô4ºİü
+LÆÿ”ûD_)ÏûSÆş}%ñ57¡7Tä‰uD?{“W‹)7CM†šÿ×öŠ¯fG{Ë ¼²ç´kÉ[[ü?ğ‡ş · (ÿaôE ƒÍ¯E]ÈúÊ¼ï`?Ñó>Æÿ\E1~BËòw\Ì²4Ş4Ş5#î¹>T´şOÕRî…>Šòõ:şˆUà¾ŠòõšGq§·Š1Øæ³¿ß*EÇ1VrÊ«ç2ÔüCŠššëZ¢kD+Èó2Q#GóĞLY¬ÏWà¶f|ÏÅ64Ş5j:Û3”­ÿ÷i=âÇ~Í´LQ®zâüAßT¦d¨IoUZ°—6(A¹ëDF‰Nyuã@†\«ËÜô}jH·£ËßÚI45 u<o(ŠµY?ööØD3äa–k»fi¼j2Ô\#¶ìüš·(ôÀvMÕ’#s!duü?Š”§-•ùc¶ş ·b¨‰jBù~}:ĞZ|S´½æ‹„äo«gÏ-·İÏË™Êâı“/gı%UD/+ÉÁHo†š5½ˆïƒ
+Ÿ¹)ªÿ­ìCS~®ô(şøÄ­+<Ë½CMÄPJñë>×¤9ê,W?W.0§›‹nPpñI¡¿¸Vu<?*Ü`jm{Ï|r•¢øïCãÍP“¡¦ñí¬ôÙ;Ğ÷‰•lÌ×Í=Êşp77mì®_üAoÅP1ÔdŒèœ_Sæ qj3½\4NôOQóXÃœ	#z%ğ<^çI¾îRûù¢]<ˆ}‰’‹VsD•i¼j2Ôô"¾fıùLéó×<×jzZ÷Ûã‰´åä^Ïò€?ÜÌKw¥şáa.è­j"†šP†gÿAmşI¿ˆî°ÅWu8o)»+Ó\ 4—¼­TO<÷w¥ñ_$:ÆÕ	öÂ¬G•Åü2o†š5ıjÚ÷PşõË¦å¢ªù1Ti.Ì!× üá–?®Wì4CMz+†šˆ¡¦—3{‰ú,ó¡÷h¸èt³MT7¡<m ê",Ï s½ê™ïF+ÎÅı¢:Å;-zOa¬[Ñx3Ôd¨éÕP³Ä7´®ÿL¿ïâò¿ä¡=_]k®õtÂnäakåş¸ÆSĞ[1ÔD5¡ßîF}æ%s›øÌÍ†ö%pÑf¢ÌĞ3[ÀMÄæö=;¸ÜD´­hQ?Ñ#¢éÄ|­êä™çvQ/DùÑæ@ÑL…1DãMãÍPÓ¯¡¦óœY¾—ƒ±od?^¡8öæSá†¯Cø#YÀë1Ô¤·b¨‰jê|™y-úCó[ÑÇöÜÒgì ô1ëÉvğó£Â‹câÖı–
+ä<Û§EíŠïv§µÖØGãMãÍPÓË¡¦YŸŞ
+äùüŒ=æ¨$á˜7±;å´Çü"Ï×!ü‘Œ?.	Äzìz+†šˆ¡&¬Å»;R£ÈSíì©çº”#3ĞßST%†—!³Ëã]åñœãÚ'ş4Ş5jæë={N):Ïì‹1Æ•Dû‰Æd¿2„8›¯j+X‹ğşˆB3|ö½CMÄPróïêù¶Ğc¿™†òóÀòe†qwØ	5ŠÇŒ½ hdö÷ÛÀCˆã…4Ş4Ş5½j¦=Ï|¹=«oh1Ÿ«Åµ™èx{tÏœ ã{Š’µà(t²ç¾ ·b¨‰jBşmj?›¦^‘/Ú!‚×Íû'¢Û
+Ø³F·eEìY³ëg¿1~g»³·¨¿èN»»!´¸ı"Z‡Æ›Æ›õÈß¡¦÷®<ÃW¿cé™ zĞ\à!:[ÔËîÖ3úl(ªiÀj/:HtRö÷‹o·?È›Ï•<–&U­GøSùîz+†šˆ¡&äîáŞÔ*òD+Ùğ¹Dyh77CMÿ‡š6æ°¦¡"h™Yw®IøËíøŞŠ¡&b¨	yYÆQ¯Èqı$j¬ÄsæÆû%äå sˆÿz4Ş4Ş5Õ5ØsŞXßPE4Héš„?P14P‰è­j"†š‡7²Ÿ8R·ÈUõTæ¹¡äå +i¼i¼jêjÚ¸ÈÚ†* w²_Â‡?Çz[‹?è­j"†š¿—¦f‘£kv+ó[mÑ·ä•£¹¢†4Ş4Ş5u5mìG²Æ¡Ï\Ü<€µ	 BıÑZ‘è­j"†š§—S¢'©[Ägç±yî0ò‹ÊÑq4Ş4Ş5Õ5ëg¹Èå¯ş¬Mø¢~Ê|@oÅP1Ô„üÜ„&9¦^ÊHx£Rôš¨„Æ›Æ›¡¦Î¡¦çñGÉèUQ%Ö'„Âğ½CMÄP
+÷t;ÑBê9 Gµ}v^Æ	?’k´š–‹ÚĞxÓx34Ğ=Ô´9¸—5å Ù¢f®Qøëz+†šˆ¡&TÌ×ˆVPÃ(áƒğkâ·=ğZM×ÒxÓx3Ôf¨YGôëZË9;ºFá¬?è­j"†šPqoŸA£„ôh£Àüv1yGÙß/ªKãMãÍP3Œ¡¦ÍÃÆæobıCe¨Gàëş@AúƒŞŠ¡&b¨	÷vJtuŒbÖ"sB€~«$š@şƒÖ2Ñ®4Ş4Ş5ÃjÚ\pô*MñF‚?P˜ş ·b¨‰jBñ-c¨e£ºì·F¢™Ô@°:‡Æ›Æ›¡f˜CM›9Š­¦{µŸ+?ş ·b¨‰jB¯ıı&^j1Ô‰ŞoíE1ÔCXz2ëÑmç4Ş5jF–“³X‘èEQ5ŞBğ
+×ôV5CM(®Ïk‰ÆSÓ(BbGÂ*¿M=¥oDëÑxÓx3Ôd¨iş¹ƒu1h}$j@7„?PØş ·b¨‰jBñ½^Ut?u"ĞY8l¿L]!ÓCíHãMãÍP“¡æjy©"z˜õ1H½Å@ 2õfHş ·b¨‰jB4~/]Cm£"iëD¹~ëK¨W%µJãÍP“¡fqscÎ4¿52(MÕ¥ûÁ¨T½ ªXÓ[1ÔD5!"Ï§ÌÙ‡Ô7ª Ì¹‘Gâ¨µúíBjE­N£ñ¦ñf¨ÉPs-ıÖå¬•Ah´¨]ş@¥j”¨z€5NoÅP1Ô„ˆ½ß›MPZ’ø–óšö¡ÔŒ:¤ñ¦ñf¨ÉP3Ç<Íš©Z#Í'Õt<ø•ªûBõ½CMÄPâñ{ÉõrÕ·Îd7ª€nÌ*»‹Æ›¡&CÍÈsu¼=²…5Tßó „N üAoÅP1Ô„äÖ€uEPï(5Ä5{­§h1uäıƒ…µIãÍP“¡fôù:Tôë¨š/Vş¥í.üğ½CMÄP|]tS¢cD©{TÆù™°¡(^ÛNô5å¥.×êo†š5cËYÑg¬§^kªY3éhğÂôV5CMpo=ØD4™ÚG«i¦¨î(ªÏ‰&Q[^õOT^“4Ş5jÆ—·Ú¢¬­^êaQ=:üğ½CMÄPÜ]ªÚI\"„5Æ‘ø¬šèNjÌy-íCãMãÍP“¡fùëi×ÖZ÷e9‘ÏÍñ*Ó'àz+†šˆ¡&¸¶6li‡Zx!ÌË€¡9‰Üc)ÛÎ§æœ”9&`koo†š5#Ì¡ùBæ]Ö[§e>‡ŞŠjÅ¨T}Š?è­j"†šàúĞeÑ'ø!-µ»tkSı±úlcÑÔŸSz$¤K±h¼j2ÔL4ÕE×ğ…Œ“»Ï‹jQ¥ø­¡_EƒD5©Rz+†šˆ¡&ø°NT,š/ÔêyÑß©öD}vİ%K=&§9Ùßo`MV{4Ş5j&ŸÏÍEÏ°;¡ÿˆ2T%ş@øƒŞŠ¡&b¨	ºçuDWˆ~ÃjôUˆC‡=VWt½hµ»ÌnÙi¼i¼j2ÔL0§)Ñ¾Yn€NJr9"ş@ej
+ş ·b¨‰j‚–Ez#Ñ¥vW^ñ·19\T™ŠvÒcÛ‰&S§±h¦èÈû4Ş5j:—[siã¿D?±FÇ"çSé‰ğ*Usñ½CMÄP´.Ö5EÇ‰>Â/ŞèUÑ~¢*Ø‹	æLÛIÔmdMúÙœ—FãÍP“¡¦Ã9^Otƒ=¿u»øšmÏÍ\jÃhÍ²çfâz+†šˆ¡&1|Ù]4ß8«§D»ğ™¹·şê(z:.Š~Õ£ºh¼j2Ôôhxs.ç.õFóD5¨.üğ½CMÄP`õ5¥¥èZóÒ‚‡×ÑÕ¢-¨L5şÚ^4šÚ.HóECE¨$o†š5=Í¹¹¸ñÑ+¬éi¢¨_«àTª&àz+†šˆ¡&Àÿ¯-%¢D×ˆ¾ÁO±i‘è~Ñ^œ}£Ú_[Šn²ŸQ÷åë%ÑQ|fNãÍP“¡¦²ü·àòÆµj¡h¤‰Uƒ?ş ·b¨‰j:àÜŞŞœş%Ş*ºÌMÙÏÛÁM*.(oU±lÓ¸ÏÃÿ?4±»27¡Jrª£–öˆ
+ïxŞÚ{š·‘¸®¨uĞ@ÔSô¸ıa“g@&½@ô¨?háü?ì­Æù(†šˆ¡&@ùkNJÔVt±ıˆÃ½“¹yşa{QÓFT˜³D‹-Ğ_‹î°a±K B|˜·—à„vÄÈ¢ƒ8Öâ»ñ€.s3ÔD5!É5¨šhQ{Và\¼WªÌêY§¶œwkñU=Ñ¡¢ëD“EË”~2õ¤èÑ¦\‚ ğ§ç@eÑ®ölíÉ
+ßù–‹ŞµG±˜AUu²yú£ƒ=&ëmüà·¡÷í‹P)jŠC 5É|ªŞÚÕíÙúãË¢gì'´ùU*è«ÚöõìçŸ?{è‰ÿŠ´¨Ff r~T·G*ºWô‰‡_¨ŒgŸgµÉ*DàÓğ   »Ñ0ç¶²¿4m?yÍÓÁLiçÚ¼n?›=İ6"ë‘uˆØSüxĞË	Gˆ^´Ÿp¯HØ3E“D·ˆNíÈY±  ‘<Ì®şN¶·º]4Şş˜¼0ág€é‹]jŸS›°ğş   ĞÖl¤DŠv+:ß~nk¿~Aô‘½:©!ùä÷[Ñ[öÓúÛì é{î_3>#}UUÔÜî†ì-b‡î#íNÉñöFñÉv'Ãtë³…Ök‹í3DÓDŸŠŞ³Mø{¹ùaâÑ)ö|'³;bcóï&  NôWõEmDûÛİæ²Çûì¹ÍOÙõüÑv'ıwö¡ÅöY`~´ıQô•íÇŞ²g©›ÿ¿ÿ±?¦³ÿÛæ±ÍÌ™‡Dğş€dù?ğUd9³¨‚    IEND®B`‚
+------MultipartBoundary--I7RRUqu0RCy2EphqmEJZ1oH8kF9bgCaD66OcPF4Ue1----
+Content-Type: image/jpeg
+Content-Transfer-Encoding: binary
+Content-Location: https://www.gravatar.com/avatar/14d80373cc16819eeaae5286c67911ec?s=250&d=mm&r=x
+
+ÿØÿà JFIF  ` `  ÿş ;CREATOR: gd-jpeg v1.0 (using IJG JPEG v62), quality = 90
+ÿÛ C 
+
+
+ÿÛ C		ÿÀ  ú ú" ÿÄ           	
+ÿÄ µ   } !1AQa"q2‘¡#B±ÁRÑğ$3br‚	
+%&'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyzƒ„…†‡ˆ‰Š’“”•–—˜™š¢£¤¥¦§¨©ª²³´µ¶·¸¹ºÂÃÄÅÆÇÈÉÊÒÓÔÕÖ×ØÙÚáâãäåæçèéêñòóôõö÷øùúÿÄ        	
+ÿÄ µ  w !1AQaq"2B‘¡±Á	#3RğbrÑ
+$4á%ñ&'()*56789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz‚ƒ„…†‡ˆ‰Š’“”•–—˜™š¢£¤¥¦§¨©ª²³´µ¶·¸¹ºÂÃÄÅÆÇÈÉÊÒÓÔÕÖ×ØÙÚâãäåæçèéêòóôõö÷øùúÿÚ   ? úÓÂzH’Q+·Íí]¾¡p4ÈƒÈÇ­q:Ôª£g•¯¨Eqv¿¼Îq@ZÏ¼Ï–Ú=kŠÕ¾'Z$‘²x-š‹ÇvA¹>â¼¾êVóğàzPrş%KÛvŞû½rk×mãÔSlKòúŠŸIÒnu…VÙì+m<=5Œ@´mÜŠ ó;fA&ß~jÏü#Îf0¸¯A»8£€g¥bÜŞÅ ®}h‰¿ĞºäŠâµg6×8šôë	)*§u¯#ñ-Ì²\6Óh¡Óun%‰[ğ®•¬7Aò/8®Â‹0œ3w=ëÖôK[­MpÆ»@ÃJyş&€<¯]ºûğBH•±áËKİf2ÖvSİ*°FtBT1è3Ó5Ûë>ğ^”Ñ>£4Ú…ñ“¾j¬'ı‘Œgçpp3R\|MÔo,WJğŒpYiqäÉªBvAìÑ€N27qÔàŠ ­§x\Šy®'¶[hí™yP€¹QÏ$	Çjè´‡…²A#ŞØÉ_™ÌŒ?à[px÷®WJñöƒàK™ïuCm¬İŞfÔæ-jÓ±	‡Àåš¤¿ı«›Ç ÙxrÌ\ZÆI:“¸¸³ S~éœ™ “©xT³±iıŸÙcEa)fU`}	úzö¯/×u½FĞÉÖ“¡êäQÇJ~‡©øbV¿ñ9“dEÜ›EÙ˜”>„Ï½w^š|1]ZKÛ@T»Mi!…ØNI ã ï@:ßüUşÌ»ò&4'=k°Ğ<]o©Ú„~a“ÏZôŸ‰?üñBt¸†;)íÛ`}1vIÏ$°*A÷ÎsîMy¼?5]g›H¾†úÙ‘av):§aƒÔãÒ€:ïÙYjÚì~v6€ô'µ{ÿ >ßjz€WËš~¯{áíT3‡FFà©¾Ìøyâ‹/èvó,á™nQ×8 
+ğß‚&‹âŞ›)tWzdğÃ½zf·à->]-áòB>Ó†Õx«ÃĞ[ÜÁ¨Z€·1gæÁ¯<ñÇÄÑ¤Æ"’ÌÃ ¯J ùKÅ·’hzıæ›6<Øå!=Xf«A~^=Ò£¶jÇˆ-Ä¾*½¼š2²Jù½9ü=$p•|àt÷ MXòY[?­wwˆãbùè+ÊVÊh†à*Ô7[KE zv£§®®
+¨ÜXğqÚ×‡çÓƒU}+_ÁŞ.†åYäcÆºOMm©C!FHêh™øm}om¨¤2•ÍÆ{×»Æ°ÔïQÀ¯˜tØ
+ßF8‘ù×nºÔá@óäéıã@rø[O‰­¢™Šò®x T,@¯8Ğ<J‘Øªy€a}kHxÆ J»ƒõ4SÇú,w6,ê7Q^1?‡–mICZõ}w_[ôÙ¿åõÍyæ­sök¿=GÊ(½ğ&‰h±²2¨ c8®ƒUÒíVÚEØ¸ÆExõ·'²|ÂvóšØ>;šù¹ä´Íøá7] í^}|²„9Íz6¡	¾”ÈıjåuËTTeE9>”äº¾®cœÄ,xéU!Òğeäú+^ïD–k¹Ñ×ŒÕ›(Ì ÇÒ· æ€#Ò<3!FvÛ	i]€=k/âßÇX|c‡ü.«vîætÏ²|sÁ*enı•@Áã_Ç:v¸8¥–îY£kwµ´P^=ëË7¼ñÅy¹ı™|eñÄĞêú¢Md‘87EOáå#Œúâ€9ë¯Š6)k7Ò_êÛš;¤¼Ä…ƒC‚˜ Ÿº#œ‘êï5û‰«4ïl»i–Ò Œ€än ghİÁ9Û÷«°»ı…õ8™â´¸h#ÆÕŸf_@qÆjïì¡âìñ£–Œn61‡Ïyëÿ ëÍ ssYézş£m&»v/õ8ğbÓ³[îà‡%Øpàr:A®ˆøÿ Áh.5kıVú& EòbÇE. n# m$úqÛ—Ô¿fÿ i‚EÏoÄ“"åß×¸ëpyç9§è_³ÎbÍæä%_Í¶…‘‡ ûëñ Û¿Ú=mfYô«XlàÎ2öæI	Îr .99<ç¾jÄ?µıìFš2ÛGÛ™Hè fè3Ó5‡¨şÎK-‹İÛJF6Å~Šı?àB¸Í[àˆm WI%»
+•¶8î3Œ“õÏô x´øâÖpÜiº®—É?ÒÑbqÕU	,©<~"½'Ã<â}u"Ô¬.4WWG¸•í˜qŒü…wqÀ!½ é_ê¿µM;2>•xu˜*•«©øFu¸ÓbÔt+ñÁšÒRªÇ·ühôƒÅzm®¡lm¤1¼ä€šÂG…rxU˜uF'ƒØVg€¼g©xá¬ïÄÁÈ0B+À~|nÖï4ÛûzX5©‹qÜõû’ ?x¸ÜNWwMz¡õŸCª­Êİ4R–E<€G¦sèzu ¢%ø°5M3smä“^kâ]5»P3.~jà“Ä7/
+ÆÌqÜt®£ÃøÀ$ À’Í"—{&9Ï­^¶†+§@0 5ĞëşqhÌ£Šóã5ÍË#äÒ€:;½.œ ë\ş¡£åIAÒ®¥Ìó ù±Š•^M 0Î}hÆheGCZ6³Îè©$®Wû¤Öì–>ol“íU×NUr•"€+¤±ÀÃÏ­Jo=ò®£BÑ`»¸‰vïQwàhA0/#4ÓÃª½¼¼9ëV&ÖYcÏ-ÍaXxÅ{Öâé»-Í \°¼7<¹9ô4k‡·lœµJ9Eºg€Øªwú¶õe-Î:P1ªÌ°Íòjh×¢Ušçµi$$3V4«¡xÏ4Ø›à©XzœÂF'£í¤¦sÅakº¯—Z ÍÖ&Ù·ªœsš£à%¼Eª]İÈî¶¶#Ì,­´ôÎ+”ñì·íœœkß<á5Ğ~ÙÚ\¡vâ@†,Ãa@ü!ğcxkëèbxáõ­÷äQŒaÖ¾Ñ¾ÙÚÇ
+I
+a Ò±~évúFA9~qÓüó^™%È‰Tí4'‚ô÷`…:u®Wø§Ü"ƒnƒoCŠëcÔqò¡ÈëÉ¨¦¿Gùwg4å:ŸÂk)ÇË
+ãÓ®Zëá=²9QñÒ½ÒWGAµ›p¨yaÇµ xDß‘	UŒbªÇğv™%êGèqÚ½ÂâÊ=Û±íQÅäÀ
+¯ßôí@9ÿ 
+"Öô’Ö7cÔ2
+äüuûéŞ)Ó¥O°B^E ì\ìkéˆ/¬{õÆ+¤Ò®’E°{¥ ~(øûö|ñwìıñvÊÒ–-3Rb‘M %†~ŸıjõßhzÖ‡{|—æ0—–mû‹pT#)ûÃØàóïƒÍ~…şÑm>"øMgòQî¬ÍÊ‚F+çÃvîR+´K¥‰£Y˜ è{Œó@m7Ú€ÀÀ®×ÃÉhP¯"¹ˆl¤³¿ºŠrG+)*0jë´9àò†-@íÒjiåJ¼ãŠÁÖ<ÎJ¨Ü=*Ü3˜¢ƒ´úÕí;Uİ.Ù@`{š çm<ëlxÁìk>÷Ãs[8\gŞ½rÒæÒK`¨n••¬ÚC#+!ïŠ àí4P°îÛ“ß5^M!^\²ñé]”6C' í=*Í‚·Ücš Äğö•%¬€¢îô®µn/Õ@Ø8­h,á´ˆcÅ0İ®OJ æôW)>rzâº‰¯ÄVÛIÉ5ÎÚZ4'qïRê9‹ŒĞus¿ kí˜I'5'œÀä$Ì¯Z ¥qnÒ( Ux­d Ö©*«Œô¨ÍÔqıÜf€pol~•çŞ%Õ$Fb+Ğßı&&šà|Y¢Èêå* Âğ¥Šø£ÅZu‹Ê"IfÜöQÉâ¾»],Ü^Æ‚6 TnÜcšù¯àfŸ—e¹¸<6ìb'ûçÖ¾¤ûaX­Œr¼‚P2ääg<àÿ 1@‹¥¤ZdÎTŸÊ·%¼3  œÛµrv×¿h‚-§rmÆ}kWN”d/%˜÷ç9šgc°ñø‚*xã“nHŞ¦§·µ>fY¨«¿»D;¾Sœb€3d…Ø sœàT2†Áş/zÒ$cÉù>µBE\±Ôó@¥‰‹ ™Ñ§ïMÙÛõ5z‹³%€2sùÔ’ê¨Xe[‡,@°êŒá†*Å¢ğ6[GaZ
+¶×GjŒ{tü«>÷L‘%¬HÎx¨xŞ-Õ„èy¤m5ãzç…íÅÌ³Ä¤”o0 ûËÏUõúW¡ı±`G'åì@5Ákz«J¦HÜ	#c¹	üQü¨å/‰öÛÅúŠBvG#ïG³9éY^²š9•FpNk§øÃ;Âj)LK*W¿$Tš”f%sÉõ «OÒÅÅ¢8¦^é‰nÀÆÃéH/¥³·zUVÔŞvÜF	4NïPšØÀ5¡§^WÄæ™{°Æ—“Sib$PÕp¹`qŠrx-e95SQ8U¶·jçÃy³ÍŞ€;9õß5K/SÓ[íRw}ª Ûc¸ªÍ¬DŒWjğq@|ºUÔh’M6="áÓ/~Uï³x"6p~U\ø1J˜Å |ç¬éªîH˜sØUtk«…Ü¨Iô]Çc“+åÊ£oGÇLô ›5+Ym-šÊ]ÌşÙ¯dñ_‚”ÍµWô¬$ğ2Ä„•É÷ 2ÎàDJÍÖäe#Šë¯¼.Ñ1Ú½+ûÃ’²’úPÃÛQm¯K:±L Œ¸şO&½ÎëZ‹û2İ¢òÒ!'„u!AÏ>™ëëšñ+GÕnX•E*2_8ë[Z_‰ÜÚU‘ÿ VU20œgÿ Ò€=çGç¶€«ã§<Šîô?nrTcœõ5Çx^ÙâfEÁ8âº]{ÆvZ-°Úê¡NOù4±¨Ço ãÿ ë×¨x†c4…í1Àõæ)øó§[\?šÁU9Üè9¯"×¿km¿³ü¬@İõ ¨­|Y!˜Ã¼¼î ŠšçÅB7n,sÈäWÏŞøÁeâÄ°L¹uÎãğ®ËAÖÆª%“>aÜÆ€=+PñW—X˜;õÚN?ZÈ:¬·RI@HïÍy‰<[‘,#Œ Àö5â^3ı«"ğÌÎˆäˆÎK(Ïÿ Z ûSKÔ<§Rî@åç½v6wñ\ G+¸ñÿ ×¯Î­öÎ¶¼tSL™ nt(9éŠõß
+~Ñk(ŠHî÷Ää•s–{‚3@Tkú4–¿ˆŠEÚqĞWŠxŠgÓµ‰ÚTù6olúdŒûõ¯Hğ'ÄÛoéßgY]ÃnqÔöâ¹ÿ ‰z´6iµ#”´Oçÿ × ’¿hòúv± _Fÿ »’&P#ÏáÖªøGÆ–÷${À=ù®ããÇ‚âŸÂöÁKG,rîòÔ’1ŸcÒ¾f¹Ÿta9Å }/³ğà¯¹ªrêvîq¼ WèŞ.šKoŞ9Š£ªxº{wâB§­ {.±â&4`EUĞuï2R’1ãŞ¼~5ÚàÉ½¾µÕøGY\–€Gj ôWT‘ØÉ½6ÂG•rÇä…ï ’Ô²€XŠŸM)­Ç!yõ ÷z½ÄP„óí\Ü—ÓbIÉ&·nm÷`Æsë@ÒTŒ’2hô ¹ô6zŠqÎi¦€…=TSæ·W„àcŠdâ¬˜Ò€8-gK¥c´X—š\b>œW_©ÆÛëT%´â€<êóHçå¬Éü>Ÿ—?…zÍ€ÏJÍ¸²Æ@ãß´¹lü-yä£ÛC¬Cæ#=+‹a-–½£¬ñùW+4ª£ˆÔ¶Ü~¿­{ş·à–ñ7…u˜ ¾û-òÂM¼c«°ç¯a_9GuÏ|;Gh¯aâI®âĞ§ ½hêıZá¼? Ï*`0@=‡ä+çê:‡‰.Œ?‘±Ê‚GãÈôõ¯ >%X‹Í;u+–}Ùn˜Å|oñën4Á ·`V{Àv®{õÛôëÀõ ;ø»ãØ^5¥ÿ ˆîu+¶`¿e± í>›€>İkÆtGBÕµic´³œKÜVIX:©8\‚¸Éúş5ìŞ&ıu-gÃ:KXOkkâ{Gw–òfumÛ~mÊ¤†R£Ío|4ıµ†’êz‡Šu»mvúîÌÙ!‘¤cMÛ/‚sÆ8çÖ€9
+Şİh×\[´­hÄyŠÜ2õ÷ÿ Â¶«àë{˜ÆEİ»şuó/ş[Ú}¡bi-çË}•ÁØ…2Iî:Wİÿ ô¸ô¿YÛ â(Ö3õ€><ı§ôk­4·‡{=É 1ZùÅ:¶×0Ú$a¯æ9TÀ’CÊ;gÔ×éGÇ­5JÒUe’Ù²£½|Ù©|2·:´º¢ia/eäÙdltçÿ Õ@·ŒµXÕtÖ’ÖŞ[9*şHÁ2oÉƒ‚q×½zÏÂ¯VátæñF¥Ñt‚ş8€BÊÄT“Óu$×´ÍğGáÏˆõIµ=wÃòÉ©LŞd’•rŞ§kbº÷ø'àè0è–š$ÖÛ8®H'¾I9õ Ãá–¥wmªi÷	wkpGˆ˜ê::úâ½ªkÿ –ê6ò¼WTşzšğŸ…uY¥´éZH<E/Í°ú‚9…{×‰€o„Ú¥¶#“É€ƒç…ëĞŠ ğ;ßjŞ,7z~hÚ¬©ó±€ÛxÏ~Oóÿ Šü<»¦Ç²E$a‚í_Ké¾#ÿ „Ê;>iûTO‘É?"€qŸp+Á<O—Ò\\»––Fgb{’y *sWÀ¹¯9ñŠ¡[…XI'ÏjÖø¯{q¦YÌñ«q“Å|¹©ë×—÷¯+ÊêsÀÏJ úOÃS,åJ¶à}+½Ó.¤±e õ÷¯;øKnóéò:’Jƒ“^–Ú{É€6ÄÓYã¥[Ò<HñÌ±–!k†%VÃĞµ±É z}†±‰’yÇJ³ıºƒŒ
+áì¤xv4Ö–BOÎhõ4Ò)ıé 5G5dŒÄOµ@ f¬‘û¿Â€9A3!úÔ>Vcvıxi¨™A@6ÙÏ—=®3Åt³DgÏnx "ø¯s¨h¶zmö˜å.â¹ c¡`ƒêy·ÄMçLñF—zº|0İÜM“¸ÆÑóš½ÿ Åz
+j¶iŒùr¬Ÿ‘¯ñg…5/|HIq ±¶í{§õ4ïBÁu]5ZF1Î3aœóøW?uàK¢€îÆ\ğN}ÛŸÎ»/Ç–P4˜*«üò®ºK[+ˆ€XÕGó¶£ğñ¥l!u\ğ~™ªvŸÔ«#Ç±Tä¼§u}qcoXíĞšå|QâíÃ‘©¹Ÿ|¤á!‹©4Ä§…mt™ÚÖ0Ä Îıı…zÏ ’ÛÃ$2ù<æì [·K·„B%MÊ¬y"»k¤³°òã€(Í¼_¥5İÜ’²§Œqé\¾—áÈ§ó#¹„1$… v¯MÕïa’3¥67sÁÇø‚EğÒ[j^{$Kòò6¾}h<ü6±¹mæ [§A‘[:w€£‡
+ì?•.‡ñ+FÕ_Ë¬s/ğ5upk–Òª*A=}(=7ÁpÚ|öÒ¤ë•Â“ù¡Gâ«{‹¿êz{¨K™`tWÇÊr01ß¯QÛñ©åñvï÷†ÑèzUmsXKı1¤’1»ÔP‚jßPğ¤!`&çI‘üÉznÊ•?®+Èn¬¼ÔaŒæ¾ñ“›âsn›a”yªA¸‚Gçšñ‡µ$t ø­á±5„ÿ 'cÚ¾,½Ğ%>üÍ.Ó5ú+ñJXHHí_ø†Î-7â%»`wÅ }	ğ»Â‚×I¶V^Š+ÑWÃ~sãmgü2Ûu§Ä=…{W‡|%ú‡#€<nûÂF<¿¥Gi§ù)í^ë¯x#ìvÅ¶ƒ^gªé¢Öb@Ç4Œ–ÜŠ¬aäñZëª,¿1ã½ ~™PE(ZR†€£š³İŸ¥@‰V‚şìı(õ~sM~ASŞ¦\ÒF‡` 
+ò%Sš0kNHıª¬‘P-ä9ŠAß¹{ûSê]€»®­Ù7ıŞHúñ]½Ä9“­¬vÄ-·I6÷„çî±ë@4İUtİ.Ütbcñ5)ñÀ…y”g?Zá<Uw5“ÂwƒíÍq Õ§Ó¬Hí¸®@=è¯øƒñ«û.ÒFFÆÕ=ùâÚ³ªøßT–úw’$‘Á Zå–ÓRø«&9‚ÈwHAÃ{gŒWĞ>ğƒZX¬^Jğ cv=h‡øµûCk^
+Ô¬­GÔfEQ¶kÖDÇæ?*±aûI\]éÌ¯–tà0*GûÊyÚ»ŸøÛT²hö¬§Ëz×ÍŞ3øW¬Xê;­á¹x‰áAÆ=9 ü}ñ*ê‰Ÿes«Ly)–8SØ³OĞîtxƒâN…okªÀú|CyLÙbGN}?røqyw)šòŞmÙ4½3ıkÜôM-:ÑQ U-÷€àúu <×üylŸj²¹1\ÅÊcŒûMğÇÅ­JÒù4íK6—Kü.r’U=ëĞµeµE(¨\?ñĞWœøÇNÒ5Ëvµ,‘]©İ €èã¡Í zd>&}Bl·u­jÓÏqqk!'÷ly¯'øqwsu¥@/@[…cÄ©Á#ò¯\ğ»G6£( «Ác@¾6Óã²ğÉá¤š72Aç#h¯koj÷ßˆÅ-<,C)“ÌR¬§–S’kÆd´Àé@yã{šÍÑFIòO>İj^.µºÔ#ä•¯·u›$’7Ş:
+ó«½>ÌêŸhÇc@ÿ 
+4tØáIrvÉ¯¦|/ª[ÁhˆSŠòŸZÛy¢# tzêâx¸G#é@ï‹5ø%ŸJò-eÖæf#µ\‘å²î[ëT§€1@^VÖ{'Ì~µ¸`àñÅg4Gqàõ Ò@?
+Fe^¤
+äo|iùÇç\Ş¡ñ8›ıh zšÈK
+˜\Å´Â¼h|JF^%Aÿ 9I+æş´ê·sF_ƒN„‚ƒkÈÛâ"“%jØüB‘A”~té :‘UÜ/¨®ëÇ±|ÁYÏñ<ÿ ¬ıhĞ\&q‘\§ˆ<Ko¢ÈÂüí)óBí÷JûV|A‹$ùŸ­eë^5Òõ;SüP]Cœì™Cş4—¬jĞkú'Úà;¡•Ÿ}CÅsZŞ”¾'Óˆå2D aÔõÑKâ+-^Ñá±HĞ[¨QjªöÀÍE{&‘.ğ36qıÓÜP)¬ø”ø1"¶°²óÒ?–E3•©Àş•Ë?íÉà8µMAîoTíh’7á‡8WºØZZê·‹9‰7ù‘šó¯‹?±‚>#]®»mfº>¾¤;]Xá<Â9ÜÀpOÔP\µ§ª$2é¸»Šãîs‘úóZV?<aâ‹;FÛÂ7rÛ[|³„²¡=uÿ ü3¨øEƒH›D¶ÔÎæ9 špÂ‡b¸'ç5ìñu­£šTúT9‘Ä‘¨Y2£ç$vÇ84ójjß5ŸO®Xè†ÛM9‘€LŒã rN*•ÿ †ş-Ü›–’ålã†ÈŞq’€>ñÇC_MŸÅkáù­­4æ;£uİ‚ª gà¿NÕÀëwšÆµy:]ß‹8n-Ä/mlFS’wc99Çá@ø³â‡Æ˜¼X<7£Go©_³û<qê\ƒ„S_AøCá^·oáİ:__¥ßˆX	.Üâ(Øÿ Ï' {×²hÒ¼'Ïke¹•‹´Øıãç?Ö™{t¡ÌŒÅ;#CíŞ€9¿.×Aµ†±û…2;ìI'ó?Î´ü1=ñÑo¥Äw2&#2BóYsÛhÌ\†xÕƒ7{?Æºm7ÛÉ…\
+ KÛ›İR8ì‚I#P¿/Aô¬©¬úñ]!€šÏ»TAï@Š×ìÖ®ı+åxù´ŸÇ“ßWÔ?nöY¸íŠø[âÜíqã5ş7'Ş€>¨øe­›û8Îwn»Ûäã&¼‹àÜéŸHè+ÑuŸÃ… N¨3Ò£šA¬ËEpOÌ]“Qns@4Ci¬Öˆn=:Ö‡Ú‘Ôk5î“qç¿¥ zÆ©âû¶PçwNk˜æúúä™‚úYWàPò{SmµĞŒAb1@†™a8RL¬WÜÔ“ÚŸvâÖ©iŞ%aUÜ>´_kñJB‚3@\Êÿ 6$lÙ¬“®ŞÛJvLpz´.Cläõ•xÊÄ¨ÆXĞù|Q}"€Òàc’*§ü$S‡ÿ ^O=sTÎP‡â°®–X¦+ƒí@q×¤eoß‘ù®sV×n%Ü©;~uæÎU“«¥¬²ç ĞÏƒüI>‡­G<ò»ÛÉû¹@==ƒ^Å°ê¼lCîçŠğß±ºÂ2µìŞ3±Ÿ@LÕ­Tı–{xštQÀm£ŸÆ€:oRĞŸøø‡‘Ÿâ^ÕÛÚŞÉö2ÿ 2®Hà`®;WœxsÄ±j&;˜]<ØÇAÁ#¸¯ZĞ’Iæ]òÈ=ñÖ€8íSÅ‘Ú#+*DÉWıkœ¹ø¬öÒ¼M9eîùz×wâ¿†¯u!xXaÁ<
+à/>j‚ùK‘şq@·ŸfÔßYIÇÊ»µ¡¢ø®ÇîÁ’RpÅ†y§Yü¹%Uå· ŒNO§Jí¼=ğ¢ÓH;X`)äĞ[4ŸQMÏÉbx`V^£lÑ4’È›ƒ*O$tÎ+Ô?³íôÛøêkË|m®Cg#Ê>ƒ= sš•äZM¡ø|d±ãõ>‘âëk[%ŒÈ¥Ï,}ëç¿Úâ±áçÒ–‘|¯0Æs´çÉ¯-³øË¨©ƒ®{ û‚_[ìÂ¸çŞ±õFA"@ùnÇâ­åÂc.MiAã«ÉT´…—ØĞ¨üA×–KÚÜâ¾2ø8oC8çc^Çâ?]^ÀÊ7s^1âkI/gy$S@ÿ ‚~"G¦ÚFƒëU¼añÄä«–ö¼ŒéwäâÃ5oşÛ˜CÍ¹²;Š ô|fYqûÌs]d_’gXÄÙ?Zùú÷Á×Pm0å1×–—z’|ÎÁ”ó@Wé^?ŠX²dÏµVOCæ7ï;õóÄ"»Òc*ÌÌ:Uñ5Ë3Ç“@gI+<™Ï#Ş¦”¶ìÕk;w–nyº+}8¹€÷“@Ö8©Ğêó	76y­½(cÒ‘4FtÈBhí­çÅ·µ>X™Ûxf³­-ÚÒçiuV«4cwé@ÚĞícòŞªÜÁäãkj5ÁGVÓ¼…g‰¿
+ «¥¹;@$TMg@ U+{—/µ˜ği÷7.P€r(KM´µ¹™Şèì´L“8ìƒ­{İí¥§ˆü§Kd[ËiÆœ©QùWÍŞ3·ºÒşø¯Sƒ&ù­¥hÔxT$WĞ_¯F«ğ7Áü×}Õ‰õ>Ræ€<WXÑ®ü-¨<úoîö·Ü=®ÓáÆ( ¸û-ëyO'­Ù¿úõµâí \¼ùÕâ~0ğŒÑLeƒzH9(ì«ZjVBTu,:ôúÓnõøÒ¹ÔÀèp=qß½|I¡|i×¼ Šé•Ò[ÀqÏø×aí¤ê± vkY ù•†ÕÏ 4ôxâ	.Y‹ÏSŒ7ÀV”~&fä;Aõõú}kæ¨~6h–Œ×KyÚğŸÄµÉkßnµG‘,–kÜî Œ}9 ¤¼Yñ:×L‚gy@
+9êkÇ¬ïî|i«#É‘m»*™Æ}ÍyÕ‰Ö<[uºe…V3ıkÛ¼¡-‘_—F9 'ãE®…¯kÖ~¹µwÔíì’h¦DfaÏ¨È¯ ¾ødšf¡öy£BØç"¸?Û³Ç:Ÿ‚ÿ i-'SÒnZ­ôˆP~Wd„©ëèírâ‡Zo‰­áÛu¼r\ îŒ?4Âé¶‹iòÖµ‡…-¤p6€`Áâ©™ÈU8êEñ5ÂœúP÷ü v“‚6ŠÀÕ~ÚLÌBÊ´ì¼n°®$<ŸJš_ÛçºĞ%mğ–ÉÚŸ¥\o‡F
+cé]$>.ù['‚A†#ó /×¼
+ñV!a\|^Ş:˜::×¿K{êàm5DYÚÇ&v®hÆçøÄG|<}+¾[n?»5ï×Ñc*yõ¬sklI8Z ô›+EÎ0jö5R§mjĞ³cîaÛŠ ŠK0Ã äúÔ³…RÓšm¾BGJ«$æÙHì}è¯krjîŸ>#`+¹•æÄóRÛŞ´õõ œßqÆG­+È“ğìÖn›4·ò‘±ìkĞ¼1à¹#H¶°¯?Ëù
+ óÛ™ÔaÎ{Q¡xj}nùQ!v‹wÎáx¿5ïVšW…´ûc+ Ô%^
+Èp€ı+.OÛÜ\M"[H“îD6š òßŞEƒ6–ÛŸxxÏ@­Çò­ïÙ»\]7ÂpxFCµôqäÛäçt#î}p8ü+Ê<M.¡{ãæ0ZÎvõç[7 x;R[\—Ô­ñ#ªäu&€>‰ÖmRì—æî=kŠÕôˆgå×8éÅiøgÅ¶¾(°Bà?ŒàƒéK«Û3È^7‘‚ õ÷ 2ñ¬/C…IoQ^{ª|³i]ã‡=ŠõëàÏ¸üû”óº²^úKrD›[Ñ°AåÖß	­m¤Ft œšŞ±ğ…­¥ÎÄUÚ:sşµ=ÛŞ™!Q±›1:Š³abğ$j?|ÜÌzz ÑĞôh-Ê¾ÅÛØú}=k®°¹û»Ï.P•¦ÀÑF“Ç=zW;ã_>ÂXÃ™84ğoí¹«ãÌ¿;}•bP¼ôcú×Ù?õ­Yşèš­"\\½œv³,€RË¿‡ğ¯
+ğ_ÃTøñ’ëÅwğ‰ì4>ÏŸv[«×‚®=q^íu
+éRX\Ì©§¼2ı¡ŠªTv8â€9{á§ˆ|pñêºlĞ!<JPş#ŠÌ’ÙD8ç'µ}Ÿoã‹O°Åù‚âÎD\à©öÉ®Ä?¼ãiM;‡¯Nqbsô —.¬UTcõ¬ï°4®H½Ä¿üC –• ¯Q5·ÍÇ¸®çJ–Å¶ËFıÕ—€9v¶xb%r3YWs] áØWqo§yùÈã4]è‘²ò2E r6µü(9cõ­1ªj2(*¿kÙèÑ¬™aÅn	<µeP:
+ à†·{$ş[¦*èÕpbçëWoô–‚è¾ÁZ‹ÿ u¿* öëı=
+èŞÕ^ÕÌL œŠ·mÖ¯(¶·‚[‰OE‰	5ÕiŸ
+&}²j7‚Ì|„]ò~8é@q—kºö¬»««öÿ G¶’Qœ|ªM{›¥ø_ÃVÂK«k‹‚dX¯åŠ}çÆŸiğ4PÄ±¨ábòvş”æZWÂí^ùC=©‰zóÖ½Ãß,3Æ£Ü'k69ôÀ¬İ?âÎ¯«ù—ºHû2’0#¥G¦øÿ ÆWrÜÜIg­‚‚TÜL#\à“@™q‰á= °±µ¶¸U%B('êMx7ˆ~!êšş©=¯™wr2¦(º'¹=ex»Ä Ö&hæÕ`+pOî,AS¾æ<ŸÒºx^è/rÒ™å¹|…è9 ßZÒ ¹¼˜¤±¬g÷f\İ‡ë›Ñüo«jĞjİÛÃj²ª˜’IÀë’~µíÍœºKDmcdUù°;šñŸ‰º—†´èÊF™)8oÓ4¡k²éIs3ù×˜Ëí¡‹áÿ 6»>¦c“ş&—W¬£•s+¢×ô¸í4•¹Œf7‹ÌEø1×ú×Œ~Î×qêÿ üA+)m¶Ìm£ÇÜ3Ç­ {„<_u xµí®œªÌ7§`1Ôßµ{­®©¥¸9ld7Jùçâ¦ˆÚKéúºÈLöÓ„ ÂÜïÔWyàÏ½Å¤r¡1ƒÏë@î©h²Fä §¨uErói‹6ìã#€AºXïTÛî0Æ@µQßwJ’{ãÌÇ¦%¶ì¾şµvÂİ·)Æ ì_¥_ò¼ÀÁ£'¾	â§÷#iÀÇO¥ gk—kjB(ˆÄ×‚üF×ZÜJò1La@ä±5é~;ÖÚ`ñ#tãµá&Ñî<Yâ]#CŒ¾Ö™f™”í
+¹ÀÉüø çáı¿ü#¾°—ËóÌÈc€XóQ|LÔî¼w!Ğtµ0,…b¸f9
+í÷'Šëüm¤®‘¢Ød?a¶ù¤)È]«€ÄúJàşê±•óË‡’f’ãÍcÎrN>ƒ¥ u“JãXÔ4µ=ÖÑ:!†T¸Ø: ƒ[Úf‘âK-ä[¨‚€É¸‚~€Õ_GÚ¬úÄfA+;rMzêi–QH’ÆFT†<P„üp¾’;mBãìwrôŠs”qíØW{yyàŸZcW°³™äÌ d~"¼‹â§†lõ»[i¥B²!;Z6èk†Ò¼oµ[I^Y¢·RåhÎ=ö õİCà—ƒuWs¡ê¯fíó*;Sù×¯~ÏŞ'µ%ì£‹R€rùàkĞ`øw¡é6Ë+j7NÊ7)yOCJ|}¨øGciø¼·Á&'™±Ôô ¼ğ£¤3%õŒöÌ¼~ò2µ0mf g¥}mñïOÕÄqjšè’ü»$EqŸ©¨õ_x_Ä—F“MfåeJŸ\q@;İh­ 8ZÊm	·—½{¯ğ‡P{é.¥çËÎäkˆ“ÂúÚHÊÚMà`H#Èoğ ïÄl|'¥²ÚZaX€ˆÙ¸œûµ—áf‚³Œ+8åy'<ŸÆ¸ûÿ I­Îï-µÁx]àŒş&¤Á¯§i[¬D²HxP¬ø«â„ğh,æå0Nyü%v:É’kˆíØıâë’?»­è“ê^‰dœC0?wtàW™İx~şÅÏ¸YyS@ÿ ¡ëÚM¶‰mšåÏÊrçÖx›ÃÃE¹ß)FòÏİbO¥p6""ÑíŒdäü¼f¹}rêMfŞ÷jæ×nìã8À mM&kÙ.›÷œ*÷Çá]•—Š­á²¶H•³Ç€ä–gä»c ¨®ïFĞï$µ¶Í¼—'îc½ jxËÅwÖÚòÂŞH8Àï×Ş¾uñÇˆµ-B÷MI|øŒƒtN85ô?ˆ|5w©hW+#$a'¨í^e©ü7±¹º²g¾x9Ë( Ğ…¦½Ö€Öw¤s´ecÀŒpGçüëÉ~À¾øÉ¥İ+yVw³¼1¹èáÁ<~•ê_<&4ıA½Ó¤77Ò;:m•7/µNÚkß`ÕnO•²î=¼,DÃè_õ­ÇÃ3E«ê6š]¼¸H~ÔàôêFI>œÖÃ·ylc·ºÛ}Gõ¯~6¶¯ñ{ö™Ò¼5¦Ï‰ÒH,íîB‘#`9lààwÎ3úWÕŸ®.l¯õ
+ëö¦ÏÄZdî'Foõœıáõëîh×´É^«´ùg®zÖµ»Gà)*Ã#=Gke´’Ãè+A¬˜Dc€çu @ÄÚEP¹YnrÃ€kwOÓ<Â€ ?Ù«×¶6ºNŸ%Åì±CğÒH@üúPŠë`ÅÍÅÀıÜJ]‰ My‡ş1øSCø•g¡ê7"-^àn`Ç·
+ßÂØäG#8­ßÚ—ãöàï	]YiiÜÏò+L0e9ì¿İyë˜Í~tÿ hİjZë_Ë#5Ô³ùÏ.NrNIÍ ~•~ĞŞ.“Âß¯ÉüÙï!(m’9sÏm§õ¯š|7ã­Uã²³µ·6öq9“Ì•~wcì:ıkÆş »ñ‰á[6Í:YÆÓ°9aòÁÀèI¥køKáíÆ§ıÃkj»Y†Nôí@Æ™ãÍA @fPv‚¤ à×±x{âİöƒepæ2@ÚäãŠğh|'tŒ<»ØÎ~\2•¯Oğ‡wı‚Ğ;Æá$;JŸQš ê<EãtK˜'Ìcô=ëœã±şÏhd+Ñœâ´µ¿İ]h³¢BYöpO¨5å:¶•©Áî·8ÿ `‚hÙ4¯ˆÓø‚ŞĞÜ&##øáZ$ñaeç•4ŞQÃ#Œú×™ø=å‡Dµ‚22`Mix‘':EÁ†9$Èİ÷j Ò›âMÌlÆ'P¤A+Öü3ñMCÃÖ·Póñ»¯µòÎŸ§êz…Àˆ[0ÇvÎ½›Áš]Ì:)†IRŒ+tŞ€=\ñûÃl—¶oöÑ€‘£\ãêjËµ22<G¦c¶ëVÏãÍs(Óo¢Ò®Œpr™V^zr+Æd»»296Ç$œşìĞ¼İxÊßN²e¸¹ì+“ğ¯Š&ñÜü	"óˆR§5äş)ÔËA"³–b¤–'=¿Z—àÕíÍ¶„ŞY’IüØÇÍŠ ÷ŞÅ¦,&æe…I8ÜØ¥e[j6÷Sb¸IãèDL>µÃxºò[«H¤œ³•$e‰=»W#i¨9h¡`xÃíÏÖ€>›Ôe†M64‡
+Ì€tÏjË›G²¶Ñ¤2[Ä"K|œ³f¹äÖ.BZ³·˜…W*F2Â›âïÉc¢¹KTr’(#ÌÇô ›)-¬af··‰ğÛS·´şÓÊÁóIõ¯¸øŸ|î±[\òw&î~µé~×îçĞ –I‹ÈêH  :ñ@·ˆØÇ¢Î	!Bg“^'â]vÆ-Úî UÆAq]wŒï®§ğıòÍ+”òOV#œWÎ¾"ù­V£NhŞíüC¦Í¢ØFò¬€¼£=@éş5å¶´ñ-¶s$m¥Op.õıŞáæ'åüëÎ!Ÿg…¬$òG4€Ÿª­3ÅÓ:x*MZÃtz¦šÿ hÃ
+ÿ 8õĞŸø)¯…<#ñ÷À_<¨Z4(`‹R6ÇX&NöŒ`©#îã4İsãeŸ‹ş4xâ•¦Ïea{cW¯,ŠŞkµ›ƒÙHóòƒ_9ü^ø­'ÄcHÒæÓÛH‚Dóld429Á ´¾×l¼â›ÿ êS7öæ&°FÀ‰#ıÓÈ4ú‘¥F—+“…#9<ŠÙH òúî¯‚´_Û	ş]êÚ}fF¸ò!(cÛ/c_røW]·ña©Ú1’˜VhÈ?Â@=»Ğ–µs…¤Şj.>KhZR ,H=&¿4ş%şÔ5ké¬VÉ~Õ­›¹wycŸàŒ·ŒuÉ¯ÓKë¨l´{»›ÓvÑFÏ+8ùB’Oá_™Ÿ|[g¯øšå4õ€ÛK"$àúP€ø®ßYñ#¶£«_Ë~Ù%Xüª= èoü.²Ò¼;á»ßŞÁm¨êÓ´Ó-®2É™¦+Üœg€yëŒ7ZÕ¡M;PYËµL(QqòƒŒ©9®;@»+2%ºI.Ó…} }/ğfÚ}FÃ3³M!rÏ9>Ÿ­}e`º_‡îã‰æBI&¼'áj\ÁáÛf2”,YˆsÍwSKsw¡İl™ÕŒOÎã„â€4 »*Ìqê¡¯Uøgp—|£yáÆ@éŒWÊÖ÷÷¸#í3àp~s^­ğ—ÄW6ö·H÷R•Xùõ ¢n
+-»«pqÛ5áÚ£#_I]ÁXğ§§µoİøªîå6­Ó 8¹¯‡Æ:…µÜÁÚ;†ŞpYqO¥ }á«Ïø—Æ¡€Ä1ÆFkfd2Á$3 ù”áÇN•å^ñÍÕ¼Ñ´ÆÁ•†\ãÓ¥vÍã¾(ÁÎÒGÌ? bÚÊĞNI•*C0ãÙøSP]³Â¸¦zz×ƒkÚ½ÜŞ!¼…®ws¶8şU óÛëZÔe´×6¼¯xØ|ÈäP¾OrÓ[KÙ$8 ĞW³ª±(ÛŞ¤µñ.¡<pK•Çàg­y^§­ÎÚ•ÙóXæWşf€;xGN}-‰YC ï%ºzt¬ÿ ‡™48c·¸£VråIËv¯8ÕµıQá”6¥vG–x3·øÔş×u(´(j7h9ágaÜûĞµİxLÍf§P˜1-ÂFqØûVü+ë ¸$¿aëÓ¥p÷~"ÕLqÄÎó×ş>ÓëYSxVVƒ¥èÄƒ¥ÃúıhéƒáVR
+Üy„ÔƒÇn+”ø‡ ßÛèqªÛ»™&¶Ş¾•ÂEâgÏ?ñ7¾àÏËÿ C®x£Y}:0Ú½óƒÍËŸ_z Ï¥rò:ÙLáOSé¿<?«Üí'(Íç^C'ˆµSgS¼?öğÿ ãZš‰5u²!u[Ğ7ÃúıhÛõïÍ6—u\*Èc<ãï^1¬ø#¶™íß$å‚ŸÖ§Ô<M¬=Œ¡µ[æ:—?Ö¼òó\Ôs¨]˜ÿ Ëfÿ  öÂpËà©#‰äb¯Ë}Tvü+,øZ{¿
+\Ä&‰·ÄUÕÉ\õÅXx‡TÃî©©^"HYÜŸZÌî¤tku²0xóÛüh‘Ô¾jvWÒÄmæ2¤£Â7d“YMğÔx‡Gh®¡q$NU¯C•cÓİë³Ó5íM­”Fìœ‘“;_¶Ö/ÛJ”Û’7­íï@0øÆß\ğ^«¶¡rªóÃ!ıà×Ö¾²ı‘lí#@H¼-ã9†ŸfHw˜>\LO*Ç²’rnsÅyí<·>·3Hò•¸B»Øœpzf¾w³ İÀÈ.¹ë@¨ÿ ¶Wíeá?GáİRµE“”9òx*¹ÿ h~€ú×çÊİe	y_÷Œ[v6çHüxªş:¿º»ñUÀæi‚|ˆ$rÛTp ÏA€*ÍµÌÊ‰‰\b ñÉ ]µ1èò[Ä›€R}²*ç‚<và2ZÈÇ®í´šlò4ó“#“Ç%­v^Ôn£å.fCáôì</¨6n>Ï å†2 ë^‹eà»¹tç‰£P¬ŒXzúëÉ|-®jQéK³Pº_œıÙ˜ZéGˆõaª^·ş~ühj
+XãyÚºè:Ôw÷ĞÅd¬¯FÎ~µÀmjŸı>ç ÿ –Íş5«àı{SMN}ºÚñ'aßë@»oáRX‡ªãøPnİ^c}¤K§ê÷*ö³å$`r¼õ®¥üK«€§ûV÷?õğÿ ã\uî¿©¶©pN£vO˜Ü™Ûüh°ğH™u–·H±ËygõÊ½-qÿ ÖÒ¾ÙÅxÎ‹âV;ä)©^)Ü~ìî?­uMâ}`tÕ¯‡óòÿ ã@õïÊ|A%Ñ—ÉóbRr»yÒ°ôíîÏÅê—	p¬X4dí m<ÖVµâQ¯Jìœw½~µÎA­ê#Ä¶¬5 ÁœÙû¿Z ú×Ã×â2¾Zª£õ®>óÀVÍw9yeŞdbqœg5ËjŞ%ÕĞº­êôépãúÖxñ¬@'T½'ş¾ühÿÙ
+------MultipartBoundary--I7RRUqu0RCy2EphqmEJZ1oH8kF9bgCaD66OcPF4Ue1----
+Content-Type: image/jpeg
+Content-Transfer-Encoding: binary
+Content-Location: https://coursework.vschool.io/content/images/size/w2000/2017/06/CRUD.jpg
+
+ÿØÿÛ C 
+
+
+		
+%# , #&')*)-0-(0%()(ÿÛ C
+
+
+
+(((((((((((((((((((((((((((((((((((((((((((((((((((ÿÀ  Ñ" ÿÄ             ÿÄ K  	   !1AQT‘"6aq±ÑÒ25BRUrst’“¡²Á4b#Vƒ³E‚Âğ¢¤áâÿÄ              ÿÄ -       !1"23AqÁÑQa¡4ğ±ÿÚ   ? ıR                                                                                                       Êt€)Ò€        Ÿ
+ş’é,6GÇÉgé­¨ÕDNUÂŸâ
+ıŸŸÿ òn§%ãª±ÙÏ~V*OM§ºöªØ´Æs)e¦u;ß¹‹¯¬Š½¬ÂøíuhlÇ–¹#u€À                           ÃV¾²:8òíï_‚Ş“CI/°Y©r¸’¥éş\Yãã_¡b¼SéÂ¡s*‰ÏıÍñx•úzõÙ«Ö§_§¾íª+ÃÒUJµEÜèŸÿ Âyªj+U‚•
+ªi)¥XåL/2ó*¶&NÊUÚ¯x»Ø‹Çæ¶Ô˜ âUVÆ÷'j©ìñ*+¢{SŠµP
+ÜZ˜µõ¯W&ío’¾#äWJˆâ‘ªõz»ƒœ»ÛäåUüÆş4åUüÆş4ØË¥Kiİ½UËÁê»Ğ{©SÜÛ-uÎ~>:¹U1¿¹U1¿±×J—S¤håG"ü<ïQ%Ò¥ğ±ˆõj·‹‘w¸{•WóøĞ{•WóøĞXhé)!{×.sQULæ6::H˜íÎkQÌ  ·
+Ú{}3§«‘±ÆœëÎ½œêdª:Zy&™ÈØãj¹Ê½"ÒÌ×š×K"«anè£Îæ§¬èãàœÖş¼®L`¯ó)«Æ›UÔ9Ì¶·¹¢ùîDW¯ğŸû¼¬UVTÕ9V¦¢iWûŞ«é-3¡ï­•7%tP;{bMÎzt¯B~¾B÷El¡¡j6’š(ñÎßç^*uÛ>Í#rá¯?#Ú¼êU®V¹ª¨äçBZİ¤wJ&Ê©ïb|‰{ö¯nôó`ëÒFÉªö5Í^eL¡^¼hº¹®tJYùw¹ñ·Õ‚#™ı¯VSÁË¾;w|Ñİ*¦º¹°N‰OV¼«Ş¿È½>/Id8­ÒßSj­X*Z¬‘»Úä]ÎNeE:„i®p--[³WeóÛÓåNsW#¯©Ãw—6·§—ÊÔ 8–  ›åî’Ì­^ÑV\ê£Ï¤‹÷ñjùµ?=fî–RPKnZ»”™´ÈªÔk•«½Qø(½Ù£¿ETşzúÎÌi’»˜™—#>LwÔLD0émÎµÕ*iQéFŒïÓ”Uõ–|º9Ô?úí+İÙ£¿ETşzúÇvhïÑU?¾³®ØâÑéÎ*äµm6êË[»é[¤í®‰e+fI­j"¢'ˆ»{øµ|ÚŸÀ²¥İš;ôUOç¯¬wfıSùëë#&*ä×Ug²qæ¶=ôÚ;¯V& ºÕ÷=>Õ$ÕW&»p‹‚t©èe-¦¡¸[é$ìrÅßÈ®æEéñ–Â·5k[j¿Ú×­jnÒ mÀ                       „&“_á²Óa1%[Óü¸ÿ •ñ4§H"³Sê³V=;Æs'÷/‹ÒrÊº™«*=L’W®\å;8¼YÉ=Vğ¯åòã³O/µ•SVÔ¾¢¥ë$Ï\¹Êy§ZiÙ4s%bë5ÍâŠb/Z¢ªªÊë¤{¸Ç“õTş<¹)ŠÕXq_5ûyıÖk“\í4ó\é‘“qD^tæv9³ĞK`PÚw;ˆz:Æ¢"go ½ÃúŸ³w¡Mƒ^áıOÙ»Ğ¤×Ì1·‰pó3)j$j9Jæ¯F*¡â$“1{Xr5\îñ©r¤îŠJvAO¤ôQÄÍÍjjîç/rdèˆÓÎâÇ×3µK¸êº´ßGqÕui¿—>è­ÿ UQö7ÔyuMj5U4ªU8Ã}F¯^hşÿ ß§¯ï?×åNî:®­7àSØèÜ­{U®N(©…&=ô^zëÿ }D]]Dµu¡úò¿{œ©Ç›˜ß^©Ÿj!Ïnˆ÷f]F|·ıƒ}™£>ÛşÁ¾‚L¡ÉïKÑâ÷  ³R¹I¯Xé)èc\m—^Oªœ·Ğ@h=¡·+¢Ë;QÔôøs‘x9ÜÉäçóùDz»Hp¼Q?UşK/'0¶;äO…$®Uó"!g¿Kó*zÜ©‹x…± bÜ ¥–†]mok[š˜‘_óç£ÏÀåöšÇÛ®TõLãÑU:S‚§aÚÎ/}‰ ½WFİÍlÏÇ“;‹º¢ØçÂ«şB6®HòìÑ½$c^ÕË\ˆ¨¾#Ù£2,º?@åã±jv&?‚Q
+ûF¦agKuV$ É	¦~×}TıÈr»}7uÕÇ¶¦¶wã<'TÓ?k¾ª~ä9ƒãx?îıªYñ-5Ãi…O2±lô‰ñ?–+¥pÔìµõÓUœ`Ø¦µm­rUíp­kœÇG'½'øÅ>Í=*H[¼—ìäşM¶ËhÅ[~í4ÃIÍzë´B»KŞ¢8³«®änqÀÚ»Pw±µ$W£›éƒ«ã*o´OI%¥_ÔAõWÒlµíb±ãM4ÇYÃkë¼JÛÉ§Ä•x_ÚÒİÌTy4ø’£ïûZ[¹ŠGÅ²ë‹ğª .€                      ¯iV‘Ef‡g¬•¯NõœÍN•õs“s?(è£‘¬™ZªÜ¦qãÇ9Ç¯Ôu´w)[rÖtÏ]m¢ïG§J/şàêâb®KûSáÇÌÍlTöcÏÍ©UQ-UCç¨{¤•ë—9L!ƒ¡º/±Ô¯¹3üß….ù>5ñø¹¼¼-rå®îTøpß=µz¢úº•÷&wÜb…ÉÃ¡ÎOà½€ReËl¶ê²ÿ á¯M@­´  5îĞÔı›½
+l÷èj~ÍŞ…&¾a¼K‰E¥•‘ÆŠç½ÈÖ§J¯áCmª§¤)´f*‰›ätÈŠíåBŸQ'hç2=dÖsx¢gz§Œ²í,ŸJİ‹¬ûí
+>»Ìı¾é.ã›ı%ç î9¿ÒP~z»K'Ò·a´²}+v9õ?Ï÷ùun?İ~]Ç?úJÏB£yc™r®¥JEEOòQÚÈÍÉÎNm,ŸJİŠıÅaZÙVšYe‡)ªù~îç7`‰ß»Ÿ‘1¨×Ûí¹£>ÛşÁ¾‚LŒÑŸíÿ `ßA&Td÷¥y‹Ü  1fæ<£Dæ_šõø2BŠeT'¹5©I-3Áş)síTİú¢ùC·:ªÖÊ¨›—Ó*«¾¢ñìİú”½»-¢èÉ•é©*'GO•:Ç­ÆÔy…=§ĞåuO‰vc‚hê!d°½¯é–¹«”T2‹x +zC¤®²Õ¶)h_#šÌ‘„^”áÌeJZóªùc|•ÇVğ²;–…UV\*j{²Idsğ­]È«œ?Äºƒÿ 5=Fõ“K›u¹GHÊ'³_*¯×EÕDLô4ÇŸí§%òñù¬ÎÓÖš^á¶ÓRª£–(Ñª©Î¸Ş¦à>“;»b"#Pú 	BiŸƒ5ßU?rÎÁñ¼÷~Õ:f™ø3]õS÷!ÌìÁÿ wíRÇğ/şü•\¿òiÿ _úÍ¤ÿ §Ù§¥IwƒRıœŸÉ¤ÿ §Ù§¥IwƒRıœŸÉş>°ÆŸ'ÒPv¯Œ©¾Ñ=$–•QÕ_IjøÊ›íÒIiWõ}Uô›oñëôh§ø×ú­¼š|IQ÷…ı­-ÜÅG“O‰*>ğ¿µ¥»˜¬ä|[-¸¿
+  Òè                     5ë"RÉ±jºEMTDñ]¯ªt·K±ª¸b§B5Òé
+ÒÕ¢6v¦Zäâ‹Ò£í5–Wagz1:z’´¶úzuG1™z|§oRbÓYÜ1µbÑ©ğ­hÎˆ¶‚u¨¸+&™®ÿ )­ø-èw—Ñè¸p Ë&KdÙ<UÅ¬ À    ×¸ASönô)°`­j¾vµ2åc‘ÌM|±·‰qJ5rUÀ±«ô‘ºªõïQs»>"ñİ7»düiê)ëg¹}Yùõqî_GÖ~K½EÖH¦Mw…9¾=û2Ÿ¹_î´±–İ*¹3˜ZDòøÍ?}×.ŠoÊB3Ü‹—ÑõŸ’ïP÷åôugä;Ô+L:Ôèœ™¦{m'ïºåÑMùHB×UI[W%DÚ»G®WU0œ1ÀÏî=ËèêÏÈw¨{rú>³ò]ê3¯¥NõÓz·ímº¾Œø?oûú	2;G£|6:åk™#aj9®Ü¨¸ç$J<ô½?r ‹7‰Ùæ=¨æ¹0¨©¹PåzW£ÒÚj,s¨½ë“~§ö¯¬êç‰cd±¹’5¯c“
+×&QPİƒ<áÃŸ‘Ç®zê|¹.é]ÚŒÄ´Ê¹Xœ¼<‹Ì]è´ÎÕPÔÛ>Jw¯3Úª©“Fñ ğNçKm—`åß³~öy—Š~¥j§Do9qL’§Îè¿¢®C¶OŸ¼Î¥_Yäñı˜Âı.”Ù£Lºµ‹õZåô!QÒİ'¥ºÒ÷-52¹¨äT–MÊ‹ı©ëì"cÑ›ÄÃhdEşåDô©1nĞZ¹\¯8ÎÖwÎõ'ê+‹Šz¦Å²òsÇON¢TâùÉ¥êªç§DÅı]üvôCáØ×Ú£zÏ÷5WYÒ§¯ÈY´v‡ÜÛ5-3“krÿ ¬»×õR9ªß«óO‰lyw’L V­À šgàÍwÕOÜ‡1²=±İ tFµ5·®äà§SÒŠyjì5pS±_+šš­N+½æ~÷.ıBnÂË‰5ô­[N¶ªæÅã-mXŞtFKpEíz#2ÕÏI¿o¨…º=+#úMUvü®q¸Ò÷¹wêv{—~¡7a¾kiêğæ‹å‹Úı3İ¥msYp§sœj=2«å$tšXå¨‡fö¿\ê®yÌ~÷.ıBnÁïrïÔ&ì3™Ç7‹õxa_R1Î>™îºriñ%GŞûZ[JÖĞÔĞZf®D÷L®DwMVïı)QbrLÂë«ú 57€                      ®½Q6ãÜM{ß:9íœnsXåàr&Î I$´ÌVU.ÇÈªèÜµŸ	S)ßcÙ3Ay¡Šj¶I"SÂİw¾H^ÄÕÆršÈ™İÑ$Q¤ÚzzyåšDŠtEÍ†G"çr&æî\ó.óÔwÚÕ¶™’L³;Qu{N÷[àë.¯{çÀ€     mÆ÷An!¬™Ì‘Y´ÂD÷a¹ÆUQ3Ò–Ïvèµ),u7GÜˆŞÕW"azUMˆ®²Ü&¡duT-G><.ä\sãéÚ€mà`Š·_í·Y%N³ŞŠæ#ãs5Ñ8êë"gÌJ€     ×¯¬‚‚’Jª·ìà2çjªã~8&ğ6]y ¡|íªXèÙ$MG.çj¢îMû÷n5İ¤–¦±î—®»İ5!‘]¬ÔÊ¢µ”Â.w  š÷n†İ{ê™Ür5²&Uz7y<Üçš»å%rRO$ÉPï‚ÖÁ#µ·"îTnr§ J:ŠñE[Rø)d‘ò1Îk—bônZ¸TÖTÇêH€     ‹«¿[i+KSS³•šºùÚ­Öá—cU3ãP%ûÍnÅ´‘Õ(­Ek!{‘5¸eÈ˜Dñª‡^¨lmÁg^ãWj#Ñ\®¶®1ŒñİÀ	 CÏ¤VØ¦’v6UÕfieŞ¹Æ>9’+åµ‰K“:~ó-îy;İdEMeÕÂn^|xÀ”                          +69k«« «¦©Ig¬|±ÊÈ\æH×®QUÈ˜EN˜Íé­uÑ[#Yéª¦ÚQÖÇkæê®TÜ‰ı:s•áÌ„ƒWQe£¶Ó²ã,²>$›»`tqÆÆ¦²·[U7e¸ç]åàH’–½¶éhe¥‘]Î)Y²c•›7=ºª©½ª¹è6Ñ²A¦Uó?İ(â—`ŒX WG&QQÎÕ\"e8*qRØ       İ+·ÖÖ]êH“5¾æ=¹crÙW]d«tèT_1r Rèğió¬WJZyb¦Ù²*w9Ãp­z«USÇç<[©®ÖĞ]&¥DîŠ—¬Ìk]µk%á®˜ÜÕg“ÜD±SUTĞhõqU@ú–i¥š%‰­Ş¦xç)À½€     †ÒúY«tj¾
+f,“>>õ©Åp¨»¼{‰
+ùEÙ·zº:j­›á¦…šğ¹®s’Ts°ÕLª"sãåe¹Ö›Õ²µ[WZåšij%råcÕozÔÜœ¸€(Z®Uu/‰hÛIQV±Ô"£´MF·(‹ß"k;ÚÄ½•³VèÌ•Tó¶Jxê"™Îb¢"¢5¨ª¸ùXÊt–àKDÛ-=eTSû¥ŸQ3’'À©Ê¨ím^8şâÚ     ›sIÙtÒ(›AUPµĞE*Ø—QË¨ä\»‚"*§9r R­t³Ûoò6¡×&µ"¥‰
+øæV³¬íUÂgÆœTÒDÚËrQÜUÛG"R¿àíó–ª¦p¹Æó¡ *×ËUoµlR¾¡c¹Bç:¢lˆÔvUU5SrtãŠvÉ™\¤‘.1Ç4¤{(ÑIşZ"ë;Upˆ¼ùBØ                           6u©»ì™À6u©»ì„jnÆ{&p„jnÆ{#a'Z›±Éœƒa'Z›±ÈØIÖ¦ìg²g `ØIÖ¦ìg²6u©»ì™À6u©»ì„jnÆ{&p„jnÆ{#a'Z›±Éœƒa'Z›±ÈØIÖ¦ìg²g `ØIÖ¦ìg²6u©»ì™À6u©»ì„jnÆ{&p„jnÆ{#a'Z›±Éœƒa'Z›±ÈØIÖ¦ìg²g `ØIÖ¦ìg²6u©»ì™À6u©»ì„jnÆ{&p„jnÆ{#a'Z›±Éœƒa'Z›±ÈØIÖ¦ìg²g `ØIÖ¦ìg²6u©»ì™À6u©»ì„jnÆ{&p„jnÆ{#a'Z›±Éœƒa'Z›±Èl2#‘V¦g"oÂ£p½3€                           —jÆÛí•UoL¤1¹øéTMÉÚkLôÁ–W­%[-r¦]ŸƒFzWÄs©¯Ë½F¯uVO#¸Gqækw~†Œm©»]İe’ªª\eyÜå;†ÏKe e5#ûäTïî•'Â}}ò[Snïu)Ú›ÕîG£|ùİÚu}ª©®ÑªšÙ6•Gk?™MeDáâÁ6©”Â˜áŠ8#Hácc3†µ0‰ÏÀ¥      æ<§\«èïĞGI[UOÓ5ÊØ¥sQWYûğ‹ÇqÓMÊÏ„tßtoïy0!éj´š®-­$÷™ãÎ5ã|®LùPÉ”ßíÕ’®us~u	­æT]å÷’¿÷‡úFr¹=ÍA>«R}w3[Õ¸Ï§Ò³è•ş;ı¹fkR9ã]YcÏæTñ)8sHu»¶åŒêlÙŒåqü8‰H     Ê­}e¹}ÅW=>¾×[e"³[˜Î'%µÕu´÷¬ª¡Zöj¬²+ñ¹xeM>Xé?ïàeäƒú[Ÿ×g¡ÄüèG»Şî±İë™Î¹¬lïDjNäDMeÜ›Îâ~~½üs_÷‰?rˆK¼Ğ*º†ÏUW,mUUâ«„6{oÅô¿dßB    _ÓÊ‰©´Rºjid†Vêj¾7+\ûSr§ˆ°ÎQ|¸·ÿ #@åt×[õT©5}ÎiWƒ#šG9|È¹6d¹é=·©¨ºB‹Áj5ñÿ Ëq±É¯…´ßQÿ µNÇ,l–7G+ö90æ¹2Š4%æz=Êì™°ŞÚÙb]ÛxÛ‡7Æ¨›•<˜_)Ó"‘“DÉ"r9Ds\‹”T^
+q­?±Ge»5iZ­¤¨j¾6üÕO„ßGinä¦æê‹dô2¹UÔÎEbªü‡gw™Q{D‹Ğ „€                       g”iš#Z‰ò•_&ºbM©V³E®1\‘í	¿½Twğ.äù~˜[‘ÛÓ/wåOÔí§ÑJÖÛ´‚¦EFÆÙ5\¹à×&ª¯bá	”@ !      É¹Yğ›îıï:ÉÉ¹Yğ›îıï&†é…]ŠŞ´”ôğHÅz¿/Îr¸è_¯S[pÒÛ¼,©7¯{=ÚŒny“Ÿ=ª¥Ç“»Eº¿FêÚ*y³=ºïb+±„İ­Ä¥i}¥,—Ù©aÖØî’,ñÕ_Rå<Ä¡ÖtRÃ‚ß°c¶“=u¥“Ö_‰	²Dn^êèõCœ«.®¤Š¼u›¹WÏÇÎL˜¤     Î9aÿ ¤ÿ ½ÿ —’én]‡¹`ET´ª&äÚ¦“’Nç¹§>¼~‡òC¡ŸŸ¯×ıâOÜ§èóíéQoêœ¢OÜ¢	w«oÅô¿dßB½+hi‘SzFÔıØ!    \åÀÛ‡ûò4±•ÎQ|¸·ÿ #@çœšø[MõûTìÇä×ÂÚo¨ÿ Ú§f&E•Æ"Úh_ò’ejy«êB’Y/Õqü—S+—Êo¬Şårµª´4-TW&´ÏNfÿ 'H©\µ5õjëXØ‘zUW+èAòC¦ H                        |r#‘QQr¢¡ôÄ´ÏG¥±Ü\¬c–†W*ÂünOí_~¨LhÖÉAHÊ[¤/©››+¿DèT^=¨u
+šxj¡t512X¹Ì{rŠTkù=´ÔH¯§}E.~KobïıIÚj9G¶25ZzZ¹ÈäkS·+è,Ú;quŞÍM\ö5‹6²êµr‰‡*cô*ñrmok³-eSÓ¡º­ş·Ú¨ µÛá£¤G6³ª\®õU]şU!-À     “r³á7İûŞu’»¤:'A~­eMdµ,‘‘¤h‘9¨˜EUçEß¼@Ñä¯Á‡}áş†‘œ­ĞëSÑWµ7±Ë×Ä»ÓĞ½¥ÂÁg§±Ğ­%#å|jõ~dTUÊã¡ Éy¶Ax·KEU®‘I…Ë0EEÎì NIn8’²Ü÷|,MgŸƒ¿ƒ¥k>…[í«)jkVXó„{Ú­\¦½-"@     W”KL—KºªééµkS‹›Œ*'§ÌsÍÒ{õò>Hİ-4ÍFÈÖñİÁS™WiÛJÅçB­796ÍôÓ»{¢#—ÆŠ˜ìÁ;—>Q(Fÿ sâJ—"£uÚkW¥wş…FmRß/pÃªçG­¯;úœ®|¼<¥îMíí‘jÊ§±>J#[Ÿ>m¦ÕEh¦ØĞ@Ø™ÅËÅ\½*«½FĞŞ@	    
+ç(¾Ü?Ûÿ ‘¥ŒÑ½[a»[&¡©tŒŠ\ecTGnT]ÙEN(Ñ¤{ä5µM‘ñ1®EHÑÛÑSPº×ò“J¯¹ôS¾Uà³á­NÅ\ş†ßøohë5ÿ É’O,±;/u\ÉĞùôD'²Õ­¸é%áU­uE\îÊô"‡fÑ«DvKLTqª9éßHôùo^+üyÙ¶Ûhíì¨)£‹ÇU7¯•x¯œÜ!                                                                                                                                                  ÿÙ
+------MultipartBoundary--I7RRUqu0RCy2EphqmEJZ1oH8kF9bgCaD66OcPF4Ue1----
+Content-Type: image/jpeg
+Content-Transfer-Encoding: binary
+Content-Location: https://coursework.vschool.io/content/images/size/w600/2015/12/Blueprint_banner.jpg
+
+ÿØÿÛ C 
+
+
+		
+%# , #&')*)-0-(0%()(ÿÛ C
+
+
+
+(((((((((((((((((((((((((((((((((((((((((((((((((((ÿÀ  ÈX" ÿÄ              ÿÄ W 			 !1AQa"q#2‘¡BRS’±Ñ$3Ubr‚ÁÒ4CVs“”¢²Ó%t£6Ecƒ•³ÂáñFdğu„ÃÿÄ             ÿÄ -       !1AQğaq¡Ñ"‘±Áá2BRñÿÚ   ? w<ó__Ë"‚²ÜJÎ#ˆPIÎ<GÈô¡³MŸ¿¾#z•=Vş.yòÇZÛS¹·³C¤è%¥ˆînĞ}eÓgÄ&xÀëûq¿ŠÏDŒÛMÜİk?çrÙŠÓú ~T½ã_EjT«åïß±äÕd3Bµ?Q¼Õ$2ÆölVÖ9Ï|ë½=ò gy8šÿ R¹»	7so{»xIXãøs’|ØäšâÁ¤hu#Â'ñVy·™zdgÏ;N}(3"dûéúÂª0ø›brÂHï{ş{ş¹ıõ[Ûóäısûëœ‚8 J•¡'[ßóäısûêoÏ“õÏï®j¨Ùßë$ısûé¯i!ök».éä-…´¤oc‚SŸ9ùÒƒĞÓÕ6ëÛÏ»§Z¯#ÿ f÷Ô?ì¾e-˜£{~’O×?¾«{~’O×?¾¹ª«¢N·¿çÉúç÷ÔŞÿ ¤“õÏï®j¨¡š$ÒÆêé,ªêr
+¹¾½F=†© ß. ñéwo41ûjîål;€ê8O²rË€x¯%Ö™n²î òÚŠ“ò„şú$mF³I¢I.|ki6Èbg.’)é,NAÇFĞ
+ÃP²0Û¥åÌ·:|°JIWÿ G"çİo#Ñ¼<ªYj [- q§‚J*ã¼·'«DOOU>éô<×Æ4;Åxû›»K„Ê–Ra»‹===GÚCø¬§ã÷ı†{iòí,éKq­Á¸ö…–iŠ¤şîĞŒß’G$ÁÉk¤ÃH?VSV¿í»1µˆÿ DdO©Âük+í(\®t®.¬®	U‰TÉ$“ã<È>"‡»Ò®¬d¨§³1ÇÕSÓ¢œóĞã4–—Ïä<®Ašœ‘êöo©Z ·»‡Ûo*„2ğ3€ÃÀzLÓµ-Q™tè.®vı¦Bv/Å‰ÀûéİİÖŸÙè®´ı>É®¯§„ÁwqyÇtíDª‡ ôÉÉçqH/5+ûÈ»Ë‰`A…ˆ¶d`~CS_Ü¬%W’æ‰m.cYîc»@ÀÉµÃ<W~0Ã4êóR¾í˜ÑÛ$P5„Yx wß4 NKìñç89Åyƒ‘Déw×^¡o}fq<½sÑ¼Ôú~5R…çš%J±È¼r2$“×?¾¨Èÿ ¤“õÏï¦ı«²·¶¿ŠëNÓuÅÕ°üÀO½Å[#áŠIW¤­Tèë{ş’O×oßTdÒIúç÷Õ|*¼}j„u½ÿ I'ëŸßU½ÿ I'ëŸßUƒåUƒäh­ïúI?\şú®ñÿ I'ëŸßTsäkœ#@t\Éo­g%4éräà‰#æ²ÔoZîÏNgGµƒÙ]÷¯†,‡>xb>UŞˆÛ-µ°x-¦È£Ô÷‘Ğ°_Moiykµd·¹½sµ”å]|˜r=A Öu–Ê¼wÎIúç÷Ö–ÑÜ]N°Û÷ÒJÙÚŠç' “ãà?*ÛSÓ§Ó¤ŒL¡”n†xÎb™|Õ¼}GQâ*iÓéº‚][ y]J°à«!Vq?uUÜn"ªtÁ¬@"I0yû~ú£#øÉ 'yıõ˜÷Pğ£4ÏKØ^ZŞjÖWÚàÍEv­ÁİŸÈÏRÎ1ãNN%fÚã¼~‰eŞJ$ÔÜJCLå€><(JO½ÿ I'ë·ï­õ+ÛKP¹¾¼m÷™>Ğè(l#D#K#nÙeßô’~»~ú›ßô’~»~úçÈÕOª Ûk©SNÔ!rJ"Ë1%”«äm;²¹äœu Œ?ÎIúíûé¦ì£A×;şïÚŠÛ‹mØİ÷/·û#ŸJRjcVûä†ùŞIúI?]¿}NòOÒIúíûëš•B:ï$ı$Ÿ®ß¾¡‘ÿ I'ë·ï®IÅU]äŸ¤“õÛ÷Ó^Éû´vPLÒ4wH'íÆëççŠLy¦”uµ:;¹
+¢î0I8 ï©šø_ãºG$†$&Is´gßoß]w’~’_öûë6§¨â¥P†vï9ìåş/™#pn·-Ì™WÃœû¾Cyç±¤õ’ş»~úa7ğnş@Ñìö»t*S.NÉ!¼ÈñãÊ–“Ç=*b²ûä†ù¬éŞ±¨ØhösêÅié‰†ØÀ,3G<ñŠa¬º’Ó±½‘>ÒNòîğ¹Ó2X¶N#OgŸ—Z m-ôû;ë=ÆÒ8§¹Y#…İU„%ò2ª0¤õ$zb¨êÖZOfıƒGµ€ê2cÚµt€z,CÀuğëÔ‚9Ú›¯Owìi…ß¡½§Ã¤jPiÚF£u©jªÛ&x	îÃ°Çuä±ää“ıø®Òè“vU¬}Q[U*&šŞcì˜ ®_8Ïîòäç¢İÛh¶ĞÜZ¥µÖ§q"„S‘ŒóÉ|ƒÀ øó]vf÷FÓä—SÖ`}Nô;<6…°¦N’RF-<1œñ|kêı°Ë¼ÓıÑµvêî»²d†Î!Ü’wÉÄ`7Äúr)u¥™öHîõ©­íd#»(ÛŞPjîpNÁâŸé×öš¾ŸysÚÍËi÷m¨¼på"›
+éÍYdŒ^´»S¼›]í2j“*ÂvÅK2XÈŒ2Œ/NN8'¥8ÊYO¿ in.²µek™"¿m>™¥vÕòRçİRxğÏCÒöFÜkºÅÎ—k¶Ö—v’3Jów.ƒzK“ƒWì ‘Í­\¶¤a‚ÏÙì4” [Û´¨6Œãsó–ËrIñ<Q©íï§Í§h-e¦Ù™K‰UMÓ:€$™ä<õÅmÇ£û~Æ’±~°Ö’ê‚Ã³u$D;é%b÷M‘—Áá|±Ç_*a®{“h{?¥ˆõ=Bc¹ÔšC¿¨xÁ8Èëãè×µÏC±M3@)uHîîİUğŒHÙ„€0`N3âNM.²Ğ¡¶ìÜWv3Ûİkî1µ¾¦­ªc!°]ÎH+ñçaM4›ÛïâÇYiZé–:ºD:”—Sö†îæÚ÷¬‰b†QËàûìGEèG=:ƒÚ=M:GT[K‹Ë¹Z×OÂFˆ»ıağPŞ:ãÔŠ7²TQk6×ú´ÑÜj¨ÃY´Şô®X)6ïxôõ‰Ó;,/õûûîÓj6koîëloayn€ì{øE#Hëñ©sQ•¹~ü‡}G¦ÖÇ‘Âæ55;ÎõmdÏpÜ‚Ö
+Aü“Î3’Ç‰vgF“Z»swô~š„$—2HáKŸ³s–v>8ëä(½rÏQÔîî¯oWM´·€KHoâ 0;Bå¼vüHô{½[X·Òm¤Óí¬bc!PÛÄÇİwÎï¶y÷F	øsZ¹ÜwıYØ‰i{Ú}}´Í%…²„q$ÍİÛÇA‘Øœœí¹cŸ:—³ûl°ök±ò^\Ú–fygeV¹}©uHÀûXÇâhôiáhz¶ŸôjJ7^ûtAîø2åıĞî ÇN8Å1ÔôÉ;1Ùå°ìåÍŒ··¡Eş«í°¡ œ"ÙÏ'ÇŒ¿’8§ä¿/¿ÕS<ııü=˜ƒØû9¬Ëw}u­íÔDŒàƒNFO$äúœÑm£¿cã¸ÔgÕ•õKDŞ'r"¸œ0E/öX*nsæG–2´hrXGÙjº|š›“Ä­wj3Ç×–Àn*2y'ÜÇw ÚéìV——q3j“—¸I£ï¤`ŠdÃe±ÖR<[8 §XQw{õ®@¯˜²ösNS¾½tÖØ,º}‹!›ŸåfásÕAäuÁè	ÓôI'Ó…=«¾x4¶l…r&¾#òT€ ãòÉéÍmÙNÌA«jwsö’ò	BG¼ZÁ2+Ş±è0Š¾äùu©ÚYÕu×¼í3Yè¶kµA«¤1€ H•3½° Ï8Ï9­Zug›ü ¬]wâ¢Ûê]­»Kİjı­t]4¢Mp¸;u,
+ÇŒ“ã‚sÀ©[jI.§%Ÿou§é›´•^n/cg'#2º¡-$Œ|<	À5*&×6×‚_|</ïÍ­ä:%ºN¾î«:f,mb#íú;C¤Wwšå‚Y[Ú¼qD,á|w±bË’Ä•$’OZ
+âËT¸¸’iìµ	&•‹»µ´™b|zQúN¤ïm·N¼|ZÂr–ò½AÁ#ğuølÖ4íkP6š»™Ô°µR>¦<g½AœmÇ Ÿ¾„şj|ƒ<,<šÖ#ÿ ÓK½øÌ¨ÊêØÚÀåH9G÷~ê¤†WBé¬ƒ’Ê„ñ8Àªş8ïHZ¥Ô;Zy%tóF¨òÙ«P I‡q»  ùRÚm©Ù\m1–ÎìdLÀÿ hHãËË}l/AæÆğü;şêpj‚IØ5Ulm.ˆÏ²\íóî_~*5Òïİir6rÙ…Æß|ê­LÁºsÚ³üvÃÓM´ùıé#ªK8ñ§=¤úıBÈBSôu§‚ßæ‡•KşËæRş¬LjSĞõCÈÚ}ÄQ·ÙyÀ…OÀ¹$Òš-w{§Â Îáfsè<ó÷S×¡¥‹MWZr Ğ`?Æ5BôÉ´¶XTÿ jCŸÂ»¾—lG°özÙ˜t’úw¸?¼-ú'öûOV"VÁPîcÑW’~B™E§_ÉdU­{ˆ„ášäwìãí>2=7ju†Mİ%œ_™e
+À>õüh'iî´Ë‰®..&ÏJXneoxƒ“œ.3šMË;ù9Çe¦Z2Iw¬[NÀ‚`µ·{€}‹øÓmQ¶¼‚úÀhz|–‘G%ñs)R‹İØ,3ƒÈœb¼}z¿û=Ö¬´{GÛ-w¸¶e\2…ÚªÌTçó¸Ÿ/C{²àó[]ö“R°q§êºqÓ¤Eb¶plI¢<¬‘@=2>N9¥}&“}Å¦h¢T)qÉlvÈ3”‘Nî‡#y"^	´‘§Ì’?tû¬™FZ=ÇŞŒÿ Dğp:0õ5İ¬†óOm:R‚HY¦µgv*ıs‚èÃÖšá¨òó÷“|Ç×z‡g%º’şHmdY›½61ØùXòÁåfÛŒçƒ²¼Ò5MM,¥Ò4ı2Şá¶E<[‹E&}Íäœ2î°Àë^k>GŠi¦YØ¬>Û¬ÌE¨şNÖõ×'Ëú	æÇà(|5»6ÙÆ­,‘ÜOiu¦iÖ·0Èc~â…XGÚÁ.A ŒàÄPÁmÊmÜ#Ãs¸ı¯ùq[ëšœÚÆ«qr±¤³JÆ=Õ  Ü>4ká^ä½Çv×‘]ö^ãLºuIí$7vLÇ ç‰bÏ¨÷€ñ"’îÂ•Ú§>%y]ÛÍì÷L#I{·cu®U õqDë6‚ÓQuˆ/³JöåI Äü¦	çÇ> Ğ’‹®¹íC*Ç0Á gêä§àAük¨îDw}úÛZ°ç¼{¢Ù'öš½:ÂïSœÃ§[Mu(ê"\íõ' EÅ¦ÛC¼êÚŒv­”kxS¿œ‘ğ÷ ç©jnQX`“0ŸPYP¦éq9İÏŞäz+C«DG.‹ñöwçş:&×TÓ¬® 62M¶E&[öïäa‘¨1“Ó¡Å-Õ™[U¾hÂ„k‰
+…9 8¥+uC~aUùŸEÿ ªßã®~”OæıÔÿ Š—UUhB¶=Ó¯â•5mF&+G•K[˜à¶sŠµD$ÿ İ7ÊÕ‡ìjÛ³öÉqi¯³€L:cÈ™ğnñ9øãöÒry©QM±¶éí;DÖM:N‘ÜMü¤M”oR¥ñŸ\gÖšöKXÒßZ†+ËiîÅ$*öÛƒ‚#b}×b¤`ÍxÒiÇc­"¾í=…­Áa¦@ûX©Çvç¨øTñ8qÓ'îT$íÅ©[Û]2Â4}X»ÅÇwâxphKË«‹Û—¸¼[‹‡ûRHÙ'ÿ ·§J>cRzàUÖÊ);&Û;Ní÷l‰úq"qÕ<i(ô‡Ÿø©uQ48§¸'C#ª§ó>‹şêÅUô²ıM¢ºŸñRÜ×4´ ¶{.æÖ^Ëë×Ï è†[f¶Eş.àîsŸĞtÇÎ¼½íÈ¹”2ÚÚZ€1²Ú2‹óÉ95è4a;^¾ Ù¿şa¯/ãQÃKT¼ÿ ©l‰TMYªøÖ¤’¹<Ô<Ô 	Fh²µ>BñFâ7/0Ê.·ôxçÒ‚­ì%0ß[Ê±Å#G p’€Qˆç1ñ¥,¦rì|	'ñª5B¡ªæÎH×±Úº1ãßZl¯&qò¤´B^Jš|ök³¹šT™É\¶P0\ïùĞÆ¦*›)ò!©R¨Õ•*UL}›ºÓ[¶7'“æÖäyÅ ØßvAø¨¥²ÂĞI$ı¸Ù£lŒdƒƒû+†”ƒĞŒS>Ğ\­ıäWÀbK˜#yı*ßÚ)»çQ´¬®BÎ*Š©<¨?*ºª±ÇoŞYÏ"ºâ¿Uƒ’¬H,< éö‡ZÁ‘IË*“ê(İ'k_$ŠËr¿½ÆŒ)À†ÛÏ…$oÊRDb§ÁÁx4“ÈÂt$#\Ó{•A'µÃ°‘Æ{ÅÇãXê§Ò|+}|ñLgß<ãÃáWe/q}k6Jˆ¦L®
+ëTnu;ÙÓìMq,‹Æ8g$~ÚYÕaÈb²ª>Uèû'¨¿gd½ÔRX º“Ncïyg2*…b3à3Ò‘Z[½åÜ±nï'‘b]ªX‚Ç rq×Ê›Ü$¶¥«ÜÂ7éú}°h¢-´ËoX”~Ió©âSøXãŒ¡´š§itkX¯õMNèÏ)Ogµ¸¹%gxÇEÀœO)MÖ¯ÚÛ{\ß\­·µ}%#˜‚T"ÆãÖ°Ğå¸Óµ=§ºÅ‰•,Ä÷Ú‰Q‰ä0 nòÏ€Íwi¥İöº]C^ÕßIÑ`%î."djØdIùNp |:œ
+É8FÛKãÑ–	£Éw«ö†Â olìe™…”½ÚtfVcÁä’sÁoYjÚıö¥®ê“%Å¤Rn¨•Ô˜‡ºÉ<’¸ëçN;'eqÚ[ıDiğXÃi`ÑE¹Ê$]î¥ô/³¼c€2qåšóë£ı%®Ç¤vtM™‚¤ËŒ9äœ üã09IÇS¾Kéæ't:NØk÷–~¡Ë{o$°yè¼’€Iå"Ù× Rû‹ûØV0Ë{qªã¹ÃrT8’0¤®I8à’|O
+=’tÔ¦Ó¡ˆ]]ÕV%.]·cÜñÏ,Óm[O“š(f‘“´6ò¤¤Ã(h¡R¹
+q‚9ÉÏã&ˆEÔVııÛÜc/²vwJ†ïl›´²4X·¹‹lZ|}àb0ßkv9 ë+nÌ&™£<šçk½¦ëV.’Ùéòƒºv|3±ë×8=8$dR²r’uxûx(§»£SytÄnº¹?˜ÿ }¬Or²Yfâ|{¹_­n…>>y¥dàóÇÆœjvwWRişËkq?ıßmÌQ3±è+GI£‘[BÈÔH—òÈ¡€9&BXgæNO—­p²È‹µe‘TŒ€FzcÊšYè×Ì·¨ö7Bal^5ÚA'zu#àùzPØİÄûeµ¸FÁl4LSÓ§­
+Qn¬TĞ~¥¨\û&’±ŞÜ‚,À“lÌ9ïŒàù×œb–{UÆsí7=ëqøÖÚV8>ÑüT"3#ğŞ¿İŠ&cÓ-£¸¸XooäPğÛ’(GƒK´ŞIĞuo*•QXE;lÊŞKÉ4ÚÅµ©ç¼’Y?ÕPrÇá÷Ñ_JY[)¦¡©1à½íËÇÿ İ¡ÉÖjQws5åÌ—Rgå°	ûºAXÕ{‰J¶};,(}šÇJ¶c²Vaó}Æ˜öƒYÖm.m¡]FâÙÀì-ÛºVfMÄáq¿xÏ+Ë·Ùn3Ç…5í"Ü-üêD‘½Ü£ À	İ£â9çÆ¥ğã©`¥'Bë™æº}÷sK;\¹}d:qR¡5²Á&¹©PĞ£¬¥A¤ê°;(gJ€õb®Aääü¨
+eÙõïo¦µÆMİ¬Ğqï,¿Š
+™íeGqm¡÷MX‹ÍÌÓ*I¼e@n2~ƒò nPŞc57²ëË/¼>#šmZ¡'›&Ù";X²KÁ>*ÀõøäSm‹Ég®Ùé®[|›Ìİ¡şG‡Aë±$½ÒÀÁávÆÃÅócåSKö› ú]¿vŞØÊU$8Ì‹’¥OƒWÈîÁğ¨yJ]ĞöÀwjâ†èÚk‘mõ4f’%éÂœH£Ğœ0øšïPkov§5ı¾Ÿr"Qunbfido‰G0Á##9ó¡tÙ®/´‹½"(Ş÷·D7hÙ`¹N s‘A¾™yQMwo5¥¼˜Û,ñ•óÇÚ#à*cÃt×Û¿±Mó û?I¿»ÊÚ÷Pk¹ƒ,-%ºG“ªŸy›“Æ|È¤«Ï*Enó?4RÌO–4ÿ KH·ûÙî]J·µ¶R¤Œn’Cœ{£Õk½¢šmBùtYZÇLšRËˆÁä—+ïœO8ÊZ©zƒJ­ƒı5°¬\Ûik×dí¾b="L·ßŠcwu¤§g¬eµ±“Q’ÎW³ŞûˆfU&$<Œ– ğ9¯* à`O­=ìŞ.lµÍ0àµÅ¡¸„ÒÂwŒz•Ş(âEÖ©=¾_¿P‹Í +ıgP½‡¸šà¥¯…´
+"„ap>üÒŞƒ `y
+¼ä:jj’XD·{›éë»Q³_9ãñŠ7µµZĞŒ ‚ölısXhIŞkÚZË»„æ-NĞöƒU'©¼›ÿ ˜Õ?ïä?òR¥Q«$g£I$vÚ×t½§º¿¢÷‘æ•1äÓÎŸ©×³üÕ7üñÒfêjc»+’*œv>9¦í%ªÛÊ°Ë²b$uÜ«ˆŸ$,Rjô}„³ZËû@hÖ·133mÜÆ#î¯‹79Àçô¥Åuä8dy˜Èî“6Ù]QğGg5¶¶p\İŞº‡¸Gm¨1Ô 	-ù ã9 ®,Òˆ™$Œ1ÚÑçkğW<ãË<ùÕ§n…TpMQâ‹Ô,&²	XÇ-½Â–†x›r>>ĞÏƒ)8*pEM4Õ d©]Æ†I‚Œœ“O€õ§‰c¤ØéÑ]ê2\]É#DÂ%“krJŒÉ€PİB””A+ÓnšÏë°Û‘n­¹ˆovB}ÑŒQ‘Ç<óJ‰¯mf–MÙ}jÓR+¹Å™K[K‡–CºopùÏ$(“Œâ¼æ£¤Ì¶Wp^ÇoÌén{qœe¸Ã('itÊçË"²„Ó“åŸÂ.Qt…uÉæ¡æ¥lA*ªT 	Z[J"›{"¾€ÆJ2?.µ•o+Ëƒf$	ç'*îÙqÕ°­×ŒgÇ0@À`|*ªULÁ*X)Ú0	Ç=2j¨¨–#¥İ³\”˜MK|œJ¾öæÇOwOçP”!’¥J¢iˆ†ª¥C@ÈiÎç±e¿Ïé×àîgOØ$ş/ZKL{?j—÷“Ù»º¼Ö²÷[_hiUw¢·˜%zyâ¢{_B—AmU@Á”0èFEJ²I×Çv­†µºÙÖò;n9+&â².|}å$àEGAujt¶µ»†v‘&ï`’&Q€ÀFÏÚÇ Z—xhhÀ9Ô-,S<aŒ…mãqWª]RøM"É(¸”<Š»C¶ó’€''u¥å‘½‚;=ÜHó"Å%ÍÔ²2±q´œxcÒ´Ô®¬—S¼ŠûDfK‰F´»–?x1FíÃä*u=[}½ÇXiì`[› ÷<q”†HxÄ­À|NóÔâì¸ÑÌ×É¯	…—±¹NáÂH]YHTÏ·+,Ğ——0û6¶-v-Ã¥IÊ`Ë ®ÑĞ/úğ+(¢šáRâå-bêÒ²—ÇÁG,})µiŞcÕè:]Ïj¥{ı~şæÛ³Zb‘%Äóî“©‰ˆå yqœ
+ßP»Ô;¨Ã¤v~Õ,4=7C±AÏÖÊ8óññÉ¯'y},ÖBÆÕ¦|È‘1Ææü÷ í/Î2 ûóOµ~ÔG•'g»1³Ñ¤+ß\>{û²@É•¼xÀ:qXË‡-V——EãçßRÔ•u[È5Eì·`’i!¾iä[¦RéOä®w0†{v{"·İŸìåç·j—®İŞÁN0má9É÷‰Ëq×yêÚÏf¥—FÒ®X_ÇY]]Úœ	Õ*íÎC9šÚ{Kû:šÎQ=¤šüöÍ¾×ºì*Ã·çíú/.°£I-ï)uço¿aß0Åuÿ ³[;˜³KÚû•
+­ïN„éğœğ3Ğxu/KÓí{¦CÚÒÀ·¡»%•„í–Œ{Ù?¥ÎI=8’kÂèz«iZÌZ”–ĞßÜDÆ@.‹0ï<$8<°<óû«ÑiÑzêïµ=µÔ¶ÛBT¬mæ¼ ±Fœ€‚®sâiñ8mmı_Dº.ú-rÓ4“~[¶}¾¸YO2´0‰oß>âªşLcŒzÉ•Ì×½íßê÷Qiú]’¬’ÈÄwv‘³ebQùN@_§Ë¥cÄ¥ZÛ¾ŠéxaxWÏÿ C[Sq´Z[YÙ…`Êa‹.ñŞÙoîô¢»C{w,–=íİËî°·f+`’œœg4›¡¦÷iùşo¶ÿ ’º4¥$r[¦e§®mucáì÷¯ÖÇŒüè0ì­”vÌ1ÓÈµü ÿ çGYivRjz¥µ”'kÏ Mßš:–ù OÊ¥m÷UÒC~øÙi¶Z„Íï,;x_pJ¼’mP8ÉÇ‘¤£CŞ2œ 9Ï»âO>”ßµo$ºt–H#¶k0"Qà‚Isê@É>$šH$’@ ’z
+\5kQRŞƒ›O2FdÓçKÕQ–¬È<Ìg’=Wp¢ °°·E}bù”²[k5ÈÀôÜÿ a>‘X^C&•1¶bcÔ#$JñÍ”}_†$åçC´ÆòíZúr»€V›»Ü~,z¿3%¾=G…ÈŞ+ûxPšMŒ»˜”k’ò2/‚ğÀyâ˜kWV¶÷¶B=/Lx¬2"2îfL²– 'Ó’Ş[Ii Y
+2°İ‘¶ä‘|Õ¼Gâ<@®n‘¢tG
+‘Á|9ëĞøSÓìVÒNú%ÛWšScíQ“àz‡9ë@ŞØ\Z,rH…­ææ…Ç(óSıÇyP”]–¡-¤SCµg´›[i	Øäre‡ƒ~#Šz\vOpLÕQÖâ	ÆÏ%¼ƒ|R²<qŸ#‘òÏVäUD­ôû“e¨Úİ(É‚T—x ãçÒ‡4N›§^ê’Ó­&ºa×º\ªü[ ùšRªÎÀ®ğ1C4†+v(­Ô.NùWàØZ[›wÕn`Ì·°‘ûÄ#*waz0÷†s\^_i‰Ã¦i@#øÅôô¼~hUõëš•;ÙXôõ."ëPÓmníQ;¥ X#iÊ’í€Ù×“Áº4.x®'¼“Q¸…„‹’ìrœ€enHÈe~u‚ÜÍ«{LwÆ{Ë¶‹u³’]£d÷ŠĞ)]Ù q€|)Vs‚ÀÒQnÔŸ}ùÒÊ=…×h‹Ú•ºÒí-,í$x®Y£t’Ã&vÉ–\JE©)ÓûS?¶–¹ökÏ}¦;Ìˆ<“ÔÅq~æ¦\>¶Õ¤/Û*¸ğÂ¿ÏåU«îq§Ü¹bÓÚ!,ÃŠàÏŒšP‚W—Ó¶6Ûv£C×îµË§ö{»ëq#iP‡Näœ \(Á +ÏêV£§"=ıÍ²9Ú­*`1ë€~ÅüÑL¬ÚGĞõ;uYš(¤†äì ¬g%76y ƒ:œgŠ¤¥•®şbtİ‹¤Nmu{„ÉÓ.€1 œÁàZ×HRWí‘ñğ­µDì{nÖw“Û:2424eYJ‘‚qzqŠÂšö«a×îäàÜ¤Û'³-½Hñ‘éŒRšQwÆÕ:Òdxµ}>H”4‰s*“€HqŸ
+ëZİôÎ£Ş$ö©·ó•Î‘Æ±§Ÿ+¨ù‹]kÀ&»ª(è·sşÑªØù\“PšäÕˆg£,¯±Ü²ŒiÒ4€Œî@ñä#ÓiYêsO;/ï_ÏO¡î?jR3É51E=‘Lx<ãÖ½}:£ÙÙ	æîd^à¢ß•/¸à#Şy p9äWbtË‹rÂà˜ ¶ïJ,×*åHAå˜1Nû,½Ÿ¶»‹N´¾Ôn.„s«¨áD\FÀ îe$ órs2ãqVåB/ò6¼Öo¦#Š8w^]¹*6qî7ôr ä³}ÃHª\^‰£³$®ä_zF ŠO¹'ëĞ¼M7H½‚í/šÇJB"A{§/?Z)câpéæº÷L“N·?KïI™O±[¬‹"º“Ì›#»ø}²| 5jiã¾şÂh6ÒîRÎŞÿ »‚ÓPú›$âN`:7\±ğäyÂX‡R®OPG}ôÁ'¸±Ômî–mú‹`XnhØğîlcó~#€õi¯.İÆIdf÷Bà–9àp9ğQM1<ZÊ×JĞl.¯Ñ$–ò3r°–9•rB#`û±ocÕ‰U	´RA"ûD>Õ­^*x“«}’Qz>ØŸ[__Å¥ıº¤—¯on¶éÃ-»•wœğ\p§€Hcà(1o²hàÓçy¯ÙXİ\‡"8Áû@7_wÒxò®q½ß¯¹oÀg£Û9Òuu±™Vş5Aws#ácW«ª°8  KIÔ‚BñÔ-6âhSl‹iehÂK‹¢ö–É
+¤’d,^¤·‰Û¦šú.«¼Œ¶Öíoüdûp‡sÉÁ .<9cÎp²5£’y‹G§G)hm\¼ÌxÇği1£œP³wŞ;òæ'ÊŒµh ğÉc‘XÜşÙ$ê¨Isã´†\øí ©çiÍÌ‘èóß+$óÙ™Ev,Q÷Œ#TOÉM `u=M#­`î$Ë•DÔ©VITŞÿ ı—Ò-À÷î¥šùÏĞ{¨ÇÃ
+ççJQIîÁTN ûè­ZyfºH§‰bkH’ÌF§!{±´óæNâ|2MKVÑKÕTª&¨C{{wìö£rùö˜®mã0}ß°Rê•F„ªÆCUR¡¦5U*¨VöÉkm</rÇ*²¼ƒ*§=XyJ¥&¬f·VæÒê{bÈæ=Èr­´ã øƒŒJÊ·¼mŞ%IDxc”=7.JŸ"F=(sBØk’@'Ò©v
+£'ğÌù3FK%½”Ğ¶Ÿ3O<D3Nè;½à‚;µ#%}_¯¡ºÀEŠWÕ´æHeu7QUÆ:øŸ
+½u.­{5Õ¼Ğîe‘{Ä+œÈOğzõÕ¾¡¨İ_éè÷·2´w`W”•ÙÇ*“áBÜ¼°ŞL½ãŠYÜ¸ƒ =*Rz­95q«;„C;{ d~&Šµ[Yâ[y ·¸çeÁqÉ#j8< ëï12hk»ymn¦¶º‰¢1ÉT ÿ ıõ«¼Ğ‚®böG¦ÃvÆ8Ü;‚7ïÙù:“œgŒ[è±C.¡cq¼²I<e¥»1¨ºŒås»qé·¥,Y7mw]Ë±°Än_#æ8S
+ím&¼ºyYeŠÊhà#“Ş:÷k@¾j$–5¸í¤~Ëˆ/MwÚ˜Úé¦¹ˆŸaÜr®9!¤!·6råù¬Ô4ıFÅ­µ]~ÛÚëw¥.'=ì Œ†påÏ>])8šUYp™ÛïŸw#ñ >x«–îæfV–æâFLm/+1\p1“Æ%Ãkóß"¬ô:_dï/{?u®]Çs˜mVŞÔÈ÷2ç…TÂK§Ê»Ò;­êÖ÷w’ØM§ØÛFdg)ìc+Y‰çœc¥yåÔo‘¥ıê¨
+·. @\5ıæC=íç¡iäı¹¥§‰œ…Ç öõ;A¬]ZÀ4­HÛA",¦œÑí@Ãnì/$N9©I#¼½2ÂZîğ©‘@ÌïƒïøóR³âFJ’¡aîzïa­³»Ø)öp 9È
+p~c7°ŞşEwşÁÿ u®[N÷:tQ[ÎÒ: ‰·{©ïqŒñÎ|©¶µ#1d3˜£¸@ ‰£îÎOA¸6GêÑš\—–—÷¶ñ©1he-ƒ—#*<I
+ÃÓ9 L2¬+3E …Õ¡
+O=	­rF˜ º_~|µ°'</r@ñäÓi<.ı#H¬JëºÕYƒíÌ	\øp:q×ÖŠĞe:{Ë«wOdÂÀHíöIóÚl!Ò°Ô„‚ßKïT lÁL6r½ãàúxñE½½Ûv_OŠi¤I®§¸ú¸ËœDRqı¬T·q§Ì¤³bgfwgvgv%™˜ä’y$üëš4i:“6üü3şêhf¶Ï°·”‘•?hšÙLîÚçºX¤Nö	Êö[ÁÔø0>># õ®õ(®cxæQ2¼+ÜÊ§*ñ¯º1åŒ`ƒÈÆ' |€É¦7	uajÖ:…»¤U&TBìÜNW†_¿T¼<ej«¹â’	)‘’D;YXrgÖ¬C=&ÚmN>ãG»…', oUç ²#öGJVr2ìü÷VZÎŸygÈé:…HGÉÚT¶0ŒúĞWpµ½åÅ»£#Å+¡N»Hb1ëŠ„ş&†ö%œÉå¼ÓF’ÅŠî’«( GˆÅ1í%Õ÷ÒW–7Ww3:¤%ğŠ¹Ê«…èG…,ö[‰„·¸ ŒebcıÔf½#Ü_‹§ŠHÍÄQÊCËmÚÇ§©ãÂ†“’aš9°Ìö–Jl¨‡C¹Š8şˆ¥äıÕÜnÑÊ’*’Uƒ`©Áô5ÕÔO£´&8æ^ö0ªÛv’p<àr>UISèÎ7xäWÙNU”à©óº	 XLŠÍ–2ARHü V\şk~©®£@ÂL¸BªXoà7˜øù Äë'b¯"8İ¥‹¸xİOü¢²¾Mİ—Ñç'%'º·>ƒ(àÄ~úÒI>‹ÔQ-ÚXº-2©Ä,İÉõË|+¸ídŸEÄnå)tÊ!HY£  %òÈ#US¿Á[¯E¬6–š<:Õ·¶É5Ì$/+GlUl¶ßy³»¦@â±½Ö®®­¢­½¥‘`ÆÚÒ1x±ø“@™Œ{#›&$rİÓ’£'øÏ^)Œ§_¥ÂG¦Í«’¤–÷&@»W>ò°äuÎ<ñÒ†«2VÉ
+MUYV%Xêšá˜´qñâ´$±WP†Ê°ÏOtÔ
+ÌÁU˜ò)$ü¨[)D7Ö²•fÌUzœ08µz¬†MVùÎü½ÄõƒË“Èğ>cÎ¹ÓåîµK6U2H—°Œ¬Ä8;FzÒµÔ{ÛİgPxm§.÷¹‰P³¦\œ0ät©ÿ E-€j¨¦Ó¯×–°½gıÕ„°Íò°LŸ×‡íI®AAÚ8m­d°Û§;{§=ä|OJÏN‚<½åì2ËanÀ8B|‡%#Éğ89#$.Mq§ÏÜE¨©IhĞñ8%äùw¯?ªw±hz5®ÇÖ[æ%ßb“ıˆÆ=C»®¾Å-…«s"^GuÈ¦A${»¸òAğ¯H÷j%·Õí{›M6"î`·?X.$$,	ÜÃ8cÂÇöy¯)‘ùQú¼’ø[éè²É8*ĞÊã”(-‡R8Á#×¥9Å5au4ÄÙŞŞÛÛ˜ö„³ÓğÁC¦sİîÇS—9<ŒÑ–×Œm¢ê6Ëqq<ªÑÇ#Ös°ûj¤–Lc/´ÔÒÑKˆõ=ËÁŒ~EQ¾Ë÷AÏ»àQ•­ÒZ6,ây^A±ÄÃ"E=Pªœ•>#>÷CRãŠ®ûú‚g7}6y­˜wwHï²‡ßŞ„äc#;‡'=h"qO;DdŸJĞ/¦W½¼–o•#Ş†Bq—î¤Émq Ü–×<Ö#öUÁÚ¶&³H2ÆÔjŞÍm°½BÎd’b†DÆHÁ;xëÇ¼GÂ²î­§Ì–Æt±Š4ïe“æ¯L“ÑsÀ'ƒBâX¥áeHÈ=YóÕÄÒÏ#<Û‹3notŒ·BÄyŸE;éC›ªÉr7éÌÑwƒõ®U‹ Ş?“\à3ã‘¼Öše‚Ü\I%ø	*"¹‰ã"+X1ÄÒŸÍ û‘çsœg½öiâµÒõkÙ­&º6òZòíü§*êúRİKQ»¼FRHmdœÜ˜9B1¹™½çoV=s€+:nM.ğŠÂJÌõ{Å¾Ô$š%‘-ÀÂ’¹gXÔaCãO©459üÖıSTxêø‚+d©R#rUQÖZUåôF[d…1S¾â8Î~ÀüësÙíHuŠØülã¤ç‹‹Ò.-í/Öæé;Ñ
+4‘ÅŒ‰%ÜıÄı\xĞ*0 œgÎ½-ÿ fõkK[^êßÚrgœ˜U£fÀXÎ_'
+7y{üR_£o
+³-»2(²²3ÓiFqyLm4	TN<ñÏtëNì¶­©Ûwö0ÚËæö?dT¥æN„“{¯gõIÃZÚ5Üvñ¤²ÉlDŠªË¸têqœ¨É<RA ƒ|kèWšj­â³/y±Û˜nÄQ}Gv¸U à™’E­hSİê××Zh³[)§iaY/ ‰Â1Î6o÷zô¬aÆOv‹pèy£UE6Ÿt³4F5.¤©T<€O8<Ò±H%‘Ê¢e€Àu §ÔVö‰2ª­)&‘W1d~úÚ‰çDï$]èT@ÃâH"sE¤ µ4ÎTY¡µŠÅw‰£Û‘×v>}+.öİŠË
+ä Ä¤Ñ¸Á8«Zãµ…0y{®âa&K’0Nx#ÇHøƒXÓHìg—G@©yí{QK¨‘²˜<ç…GÚ#$ñhK½>ê×p4F^£½C@Á8äÛĞ–ÖÎ$Óôxow6¢¦wpHcn>ÊÌ|ğ¾²™j+q{«Gn¨ÆDHíaICµ œ„õÇ<pEqk5º+Êª‰PC«d½	¢>;±³½.á-5[™Cà¸WÔ…`N=x¡¥`ÒÈÀ’Ù#‚I©4’*(Ë1À®XaŠõÁ#ñª¬ØŠ>4ÂYö˜¬àµÅŠª:î€ªù£ şkù"ªPÕnbµf·e,z @“‚sĞº½f;?¨ıÚI§·-›$EŞT;¤¥pØÎå1Ò³âN1WeF-2™ÁnÑöjòô»*Ëu¢¨…2±><a:c©Í{%Úæ©¿ÚGş*gwÙpvcKµM.àËíW7.äã"4OÊòV¥.$0­Eô<q5FÉvƒù¢ãõ£ÿ WğK´Í­øªÿ ’ô¾¢ÒúğpN:g\Züq—“w~ê˜İ÷)  £d>S›NÇëg/u¦Ì GMÑ	‘^@O;pOAœ±è:d+©{¯Ëy?ıßobL—	İí'üØÜY”:óRø¼7†× ÔeĞóÅÚK¨•Mªƒ
+ `8>5)ä”×„Ñ:é¤1·D¤¨lîo|óçR³âq!‰}CKèzy5ıaÆ×ÕõFåÿ }q¨ÜÍsm?{qÄvÑEŞoes…Æsœò<|i}«¼¬Ö"tU+e¦ÓÉ‚Tüp
+4Å5HÂÛ@LìÃîFK`±#'©ÇŸ­mCvyoœÇxa‘v7FNzø0Å-,RÎhÒ¤ıŸ×ìÉRâ8¯#ñğØşËShqÎ·sRÔßUÆ7ŒOCŸÛE=·u ÚjVÏ$rµÌ¶Óƒ!ã§•yE“4İèšÙe_$˜m¾ŒÒİgÒuM=Ü+n8ârüĞŸšŠO	4|ƒı/©Æ¥ÿ ò_Æ°º¼º»*nîn.
+p½ôŒûså“ÅgªLÚòKã8òñÏOwvñHë$"¼ÂÂ1×Ä¹ëÉÍU$ğ…lÊ9^H¤xäC¹]«) †ŠÔµ;ıDÆ5»‹èmQ+“·×ÇÌ×V<u6Ù#Y]‚ä<ø8ğ!BŞ[ÉirğO·¼C†ÚÛ°|F|èÃyÜ{ ›™ïL†W“øÕ¶ÛvV<¼_æÈş©ÊŸB´Ò½‹ 03à<¨Í"t·Ô#ï—}¼¹‚dİ€ÈãiçĞß%ÌÚÜKor¥g…ÌràÀàĞ°èr9Ñµv]WO†×R¾w3"¤Fá‚Ù# \:VW=£ÕÕÃZjwÑ[´®ñ¢ÌpªX3ZÃHÚ-íğÈhahb`:K(*9ô]çåA[C±çİ@iåà	õùTh·CÔëq€í6»±]kR©ş0ÇöÓĞv‹YöcÕ¯—¹µl¤n~ì31ó9oÂ”®—³WV°}çhØ³6ìø #Îk}j8.µ[û™5+8I™’“+Ğ`lã€)h†¥A§*ßÔÏøI®ÿ =j?íÍmÚ=nâÒKUÔõ¹ßDë9€§zÎÈ æ(}>ÒHãiµ«(ğQ¢™Ù?­…Æ=s[¶Ÿeo*=·il{Ô!ÕÖ	ÆÖ‚Ún<=«Óô	Ë¯©Àí.¹€Fµ¨öæ«øK®õÍşAÈİ)#îñ­µ*À¹µÖ,E¬ÇİV1G nRvx‘œ<)eİ¼P6!½·ºÎaWáï(§	m@nKŸ©ìnµûÙt]WS²ÕnQnº{8››IÌ„È~i•>D
+TúŞ®†ìjÚ€¹–õàŞ'?É¬Jvã¦2ÙéCi’Cgæ[°}šöõa“	’8Ëe¤Ô¸ğkkÛ[Uìş‘jÚµšn{‹¼´R‚Á™QIIÉ¿,ÖJ‹ªçÓÃô[m«²­õ.ĞİÙ5Äšá†×yˆ=ÕÊ¢»ã%T`–8#<xŠÆ!§Ân&Ôue¼™ a6°¹úÜ{ŒÏ…_u¹ã<Ö­œú=¦œ5­26‚yf»JªıàQƒ˜òÚ9éƒ[j}Š»Óìc¼¹Õ4‘i!ÂL²Hñ“å¹Póª¸¬<_‡èT÷ÜGg¬jvr¼¶ºÜ2¿.É)÷^|ùÏßLl;BX1Õ¦.ĞÅ#-,íÍ“nÙï5İ?‹ÌÙû£¬d°….„Kªéï3ƒ&ÁòÙ»ğ­áÉåzr\Â¤í_h_íkz‡Ê\~ÁBG®jĞÜËs©z—2€$•e!Ü€Ÿ*ÖïI‚İFífÀÈQ\!Šu%[A1ô#šZBnš/¤¬ÂNÂ@Œ|‡¹»?Š"¡X^ñsaö½ Ö§¾¶GÕ.¥ß2)YdÊ¶X7Áè}+]_´Üî«İjWv¬n¤–òíPC€2 Í§Z[G«[“«YŠX¤#™ƒÀíP$ñä3+MJÊÖãR¼™õİ=^Yä‘• ¸R	bH#»àóÓÂ¦¡«oB³[™Ôöƒù÷Tÿ yjíûGÚ!o­®êf9(ş2Ç•Æs÷ŠtëB2uÍ==9ÿ º:ôÚŞ“¥ËZwb8ue9n1p&ïyÙCÏ¯\Q'Ã‹KNş ”»Xv‹[–E¤Ö5&1Z4‰üa½ÖŞ€7ÜO_:î÷µšé´ÓäƒUÕb)	‚W2{²H®NAñ;Y3ãÅ&²´iä¸Xîá‰#FïebÁ;¬à· ’	Ú1Œœ:àÏg¶K9m>—Ò%IJ$îæï€<)(0¡ğèhp…íè	Ë¨ªîê{ÉÚ{¹i›«¹É4F“ª]éS™l®n!ÜqÍş2WÈœÿ ù¡„J!‘ŞeI€!*Û˜ÀãøŸŒ×z}«^ŞGm¢<™Á|ãŸØ5³ÓTö!]™ÜÏ5Ôï=ÔÒO<‡/,¹˜ù“Wiuqep—sÉop™Û,Mµ—#áD[ÚZMlemZÒ6î<RäúŒÓ=7³¶·vÍw>¿§Ågs±%2F¤ô  Ï@2y©”ã¼ŠI½µÔë#LÒ¡]_TK”IeÚRo|§©G×Š_ü*í†½ªÿ ‰jÊêŞÎæöc¥6ÁöÄ&3,c¦NÒz|<pËiÖÀ]sNeÇÚîç¡B	_A·'Ìæã\Õ®YšçT½™š33ÌI(NJŸ1‘D
+{@/Óš–ÑáßŸÛÖ…µ°‚w!õm>ÜÓ÷£>£xû«™laKëéKOÓ!¦?S?…UCjô¾£«MwZŸ³ÚËË«êÜµ±\ÎÙ]ÒHn£#ƒiJkúÔg1ë:šü.äıôÂÎßLƒKÕ-¥Ö´ÇšéaÉİOõe$ÜßæüGP#L²ÇşéŸìî?éÔÅFŞ=<İã>§ÂĞı{©ÿ ¼PÕuO»•ıÕØŒ’‚ymÏ\VÒéÖˆ ¦¹§Êr	ùÏ˜ÇJî=;Mbİçh-còÅœíŸøF*Ö…”½?Bø¶±;*±÷•OÄfÒìc“¿¼šY&¦VBO¹RäcĞ>\zE¬ÓÇ®¹c4²0HĞ[Ü+;€ îÏ$ÑºÄPZZé0k6&;bÒ\4qÊâ[ƒÃ„ÁU "ÿ høÑ)ò_f
+<Ï7pÆæyfœ+Ë#f<’O©çÿ À®6)9(¹øSeÓ,˜gøA¦¯£CqŸş]YÒìGÿ ¸tÏöWôêµ®Ó
+×1Ë"“ê)ÁÒìÒ-3ı•Çı:ŸEÙ¤:gû+útk]¦Y­¬É¦ÁzÖ›ı›Z4¶*víC!ÆàÀg †Êø0ğñBQIË"nñÂÏÃÂ½f’ö6ºKªè×Gc¬/*]ue;~¯÷‹chJF•bá™ÀÇòWôê#*oÔ¦…W¦ÕÇÂ¬@4Ö=*Õæ)ôş‰å¿îî³Qô»4¸LdÚI•#”/äòOî«Ö»Lšà’|ñPªAQƒ×´Üévÿ Ò=7}ÅÏìîë)ôëHãv\ÓæaÑ)Áo¾<™£Zñú1Ğ¨Çëê¢¦Ä>áZLª’º¤‹"©Àuc |kŠ»$Ò#)·¸Š6"ISÁ¶	8Üqñ5ŠªŒ ª1ä:QS%½ÔrL’I+,q¾Æt#ğ8?õ®.cHg’8¥F§ Ü<<?~h[fH‚ ûÀÈ‚˜ÚŞ+Ï\yô5˜ €øQVÌ‘Éo(D–FSìvìaŸu‰<!Ï'’¡~ B(O#¼r#ÆÌ®¤2²õt#Ö¹$’IäNh:16£goÄ“Æ‡aÃ`¸Ï³ºNêêâ0	+ Éb9õâ‹ÍD'%>xé»/ü[³°œZ—K8m·ˆıÕg”c'Ã‘ò¥z}®^‹]6$¥Y·1ÚƒjîÁ~€àxÓ™¤ŒhÆŸ¦L“XØÅK8İ‹™e"ã£jªîÈÚ¹àµeÄ’—Ü¸ªÉäŒQg˜£ú¢škÑ$pèö¦(ÁƒOÊíëJÍ)Ï®
+ÃM³7·b"¥¡E3\ÁBÂ¼¹,xp=HMq©^É¨ê“w/´œìG¢¨
+=i¼¼»÷'sè£ıQUİEú(ÿ TWf¨ÕX;¨ÿ EêŠ®æ/ÑGú¢´éR•1	áú¨ÿ ”OÉœ*WPÿ /úÄÿ ˜T¬x¯aÛ5U*©˜[ŞOl1¨Î5n~`ÑVZÍÄ¯zax‹“!kXğßk”øé)gZ™Á©p‹İ6‚õfŸÛ¤[¦äL(6áDez‚»@9ğõÏ4,2¼3G,LRXØ:0ê¬AûèÛ‹Ô¹Ñí-¥Cí6É€ -ÎÃâHlãÑ/4Gj`÷Ël/ĞßÄ!…ÊÜ"ğ¶ò²Ä~J9 ÈRHò¥’Ç$2æFEûHã¾„xîÒáí'Y¡ J¿eˆÈx?ÇÆ‰V´¾¹‹Ú&{"sŞÌû¦BsÁ {Ã×“éåI\|‡†	N’¼Q“ct˜#Ü_3Ÿ:3â(ÎĞİ=æ±=ÔˆQæä*~ÂóƒçŒüèæ²½´^ûJ¼Ó®áße¤€—
+=íÑ¾—nrF({
+ôÍ+ÛÛG²ª1v•R$Ü¡¶†r	ÆïSR§VØôº¡1¡â›ŞÂš¥fÑIêŞ9f’gÂFÀm‘˜ùesãö€¡’ŞÊ5İs¼ä}U¬LÄ}€P~ú/Q¿7]˜ÒmÕc-fš71€IÃ#œä“‚Ş™Î)É¶Õ	,dXº¶nêËM.tûbÛA‡™ÏÚ•‡†p 
+¢ÒFŠ)‚œ÷r‚Q½Æ³5ÍZŠJ…vìdº¤jIF•Ôbãÿ 3îò£eí]ôÖË=¾Ÿ<qMv$| 5TŸ/t5&Aa¨iÃ²÷O³µ¸ÉÄËjÒÄG†åïê¤ü(=CO¸–å¤±ŠÚê‚MÑM§ßSèÜÒª€•pêJ¸èÀà
+í1İîk¤}KÌé:´Šá‘®FHıôd—†îfÒ´İä4-¸ƒÈ#‚ô¡ã½e¶[w†ŞhVNğw‘ûÃÌ /2î¬µx­ì4¡%½ëÉ¶(®ÇxNAú´™z.rv²Œœõ¥'[¬ğ;Ô5•‡N±…ô--@î€xßkw‡†QŞdzãÃÅiµ{8ï-,#Òô—‚ÚÒß$.vÈÈ€Cƒ°dqÏ‰äĞñèSê}§·scp4‰f@Ò‡¢ÂŠ7">Êáå^vòìêÚ¤÷yAís—`CO ÏLVq„d×‡ç¶[m#K»¥y+;Zp¤gªå¹pOŸÜ}ähr<•¸Š%FY
+ÈYY™ˆï1xxĞ¥ÅäöW«<odÕş¶œğÚÀøŒãœƒç…ü·òAj/Şvˆ©’ó• YOO£WH‹ ‘«Ä¢èäœÿ æW-ªÅ'¸4M.Bª—ÇÒR²iŸe­`¼íŸØ×¼ï&àÑK°?%ÇÎœ¢¢›`›n†}±Ô şj17N•`[¬…dˆÔ'ƒã¸¤~Ûsômˆÿ kş:YMÄ²NÃV2c¦2IÇã\p‚ŒR•»Ù_#^[G`ò4È)•Y˜°ÀŞpsãáÖº¼½H5˜çÑôÓ*Lêà™¼ƒÏyÏ>>4–"mVÄ\mîÄBMİ6o³éŒ×zñOj{1·ÚæÆ<·œR¥ª‡x]^È;9¥–ğ&Iñ÷o§½¥í6¥'f4[geT½¶–i@yå2²ï9ÈÂøçÓâ¶©o!šuÚÅšë;)ÊfÎÂŞ%UÎŞAó9rML¸qr}î5'Lšïu¬>µºfìÛ£>êïLç=Ï<sœWé·•Â{4p›˜ä8ã|Ö?´NXìÍNÏÂ'ƒ]Vb»4¹¤ãÄ«Æp}+FH¤´Ûy–X9KÈàÊIá‰€¸Q×©=0İ¦ôî.–mªZ4Ùë6ßon­½Å´¦)c\ñ‚FGU8ÏÊ™v{OĞ.õ«d]Jgˆ¬ Û]ØÎ;·?i®G_³^LŸ¾˜vq®—[µkÖ[¡¼¢3aHîÛvO\Ÿ•…EÓ Œ²¬&Ğ¬mØ÷“k3².Ñ%©‚%ã®wïü+«[ò‡¤mÉÛ¾9”ynŞ3ñ¥ã»M¼®ÑŒùbº«Ğ¹±jè2ƒTŠ?î}&A·’'ns×;óŸÂ°–õ$™dö ’R4eVô#wì4JzPXTwh“cfèNJ:¹1Œ†Î<zõû¨¿¥í•T&¤e|XLùøæJRj¨qLVÏW¥êÊÚ¸çFÑJE¹ Z°LÀûùãœRXµ8S èú[Œ’w¤„Nqş­´È®³šü±N‰nÊ³FS-.e;p$ÉóàRrj#róü"›xnÓn³š(>l&søÉ\}3ó‡şÆ_ú”¢ˆ´é¾[ÅfUMğÄPí³€	ğAÉ>x*:ñZcè5a¤$:„zN›ıÔD@Š’e ¾C?!pGºøŠ^ºÔ
+ ^Ïè8âòÿ éKõÉõÙ®îäï'”å› ˜ À    (sIpÖïprr/æıÚOú”=Ş§Âm]#J·o‚9½È?1Kj¥‚ØUÕÜs4…,m ßŒƒá0s‘–=zxñ÷Ñ0êñG£èº4¤uy!“s|q …+ª¦â‚Æ²kº2®‡¢¡#–2=Fd5PêğÅ
+!Ñ4yJ¨]òE!fõ$H2~UPÇl{1}!‡uâ^@«(Ï¹WÈòÁ#ã)_Æ¥E;C¶8újæıŒ¿õ*}5ó…şÆ_ú”¨ÓĞƒSjæı„¿õ+¥×-6âNÍhoêè	)!ª£øĞjgR¸y]Ö5‰Y‰™Ú£Èd“‰®jUV"Fé¶°_	-Ì¢ÖÁ·i,rŸÑ~ËÉlã<d¹# ƒĞĞÕÜ¨ñK$SFñËxİJ²0ê=¥oiqnŞÙj.£`ò­®?5†|8äZ-Ôw>î¦n&`«w&^%¡SöÆ:A`ãŠæ4ŠM±ÜE:`ñ†Ÿñı¦–øcÙÚéW0mJöÒfuÖÛÎüğD`:ãŞ*1A\EgÊ¦êyœgìA´Ï –9#¯ sYY+‹ûPÄİô`>Ó•;†Cñè~¹heöX­ÑçÊÀ”¹c¸09ÏÀ|JISÜg¶ìË]ÉÙÿ £-îîo-Ê‹«»xDÆ¬Şâ>Ü4’¹ÆSpP¾@RİRÆÿ Ûuèı–8¯.#‚F²ÓXJ‘˜là€p22¶Ú¶‰ksiw~4›kØÿ Œ[™•¤•@8V‰	nsq×(]<İRú.4¶†ßº¹ï&F“n3à™+”z’zV*4Ü“U~İı
+¾F–÷Z\:Úuäâé®;Éf¶x™_nB.[òT–<xœç¦ S¦m‹rj%¹ïxÀû<ãó¼OAàMş*¢km4E†Ü>šd_fƒPànïgq9Æ c |¥Xm$g6ú“r0=¢1Ç;:ôğÀõ MUV±ïÑÑMƒj†èEÈˆFörIû©qéÇ_Z†¨ÓJ†²{Lašëo}*gn}ìŒõÎ1Î1œóR‡ƒü¢õ‰ÿ 0©Xq·Ygµ¦N†8mïQ†İç‰gXû‰$!¹*1“Œâ—xŠ?VİÜéEs`˜ôÜøQ+´‘‚+Ù,wux±¾É/î®M­—oÒ¨ËŒï[Ivü<ÿ 
+5	¢Ÿ_·°Zèj¶Âİ£¹KˆçŒº:#! 1SÜA­ã·MObXÄ#¿Úw@Ÿy<63”ô÷|¨Iÿ Éí×ccìı³ö=8ç×49 ŒE6·Ó«#²º²:œ2° ƒäAèkœÑ2ŞmLSC“n.˜û cilò1£#¦Ÿ¥Üj+!´{S";©.7#°@ |hÕJä*½…ì‚XÇ4v«ï¨Â—+\´Vê»PQv|ğW>µ±ìş°cwK»%/}ê\†ùf¹x'MvŞŞi˜Ü¬«¾ıÅŒømcÃğ¥©7†:idPµ’ÆşæÒ|w¶ò´M™SŠèÇÿ r÷Û[ï»İ‘äó<ñğùÖ7—ww=Ë¹v–F}ÌÄ““Ç'“Å$Š½™·ˆrò_K#sĞ,H£ïÜiæ•î˜²¦jª±ª¥J †¨Ô&ª€%3ÑeŠÒBõäâ(;«UÏ&Y2»ÇõWqÏ™º¤háÍ#E”Ç€(¹-c»Õ`±Ò¥w)³>îöSÃ0ÇsœDgÆ¦TğÆº4	‘ ê¥¼şÅ|ålìäN®Otq ÏBØò åÕ…ËÖ4Ûk™T_eœ|Jí)¡5¨¬íõáÓİ¦·ƒê»ârfaöœ Np<€ó¦·Ãc¨%¯k5ÍÔ1*]O-Ì’]¹ tE.N|OAYÒ½UmıK·UĞ+³ím=Õ½ÔSÛHá[LÕã 0ñîæ^c8ÆÓÇCAö«O›AÕuH­æ:I‘„r¥“2·@Ùãp9 sšÏQ‡M±u­kxño·Sq°>x²¨”sÓ9èH¤öw—9ö;‰aVÈeF;[#+ĞñÇ"ˆÅ·©lÒ¦]ÜpF#kkƒ*¸ÉGM¯à}<#Å§ÁjÚN­uy†’4H­c'¬®ßkóUXùdŠŞ;ı"æ$QÒ=™”í:d›Å£rU¾DSCEôm*ÇHÔmç–bo¥‚p-îdÀˆìc†Ú¡½ĞÙç#­9Nª/ £yG?…Jiªè:–™½®meîã¾U;}2+Ÿ&•dÇ"µRRV‰j·7±wMBÑ¢UihÙU±‚C1ñâºÕ¥ïõkù¶íï.%}¹n\œdp~#ŠïDŒK®i±¶0÷P©ÈÏÀª×A]{SVfr·s)fêpädúÒÿ cäe¦Ú6¡©ÙÙ'-s2B8üæ ş£»_v—½ªÕî" Ä×.©›Wİ‚×=œyío¦Ôm“siğ=ÆN0‡¹>ÁyƒJ@À=<M*¹ßNıƒ]Çqò÷¦3=³C€¹ß–S·Ğ½}=hV<šÖk>T1xš1Î6’G>½:zÖ>9«H
+§İ…“gj-¸ûQ\'ßÒO@N98ğ¦İ˜’+=fÚîæx¢Š%”¿¿ï&Ê<rHàxTq3¼;¡,ÈGıAû+ª¸#ÊY¤Ljªç.z>$úxšª±¨š•)ˆªª•DĞ1Ö™/Ù~ĞÈáLñµ¡Œ 1€ùÒZgbö["hSÙŞIŒ›L_X@ãòÉÈã‡¾Ó®laï!y†ô›ëvx;'UÃ8'ËtßŸáö@­ˆÕÙXFù
+Äp}2*I#ÊA‘‰ÀÂ@x¼?Zæ¨Õˆ†ª¥CLjªUPª5uCÖ€eú"ñÄ
+ğwĞ«JIÌmï éï‚zğ(:ôúBÿ g]¨sÎ.ì¶#¹¹ûysQ	[~ğŠkbª†ª¬D©R¨š`CURª€%J•TJ•Gš£êeªØÜ<ó$0]G;ìn}Ö#×(K©š{‰%f$³1ô$è3\Ç#E*Hœ20e>DŠá‰f,Ç$’Iõ4”UØ_#•P í AO´	ÒÎv°9ÁšÒŞdÜ/÷~T„Ó­kDĞ;OËÆ'’ÖfWêÎ'RvúíÏË5<L¯šû¡Çq)æª¡ëUV"T¨j1šª•TÜ?åÿ ¬Où…J¨Ê!ÿ XŸó
+•‡t»º·šÒá ¹‰¢™1”o^AõrC]Ş´Í~»Um”EÀæ=Íƒ÷çÊšé²E­XÅ¤İºGyuËœÌ9üÒ~Éğ<RİN¶qÉŞ	¸ï#“ƒïpÉøÔ)[§¹“X´UR¥hH]ÕÃKc§Bcd[t‘Uåî±#Ğp>úœQwŒ‡ÜDR»‰Ø{Æã×9 (ì6CTÀ‚¢¬ÕSjí
+±‰Ş>	÷¯ì§Aî4İA¤‚FT±f@ÊT‘Œ)ñ%óÏ\HœûœƒÖšëkìÍÜ–”M6ÉgŠBI„RO9å–
+â¦Jİu*8È²YY^I
+–s–!BŒúÀùSKÅ°·´ÓbšŞå®°šWŠ`2dbÀ`©´ñ×<ùÒÛKf¼º†Ú6
+Ó8MÄà(=XŸ OÊ´Õ®!ºÕ.çµ@–ï!î”.Ğp¼| ?:m[HÖk,:sÜm}<P•Înàä7—¸N~5¤:%ÍÖÆtÇò"»@ÿ ªÛM,®Xá€#ÈóE>L1Ì>ÿ IÔtñ›í>îİ9â;Oöº~4¼0a• Nh‹kÛ«R}–êâ©BViê1”XÖGşÊÂømÚL÷lyîiÏ}h¹/ûæªc+éwŒßY9ÆÄW[„yİµ¾hË-y½ä>Ã©Z9m‘‘˜¯UÚûIÁ#p^¼€i9¤­ã¿ Ô[ØSèı5g|­åêbc€ä4…ùUşãâ+kt,ê9Û}x­cìÉ7íEõ,|+™¬ï%¾š÷´Oº:µËÊ½Öüı˜ãğ%€Â…àx5À[ŞÒëÑCq‹›–X¡‰x…Jª?zšœ5¹ûwùÂ¬ 0Æ)äz‚k‹ia«È±İ+,PjEK:¯A¸>úäŒ7Uõ¬¯Ay#¾…b÷ñJ'ÇWx6ää€­ÀÇÖ¶Zt’jsİZŞFÚÕwš_ÈfR#\n>dãÉ&šºwË¾üA*f7y£½î‰~±KRhIÜ±IúH›òOàsÈ¡ŸN‘íÕœ‰u&ù–?å-ÿ ®vÿ Le~$ÒÉq4“\HÒM+wn¬Ää“ó©ÒÛÎ“[Ë$S!Ê<lU”úV¢ÒñD·‚K·Ù/>»"NÁË:u>®­xÚ¥ü÷r¢¨”‚#ÎàŠ 
+£>  6¹ŠØhÖwzˆî/oİŒol›‹¯GŒ³dc ÉÅ-¼Óe‚9&‚H¯lãÆë›RYS##x#(¬
+I»©iı Õ4øÖ(.ÙíÙî}#İnœóÆ(ûÍWEÖCKú.ùÛs]éãtdøî„‘ÿ 	Íy¼ñ\æ‡ÃÚÃOcÚh”¶¿Ô´öÑõë+÷Y#šh6Éª¡×v8ëä8?vif¿¡j­¬ê“Ãa5Äêfßm‰€áë°’>uçÁ ‚	ACP3	ŒªÌ&';Ãa‰>%ºüêT&¥z¯åÿ ƒ´ÕPıí[Kìd—3¼°Üjw^ÏÜ¶Sêb÷˜°>n@ÿ ó^|çb>ÇÎÆÇ¸>8ÈÍ?ÖõF¨l†¬o!°
+‘¸a,eÂÌ»–a“œãÄ]MÚË›Ï.êÎÒ`g3¼¥É®Ô
+0p3ÎOÊ”5¥uv7[mû¢—éP{£İåIËäp1Ğã<?
+Äóğ¦Új¥ìzÜ·)x´×’< P¬­† xãÇÔŸTzšÕ;l†EvUeV!X ÀåŸ:uØëH¯5ûTº@ğl™¶“Ã2ÂÌ> •e¥é2êÖÄYE$—Q½ÌK¹¦èAñŒà“Œc'"öO³·½¨´—ºm½À¡·ïûÉsİ8#j3â|+>/*2WšeÆ.Ó<€3]Y‰á#„  AÛÓÉ>¦±§rh:„6/mbÖšœ!•ä}:ág>ê2ƒß eOJG¾‡ĞùUÆJ[Ó[’¥Q«EiR1¹Ø…UI' UÉ5µ´·—)²‡•X(¥ Iğ«Xã†IÉÜñhAW9÷aÓŒò2s÷Ö—z„·‹f¡!±FÜ ŒpNNÏWa­œxb•¾C®£m/P·Ó{9¬Ånû¯ç6ÛeÜ¦×İ…SÉu ûÃ#GL×vgwwfgv,ÌÇ%‰êIñ4ûD&ì¯j”‚;IPŸßiâ¦	\¼ÿ rÙÕT¨kAÕTª 	UWUñ d©R¨ĞÛ´±İ±‘D²ŞÚ0LŒ²€ù yŠAšwg»v/WvÙíi}k· nV@qã‚zü$¨†òóü!¾Dª«¢mÛşï¾^á\ıSw¤Å†#ƒŸÊÎ9Î~U{ÕTª¦©Rª€!©R¨ó@ÈMQ¨MU5´&»‚)_drH¨ÏŒí€'ä+9@Y]A+x€qšîÖ!=Ô0´‹É"¡‘¾Ê@Ü}sYÈÈÊ¬+:d|zÒ¼Œæ¥J”Àª•Q¦2URª€%U]Q áş^õ‰ÿ 0©UùD?ëşaR¹øÛ >›q
+kQÉwi® €½Õªw£Æh‡âÊ:GŞçØûIe¤D÷jšé³]³Êã»¹!ÜwL%øÈc×<×”{¾òÒYÇ&è¥_q†<zZßé¤ÑÜ<1jWVƒwkSò^C˜„ Iê+)ÆšÏëôL]Ùç®`šÖæK{¨ã;^9O­eLïµÉQlu…-%¹‡š?ã y\ä?¢Ùô¬.´öMòÙÊ/m+4ğ¡ÂnÎ©å¯¼ÖªXøˆk¡¶¯liÚ.wOhÓ7ÄÊãöJóLõiÖm/B
+À¼V²Fà³‰œŒüA¥tBë>?qKrU†´µ·’îáa„.âÇ
+Š:³’¾¯`JË´YîÛD†WPpÏˆ¾¬p=O…Ú;d²Ö$‚5((Y—$€Í±<ã'ä2÷olÌÖ±îe%v™.GQ Àz“N;]¶ïµ“÷r*¬‘Âw1á@	?*ÎŞ¤üà®Bø †={«€Y¤ö{eÏÙÛ†’CğTz±ò¥çšîIR¥
+¡Œ`•ÅZU¹$5F¡5TÀ•U '8íëqñò­®"†4„Åt³».]V6QòÉû_*,	j‚î#ïmÚBbM¬ûpHóQÈçxéGGÚíÓÜßËVVÊ¢Yv€–ñg
+‘§ˆT“Éñ4¶%‡oäƒ Ì1Ÿ€ó8®‚Üxç-_˜ĞŞmzé+}:kˆ4Ø¤6Ó8”$’\µ‰Ï– àt¬-µxîà¸Ig4r÷½ı‹{Ê@à*1Ú£<üñÓŠÊâ×ºÒ-.•C­Ä¦QŸ«dã»òÉ7Ãã44£Öo™èŸJ½í#Ï¨iVÖ’H0×0ÛÌƒ’}şí±·w$nÎ:â‘^ZÜY\/`šÚqşnd(ßqşê®øû#Û÷qíwÏ´ï8è¹ÏÙñÆ:Ó?µz…½ ²½X5M<p-¯Ó¼ıVûK÷ÑSÙ]÷È¬=Ä9¢ô­>MJğ@‡dAL“Ì~Ì1µ# Şp5½ôšMÌm-”VçüœO	pËğ ÑZ“M¤èI¦š'º~ööoÉbÕÀpvğÌ?9±áMÉì·bHYª_Ë©]wó` ‹h£jÇŒ*à üIÍckuqg8Òy ™FÆÄyzCÅdMsT¢’¡^l.âñn±ßZÛ¤…Áimã’¸Á×8úUIo·‰„æE~p«‘%ˆùæ…©EVÁv{¤ê6+¾òÆâ(ü$Ù¹Á×*~ú'³H‹<úœ¶ĞİÙééŞ¼r8òˆÔşw½Îß´ºÒòâÀ—²¹Ôõ&>ğ5é{CªİÛèöº]ãCqyp‚îù¥…K£0ú¤†Tç<œ½g=_×©j·<¡$’\å$ôÉ®IÍj’G”@UX®U˜œà“ÏN8Ç‡=sL,&ĞR]FÇV–l{ÏÜj¤ú)N>óZ7\‰ÜTŒàÁÁê<¥£éë¨O?p-m-¡3ÜNWvÄ…ñbÄ($×WçD(~M]d=ËDT~¨É£nšÊÏ@Ó-Êİbô5åÁGMä©Ù`&C¶ÓÏ æ¦RucH_s«\ÏaŒ{-¬” ĞÀ½Ø•‡åÉƒ—o‰Àğë°W¥D–ââD[K–ÚÒ±¶2	õ¤pÏ¦$K§İM>:›İ©Ÿ<ÏË4~‹Ú%Òn¶úNŸ¿º’&o2èW!™ˆAÀã3ÅÆ("ò›g·;VC¶DU!”á”ãÀEz[{«~Ğ[›}nê+mF1ü_Q-Óê§ÀËz?QĞæ¼ÿ {)µ‚İ¤f†ìO'?\gÈ‘ê­%^bNæXÕS»‘ùŞ
+`)ŒxÁÎZà’Êã>ÇÏÎvš5¸¶Ò5… >£{@<M±Ûû^ë|Ió¤&ˆ;VS%J•F¬C½"ñ-û5ÚXs%ÔVÑ®16I' àxõ¤i…ŠËô®ñİƒl²3´¹ÀønÓÈRìÔE+—ŸáùÕTª«*ªT d©R¨Ğ5F¥U u±Œeö‚—ÇBGLúã?*â‡¿úïe¾ëoh‡½Ÿq÷±1œsïã<u ³BæCLôå@×›¼*TZû™qŞŸÙÇO?ZWL´Ø¢}]‘ã,imİ9c3a°|	û­)íôû¡¡eJ•¥´‘ÅqÏÜF§-; aå¹y*b1föˆ_‰Å^1Ôñ¯§vO·]•Òå‡¼ìœ6;Aß<CÚ\ŸÃ^´µ}¤Ğõ.Òê7‘vzŞî9¥·yqH6’ €½:cÂ±\Y¹ip~úš8ª»<aª4âMSL/”ìåš¦1·Û.Iøç}eî–¯ºM:şhÔ%öfµR}§¹â+©N Ô´HÏ¿Ù£/õõI¿¸
+Øë:ú#ÿ ¸¤æÿ åú{—QF’¡õ{fÚ¦æ [Ëß^k=E·ê7³féä;@Æß|ñN†³ nöFgœj—ª:Î†I?Á+n¾:É?¶§T®ô¿OqÒêyê†½­­½•Ö“&¡etÁ…+j·=ä€¸Œ3€7{ÄgÅa«>‘§=²ÿ ´{¾ÿ  mVé‚ÁH;ˆã'†éçƒBã[ª~ãÒy
+£Å{«ûK>ë=–ÒfŞÒ#u{’‘Ÿ{±µC°%A8Îx®¢Óm%º¼ˆv_GXm7w—O«İ,%•²)',À@éëŠ_Î·¯·¸h<jSá¬h¤üµçQ¹ÿ pu}#/eìóœ‚oîx_j´Ôÿ åú{Š—QU0öÎ]›4{xvÉ¸÷WË°w1ññøV³{>w=¦¥£–»‚B’§¶:`y\.iÇ=^op¡l?ËÃş±?æ)ô:ÎŞÄd¬s½@crH;‡?j¥sq¤í|/ÓÜ)uØÚ\_ŞGkgM;ı”^8ñ$ô x“À§:æ…4vvÒÚŞ[êqAh¦_gmÆ$ÜŞğLyÏ¼3Îs@Iª²Ú\ZXB¶v·™B±ix!sÉAà>üÖï5Å¥¥İ´g»’ÀÙœ}’Ï&ğ¸ñ gÒ”œí=Œ•l& ÷Ílš¬’Ë@¯|Š¦}¸à?h Çy®Õâf“H»’ê2‡s@­¨¾"DëQ•>t´1½Òµ]º¸»µ¹´Î
+J8ÚHÈ”û­èpjÚJ’!&ŞM.ıœèš38mïŞüxÀb9'9<hy,Îc°¸†ømŞ;¬£ŒŸq°r<†}3GI;İAnú¼te`.û3¦$+à¬ŸkqIæ¸¸Óôw¶ØjË4á°±Ş)¶ÀóS‚ü×qS^¾]ı
+«¤¼+pÂÕï8*£IğÚ9øu­&¼Çì–‰İ[±+—œ›‚¡©ÉæÌ{[¦EõË¨›lÊ˜?9Hı´­ÑÔŞE¹Óôd9šéĞÚˆ³æÈG>J'ÀSÕyİx0ªÀ«8eYœ©ÀQ“ÓÒœöŠkx¤º|KRÅó°ëÆ¤ˆ:ãÅ‰'Ã\êZ5°¹¶Ó¬gšŞE
+Ó5ÛDòñÈªù9ÉÇ>U¾¿u¤‹ìÇ¥7Û@ÊÂõ•W1/UG#¡ÉÉ=hÔÜ–uâ’Üó•Ã:´Ê>$
+Ù¦$,‘Æ©‘)İŒzñœü:S½3PíÌ&ÙÕ!…Š©øŸÆ®M¬’•ŠâÓ/¥„Ì¶², ŞIˆ×‘‘‚Äg>Ísdl¢•ŸPI®@Û¤ı@øü+kı2ö²jom Or¯ şÎIÿ µSI§YÎM²¾¢Q›kÜGİÂÀ¯»Îì‚OààRÕ~>^ãª;ŸPºÕdK;8¡µ¶'jZ[î/<¹'Ş>%˜æ¸¸ÒÁ¡Ï¡ri2Öè$ŞyœñáÏZæöææŞŞÚâw–qˆ¢8Ú€õÀÇÎ°>´(Ğ6W:Ã¹;Š¨ïf~5Ät`yô5•å¬¶ÅK©h\êuÇ(*Ş?£Ä
+–ñK<wK€‘Äg‘K¹TƒòˆÎqñ5TàY\@ì£İî³™õªWxŸfámBğé4‘AxU²¹ r	ã†ëI”åA#”J^K”ö±•H§À›hæPB“ù óÁñÍBM6Á¼¥Jy¢é¶Éfuq[è´b°ÀúAùäƒò›åNRQVÁ+2†Ò+jÉº{ VÂHÈ›†ÇäŒaGå7=m©ßZ÷İÅÜÊ'É™KnYIêYNCR*µMBãS¿–òğ©šLp£
+Š8TQà pIGÛè4´·Ó/ +%ói×Š3›•İo'ÁÔnŒüA´&£au§N±^BÑ3®èÎAYó‘‡=A¡©†ªÏeµtïOs¹ìî2c'ÍHåúKƒñ¡¦²²bú¢iÌšTW¶òİh-,éïšÎNn _şUç(Èñ­(†9'–8 F–YX$hœ—bp øšjIƒMèvğ´ò]ßÛÍ6h»çî°99©'Í±ÀÉÀ<RÁœsŒõ8ó¦úÛ¾„‰•½šf{©v÷“½}åA•Œå•(¥ü@ñ‚UT©T"£4~¯,3E¥,cQ³X¬ÀœøäcŸ—…/¢mÒ9íe3µâ`EÁBœ—Îy¡ uÉã4šæ¹¨@#¥QªÍUJ'L±ŸS¾ÒĞ)‘Á%¶¢(gsà rM¤­!–¬Š“ìÙ.ÆIãìÏ;Õ ãÌyôô¤u­Ì¥Ù#´ĞÂp“œlÉ< I'çXšQT«ÏîÙUJ†¨V1\¶…«ËGìèÖâáNwY¶áÃsÔyRÊe`’ı¬Éîí}eÃ`Èq‘Œ@äã¹¥•İ÷ÉòKËqmm¦Z¼ˆ»É|	±‘ÓáY­ÄnèÖ14¤ae28*s×npxãŸÆ…©ñ§¥„Ï=¼–ÅŠC2}¹ÄÎÍ'ÅIÚ>Bº–æÕÚºzFÂÜH{Î1ÎO»Ï<|(J¬ùQAc5Ô4õPèVí(\äã'Ïhl|ºUÇ¨é«+èò0-í³ÇÏ¸¥$ÔŠçz~zş°£Bñú°±Ãê:c)Ùûu>búàÿ õP×VrÌ—%êV†X’3ç÷P!”ô`~u	¦ —ş±İâÌXŞHm¡RóÄ©kí2î
+ÀçŞPxäb°vbrçK£ }Y¹“ƒ¹úb®)-w6/Úê@W¬A\7>ñ^<}i~G˜¤–áclÓÌÈÇGNìì¾ñ=ï>ãi¥£ı«Ÿ¡!a·åïæ9&Bb òqÇ4•é÷Z­Ü	rH–ğA!;$™Ã6_•URJø’ ñš>Öß®™}—oÃ¼/h †8ãˆ«6ÿ uTTàp¾¢jğ¹W6RñŞ_YLÙ¶µ·´ItòÌkq Úa89?XFGßNÇk»@½5yÇöcÿ qju¸äg‹Rxİ‰,ÉjI=yUñ.^¯ØX=Õ»E H L‘‰;Ö%:q×noì¹A¦@$>ïz/%àùíÎ3é[I¯ê­wÔ—ò=ÌHR9]Q™TõÛYÜëz•Äç½vq„¨>¬ŒàtÇİNŸOV¦¾Óä€$z4Q8ë(¼™˜ùğN?
+¡}aŞÆÇE€¢©†î|ùç9Å/w29f ±ëŒJàÓÒ»lV4MSM…İŸB³xØğ³^Oîú~95RêšQ·‘C¶Ø²û|ä¡óÁ88õ¡¬õ»)D¶“dcÜª¹Úzƒ‘ÏÎµ‹XÔ!IÓ	…Q	ÀéÕZ;¶;;]_H:ı	dÌÄ‘!¿›rú61ñ¥’Ï¨XöFÃ9"]Äç§9§ÚîĞ:l}Zá“óJÇùhy;G¬ÉÄÚŒıÚÁT*àƒŸDT—/Wì<ÜöªÊá4ØeÒ4ßc´
+$·K‡T¸!JäŒáO;³‚IÆIPzÕ•Ş¬÷×p:¼¨í^9Ü«ÕYÉ$–ãŸ` (Ïáwh?®?R?ğÕûAüíqú‘ÿ †¥A­—«öø”;\é4Ñ-²ÛKˆÛI9˜RZ=¬ä²”l0ÛTP“ö–îæÖâü<Ó¨YVENò<±dd\)ÜÍ¸œg"ŒşöƒùÚãõ#ÿ Oáh?®?R?ğĞ¡_å}A~'3Åúh¿\Tï¡ı4_®+Ğ»Cüí?êGş£ÚşĞ;Ïú‘ÿ †®çÑ}BÀ…'„K×Eö×òÇ˜§¿ö=»vï´-ğ²é0qƒœß]'k{@ÎªÚÄà3 NÈøã?fœ/luR¿±½)©w´@Ü]¤Œïg?‰kRºõòğ(ñM´Aõ±Ÿ­N?8T¯{ÿ ê=Ô¬±¶“i‡eS‹™ºJÇ‹9Ú¸z Ó¦R+G&ÉU’AÕJ·Üy§×·V2h=Ä7PI}òM[¼r²nû9CJÆ©x"h¤œÍJÜ/OVÉ"+«Ë¸¦ŠØ4YhíV
+ÅV"@ÉÜrAñ&ªI¶¬Á4¬ïM»:Tév‘$’£¶i#İ‚‡ÏBçíuª²Õ¦òêâòiæ7IŠ32½àèÀŸ>8¡í;¸ö[Ì(Æ`CA·Æº·–ÕEÈš9ıø¶G±Ôá·–ÈéÆ8çöSqOt4Ì¦šW‚İ%$Ç
+2Å‘àX“ñ9?³Êº‚ÒIæ–(Ş è¬}÷
+ª	ãw^=q	o,VĞÚ@°3ÊVbwá¿ 9'=ã@{D÷W	çwmèª\ä/ œf©;XAuÌZ|K<7WĞsˆ-ähG›89?1F\ö·Z¸pÓİÇ"³G".8§ÃÇ9ó4»kì:Ş¡hÈ ¸’=äcvóéX½½Å½µµË‘\16G½±°N<ûêtÂU&®Çma\vŠö[r™Œ–È°ˆ1öO»Œ|ªµK•†ö5Hmn6E2Inqd1ÂçáÎi\¹’%%.
+eW¼ò|O4æÚXnûKa&°ÂæÜ¤]èUo}.¹÷@8õ#ŠTr—QÛbë}JæÜ£[<q²‚7,I–Á²9êzÔ—TÔf·öyuÆ·ÀÑ¶cÀmÎ(˜/mµÛ™uH-`ÛH±xû¤ŠP¹Œ€8ê6’zƒó¥CÃ#ÈÓI=Ğ›ñiİš»¹†	¤—OÓíç Å%íÂÅŞp
+¯,G®1Komf±¼Òî3Äc‘İãŸ*ßWY
+iËr¨ˆF$ÆK•Ï‘äŒƒsÛê¤ŒŞ¯³¼Öê–ó³8Œ•„‘Ëg\Î>4µ5™<'„o{¨ÅÙû»kg)§4ëí03)
+Œz•;IÇLŠÂÑmîmØÅ/·İo$|‰3İ¸òã!‡BH ƒÇi<vºf£dï#M3ÄTÂÈÑ{„Ÿxõ=N6ÒÓTÒ»¬A¶•so¤]ÛßK¾âî&|Z¯º£†\HşG'*£§4œ <JºªµvJ•h­$Š‘«;±ÂªŒ–>@xÓ	 ±´²”\ËíZƒ©T†Ìvçó¤~ŒÃÁ xŸ
+ H#MÓí-áMC_.¶„n‚ÍÙ¯>™›¾ 5}FmRùîn!ÀHâŒb8c* ğP>ş¦„’F’F’Gg‘º³“ó5Å%ê{¼Q*T©TI*TMU5¶k[˜®-¦’ˆ›trÆØe>`×©Ò˜,+¬Æ,¬µ©„‰§ÂˆT\?Ùi‚çll2Ê½›8 Ò=N[ÓqsvÆ-2Ñ{Ë™3ß›ŸÏsÀòäøPš•Ñ¾½šáF®p‘dc…ŒcŒ(Àük9-n—~'Y3¸·šÒw‚ê`3‡U*àúƒÍeNm3®*YÜO#jH‚;%“+ =Á'¡9;Ïİ=F0*Ì®¬¬¤‚¬0AGô«‹¼=ÄÕd•F¡ªª$™®¢–HfX]£–6‡¬9\TÍ,Ún©ï%¦Ä³^}¸'=s"”cùË‘âEieu9Ák&Ó¯#üû{øHû™1H«–Unª§â*4µıYV¹î´)ìóôæ›k‚OjY¤ù${‰ü+‹F8´÷Óô´x­¥Ç´Í íÖ@ld$`ô@O<’M+ (Â€ ÅJzoûô&jªT5b!5U*¨Î“p‘vw´q7yºtµUÂ’¼M¸î#€p8Ï^qI:Òdhû/ÚA´•Z!9 )ï‰O=öROgåçøE=‘*Tª5 ˆhÉµ9¦“sÛØuWjYÆ«œp^y>>=(*ªT‚Æ)¬\FT¥¶˜¥z`„ŸÅM/juIû¾09Äzmºÿ ôRJ£Køâ÷C¶7Ÿ´WÓ†Ã¥œ®Ü®›n¤z‚ƒëAË¨Èëöm=k°wvˆ¥†1ï{ÇÔóšªš„VÈ-¬n>ÌŞ\¥®œÒA{[¥³G!dI	#¦T|…
+5Ë‘ÒÓHÿ á°†¶´ÿ Ğ­cÿ ò6òKI3R¢›v¹şíàôÉ®İIÙ«€-´ÃÜßFì«¦Ã´+Dê¸û@Ÿ<RHå¬/äŠ46àÇß±EÊîc³Y9éååXÛ\Klåáldme<«®sµ—£/ ñOíuK_ 5p4+Şö¡öÍ8Sï¹]ü`ƒŒRÖ—1İ‹-µ‰­­–³Ò¤Eü©¬#‘ÏÅˆÉ®¾˜êíÿ †Åû«!}h3Í³ÿ ¶œcîz¨o¬ã?Y£ZJ¹<=ÄùéĞüUi[éû
+ßSe×§^šn…óÓ"5´]¦$+“ÙĞ\éqœıæ€{ËFd+¤Û"©<Çpñ–ñó5´×úc!è1Fä{Û§`9ÉàŸÇ_N)ÿ Ÿ·¸íõ1ºÕ%¹i[i±‡M„Ceayê¸ëœĞ­’h„îíkÆÇ"=ì6Œç ç=8ç?4TWÖHÍ¿E¶‘	Ès8 yd7÷U¯‡d-ÅõTÒ]CM1‡A‰œï’ögÀò }ù®¾“Ó?ÑË/÷ËŸñÑ©ô~á^"ƒUMş“Ó?Ñ»/÷ËŸñÕ})¦£v_ï—?ã§©ô~ã¯EJi6£§ºâ-Ê3çíWû^ª}GOq‹A´ˆ«îb.®:şiøøhÔú}½Â…fªœ})¦£v_ï·?ã©ô¦™şÙ¾\ÿ –§Ñú{…x‰ÍU8úSLÿ Fì¿ß.ÇSéM3ı²ÿ |¹ÿ ŸGéîâ(_´¹ã<ôÏ‡Æí„öƒSöan°{LØ¶9ˆ.xØxÊùt¦š<Ún§¬XiëÙûİÂAŞ»’qÆq¿œSiÛ°QÊñÇŞÈŠï·;[^*%Ä©e1¨ãsÃCÄğÿ ¬Où…J÷ÏØ#V÷+w¹v4Ümİ¸cû÷Ô¨”µæšó>#-6ZX­
+‹Ù#˜Ğ;x+©å=Ib¹ÊÈÁlN©a‹Ş€HıáÜÇz²©VåÓ¥JTõRf*´ÙƒÙX‚»u«SÎm§gšÎîÒÖ½Æ«mrN3İÃ*…çÍ”~U*VšZçöök ,Ì
+Dƒcwa€eŸxœóÿ ÛÂ³‚
+œAÈŠ•)ˆcªj£SšIî¬mæFŞó[)Vl’zôĞ——“]­²ÊWe´"•WP~d’I>$Ô©IE-†ÛaV—yÑå³Ôñ$q[Æ³k¸\|)Æ½‘¤<Ëqw=Ìúdi÷X€î';AÊã©ëR¥e(üi^÷ø)<V)d‚xæ…¶É‡Fò`rŞ)åö™5Áš!‘™İd¼vRO8P  g§Ê¥JÕÅ7d§@w÷{,nñÅ$#ˆªª0 É'Ä¾4# z€~5*SJ°€£UR¥0+4Ãè]@iJËlñéÅ‚,Í¼“Œ(ÎO=8ëR¥eÆâ8%\İİšı.¶p<4-l\m–ñn$r ôO’òGRiGJ•+E¶%»9©R¥1¨š•()†…¤\kWo,Áfk‹‰>Ä®|O MJ•ŸNrEA\’`ú”–­ré¦÷âÅOÕwí—é° ¸ğ¡*T­*°IG´Êâ9µ;KK3Íq	V¾’YT–ŞÛQÀë×†ëƒ:•*&êŸŠõcYª•+AMJ•(J•)Fª¥J „ÕT©@Êª©R›Äfö;…FÑ™‘ÉÉÚyçŒ|ñXT©IsUJ”Àª•*Pª•)U*T ÖÓF½Õ!f"W¿µp
+œ©.yés.iEJ•)S}ô+­7Ó•ÿ ƒ] `ªcV³‰äõ±ããøT©J{|×İ	ª‰©R¬’ªT©@Ê©R¥ Qª©R˜Ê©R¥ Qª©R€%UJ”*‰©R€vlJİ£ÒÛùv½€Gınğbƒ¾AõÔj¥BM"…=FŒT©PŸÆ×€ùÁşQúÔÿ ˜T©R£Š¶ÿÙ
+------MultipartBoundary--I7RRUqu0RCy2EphqmEJZ1oH8kF9bgCaD66OcPF4Ue1----
+Content-Type: image/jpeg
+Content-Transfer-Encoding: binary
+Content-Location: https://coursework.vschool.io/content/images/size/w600/2015/12/banner4.jpg
+
+ÿØÿÛ C 
+
+
+		
+%# , #&')*)-0-(0%()(ÿÛ C
+
+
+
+(((((((((((((((((((((((((((((((((((((((((((((((((((ÿÀ  sX" ÿÄ             ÿÄ '        !1AQa"q‘¡2±ÿÄ             ÿÄ             ÿÚ   ? üèçÚ:M¤ÛepQHÓ $ÈÎ8( }¹*"¥”•ÁIÓ`Rx2Cì6
+'€¤ûC`= 2ÊÃD—/’‰
+‡K,g „Q"Q- Áv…rDs±)©'RÏrKgK’u%V—-r‚nC4ĞC§‡ÁY¤ÿ $¥äeØUó‘¥üŠÏ²ˆÖ
+Ã/ÉÏ,¼>
+:aå†sCÁÑ/ƒX®ÏãÚštıa^6¬>x8"šè¢ºÇf ¦³Tê—oÿ fQÓí¾Do?±Q¦FÚ-¨š!aR§‡ğtéÚÛ/àæ¾‡ş=}®_PÄt<ª]#*öKQòU\äDİ¢ª(z &"ä|¤¾F
+¬mÃırSŠ_².…vüŠİªIJÂBº&©µ€d‚²úÈ×_c¥ô/ò/lşæ6“ç,ƒ¢‘Â2ŠºË6xÁ</?²
+KòÙŸ®ƒÀ¼¼!“'%$–UCø*©/¦HK0ŠÍõ~}­M¼.X©¶òû(®çO,dNJ$\Å2
+ƒ“Aƒ‘rl”>M‘r™ÑL˜LcGÈ(AĞ´Xó¤ıg7<é”ZgDé”Z`s-1Ö™Õ:_­€9–™¾™ß:èápÓàZƒ¿é½<q9£¦£‘
+!PÈ}ŒØÀ2±^É.ÇDE§Œåx&¸0Ï¯Lè\™Î@â©À2vÖI½3Q\U¸;^˜•¤X®Dš~K=0}2æKÑX~ªZ"ÁYE ”qÃ-(Öb«´ø#%d¹‚ÒÇÉ$:f¢˜lŠÙb’ŸôGQqÇ(­bW&Òÿ ¼{+P°I,4×²AFüùò-<¡õ4Ü¾{%Kß tÿ #_®É¾@y~ºh¾ß„hN¸#[ÎDÉ5&oÈ2åOÙåÖoÁUÑÇ¨÷[dİ@\´Y>	é®J4’ ÿ G‘<ÿ ˆgÂ §–^V=%äª@<ô4‹!(|àeD×e&}…2`«ñ=û¼ğ¸^Â—¢+ÑU8BÏä¹ätÑ$2fƒäÙ0r(2@Ù`lVÌè|£lÆQçÄ¦ËÄ&.œ&téi¬g2Î’ôUh¢±¦VaFtQU¤±ÑY–RP=¹Hm«{Òã¢7§í•JäçÔƒÎ½4¼¨Éß©<÷Šäkï²õÜr!‰íM ;Z"À?Cl+%pš$»G•ƒ£bÓ5˜±-© =>‰äŞaLG§ƒ±È•&¢¹^˜»—"¹,û´¾Ğ`±S”VxÈé`°<•D¥ãÁYç¢Àèd"D„¡h"ŒGÉ ›YÃªï€Amiu
+İ&Òèå´ú.©´Ób5‘>ÜƒcEÒYÈm&¸s`rğ;\ƒ¡È»Lî",Ép[gíI¨¶Ã\úëìIùg>ÎLî"q8CÛÆç'+úSªÎ
+éJK’À²±ÁD¸hØà@%a+“OÎŞK4§–+¬şmÓä)c¾ÄVK#¤2F³Hd†F²L› >A‘2™İØ lÊ³lÄM:H¡^‹Æ•z<ÎjJà¬¡b)x*¥ÃÁIœòÅSí”\AR‚å!hÖ`çqÈºš9EšûƒO‚ÅyÚšMdæÔÓ~KPæ´k9iÁPÉ¸;jPQ¯#“`Ê~¨ÛPŠŠ‘Ò8*C/“`8,Ø6† hF‡hVQ6„h£•ShV=‚#%Û`ğÆ‡<ª(Ëu††S8Ï"Ó\c¢Š'B™4ğòòU>A“•AŠÆb+ŒÀÂ4ö6° ÅpÛI?Á€V³à
+
+`) 8g(»\
+—ÜH9µç5BL"Ö³Li•6#)Ïèµ%Ò8À‚JsEglHl¼t È½°öÀ,/a ¤rl”6M‘r€ù6á2Ä¡Ûân¸›¢¸L™dÎ‡ÈaÌ#|˜{OD%èäÓ£¢(ò¹:fgĞê'Ñ(¢‰ˆŠ-9DàEAŞk0QL¡k;'Vo1a¯†¥¬QÓ1¨[dhzbQ¨©×b1ØŒ ÌcÄ"Œ…FJ•˜”3bS-ZJ&Øi“l´ÅlWBUp3J¦îM’;¼µjê¾GO':ÔYi]‚Ÿ¢
+†TZµÓ5alçUì¤Ú|7Éjæ±[e
+è´3bäW@l”6GO‚Y>Ğ¨|˜\…6L.L™E»1€oçD§Ã(2ÆöÑ HÉeäÏ¬ 	€+ ~…ü˜)’ÈÉ`  È¹0&"º@;`l“±]|’ŠºùÖInã"‰û)89Ó6‰¨èIÁÎ¬mÆ`¶Q;~…ÜfÄR¼äÆf,®ptiÙÁ§eâ>c›ºl¬ÙÅ6QY¬å#¯x7œûÍ¼Şr±wb;%¸æ5T#bº³@¶%0:°¬Ø­™±[3ºL.àdÎê!&Éé)²‰£>™§A0™ôÍÉÓ±(zZ•¢–ÈÑ¯KIoDYs¥Í¸Pô)¸e\YÈë-–‹*2I0¢úUwÑ<²Õ«N³\>PÎ“9)‚u6şè®—Mqù\tHz*»†‡÷šXcnXÎ:'¡ĞØ­™ÿ ‚3YĞl…2Nƒ5É¬Õ[!LŠ «5UmÄî¹î»Ë]3g’;ø6ÿ ¢©ò’vS"‹;"­~~EÊ]q-ÀŞ—lQlş’?SĞ®şEtıtD¢•"º&ìGd¢®€è–ãd•ÈS&˜S©Œ™42(¢†@1…À01kÙx´yzvıß³–rÌz3kØóhàš~ÊM4o9XíTÄ"ò†ÜXªîd÷ÑE
+è›¡]èWDİ
+ìÎè¥Q7Bº'WòczMÕwqÏõò«+ÉÏzMtd)œßZ}Œµ§ÙÏu
+dV¬ûjIšÊÈyë,‚´Zjkg¬á„_Fé¶ß?ørW9^WG¢§O”’ôÎ?åLª‡.+#Eõ9ohÖkI2T½¢oÉ¥O±¸3TØPˆdÀ¢S1BW6R‰Ñ¬Ğ•BS‰¿‚Ñ•9ef·.~^­ËàRº¥å<E§ù*šéÓ­ÚkúŸ€h>×ìkI®'òdğ
+|ˆŞ˜ªoÃ
+µ’-ç¡fªº/SÎu|‹­XIÜ)]?PßS³™ÚBoÏl”®—«ªg:¯H9~X££z]³}B	¥äÛÒèQ}í›q¨â‹ï²Ø71EİŠè–LJq².M0äš:c¦M€¢‡E†B!€c&(&€œ0cÁD21Ó|—1ˆ"¶Ì`i~É¶ñÙŒgPŸ±?f1BU?dª«ÙŒsÑ§ìGOÙŒcY¿exìÆ3¢‰±Õ?f1”Õ?e"Ÿ<˜Á::·šû˜éºyÂ1Š9¯É:1‹Š•£Ò•€Æ*ŠìeÙŒHQŒdëÁŒ0I‹á³Ú$ÀŒ`pø--˜Ãt[İú(Û1â§LFÌcjVc¤u¿ëôG,Æ"iå…<ÆPÙ~Âc[,f0VM™¶c!F1	Œy1Š¢c:À2Å†]À3£3ÀÿÙ
+------MultipartBoundary--I7RRUqu0RCy2EphqmEJZ1oH8kF9bgCaD66OcPF4Ue1------

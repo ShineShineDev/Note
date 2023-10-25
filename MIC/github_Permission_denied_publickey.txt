@@ -1,0 +1,15 @@
+//go to ssh folder
+cd ~/.ssh
+
+//Generate ssh key
+ssh-keygen -0 -t rsa -C "github@shineshinedev.com"
+
+//copy public key
+cat id_rsa.pub
+
+
+//go to github and add publish key
+https://github.com/settings/keys
+
+
+https://www.theserverside.com/blog/Coffee-Talk-Java-News-Stories-and-Opinions/Fix-GitHubs-Permission-denied-publickey-SSH-error

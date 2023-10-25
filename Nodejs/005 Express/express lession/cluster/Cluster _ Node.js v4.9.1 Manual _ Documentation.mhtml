@@ -1,0 +1,1223 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: https://nodejs.org/dist/latest-v4.x/docs/api/cluster.html
+Subject: Cluster | Node.js v4.9.1 Manual & Documentation
+Date: Mon, 11 Apr 2021 07:32:18 -0000
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--jYONWjpiUr8Y4lr9okAORprXSyDCKOFGx5bjlwSeW3----"
+
+
+------MultipartBoundary--jYONWjpiUr8Y4lr9okAORprXSyDCKOFGx5bjlwSeW3----
+Content-Type: text/html
+Content-ID: <frame-3A9020760E8101AC1C5154CDC1EBD5C8@mhtml.blink>
+Content-Transfer-Encoding: binary
+Content-Location: https://nodejs.org/dist/latest-v4.x/docs/api/cluster.html
+
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>Cluster | Node.js v4.9.1 Manual &amp; Documentation</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic">
+  <link rel="stylesheet" href="https://nodejs.org/dist/latest-v4.x/docs/api/assets/style.css">
+  <link rel="stylesheet" href="https://nodejs.org/dist/latest-v4.x/docs/api/assets/sh.css">
+  <link rel="canonical" href="https://nodejs.org/api/cluster.html">
+</head>
+<body class="alt apidoc" id="api-section-cluster">
+  <div id="content" class="clearfix">
+    <div id="column2" class="interior">
+      <div id="intro" class="interior">
+        <a href="https://nodejs.org/" title="Go back to the home page">
+          Node.js
+        </a>
+      </div>
+      <ul>
+<li><a class="nav-documentation" href="https://nodejs.org/dist/latest-v4.x/docs/api/documentation.html">About these Docs</a></li>
+<li><a class="nav-synopsis" href="https://nodejs.org/dist/latest-v4.x/docs/api/synopsis.html">Usage &amp; Example</a></li>
+</ul>
+<div class="line"></div>
+
+<ul>
+<li><a class="nav-assert" href="https://nodejs.org/dist/latest-v4.x/docs/api/assert.html">Assertion Testing</a></li>
+<li><a class="nav-buffer" href="https://nodejs.org/dist/latest-v4.x/docs/api/buffer.html">Buffer</a></li>
+<li><a class="nav-addons" href="https://nodejs.org/dist/latest-v4.x/docs/api/addons.html">C/C++ Addons</a></li>
+<li><a class="nav-child_process" href="https://nodejs.org/dist/latest-v4.x/docs/api/child_process.html">Child Processes</a></li>
+<li><a class="nav-cluster active" href="https://nodejs.org/dist/latest-v4.x/docs/api/cluster.html">Cluster</a></li>
+<li><a class="nav-cli" href="https://nodejs.org/dist/latest-v4.x/docs/api/cli.html">Command Line Options</a></li>
+<li><a class="nav-console" href="https://nodejs.org/dist/latest-v4.x/docs/api/console.html">Console</a></li>
+<li><a class="nav-crypto" href="https://nodejs.org/dist/latest-v4.x/docs/api/crypto.html">Crypto</a></li>
+<li><a class="nav-debugger" href="https://nodejs.org/dist/latest-v4.x/docs/api/debugger.html">Debugger</a></li>
+<li><a class="nav-dns" href="https://nodejs.org/dist/latest-v4.x/docs/api/dns.html">DNS</a></li>
+<li><a class="nav-domain" href="https://nodejs.org/dist/latest-v4.x/docs/api/domain.html">Domain</a></li>
+<li><a class="nav-errors" href="https://nodejs.org/dist/latest-v4.x/docs/api/errors.html">Errors</a></li>
+<li><a class="nav-events" href="https://nodejs.org/dist/latest-v4.x/docs/api/events.html">Events</a></li>
+<li><a class="nav-fs" href="https://nodejs.org/dist/latest-v4.x/docs/api/fs.html">File System</a></li>
+<li><a class="nav-globals" href="https://nodejs.org/dist/latest-v4.x/docs/api/globals.html">Globals</a></li>
+<li><a class="nav-http" href="https://nodejs.org/dist/latest-v4.x/docs/api/http.html">HTTP</a></li>
+<li><a class="nav-https" href="https://nodejs.org/dist/latest-v4.x/docs/api/https.html">HTTPS</a></li>
+<li><a class="nav-modules" href="https://nodejs.org/dist/latest-v4.x/docs/api/modules.html">Modules</a></li>
+<li><a class="nav-net" href="https://nodejs.org/dist/latest-v4.x/docs/api/net.html">Net</a></li>
+<li><a class="nav-os" href="https://nodejs.org/dist/latest-v4.x/docs/api/os.html">OS</a></li>
+<li><a class="nav-path" href="https://nodejs.org/dist/latest-v4.x/docs/api/path.html">Path</a></li>
+<li><a class="nav-process" href="https://nodejs.org/dist/latest-v4.x/docs/api/process.html">Process</a></li>
+<li><a class="nav-punycode" href="https://nodejs.org/dist/latest-v4.x/docs/api/punycode.html">Punycode</a></li>
+<li><a class="nav-querystring" href="https://nodejs.org/dist/latest-v4.x/docs/api/querystring.html">Query Strings</a></li>
+<li><a class="nav-readline" href="https://nodejs.org/dist/latest-v4.x/docs/api/readline.html">Readline</a></li>
+<li><a class="nav-repl" href="https://nodejs.org/dist/latest-v4.x/docs/api/repl.html">REPL</a></li>
+<li><a class="nav-stream" href="https://nodejs.org/dist/latest-v4.x/docs/api/stream.html">Stream</a></li>
+<li><a class="nav-string_decoder" href="https://nodejs.org/dist/latest-v4.x/docs/api/string_decoder.html">String Decoder</a></li>
+<li><a class="nav-timers" href="https://nodejs.org/dist/latest-v4.x/docs/api/timers.html">Timers</a></li>
+<li><a class="nav-tls" href="https://nodejs.org/dist/latest-v4.x/docs/api/tls.html">TLS/SSL</a></li>
+<li><a class="nav-tty" href="https://nodejs.org/dist/latest-v4.x/docs/api/tty.html">TTY</a></li>
+<li><a class="nav-dgram" href="https://nodejs.org/dist/latest-v4.x/docs/api/dgram.html">UDP/Datagram</a></li>
+<li><a class="nav-url" href="https://nodejs.org/dist/latest-v4.x/docs/api/url.html">URL</a></li>
+<li><a class="nav-util" href="https://nodejs.org/dist/latest-v4.x/docs/api/util.html">Utilities</a></li>
+<li><a class="nav-v8" href="https://nodejs.org/dist/latest-v4.x/docs/api/v8.html">V8</a></li>
+<li><a class="nav-vm" href="https://nodejs.org/dist/latest-v4.x/docs/api/vm.html">VM</a></li>
+<li><a class="nav-zlib" href="https://nodejs.org/dist/latest-v4.x/docs/api/zlib.html">ZLIB</a></li>
+</ul>
+<div class="line"></div>
+
+<ul>
+<li><a class="nav-https-github-com-nodejs-node" href="https://github.com/nodejs/node">GitHub Repo &amp; Issue Tracker</a></li>
+<li><a class="nav-http-groups-google-com-group-nodejs" href="http://groups.google.com/group/nodejs">Mailing List</a></li>
+</ul>
+
+    </div>
+
+    <div id="column1" data-id="cluster" class="interior">
+      <header>
+        <h1>Node.js v4.9.1 Documentation</h1>
+        <div id="gtoc">
+          <p>
+            <a href="https://nodejs.org/dist/latest-v4.x/docs/api/index.html" name="toc">Index</a> |
+            <a href="https://nodejs.org/dist/latest-v4.x/docs/api/all.html">View on single page</a> |
+            <a href="https://nodejs.org/dist/latest-v4.x/docs/api/cluster.json">View as JSON</a>
+          </p>
+        </div>
+        <hr>
+      </header>
+
+      <div id="toc">
+        <h2>Table of Contents</h2>
+        <ul>
+<li><span class="stability_2"><a href="https://nodejs.org/dist/latest-v4.x/docs/api/cluster.html#cluster_cluster">Cluster</a></span><ul>
+<li><span class="stability_undefined"><a href="https://nodejs.org/dist/latest-v4.x/docs/api/cluster.html#cluster_how_it_works">How It Works</a></span></li>
+<li><span class="stability_undefined"><a href="https://nodejs.org/dist/latest-v4.x/docs/api/cluster.html#cluster_class_worker">Class: Worker</a></span><ul>
+<li><span class="stability_undefined"><a href="https://nodejs.org/dist/latest-v4.x/docs/api/cluster.html#cluster_event_disconnect">Event: 'disconnect'</a></span></li>
+<li><span class="stability_undefined"><a href="https://nodejs.org/dist/latest-v4.x/docs/api/cluster.html#cluster_event_error">Event: 'error'</a></span></li>
+<li><span class="stability_undefined"><a href="https://nodejs.org/dist/latest-v4.x/docs/api/cluster.html#cluster_event_exit">Event: 'exit'</a></span></li>
+<li><span class="stability_undefined"><a href="https://nodejs.org/dist/latest-v4.x/docs/api/cluster.html#cluster_event_listening">Event: 'listening'</a></span></li>
+<li><span class="stability_undefined"><a href="https://nodejs.org/dist/latest-v4.x/docs/api/cluster.html#cluster_event_message">Event: 'message'</a></span></li>
+<li><span class="stability_undefined"><a href="https://nodejs.org/dist/latest-v4.x/docs/api/cluster.html#cluster_event_online">Event: 'online'</a></span></li>
+<li><span class="stability_undefined"><a href="https://nodejs.org/dist/latest-v4.x/docs/api/cluster.html#cluster_worker_disconnect">worker.disconnect()</a></span></li>
+<li><span class="stability_undefined"><a href="https://nodejs.org/dist/latest-v4.x/docs/api/cluster.html#cluster_worker_id">worker.id</a></span></li>
+<li><span class="stability_undefined"><a href="https://nodejs.org/dist/latest-v4.x/docs/api/cluster.html#cluster_worker_isconnected">worker.isConnected()</a></span></li>
+<li><span class="stability_undefined"><a href="https://nodejs.org/dist/latest-v4.x/docs/api/cluster.html#cluster_worker_isdead">worker.isDead()</a></span></li>
+<li><span class="stability_undefined"><a href="https://nodejs.org/dist/latest-v4.x/docs/api/cluster.html#cluster_worker_kill_signal_sigterm">worker.kill([signal='SIGTERM'])</a></span></li>
+<li><span class="stability_undefined"><a href="https://nodejs.org/dist/latest-v4.x/docs/api/cluster.html#cluster_worker_process">worker.process</a></span></li>
+<li><span class="stability_undefined"><a href="https://nodejs.org/dist/latest-v4.x/docs/api/cluster.html#cluster_worker_send_message_sendhandle_callback">worker.send(message[, sendHandle][, callback])</a></span></li>
+<li><span class="stability_undefined"><a href="https://nodejs.org/dist/latest-v4.x/docs/api/cluster.html#cluster_worker_suicide">worker.suicide</a></span></li>
+</ul>
+</li>
+<li><span class="stability_undefined"><a href="https://nodejs.org/dist/latest-v4.x/docs/api/cluster.html#cluster_event_disconnect_1">Event: 'disconnect'</a></span></li>
+<li><span class="stability_undefined"><a href="https://nodejs.org/dist/latest-v4.x/docs/api/cluster.html#cluster_event_exit_1">Event: 'exit'</a></span></li>
+<li><span class="stability_undefined"><a href="https://nodejs.org/dist/latest-v4.x/docs/api/cluster.html#cluster_event_fork">Event: 'fork'</a></span></li>
+<li><span class="stability_undefined"><a href="https://nodejs.org/dist/latest-v4.x/docs/api/cluster.html#cluster_event_listening_1">Event: 'listening'</a></span></li>
+<li><span class="stability_undefined"><a href="https://nodejs.org/dist/latest-v4.x/docs/api/cluster.html#cluster_event_message_1">Event: 'message'</a></span></li>
+<li><span class="stability_undefined"><a href="https://nodejs.org/dist/latest-v4.x/docs/api/cluster.html#cluster_event_online_1">Event: 'online'</a></span></li>
+<li><span class="stability_undefined"><a href="https://nodejs.org/dist/latest-v4.x/docs/api/cluster.html#cluster_event_setup">Event: 'setup'</a></span></li>
+<li><span class="stability_undefined"><a href="https://nodejs.org/dist/latest-v4.x/docs/api/cluster.html#cluster_cluster_disconnect_callback">cluster.disconnect([callback])</a></span></li>
+<li><span class="stability_undefined"><a href="https://nodejs.org/dist/latest-v4.x/docs/api/cluster.html#cluster_cluster_fork_env">cluster.fork([env])</a></span></li>
+<li><span class="stability_undefined"><a href="https://nodejs.org/dist/latest-v4.x/docs/api/cluster.html#cluster_cluster_ismaster">cluster.isMaster</a></span></li>
+<li><span class="stability_undefined"><a href="https://nodejs.org/dist/latest-v4.x/docs/api/cluster.html#cluster_cluster_isworker">cluster.isWorker</a></span></li>
+<li><span class="stability_undefined"><a href="https://nodejs.org/dist/latest-v4.x/docs/api/cluster.html#cluster_cluster_schedulingpolicy">cluster.schedulingPolicy</a></span></li>
+<li><span class="stability_undefined"><a href="https://nodejs.org/dist/latest-v4.x/docs/api/cluster.html#cluster_cluster_settings">cluster.settings</a></span></li>
+<li><span class="stability_undefined"><a href="https://nodejs.org/dist/latest-v4.x/docs/api/cluster.html#cluster_cluster_setupmaster_settings">cluster.setupMaster([settings])</a></span></li>
+<li><span class="stability_undefined"><a href="https://nodejs.org/dist/latest-v4.x/docs/api/cluster.html#cluster_cluster_worker">cluster.worker</a></span></li>
+<li><span class="stability_undefined"><a href="https://nodejs.org/dist/latest-v4.x/docs/api/cluster.html#cluster_cluster_workers">cluster.workers</a></span></li>
+</ul>
+</li>
+</ul>
+
+      </div>
+
+      <div id="apicontent">
+        <h1>Cluster<span><a class="mark" href="https://nodejs.org/dist/latest-v4.x/docs/api/cluster.html#cluster_cluster" id="cluster_cluster">#</a></span></h1>
+<pre class="api_stability api_stability_2 sh_sourceCode">Stability<span class="sh_symbol">:</span> <span class="sh_number">2</span> <span class="sh_symbol">-</span> Stable</pre><p>A single instance of Node.js runs in a single thread. To take advantage of
+multi-core systems the user will sometimes want to launch a cluster of Node.js
+processes to handle the load.</p>
+<p>The cluster module allows you to easily create child processes that
+all share server ports.</p>
+<pre class="sh_sourceCode"><code class="lang-js"><span class="sh_keyword">const</span> cluster <span class="sh_symbol">=</span> <span class="sh_function">require</span><span class="sh_symbol">(</span><span class="sh_string">'cluster'</span><span class="sh_symbol">);</span>
+<span class="sh_keyword">const</span> http <span class="sh_symbol">=</span> <span class="sh_function">require</span><span class="sh_symbol">(</span><span class="sh_string">'http'</span><span class="sh_symbol">);</span>
+<span class="sh_keyword">const</span> numCPUs <span class="sh_symbol">=</span> <span class="sh_function">require</span><span class="sh_symbol">(</span><span class="sh_string">'os'</span><span class="sh_symbol">).</span><span class="sh_function">cpus</span><span class="sh_symbol">().</span>length<span class="sh_symbol">;</span>
+
+<span class="sh_keyword">if</span> <span class="sh_symbol">(</span>cluster<span class="sh_symbol">.</span>isMaster<span class="sh_symbol">)</span> <span class="sh_cbracket">{</span>
+  <span class="sh_comment">// Fork workers.</span>
+  <span class="sh_keyword">for</span> <span class="sh_symbol">(</span><span class="sh_keyword">var</span> i <span class="sh_symbol">=</span> <span class="sh_number">0</span><span class="sh_symbol">;</span> i <span class="sh_symbol">&lt;</span> numCPUs<span class="sh_symbol">;</span> i<span class="sh_symbol">++)</span> <span class="sh_cbracket">{</span>
+    cluster<span class="sh_symbol">.</span><span class="sh_function">fork</span><span class="sh_symbol">();</span>
+  <span class="sh_cbracket">}</span>
+
+  cluster<span class="sh_symbol">.</span><span class="sh_function">on</span><span class="sh_symbol">(</span><span class="sh_string">'exit'</span><span class="sh_symbol">,</span> <span class="sh_symbol">(</span>worker<span class="sh_symbol">,</span> code<span class="sh_symbol">,</span> signal<span class="sh_symbol">)</span> <span class="sh_symbol">=&gt;</span> <span class="sh_cbracket">{</span>
+    console<span class="sh_symbol">.</span><span class="sh_function">log</span><span class="sh_symbol">(</span>`worker $<span class="sh_cbracket">{</span>worker<span class="sh_symbol">.</span>process<span class="sh_symbol">.</span>pid<span class="sh_cbracket">}</span> died`<span class="sh_symbol">);</span>
+  <span class="sh_cbracket">}</span><span class="sh_symbol">);</span>
+<span class="sh_cbracket">}</span> <span class="sh_keyword">else</span> <span class="sh_cbracket">{</span>
+  <span class="sh_comment">// Workers can share any TCP connection</span>
+  <span class="sh_comment">// In this case it is an HTTP server</span>
+  http<span class="sh_symbol">.</span><span class="sh_function">createServer</span><span class="sh_symbol">((</span>req<span class="sh_symbol">,</span> res<span class="sh_symbol">)</span> <span class="sh_symbol">=&gt;</span> <span class="sh_cbracket">{</span>
+    res<span class="sh_symbol">.</span><span class="sh_function">writeHead</span><span class="sh_symbol">(</span><span class="sh_number">200</span><span class="sh_symbol">);</span>
+    res<span class="sh_symbol">.</span><span class="sh_function">end</span><span class="sh_symbol">(</span><span class="sh_string">'hello world</span><span class="sh_specialchar">\n</span><span class="sh_string">'</span><span class="sh_symbol">);</span>
+  <span class="sh_cbracket">}</span><span class="sh_symbol">).</span><span class="sh_function">listen</span><span class="sh_symbol">(</span><span class="sh_number">8000</span><span class="sh_symbol">);</span>
+<span class="sh_cbracket">}</span>
+</code></pre>
+<p>Running Node.js will now share port 8000 between the workers:</p>
+<pre class="sh_sourceCode"><code>$ NODE_DEBUG<span class="sh_symbol">=</span>cluster node server<span class="sh_symbol">.</span>js
+<span class="sh_number">23521</span><span class="sh_symbol">,</span>Master Worker <span class="sh_number">23524</span> online
+<span class="sh_number">23521</span><span class="sh_symbol">,</span>Master Worker <span class="sh_number">23526</span> online
+<span class="sh_number">23521</span><span class="sh_symbol">,</span>Master Worker <span class="sh_number">23523</span> online
+<span class="sh_number">23521</span><span class="sh_symbol">,</span>Master Worker <span class="sh_number">23528</span> online
+</code></pre><p>Please note that, on Windows, it is not yet possible to set up a named pipe
+server in a worker.</p>
+<h2>How It Works<span><a class="mark" href="https://nodejs.org/dist/latest-v4.x/docs/api/cluster.html#cluster_how_it_works" id="cluster_how_it_works">#</a></span></h2>
+<!--type=misc-->
+<p>The worker processes are spawned using the <a href="https://nodejs.org/dist/latest-v4.x/docs/api/child_process.html#child_process_child_process_fork_modulepath_args_options"><code>child_process.fork()</code></a> method,
+so that they can communicate with the parent via IPC and pass server
+handles back and forth.</p>
+<p>The cluster module supports two methods of distributing incoming
+connections.</p>
+<p>The first one (and the default one on all platforms except Windows),
+is the round-robin approach, where the master process listens on a
+port, accepts new connections and distributes them across the workers
+in a round-robin fashion, with some built-in smarts to avoid
+overloading a worker process.</p>
+<p>The second approach is where the master process creates the listen
+socket and sends it to interested workers. The workers then accept
+incoming connections directly.</p>
+<p>The second approach should, in theory, give the best performance.
+In practice however, distribution tends to be very unbalanced due
+to operating system scheduler vagaries. Loads have been observed
+where over 70% of all connections ended up in just two processes,
+out of a total of eight.</p>
+<p>Because <code>server.listen()</code> hands off most of the work to the master
+process, there are three cases where the behavior between a normal
+Node.js process and a cluster worker differs:</p>
+<ol>
+<li><code>server.listen({fd: 7})</code> Because the message is passed to the master,
+file descriptor 7 <strong>in the parent</strong> will be listened on, and the
+handle passed to the worker, rather than listening to the worker's
+idea of what the number 7 file descriptor references.</li>
+<li><code>server.listen(handle)</code> Listening on handles explicitly will cause
+the worker to use the supplied handle, rather than talk to the master
+process.  If the worker already has the handle, then it's presumed
+that you know what you are doing.</li>
+<li><code>server.listen(0)</code> Normally, this will cause servers to listen on a
+random port.  However, in a cluster, each worker will receive the
+same "random" port each time they do <code>listen(0)</code>.  In essence, the
+port is random the first time, but predictable thereafter.  If you
+want to listen on a unique port, generate a port number based on the
+cluster worker ID.</li>
+</ol>
+<p>There is no routing logic in Node.js, or in your program, and no shared
+state between the workers.  Therefore, it is important to design your
+program such that it does not rely too heavily on in-memory data objects
+for things like sessions and login.</p>
+<p>Because workers are all separate processes, they can be killed or
+re-spawned depending on your program's needs, without affecting other
+workers.  As long as there are some workers still alive, the server will
+continue to accept connections.  If no workers are alive, existing connections
+will be dropped and new connections will be refused.  Node.js does not
+automatically manage the number of workers for you, however.  It is your
+responsibility to manage the worker pool for your application's needs.</p>
+<h2>Class: Worker<span><a class="mark" href="https://nodejs.org/dist/latest-v4.x/docs/api/cluster.html#cluster_class_worker" id="cluster_class_worker">#</a></span></h2>
+<div class="api_metadata">
+<span>Added in: v0.7.0</span>
+</div><p>A Worker object contains all public information and method about a worker.
+In the master it can be obtained using <code>cluster.workers</code>. In a worker
+it can be obtained using <code>cluster.worker</code>.</p>
+<h3>Event: 'disconnect'<span><a class="mark" href="https://nodejs.org/dist/latest-v4.x/docs/api/cluster.html#cluster_event_disconnect" id="cluster_event_disconnect">#</a></span></h3>
+<div class="api_metadata">
+<span>Added in: v0.7.7</span>
+</div><p>Similar to the <code>cluster.on('disconnect')</code> event, but specific to this worker.</p>
+<pre class="sh_sourceCode"><code class="lang-js">cluster<span class="sh_symbol">.</span><span class="sh_function">fork</span><span class="sh_symbol">().</span><span class="sh_function">on</span><span class="sh_symbol">(</span><span class="sh_string">'disconnect'</span><span class="sh_symbol">,</span> <span class="sh_symbol">()</span> <span class="sh_symbol">=&gt;</span> <span class="sh_cbracket">{</span>
+  <span class="sh_comment">// Worker has disconnected</span>
+<span class="sh_cbracket">}</span><span class="sh_symbol">);</span>
+</code></pre>
+<h3>Event: 'error'<span><a class="mark" href="https://nodejs.org/dist/latest-v4.x/docs/api/cluster.html#cluster_event_error" id="cluster_event_error">#</a></span></h3>
+<div class="api_metadata">
+<span>Added in: v0.7.3</span>
+</div><p>This event is the same as the one provided by <a href="https://nodejs.org/dist/latest-v4.x/docs/api/child_process.html#child_process_child_process_fork_modulepath_args_options"><code>child_process.fork()</code></a>.</p>
+<p>In a worker you can also use <code>process.on('error')</code>.</p>
+<h3>Event: 'exit'<span><a class="mark" href="https://nodejs.org/dist/latest-v4.x/docs/api/cluster.html#cluster_event_exit" id="cluster_event_exit">#</a></span></h3>
+<div class="api_metadata">
+<span>Added in: v0.11.2</span>
+</div><ul>
+<li><code>code</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" class="type">&lt;Number&gt;</a> the exit code, if it exited normally.</li>
+<li><code>signal</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" class="type">&lt;String&gt;</a> the name of the signal (e.g. <code>'SIGHUP'</code>) that caused
+the process to be killed.</li>
+</ul>
+<p>Similar to the <code>cluster.on('exit')</code> event, but specific to this worker.</p>
+<pre class="sh_sourceCode"><code class="lang-js"><span class="sh_keyword">const</span> worker <span class="sh_symbol">=</span> cluster<span class="sh_symbol">.</span><span class="sh_function">fork</span><span class="sh_symbol">();</span>
+worker<span class="sh_symbol">.</span><span class="sh_function">on</span><span class="sh_symbol">(</span><span class="sh_string">'exit'</span><span class="sh_symbol">,</span> <span class="sh_symbol">(</span>code<span class="sh_symbol">,</span> signal<span class="sh_symbol">)</span> <span class="sh_symbol">=&gt;</span> <span class="sh_cbracket">{</span>
+  <span class="sh_keyword">if</span> <span class="sh_symbol">(</span>signal<span class="sh_symbol">)</span> <span class="sh_cbracket">{</span>
+    console<span class="sh_symbol">.</span><span class="sh_function">log</span><span class="sh_symbol">(</span>`worker was killed by signal<span class="sh_symbol">:</span> $<span class="sh_cbracket">{</span>signal<span class="sh_cbracket">}</span>`<span class="sh_symbol">);</span>
+  <span class="sh_cbracket">}</span> <span class="sh_keyword">else</span> <span class="sh_keyword">if</span> <span class="sh_symbol">(</span>code <span class="sh_symbol">!==</span> <span class="sh_number">0</span><span class="sh_symbol">)</span> <span class="sh_cbracket">{</span>
+    console<span class="sh_symbol">.</span><span class="sh_function">log</span><span class="sh_symbol">(</span>`worker exited <span class="sh_keyword">with</span> error code<span class="sh_symbol">:</span> $<span class="sh_cbracket">{</span>code<span class="sh_cbracket">}</span>`<span class="sh_symbol">);</span>
+  <span class="sh_cbracket">}</span> <span class="sh_keyword">else</span> <span class="sh_cbracket">{</span>
+    console<span class="sh_symbol">.</span><span class="sh_function">log</span><span class="sh_symbol">(</span><span class="sh_string">'worker success!'</span><span class="sh_symbol">);</span>
+  <span class="sh_cbracket">}</span>
+<span class="sh_cbracket">}</span><span class="sh_symbol">);</span>
+</code></pre>
+<h3>Event: 'listening'<span><a class="mark" href="https://nodejs.org/dist/latest-v4.x/docs/api/cluster.html#cluster_event_listening" id="cluster_event_listening">#</a></span></h3>
+<div class="api_metadata">
+<span>Added in: v0.7.0</span>
+</div><ul>
+<li><code>address</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" class="type">&lt;Object&gt;</a></li>
+</ul>
+<p>Similar to the <code>cluster.on('listening')</code> event, but specific to this worker.</p>
+<pre class="sh_sourceCode"><code class="lang-js">cluster<span class="sh_symbol">.</span><span class="sh_function">fork</span><span class="sh_symbol">().</span><span class="sh_function">on</span><span class="sh_symbol">(</span><span class="sh_string">'listening'</span><span class="sh_symbol">,</span> <span class="sh_symbol">(</span>address<span class="sh_symbol">)</span> <span class="sh_symbol">=&gt;</span> <span class="sh_cbracket">{</span>
+  <span class="sh_comment">// Worker is listening</span>
+<span class="sh_cbracket">}</span><span class="sh_symbol">);</span>
+</code></pre>
+<p>It is not emitted in the worker.</p>
+<h3>Event: 'message'<span><a class="mark" href="https://nodejs.org/dist/latest-v4.x/docs/api/cluster.html#cluster_event_message" id="cluster_event_message">#</a></span></h3>
+<div class="api_metadata">
+<span>Added in: v0.7.0</span>
+</div><ul>
+<li><code>message</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" class="type">&lt;Object&gt;</a></li>
+<li><code>handle</code> <span class="type">&lt;undefined&gt;</span> | <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" class="type">&lt;Object&gt;</a></li>
+</ul>
+<p>Similar to the <code>cluster.on('message')</code> event, but specific to this worker. In a
+worker you can also use <code>process.on('message')</code>.</p>
+<p>See <a href="https://nodejs.org/dist/latest-v4.x/docs/api/process.html#process_event_message"><code>process</code> event: <code>'message'</code></a>.</p>
+<p>As an example, here is a cluster that keeps count of the number of requests
+in the master process using the message system:</p>
+<pre class="sh_sourceCode"><code class="lang-js"><span class="sh_keyword">const</span> cluster <span class="sh_symbol">=</span> <span class="sh_function">require</span><span class="sh_symbol">(</span><span class="sh_string">'cluster'</span><span class="sh_symbol">);</span>
+<span class="sh_keyword">const</span> http <span class="sh_symbol">=</span> <span class="sh_function">require</span><span class="sh_symbol">(</span><span class="sh_string">'http'</span><span class="sh_symbol">);</span>
+
+<span class="sh_keyword">if</span> <span class="sh_symbol">(</span>cluster<span class="sh_symbol">.</span>isMaster<span class="sh_symbol">)</span> <span class="sh_cbracket">{</span>
+
+  <span class="sh_comment">// Keep track of http requests</span>
+  <span class="sh_keyword">var</span> numReqs <span class="sh_symbol">=</span> <span class="sh_number">0</span><span class="sh_symbol">;</span>
+  <span class="sh_function">setInterval</span><span class="sh_symbol">(()</span> <span class="sh_symbol">=&gt;</span> <span class="sh_cbracket">{</span>
+    console<span class="sh_symbol">.</span><span class="sh_function">log</span><span class="sh_symbol">(</span><span class="sh_string">'numReqs ='</span><span class="sh_symbol">,</span> numReqs<span class="sh_symbol">);</span>
+  <span class="sh_cbracket">}</span><span class="sh_symbol">,</span> <span class="sh_number">1000</span><span class="sh_symbol">);</span>
+
+  <span class="sh_comment">// Count requests</span>
+  <span class="sh_keyword">function</span> <span class="sh_function">messageHandler</span><span class="sh_symbol">(</span>msg<span class="sh_symbol">)</span> <span class="sh_cbracket">{</span>
+    <span class="sh_keyword">if</span> <span class="sh_symbol">(</span>msg<span class="sh_symbol">.</span>cmd <span class="sh_symbol">&amp;&amp;</span> msg<span class="sh_symbol">.</span>cmd <span class="sh_symbol">==</span> <span class="sh_string">'notifyRequest'</span><span class="sh_symbol">)</span> <span class="sh_cbracket">{</span>
+      numReqs <span class="sh_symbol">+=</span> <span class="sh_number">1</span><span class="sh_symbol">;</span>
+    <span class="sh_cbracket">}</span>
+  <span class="sh_cbracket">}</span>
+
+  <span class="sh_comment">// Start workers and listen for messages containing notifyRequest</span>
+  <span class="sh_keyword">const</span> numCPUs <span class="sh_symbol">=</span> <span class="sh_function">require</span><span class="sh_symbol">(</span><span class="sh_string">'os'</span><span class="sh_symbol">).</span><span class="sh_function">cpus</span><span class="sh_symbol">().</span>length<span class="sh_symbol">;</span>
+  <span class="sh_keyword">for</span> <span class="sh_symbol">(</span><span class="sh_keyword">var</span> i <span class="sh_symbol">=</span> <span class="sh_number">0</span><span class="sh_symbol">;</span> i <span class="sh_symbol">&lt;</span> numCPUs<span class="sh_symbol">;</span> i<span class="sh_symbol">++)</span> <span class="sh_cbracket">{</span>
+    cluster<span class="sh_symbol">.</span><span class="sh_function">fork</span><span class="sh_symbol">();</span>
+  <span class="sh_cbracket">}</span>
+
+  <span class="sh_predef_func">Object</span><span class="sh_symbol">.</span><span class="sh_function">keys</span><span class="sh_symbol">(</span>cluster<span class="sh_symbol">.</span>workers<span class="sh_symbol">).</span><span class="sh_function">forEach</span><span class="sh_symbol">((</span>id<span class="sh_symbol">)</span> <span class="sh_symbol">=&gt;</span> <span class="sh_cbracket">{</span>
+    cluster<span class="sh_symbol">.</span>workers<span class="sh_symbol">[</span>id<span class="sh_symbol">].</span><span class="sh_function">on</span><span class="sh_symbol">(</span><span class="sh_string">'message'</span><span class="sh_symbol">,</span> messageHandler<span class="sh_symbol">);</span>
+  <span class="sh_cbracket">}</span><span class="sh_symbol">);</span>
+
+<span class="sh_cbracket">}</span> <span class="sh_keyword">else</span> <span class="sh_cbracket">{</span>
+
+  <span class="sh_comment">// Worker processes have a http server.</span>
+  http<span class="sh_symbol">.</span><span class="sh_function">Server</span><span class="sh_symbol">((</span>req<span class="sh_symbol">,</span> res<span class="sh_symbol">)</span> <span class="sh_symbol">=&gt;</span> <span class="sh_cbracket">{</span>
+    res<span class="sh_symbol">.</span><span class="sh_function">writeHead</span><span class="sh_symbol">(</span><span class="sh_number">200</span><span class="sh_symbol">);</span>
+    res<span class="sh_symbol">.</span><span class="sh_function">end</span><span class="sh_symbol">(</span><span class="sh_string">'hello world</span><span class="sh_specialchar">\n</span><span class="sh_string">'</span><span class="sh_symbol">);</span>
+
+    <span class="sh_comment">// notify master about the request</span>
+    process<span class="sh_symbol">.</span><span class="sh_function">send</span><span class="sh_symbol">(</span><span class="sh_cbracket">{</span> cmd<span class="sh_symbol">:</span> <span class="sh_string">'notifyRequest'</span> <span class="sh_cbracket">}</span><span class="sh_symbol">);</span>
+  <span class="sh_cbracket">}</span><span class="sh_symbol">).</span><span class="sh_function">listen</span><span class="sh_symbol">(</span><span class="sh_number">8000</span><span class="sh_symbol">);</span>
+<span class="sh_cbracket">}</span>
+</code></pre>
+<h3>Event: 'online'<span><a class="mark" href="https://nodejs.org/dist/latest-v4.x/docs/api/cluster.html#cluster_event_online" id="cluster_event_online">#</a></span></h3>
+<div class="api_metadata">
+<span>Added in: v0.7.0</span>
+</div><p>Similar to the <code>cluster.on('online')</code> event, but specific to this worker.</p>
+<pre class="sh_sourceCode"><code class="lang-js">cluster<span class="sh_symbol">.</span><span class="sh_function">fork</span><span class="sh_symbol">().</span><span class="sh_function">on</span><span class="sh_symbol">(</span><span class="sh_string">'online'</span><span class="sh_symbol">,</span> <span class="sh_symbol">()</span> <span class="sh_symbol">=&gt;</span> <span class="sh_cbracket">{</span>
+  <span class="sh_comment">// Worker is online</span>
+<span class="sh_cbracket">}</span><span class="sh_symbol">);</span>
+</code></pre>
+<p>It is not emitted in the worker.</p>
+<h3>worker.disconnect()<span><a class="mark" href="https://nodejs.org/dist/latest-v4.x/docs/api/cluster.html#cluster_worker_disconnect" id="cluster_worker_disconnect">#</a></span></h3>
+<div class="api_metadata">
+<span>Added in: v0.7.7</span>
+</div><p>In a worker, this function will close all servers, wait for the <code>'close'</code> event on
+those servers, and then disconnect the IPC channel.</p>
+<p>In the master, an internal message is sent to the worker causing it to call
+<code>.disconnect()</code> on itself.</p>
+<p>Causes <code>.suicide</code> to be set.</p>
+<p>Note that after a server is closed, it will no longer accept new connections,
+but connections may be accepted by any other listening worker. Existing
+connections will be allowed to close as usual. When no more connections exist,
+see <a href="https://nodejs.org/dist/latest-v4.x/docs/api/net.html#net_event_close"><code>server.close()</code></a>, the IPC channel to the worker will close allowing it to
+die gracefully.</p>
+<p>The above applies <em>only</em> to server connections, client connections are not
+automatically closed by workers, and disconnect does not wait for them to close
+before exiting.</p>
+<p>Note that in a worker, <code>process.disconnect</code> exists, but it is not this function,
+it is <a href="https://nodejs.org/dist/latest-v4.x/docs/api/child_process.html#child_process_child_disconnect"><code>disconnect</code></a>.</p>
+<p>Because long living server connections may block workers from disconnecting, it
+may be useful to send a message, so application specific actions may be taken to
+close them. It also may be useful to implement a timeout, killing a worker if
+the <code>'disconnect'</code> event has not been emitted after some time.</p>
+<pre class="sh_sourceCode"><code class="lang-js"><span class="sh_keyword">if</span> <span class="sh_symbol">(</span>cluster<span class="sh_symbol">.</span>isMaster<span class="sh_symbol">)</span> <span class="sh_cbracket">{</span>
+  <span class="sh_keyword">var</span> worker <span class="sh_symbol">=</span> cluster<span class="sh_symbol">.</span><span class="sh_function">fork</span><span class="sh_symbol">();</span>
+  <span class="sh_keyword">var</span> timeout<span class="sh_symbol">;</span>
+
+  worker<span class="sh_symbol">.</span><span class="sh_function">on</span><span class="sh_symbol">(</span><span class="sh_string">'listening'</span><span class="sh_symbol">,</span> <span class="sh_symbol">(</span>address<span class="sh_symbol">)</span> <span class="sh_symbol">=&gt;</span> <span class="sh_cbracket">{</span>
+    worker<span class="sh_symbol">.</span><span class="sh_function">send</span><span class="sh_symbol">(</span><span class="sh_string">'shutdown'</span><span class="sh_symbol">);</span>
+    worker<span class="sh_symbol">.</span><span class="sh_function">disconnect</span><span class="sh_symbol">();</span>
+    timeout <span class="sh_symbol">=</span> <span class="sh_function">setTimeout</span><span class="sh_symbol">(()</span> <span class="sh_symbol">=&gt;</span> <span class="sh_cbracket">{</span>
+      worker<span class="sh_symbol">.</span><span class="sh_function">kill</span><span class="sh_symbol">();</span>
+    <span class="sh_cbracket">}</span><span class="sh_symbol">,</span> <span class="sh_number">2000</span><span class="sh_symbol">);</span>
+  <span class="sh_cbracket">}</span><span class="sh_symbol">);</span>
+
+  worker<span class="sh_symbol">.</span><span class="sh_function">on</span><span class="sh_symbol">(</span><span class="sh_string">'disconnect'</span><span class="sh_symbol">,</span> <span class="sh_symbol">()</span> <span class="sh_symbol">=&gt;</span> <span class="sh_cbracket">{</span>
+    <span class="sh_function">clearTimeout</span><span class="sh_symbol">(</span>timeout<span class="sh_symbol">);</span>
+  <span class="sh_cbracket">}</span><span class="sh_symbol">);</span>
+
+<span class="sh_cbracket">}</span> <span class="sh_keyword">else</span> <span class="sh_keyword">if</span> <span class="sh_symbol">(</span>cluster<span class="sh_symbol">.</span>isWorker<span class="sh_symbol">)</span> <span class="sh_cbracket">{</span>
+  <span class="sh_keyword">const</span> net <span class="sh_symbol">=</span> <span class="sh_function">require</span><span class="sh_symbol">(</span><span class="sh_string">'net'</span><span class="sh_symbol">);</span>
+  <span class="sh_keyword">var</span> server <span class="sh_symbol">=</span> net<span class="sh_symbol">.</span><span class="sh_function">createServer</span><span class="sh_symbol">((</span>socket<span class="sh_symbol">)</span> <span class="sh_symbol">=&gt;</span> <span class="sh_cbracket">{</span>
+    <span class="sh_comment">// connections never end</span>
+  <span class="sh_cbracket">}</span><span class="sh_symbol">);</span>
+
+  server<span class="sh_symbol">.</span><span class="sh_function">listen</span><span class="sh_symbol">(</span><span class="sh_number">8000</span><span class="sh_symbol">);</span>
+
+  process<span class="sh_symbol">.</span><span class="sh_function">on</span><span class="sh_symbol">(</span><span class="sh_string">'message'</span><span class="sh_symbol">,</span> <span class="sh_symbol">(</span>msg<span class="sh_symbol">)</span> <span class="sh_symbol">=&gt;</span> <span class="sh_cbracket">{</span>
+    <span class="sh_keyword">if</span> <span class="sh_symbol">(</span>msg <span class="sh_symbol">===</span> <span class="sh_string">'shutdown'</span><span class="sh_symbol">)</span> <span class="sh_cbracket">{</span>
+      <span class="sh_comment">// initiate graceful close of any connections to server</span>
+    <span class="sh_cbracket">}</span>
+  <span class="sh_cbracket">}</span><span class="sh_symbol">);</span>
+<span class="sh_cbracket">}</span>
+</code></pre>
+<h3>worker.id<span><a class="mark" href="https://nodejs.org/dist/latest-v4.x/docs/api/cluster.html#cluster_worker_id" id="cluster_worker_id">#</a></span></h3>
+<div class="api_metadata">
+<span>Added in: v0.8.0</span>
+</div><ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" class="type">&lt;Number&gt;</a></li>
+</ul>
+<p>Each new worker is given its own unique id, this id is stored in the
+<code>id</code>.</p>
+<p>While a worker is alive, this is the key that indexes it in
+cluster.workers</p>
+<h3>worker.isConnected()<span><a class="mark" href="https://nodejs.org/dist/latest-v4.x/docs/api/cluster.html#cluster_worker_isconnected" id="cluster_worker_isconnected">#</a></span></h3>
+<div class="api_metadata">
+<span>Added in: v0.11.14</span>
+</div><p>This function returns <code>true</code> if the worker is connected to its master via its IPC
+channel, <code>false</code> otherwise. A worker is connected to its master after it's been
+created. It is disconnected after the <code>'disconnect'</code> event is emitted.</p>
+<h3>worker.isDead()<span><a class="mark" href="https://nodejs.org/dist/latest-v4.x/docs/api/cluster.html#cluster_worker_isdead" id="cluster_worker_isdead">#</a></span></h3>
+<div class="api_metadata">
+<span>Added in: v0.11.14</span>
+</div><p>This function returns <code>true</code> if the worker's process has terminated (either
+because of exiting or being signaled). Otherwise, it returns <code>false</code>.</p>
+<h3>worker.kill([signal='SIGTERM'])<span><a class="mark" href="https://nodejs.org/dist/latest-v4.x/docs/api/cluster.html#cluster_worker_kill_signal_sigterm" id="cluster_worker_kill_signal_sigterm">#</a></span></h3>
+<div class="api_metadata">
+<span>Added in: v0.9.12</span>
+</div><ul>
+<li><code>signal</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" class="type">&lt;String&gt;</a> Name of the kill signal to send to the worker
+process.</li>
+</ul>
+<p>This function will kill the worker. In the master, it does this by disconnecting
+the <code>worker.process</code>, and once disconnected, killing with <code>signal</code>. In the
+worker, it does it by disconnecting the channel, and then exiting with code <code>0</code>.</p>
+<p>Causes <code>.suicide</code> to be set.</p>
+<p>This method is aliased as <code>worker.destroy()</code> for backwards compatibility.</p>
+<p>Note that in a worker, <code>process.kill()</code> exists, but it is not this function,
+it is <a href="https://nodejs.org/dist/latest-v4.x/docs/api/process.html#process_process_kill_pid_signal"><code>kill</code></a>.</p>
+<h3>worker.process<span><a class="mark" href="https://nodejs.org/dist/latest-v4.x/docs/api/cluster.html#cluster_worker_process" id="cluster_worker_process">#</a></span></h3>
+<div class="api_metadata">
+<span>Added in: v0.7.0</span>
+</div><ul>
+<li><a href="https://nodejs.org/dist/latest-v4.x/docs/api/child_process.html#child_process_class_childprocess" class="type">&lt;ChildProcess&gt;</a></li>
+</ul>
+<p>All workers are created using <a href="https://nodejs.org/dist/latest-v4.x/docs/api/child_process.html#child_process_child_process_fork_modulepath_args_options"><code>child_process.fork()</code></a>, the returned object
+from this function is stored as <code>.process</code>. In a worker, the global <code>process</code>
+is stored.</p>
+<p>See: <a href="https://nodejs.org/dist/latest-v4.x/docs/api/child_process.html#child_process_child_process_fork_modulepath_args_options">Child Process module</a></p>
+<p>Note that workers will call <code>process.exit(0)</code> if the <code>'disconnect'</code> event occurs
+on <code>process</code> and <code>.suicide</code> is not <code>true</code>. This protects against accidental
+disconnection.</p>
+<h3>worker.send(message[, sendHandle][, callback])<span><a class="mark" href="https://nodejs.org/dist/latest-v4.x/docs/api/cluster.html#cluster_worker_send_message_sendhandle_callback" id="cluster_worker_send_message_sendhandle_callback">#</a></span></h3>
+<div class="api_metadata">
+<span>Added in: v0.7.0</span>
+</div><ul>
+<li><code>message</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" class="type">&lt;Object&gt;</a></li>
+<li><code>sendHandle</code> <a href="https://nodejs.org/dist/latest-v4.x/docs/api/net.html#net_server_listen_handle_backlog_callback" class="type">&lt;Handle&gt;</a></li>
+<li><code>callback</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function" class="type">&lt;Function&gt;</a></li>
+<li>Returns: Boolean</li>
+</ul>
+<p>Send a message to a worker or master, optionally with a handle.</p>
+<p>In the master this sends a message to a specific worker. It is identical to
+<a href="https://nodejs.org/dist/latest-v4.x/docs/api/child_process.html#child_process_child_send_message_sendhandle_callback"><code>ChildProcess.send()</code></a>.</p>
+<p>In a worker this sends a message to the master. It is identical to
+<code>process.send()</code>.</p>
+<p>This example will echo back all messages from the master:</p>
+<pre class="sh_sourceCode"><code class="lang-js"><span class="sh_keyword">if</span> <span class="sh_symbol">(</span>cluster<span class="sh_symbol">.</span>isMaster<span class="sh_symbol">)</span> <span class="sh_cbracket">{</span>
+  <span class="sh_keyword">var</span> worker <span class="sh_symbol">=</span> cluster<span class="sh_symbol">.</span><span class="sh_function">fork</span><span class="sh_symbol">();</span>
+  worker<span class="sh_symbol">.</span><span class="sh_function">send</span><span class="sh_symbol">(</span><span class="sh_string">'hi there'</span><span class="sh_symbol">);</span>
+
+<span class="sh_cbracket">}</span> <span class="sh_keyword">else</span> <span class="sh_keyword">if</span> <span class="sh_symbol">(</span>cluster<span class="sh_symbol">.</span>isWorker<span class="sh_symbol">)</span> <span class="sh_cbracket">{</span>
+  process<span class="sh_symbol">.</span><span class="sh_function">on</span><span class="sh_symbol">(</span><span class="sh_string">'message'</span><span class="sh_symbol">,</span> <span class="sh_symbol">(</span>msg<span class="sh_symbol">)</span> <span class="sh_symbol">=&gt;</span> <span class="sh_cbracket">{</span>
+    process<span class="sh_symbol">.</span><span class="sh_function">send</span><span class="sh_symbol">(</span>msg<span class="sh_symbol">);</span>
+  <span class="sh_cbracket">}</span><span class="sh_symbol">);</span>
+<span class="sh_cbracket">}</span>
+</code></pre>
+<h3>worker.suicide<span><a class="mark" href="https://nodejs.org/dist/latest-v4.x/docs/api/cluster.html#cluster_worker_suicide" id="cluster_worker_suicide">#</a></span></h3>
+<div class="api_metadata">
+<span>Added in: v0.7.0</span>
+<span>Deprecated since: v6.0.0 </span>
+</div><ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" class="type">&lt;Boolean&gt;</a></li>
+</ul>
+<p>Set by calling <code>.kill()</code> or <code>.disconnect()</code>, until then it is <code>undefined</code>.</p>
+<p>The boolean <code>worker.suicide</code> lets you distinguish between voluntary and accidental
+exit, the master may choose not to respawn a worker based on this value.</p>
+<pre class="sh_sourceCode"><code class="lang-js">cluster<span class="sh_symbol">.</span><span class="sh_function">on</span><span class="sh_symbol">(</span><span class="sh_string">'exit'</span><span class="sh_symbol">,</span> <span class="sh_symbol">(</span>worker<span class="sh_symbol">,</span> code<span class="sh_symbol">,</span> signal<span class="sh_symbol">)</span> <span class="sh_symbol">=&gt;</span> <span class="sh_cbracket">{</span>
+  <span class="sh_keyword">if</span> <span class="sh_symbol">(</span>worker<span class="sh_symbol">.</span>suicide <span class="sh_symbol">===</span> <span class="sh_keyword">true</span><span class="sh_symbol">)</span> <span class="sh_cbracket">{</span>
+    console<span class="sh_symbol">.</span><span class="sh_function">log</span><span class="sh_symbol">(</span><span class="sh_string">'Oh, it was just suicide</span><span class="sh_specialchar">\'</span><span class="sh_string"> â€“ no need to worry'</span><span class="sh_symbol">).</span>
+  <span class="sh_cbracket">}</span>
+<span class="sh_cbracket">}</span><span class="sh_symbol">);</span>
+
+<span class="sh_comment">// kill worker</span>
+worker<span class="sh_symbol">.</span><span class="sh_function">kill</span><span class="sh_symbol">();</span>
+</code></pre>
+<h2>Event: 'disconnect'<span><a class="mark" href="https://nodejs.org/dist/latest-v4.x/docs/api/cluster.html#cluster_event_disconnect_1" id="cluster_event_disconnect_1">#</a></span></h2>
+<div class="api_metadata">
+<span>Added in: v0.7.9</span>
+</div><ul>
+<li><code>worker</code> <a href="https://nodejs.org/dist/latest-v4.x/docs/api/cluster.html#cluster_class_worker" class="type">&lt;cluster.Worker&gt;</a></li>
+</ul>
+<p>Emitted after the worker IPC channel has disconnected. This can occur when a
+worker exits gracefully, is killed, or is disconnected manually (such as with
+worker.disconnect()).</p>
+<p>There may be a delay between the <code>'disconnect'</code> and <code>'exit'</code> events.  These events
+can be used to detect if the process is stuck in a cleanup or if there are
+long-living connections.</p>
+<pre class="sh_sourceCode"><code class="lang-js">cluster<span class="sh_symbol">.</span><span class="sh_function">on</span><span class="sh_symbol">(</span><span class="sh_string">'disconnect'</span><span class="sh_symbol">,</span> <span class="sh_symbol">(</span>worker<span class="sh_symbol">)</span> <span class="sh_symbol">=&gt;</span> <span class="sh_cbracket">{</span>
+  console<span class="sh_symbol">.</span><span class="sh_function">log</span><span class="sh_symbol">(</span>`The worker #$<span class="sh_cbracket">{</span>worker<span class="sh_symbol">.</span>id<span class="sh_cbracket">}</span> has disconnected`<span class="sh_symbol">);</span>
+<span class="sh_cbracket">}</span><span class="sh_symbol">);</span>
+</code></pre>
+<h2>Event: 'exit'<span><a class="mark" href="https://nodejs.org/dist/latest-v4.x/docs/api/cluster.html#cluster_event_exit_1" id="cluster_event_exit_1">#</a></span></h2>
+<div class="api_metadata">
+<span>Added in: v0.7.9</span>
+</div><ul>
+<li><code>worker</code> <a href="https://nodejs.org/dist/latest-v4.x/docs/api/cluster.html#cluster_class_worker" class="type">&lt;cluster.Worker&gt;</a></li>
+<li><code>code</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" class="type">&lt;Number&gt;</a> the exit code, if it exited normally.</li>
+<li><code>signal</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" class="type">&lt;String&gt;</a> the name of the signal (e.g. <code>'SIGHUP'</code>) that caused
+the process to be killed.</li>
+</ul>
+<p>When any of the workers die the cluster module will emit the <code>'exit'</code> event.</p>
+<p>This can be used to restart the worker by calling <code>.fork()</code> again.</p>
+<pre class="sh_sourceCode"><code class="lang-js">cluster<span class="sh_symbol">.</span><span class="sh_function">on</span><span class="sh_symbol">(</span><span class="sh_string">'exit'</span><span class="sh_symbol">,</span> <span class="sh_symbol">(</span>worker<span class="sh_symbol">,</span> code<span class="sh_symbol">,</span> signal<span class="sh_symbol">)</span> <span class="sh_symbol">=&gt;</span> <span class="sh_cbracket">{</span>
+  console<span class="sh_symbol">.</span><span class="sh_function">log</span><span class="sh_symbol">(</span><span class="sh_string">'worker %d died (%s). restarting...'</span><span class="sh_symbol">,</span>
+    worker<span class="sh_symbol">.</span>process<span class="sh_symbol">.</span>pid<span class="sh_symbol">,</span> signal <span class="sh_symbol">||</span> code<span class="sh_symbol">);</span>
+  cluster<span class="sh_symbol">.</span><span class="sh_function">fork</span><span class="sh_symbol">();</span>
+<span class="sh_cbracket">}</span><span class="sh_symbol">);</span>
+</code></pre>
+<p>See <a href="https://nodejs.org/dist/latest-v4.x/docs/api/child_process.html#child_process_event_exit">child_process event: 'exit'</a>.</p>
+<h2>Event: 'fork'<span><a class="mark" href="https://nodejs.org/dist/latest-v4.x/docs/api/cluster.html#cluster_event_fork" id="cluster_event_fork">#</a></span></h2>
+<div class="api_metadata">
+<span>Added in: v0.7.0</span>
+</div><ul>
+<li><code>worker</code> <a href="https://nodejs.org/dist/latest-v4.x/docs/api/cluster.html#cluster_class_worker" class="type">&lt;cluster.Worker&gt;</a></li>
+</ul>
+<p>When a new worker is forked the cluster module will emit a <code>'fork'</code> event.
+This can be used to log worker activity, and create your own timeout.</p>
+<pre class="sh_sourceCode"><code class="lang-js"><span class="sh_keyword">var</span> timeouts <span class="sh_symbol">=</span> <span class="sh_symbol">[];</span>
+<span class="sh_keyword">function</span> <span class="sh_function">errorMsg</span><span class="sh_symbol">()</span> <span class="sh_cbracket">{</span>
+  console<span class="sh_symbol">.</span><span class="sh_function">error</span><span class="sh_symbol">(</span><span class="sh_string">'Something must be wrong with the connection ...'</span><span class="sh_symbol">);</span>
+<span class="sh_cbracket">}</span>
+
+cluster<span class="sh_symbol">.</span><span class="sh_function">on</span><span class="sh_symbol">(</span><span class="sh_string">'fork'</span><span class="sh_symbol">,</span> <span class="sh_symbol">(</span>worker<span class="sh_symbol">)</span> <span class="sh_symbol">=&gt;</span> <span class="sh_cbracket">{</span>
+  timeouts<span class="sh_symbol">[</span>worker<span class="sh_symbol">.</span>id<span class="sh_symbol">]</span> <span class="sh_symbol">=</span> <span class="sh_function">setTimeout</span><span class="sh_symbol">(</span>errorMsg<span class="sh_symbol">,</span> <span class="sh_number">2000</span><span class="sh_symbol">);</span>
+<span class="sh_cbracket">}</span><span class="sh_symbol">);</span>
+cluster<span class="sh_symbol">.</span><span class="sh_function">on</span><span class="sh_symbol">(</span><span class="sh_string">'listening'</span><span class="sh_symbol">,</span> <span class="sh_symbol">(</span>worker<span class="sh_symbol">,</span> address<span class="sh_symbol">)</span> <span class="sh_symbol">=&gt;</span> <span class="sh_cbracket">{</span>
+  <span class="sh_function">clearTimeout</span><span class="sh_symbol">(</span>timeouts<span class="sh_symbol">[</span>worker<span class="sh_symbol">.</span>id<span class="sh_symbol">]);</span>
+<span class="sh_cbracket">}</span><span class="sh_symbol">);</span>
+cluster<span class="sh_symbol">.</span><span class="sh_function">on</span><span class="sh_symbol">(</span><span class="sh_string">'exit'</span><span class="sh_symbol">,</span> <span class="sh_symbol">(</span>worker<span class="sh_symbol">,</span> code<span class="sh_symbol">,</span> signal<span class="sh_symbol">)</span> <span class="sh_symbol">=&gt;</span> <span class="sh_cbracket">{</span>
+  <span class="sh_function">clearTimeout</span><span class="sh_symbol">(</span>timeouts<span class="sh_symbol">[</span>worker<span class="sh_symbol">.</span>id<span class="sh_symbol">]);</span>
+  <span class="sh_function">errorMsg</span><span class="sh_symbol">();</span>
+<span class="sh_cbracket">}</span><span class="sh_symbol">);</span>
+</code></pre>
+<h2>Event: 'listening'<span><a class="mark" href="https://nodejs.org/dist/latest-v4.x/docs/api/cluster.html#cluster_event_listening_1" id="cluster_event_listening_1">#</a></span></h2>
+<div class="api_metadata">
+<span>Added in: v0.7.0</span>
+</div><ul>
+<li><code>worker</code> <a href="https://nodejs.org/dist/latest-v4.x/docs/api/cluster.html#cluster_class_worker" class="type">&lt;cluster.Worker&gt;</a></li>
+<li><code>address</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" class="type">&lt;Object&gt;</a></li>
+</ul>
+<p>After calling <code>listen()</code> from a worker, when the <code>'listening'</code> event is emitted on
+the server, a <code>'listening'</code> event will also be emitted on <code>cluster</code> in the master.</p>
+<p>The event handler is executed with two arguments, the <code>worker</code> contains the worker
+object and the <code>address</code> object contains the following connection properties:
+<code>address</code>, <code>port</code> and <code>addressType</code>. This is very useful if the worker is listening
+on more than one address.</p>
+<pre class="sh_sourceCode"><code class="lang-js">cluster<span class="sh_symbol">.</span><span class="sh_function">on</span><span class="sh_symbol">(</span><span class="sh_string">'listening'</span><span class="sh_symbol">,</span> <span class="sh_symbol">(</span>worker<span class="sh_symbol">,</span> address<span class="sh_symbol">)</span> <span class="sh_symbol">=&gt;</span> <span class="sh_cbracket">{</span>
+  console<span class="sh_symbol">.</span><span class="sh_function">log</span><span class="sh_symbol">(</span>
+    `A worker is now connected to $<span class="sh_cbracket">{</span>address<span class="sh_symbol">.</span>address<span class="sh_cbracket">}</span><span class="sh_symbol">:</span>$<span class="sh_cbracket">{</span>address<span class="sh_symbol">.</span>port<span class="sh_cbracket">}</span>`<span class="sh_symbol">);</span>
+<span class="sh_cbracket">}</span><span class="sh_symbol">);</span>
+</code></pre>
+<p>The <code>addressType</code> is one of:</p>
+<ul>
+<li><code>4</code> (TCPv4)</li>
+<li><code>6</code> (TCPv6)</li>
+<li><code>-1</code> (unix domain socket)</li>
+<li><code>"udp4"</code> or <code>"udp6"</code> (UDP v4 or v6)</li>
+</ul>
+<h2>Event: 'message'<span><a class="mark" href="https://nodejs.org/dist/latest-v4.x/docs/api/cluster.html#cluster_event_message_1" id="cluster_event_message_1">#</a></span></h2>
+<div class="signature"><ul>
+<li><code>message</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" class="type">&lt;Object&gt;</a></li>
+<li><code>handle</code> <span class="type">&lt;undefined&gt;</span> | <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" class="type">&lt;Object&gt;</a></li>
+</ul>
+</div><p>Emitted when the cluster master receives a message from any worker.</p>
+<p>See <a href="https://nodejs.org/dist/latest-v4.x/docs/api/child_process.html#child_process_event_message">child_process event: 'message'</a>.</p>
+<h2>Event: 'online'<span><a class="mark" href="https://nodejs.org/dist/latest-v4.x/docs/api/cluster.html#cluster_event_online_1" id="cluster_event_online_1">#</a></span></h2>
+<div class="api_metadata">
+<span>Added in: v0.7.0</span>
+</div><ul>
+<li><code>worker</code> <a href="https://nodejs.org/dist/latest-v4.x/docs/api/cluster.html#cluster_class_worker" class="type">&lt;cluster.Worker&gt;</a></li>
+</ul>
+<p>After forking a new worker, the worker should respond with an online message.
+When the master receives an online message it will emit this event.
+The difference between <code>'fork'</code> and <code>'online'</code> is that fork is emitted when the
+master forks a worker, and 'online' is emitted when the worker is running.</p>
+<pre class="sh_sourceCode"><code class="lang-js">cluster<span class="sh_symbol">.</span><span class="sh_function">on</span><span class="sh_symbol">(</span><span class="sh_string">'online'</span><span class="sh_symbol">,</span> <span class="sh_symbol">(</span>worker<span class="sh_symbol">)</span> <span class="sh_symbol">=&gt;</span> <span class="sh_cbracket">{</span>
+  console<span class="sh_symbol">.</span><span class="sh_function">log</span><span class="sh_symbol">(</span><span class="sh_string">'Yay, the worker responded after it was forked'</span><span class="sh_symbol">);</span>
+<span class="sh_cbracket">}</span><span class="sh_symbol">);</span>
+</code></pre>
+<h2>Event: 'setup'<span><a class="mark" href="https://nodejs.org/dist/latest-v4.x/docs/api/cluster.html#cluster_event_setup" id="cluster_event_setup">#</a></span></h2>
+<div class="api_metadata">
+<span>Added in: v0.7.1</span>
+</div><ul>
+<li><code>settings</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" class="type">&lt;Object&gt;</a></li>
+</ul>
+<p>Emitted every time <code>.setupMaster()</code> is called.</p>
+<p>The <code>settings</code> object is the <code>cluster.settings</code> object at the time
+<code>.setupMaster()</code> was called and is advisory only, since multiple calls to
+<code>.setupMaster()</code> can be made in a single tick.</p>
+<p>If accuracy is important, use <code>cluster.settings</code>.</p>
+<h2>cluster.disconnect([callback])<span><a class="mark" href="https://nodejs.org/dist/latest-v4.x/docs/api/cluster.html#cluster_cluster_disconnect_callback" id="cluster_cluster_disconnect_callback">#</a></span></h2>
+<div class="api_metadata">
+<span>Added in: v0.7.7</span>
+</div><ul>
+<li><code>callback</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function" class="type">&lt;Function&gt;</a> called when all workers are disconnected and handles are
+closed</li>
+</ul>
+<p>Calls <code>.disconnect()</code> on each worker in <code>cluster.workers</code>.</p>
+<p>When they are disconnected all internal handles will be closed, allowing the
+master process to die gracefully if no other event is waiting.</p>
+<p>The method takes an optional callback argument which will be called when finished.</p>
+<p>This can only be called from the master process.</p>
+<h2>cluster.fork([env])<span><a class="mark" href="https://nodejs.org/dist/latest-v4.x/docs/api/cluster.html#cluster_cluster_fork_env" id="cluster_cluster_fork_env">#</a></span></h2>
+<div class="api_metadata">
+<span>Added in: v0.6.0</span>
+</div><ul>
+<li><code>env</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" class="type">&lt;Object&gt;</a> Key/value pairs to add to worker process environment.</li>
+<li>return <a href="https://nodejs.org/dist/latest-v4.x/docs/api/cluster.html#cluster_class_worker" class="type">&lt;cluster.Worker&gt;</a></li>
+</ul>
+<p>Spawn a new worker process.</p>
+<p>This can only be called from the master process.</p>
+<h2>cluster.isMaster<span><a class="mark" href="https://nodejs.org/dist/latest-v4.x/docs/api/cluster.html#cluster_cluster_ismaster" id="cluster_cluster_ismaster">#</a></span></h2>
+<div class="api_metadata">
+<span>Added in: v0.8.1</span>
+</div><ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" class="type">&lt;Boolean&gt;</a></li>
+</ul>
+<p>True if the process is a master. This is determined
+by the <code>process.env.NODE_UNIQUE_ID</code>. If <code>process.env.NODE_UNIQUE_ID</code> is
+undefined, then <code>isMaster</code> is <code>true</code>.</p>
+<h2>cluster.isWorker<span><a class="mark" href="https://nodejs.org/dist/latest-v4.x/docs/api/cluster.html#cluster_cluster_isworker" id="cluster_cluster_isworker">#</a></span></h2>
+<div class="api_metadata">
+<span>Added in: v0.6.0</span>
+</div><ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" class="type">&lt;Boolean&gt;</a></li>
+</ul>
+<p>True if the process is not a master (it is the negation of <code>cluster.isMaster</code>).</p>
+<h2>cluster.schedulingPolicy<span><a class="mark" href="https://nodejs.org/dist/latest-v4.x/docs/api/cluster.html#cluster_cluster_schedulingpolicy" id="cluster_cluster_schedulingpolicy">#</a></span></h2>
+<div class="api_metadata">
+<span>Added in: v0.11.2</span>
+</div><p>The scheduling policy, either <code>cluster.SCHED_RR</code> for round-robin or
+<code>cluster.SCHED_NONE</code> to leave it to the operating system. This is a
+global setting and effectively frozen once you spawn the first worker
+or call <code>cluster.setupMaster()</code>, whatever comes first.</p>
+<p><code>SCHED_RR</code> is the default on all operating systems except Windows.
+Windows will change to <code>SCHED_RR</code> once libuv is able to effectively
+distribute IOCP handles without incurring a large performance hit.</p>
+<p><code>cluster.schedulingPolicy</code> can also be set through the
+<code>NODE_CLUSTER_SCHED_POLICY</code> environment variable. Valid
+values are <code>"rr"</code> and <code>"none"</code>.</p>
+<h2>cluster.settings<span><a class="mark" href="https://nodejs.org/dist/latest-v4.x/docs/api/cluster.html#cluster_cluster_settings" id="cluster_cluster_settings">#</a></span></h2>
+<div class="api_metadata">
+<span>Added in: v0.7.1</span>
+</div><ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" class="type">&lt;Object&gt;</a><ul>
+<li><code>execArgv</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" class="type">&lt;Array&gt;</a> list of string arguments passed to the Node.js
+executable. (Default=<code>process.execArgv</code>)</li>
+<li><code>exec</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" class="type">&lt;String&gt;</a> file path to worker file.  (Default=<code>process.argv[1]</code>)</li>
+<li><code>args</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" class="type">&lt;Array&gt;</a> string arguments passed to worker.
+(Default=<code>process.argv.slice(2)</code>)</li>
+<li><code>silent</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" class="type">&lt;Boolean&gt;</a> whether or not to send output to parent's stdio.
+(Default=<code>false</code>)</li>
+<li><code>uid</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" class="type">&lt;Number&gt;</a> Sets the user identity of the process. (See <a href="http://man7.org/linux/man-pages/man2/setuid.2.html">setuid(2)</a>.)</li>
+<li><code>gid</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" class="type">&lt;Number&gt;</a> Sets the group identity of the process. (See <a href="http://man7.org/linux/man-pages/man2/setgid.2.html">setgid(2)</a>.)</li>
+</ul>
+</li>
+</ul>
+<p>After calling <code>.setupMaster()</code> (or <code>.fork()</code>) this settings object will contain
+the settings, including the default values.</p>
+<p>This object is not supposed to be changed or set manually, by you.</p>
+<h2>cluster.setupMaster([settings])<span><a class="mark" href="https://nodejs.org/dist/latest-v4.x/docs/api/cluster.html#cluster_cluster_setupmaster_settings" id="cluster_cluster_setupmaster_settings">#</a></span></h2>
+<div class="api_metadata">
+<span>Added in: v0.7.1</span>
+</div><ul>
+<li><code>settings</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" class="type">&lt;Object&gt;</a><ul>
+<li><code>exec</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" class="type">&lt;String&gt;</a> file path to worker file.  (Default=<code>process.argv[1]</code>)</li>
+<li><code>args</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" class="type">&lt;Array&gt;</a> string arguments passed to worker.
+(Default=<code>process.argv.slice(2)</code>)</li>
+<li><code>silent</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" class="type">&lt;Boolean&gt;</a> whether or not to send output to parent's stdio.
+(Default=<code>false</code>)</li>
+</ul>
+</li>
+</ul>
+<p><code>setupMaster</code> is used to change the default 'fork' behavior. Once called,
+the settings will be present in <code>cluster.settings</code>.</p>
+<p>Note that:</p>
+<ul>
+<li>any settings changes only affect future calls to <code>.fork()</code> and have no
+effect on workers that are already running</li>
+<li>The <em>only</em> attribute of a worker that cannot be set via <code>.setupMaster()</code> is
+the <code>env</code> passed to <code>.fork()</code></li>
+<li>the defaults above apply to the first call only, the defaults for later
+calls is the current value at the time of <code>cluster.setupMaster()</code> is called</li>
+</ul>
+<p>Example:</p>
+<pre class="sh_sourceCode"><code class="lang-js"><span class="sh_keyword">const</span> cluster <span class="sh_symbol">=</span> <span class="sh_function">require</span><span class="sh_symbol">(</span><span class="sh_string">'cluster'</span><span class="sh_symbol">);</span>
+cluster<span class="sh_symbol">.</span><span class="sh_function">setupMaster</span><span class="sh_symbol">(</span><span class="sh_cbracket">{</span>
+  exec<span class="sh_symbol">:</span> <span class="sh_string">'worker.js'</span><span class="sh_symbol">,</span>
+  args<span class="sh_symbol">:</span> <span class="sh_symbol">[</span><span class="sh_string">'--use'</span><span class="sh_symbol">,</span> <span class="sh_string">'https'</span><span class="sh_symbol">],</span>
+  silent<span class="sh_symbol">:</span> <span class="sh_keyword">true</span>
+<span class="sh_cbracket">}</span><span class="sh_symbol">);</span>
+cluster<span class="sh_symbol">.</span><span class="sh_function">fork</span><span class="sh_symbol">();</span> <span class="sh_comment">// https worker</span>
+cluster<span class="sh_symbol">.</span><span class="sh_function">setupMaster</span><span class="sh_symbol">(</span><span class="sh_cbracket">{</span>
+  exec<span class="sh_symbol">:</span> <span class="sh_string">'worker.js'</span><span class="sh_symbol">,</span>
+  args<span class="sh_symbol">:</span> <span class="sh_symbol">[</span><span class="sh_string">'--use'</span><span class="sh_symbol">,</span> <span class="sh_string">'http'</span><span class="sh_symbol">]</span>
+<span class="sh_cbracket">}</span><span class="sh_symbol">);</span>
+cluster<span class="sh_symbol">.</span><span class="sh_function">fork</span><span class="sh_symbol">();</span> <span class="sh_comment">// http worker</span>
+</code></pre>
+<p>This can only be called from the master process.</p>
+<h2>cluster.worker<span><a class="mark" href="https://nodejs.org/dist/latest-v4.x/docs/api/cluster.html#cluster_cluster_worker" id="cluster_cluster_worker">#</a></span></h2>
+<div class="api_metadata">
+<span>Added in: v0.7.0</span>
+</div><ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" class="type">&lt;Object&gt;</a></li>
+</ul>
+<p>A reference to the current worker object. Not available in the master process.</p>
+<pre class="sh_sourceCode"><code class="lang-js"><span class="sh_keyword">const</span> cluster <span class="sh_symbol">=</span> <span class="sh_function">require</span><span class="sh_symbol">(</span><span class="sh_string">'cluster'</span><span class="sh_symbol">);</span>
+
+<span class="sh_keyword">if</span> <span class="sh_symbol">(</span>cluster<span class="sh_symbol">.</span>isMaster<span class="sh_symbol">)</span> <span class="sh_cbracket">{</span>
+  console<span class="sh_symbol">.</span><span class="sh_function">log</span><span class="sh_symbol">(</span><span class="sh_string">'I am master'</span><span class="sh_symbol">);</span>
+  cluster<span class="sh_symbol">.</span><span class="sh_function">fork</span><span class="sh_symbol">();</span>
+  cluster<span class="sh_symbol">.</span><span class="sh_function">fork</span><span class="sh_symbol">();</span>
+<span class="sh_cbracket">}</span> <span class="sh_keyword">else</span> <span class="sh_keyword">if</span> <span class="sh_symbol">(</span>cluster<span class="sh_symbol">.</span>isWorker<span class="sh_symbol">)</span> <span class="sh_cbracket">{</span>
+  console<span class="sh_symbol">.</span><span class="sh_function">log</span><span class="sh_symbol">(</span>`I am worker #$<span class="sh_cbracket">{</span>cluster<span class="sh_symbol">.</span>worker<span class="sh_symbol">.</span>id<span class="sh_cbracket">}</span>`<span class="sh_symbol">);</span>
+<span class="sh_cbracket">}</span>
+</code></pre>
+<h2>cluster.workers<span><a class="mark" href="https://nodejs.org/dist/latest-v4.x/docs/api/cluster.html#cluster_cluster_workers" id="cluster_cluster_workers">#</a></span></h2>
+<div class="api_metadata">
+<span>Added in: v0.7.0</span>
+</div><ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" class="type">&lt;Object&gt;</a></li>
+</ul>
+<p>A hash that stores the active worker objects, keyed by <code>id</code> field. Makes it
+easy to loop through all the workers. It is only available in the master
+process.</p>
+<p>A worker is removed from cluster.workers after the worker has disconnected <em>and</em>
+exited. The order between these two events cannot be determined in advance.
+However, it is guaranteed that the removal from the cluster.workers list happens
+before last <code>'disconnect'</code> or <code>'exit'</code> event is emitted.</p>
+<pre class="sh_sourceCode"><code class="lang-js"><span class="sh_comment">// Go through all workers</span>
+<span class="sh_keyword">function</span> <span class="sh_function">eachWorker</span><span class="sh_symbol">(</span>callback<span class="sh_symbol">)</span> <span class="sh_cbracket">{</span>
+  <span class="sh_keyword">for</span> <span class="sh_symbol">(</span><span class="sh_keyword">var</span> id <span class="sh_keyword">in</span> cluster<span class="sh_symbol">.</span>workers<span class="sh_symbol">)</span> <span class="sh_cbracket">{</span>
+    <span class="sh_function">callback</span><span class="sh_symbol">(</span>cluster<span class="sh_symbol">.</span>workers<span class="sh_symbol">[</span>id<span class="sh_symbol">]);</span>
+  <span class="sh_cbracket">}</span>
+<span class="sh_cbracket">}</span>
+<span class="sh_function">eachWorker</span><span class="sh_symbol">((</span>worker<span class="sh_symbol">)</span> <span class="sh_symbol">=&gt;</span> <span class="sh_cbracket">{</span>
+  worker<span class="sh_symbol">.</span><span class="sh_function">send</span><span class="sh_symbol">(</span><span class="sh_string">'big announcement to all workers'</span><span class="sh_symbol">);</span>
+<span class="sh_cbracket">}</span><span class="sh_symbol">);</span>
+</code></pre>
+<p>Should you wish to reference a worker over a communication channel, using
+the worker's unique id is the easiest way to find the worker.</p>
+<pre class="sh_sourceCode"><code class="lang-js">socket<span class="sh_symbol">.</span><span class="sh_function">on</span><span class="sh_symbol">(</span><span class="sh_string">'data'</span><span class="sh_symbol">,</span> <span class="sh_symbol">(</span>id<span class="sh_symbol">)</span> <span class="sh_symbol">=&gt;</span> <span class="sh_cbracket">{</span>
+  <span class="sh_keyword">var</span> worker <span class="sh_symbol">=</span> cluster<span class="sh_symbol">.</span>workers<span class="sh_symbol">[</span>id<span class="sh_symbol">];</span>
+<span class="sh_cbracket">}</span><span class="sh_symbol">);</span>
+</code></pre>
+
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+    
+    
+  
+
+
+
+</body></html>
+------MultipartBoundary--jYONWjpiUr8Y4lr9okAORprXSyDCKOFGx5bjlwSeW3----
+Content-Type: text/css
+Content-Transfer-Encoding: binary
+Content-Location: https://fonts.googleapis.com/css?family=Lato:400,700,400italic
+
+@charset "utf-8";
+
+@font-face { font-family: Lato; font-style: italic; font-weight: 400; src: url("https://fonts.gstatic.com/s/lato/v17/S6u8w4BMUTPHjxsAUi-qNiXg7eU0.woff2") format("woff2"); unicode-range: U+100-24F, U+259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: Lato; font-style: italic; font-weight: 400; src: url("https://fonts.gstatic.com/s/lato/v17/S6u8w4BMUTPHjxsAXC-qNiXg7Q.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+@font-face { font-family: Lato; font-style: normal; font-weight: 400; src: url("https://fonts.gstatic.com/s/lato/v17/S6uyw4BMUTPHjxAwXiWtFCfQ7A.woff2") format("woff2"); unicode-range: U+100-24F, U+259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: Lato; font-style: normal; font-weight: 400; src: url("https://fonts.gstatic.com/s/lato/v17/S6uyw4BMUTPHjx4wXiWtFCc.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+@font-face { font-family: Lato; font-style: normal; font-weight: 700; src: url("https://fonts.gstatic.com/s/lato/v17/S6u9w4BMUTPHh6UVSwaPGQ3q5d0N7w.woff2") format("woff2"); unicode-range: U+100-24F, U+259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: Lato; font-style: normal; font-weight: 700; src: url("https://fonts.gstatic.com/s/lato/v17/S6u9w4BMUTPHh6UVSwiPGQ3q5d0.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+------MultipartBoundary--jYONWjpiUr8Y4lr9okAORprXSyDCKOFGx5bjlwSeW3----
+Content-Type: font/woff2
+Content-Transfer-Encoding: binary
+Content-Location: https://fonts.gstatic.com/s/lato/v17/S6u8w4BMUTPHjxsAXC-qNiXg7Q.woff2
+
+wOF2     :     rT  9¸                       ¦Hp` D
+¤ ‡xƒB 6$†v …„E¤aUj·ƒ
+îv›(jq¥G"ìÔâÔŸıÿ=ÊnEÓˆW(;,ì°°£ª¢ œº‹¨ä4HWE¯ì Ç”Ö·,K,±$ĞK8õG]zH iíÏ¿Ó¼³…%ÈÃ½š_ãX–/r#'š˜+î˜ÆIEşÛüïsfæŞ²$²½HüŸˆ
+£‰ñ¯ŸP½:œ4´ÍÎÂÀ ±¡J¥B$DJPP1³æ¬˜Óu¿ûí×ù¿íkU_9?’‚cæÕBÖ–H¡Z#6¦3ĞÜB‘7Ymº($ûÁÖ…˜'hÈÛk LÓe²ÂXÙÒ#P—QŒq}qo¤&#ºı7u ùÅN¾=3D¿9æçmJ)²ˆ­øN§çV“ä
+àÿr-TDi9ó2) »¹Ú'…ŠÀ•!OqË¼¥Ñ9JŸ"‰$$’^&U;2º¦œê#üÿßœÖ¼9ê[r2ˆ7\`ú±dèºì.±Ó‰¯ÉÕ±”(e8eº \H@*K—–Z m2+­ç{ßÏ fz~ÑÖÆ×íTCûZÄ‚‚¥~ZİæNË·ÿÛ„w<¹wBÈC~cá[ƒ%L
+LóoS]ïK¾F.JÄañµ¼†­cßŞ÷õ¿¬»ÏÎ‹t²ë‹\ğ™C|‚¼'HRB’Â²ÄS	`¶v_˜†qjç¥–ÿÍ^] Œ¹ò	‡DÊ=ruˆ!$·’­áË“_Xü{ñ¼½s£ìg+VTÄˆÏšZ³NR ÎY«ÈJ	¾ãsjRËéï#Œ;à²eÎ”kluñí%H®²¤Ì¯” ˜„LÀ}ûÎl-xéxc5€â	8)#ºq¿xº¾leL$\p×ÀGxä×}nVğ^òšGĞ¹!¼ÎOgNéšZäCÄÁ©#jsêW.:iğ<ÜáEu§6õèDÔ.ä›ÊøL?:iÄ!x%ÿîô¿&³=Î¤wSKÓ™³‚¡sBÙŸüÀ@½ı»4NÃ€¦pGş'§B±WÄ¿HÁoDš“¶cóGà¦Œ?`‚@@ÁÄÀ‰/	M˜³ŒLÌ,¬lìõ²W½é}®Üyòæ/\¤h±%ƒCBK…•.^¾BÅJÊ*ªjêšZ:ºzú-Y¶bÕš?ıíÿúÏ¦-ÛvìÚsàÔYç]EDFEÇÄÆÅ'$&%÷F
+:…Fo’¶ö›ùoÙ}Lß¯£ÛŠ=Ç/Ç%ïÎCŞäã/$Ù)Õá¡No0š‰aÅp‚¤h†åÖËŠH²¢Nv‡óGtu.CÁC<NşA·êíº{÷™2ólÃSj.[×:ê¦‹±,y¿Âÿ!ÚQ+Õa¥we~–Ï
+T¬š·:¡«§o`ávuíiİy—Dl#5Ô47‚v‰|×­JŸæI[é¹M‰7¾ïÜ{ĞhD§7M!`Åâ$E3,'ˆ’¬¨ç37}<ñø	İ§{†L™¹?$«š:ºzúfñÃ’e+]Úûı»ÚMI¤¯ïÓİpÕîeC±£[¦h†yªá¹^Ş¾6à"¹óô¼âãŸ ºØX„1j2F7—´T¨J1Y^‘ßìî5wuBWOßÀÂll€bÅp‚¤h†åÖ“¢$+jYÎÉ±“9=v¾—6®´ÉëÇ!ù®?š£à3ˆ«
+Q7kH;í7Å·úèGfÓŸ¯sıÙèy¾÷)ÇóğÂËqî<–7ùø'ÀÚ°·ˆÄ>Š»ÉnÂŒRŠ°¾é\eTv>M>W…Šµ¥n<4Ş`4ıfw[ÄAP'HŠfXn=L,!+êTrX9v2§ßÎ_vã®nK0“ª9ô2›qÄWÂœh¤dİõ< 3…0H«²ª‰´ç~3ù-éí:zù©…çxáå¾æsİr“§çM>ş	8-œ¦Ig•){–W¶”†¦ÓŒ¦A0‚b8AR4Ãrë%¢$WP§f‡“GtÅR™Ñ,c•Í8â+‘ã ï€ [õ¨îò=C¦Ì<û•ó oX6â6f%§à=$ÔJÖáR±æY'tõô,Ìéìy—Dì"5Tß¡±¸%AşèKê#†îƒâ=™2#9–²ğ¬¨šU]=}.‡ H‰|Ôz£&˜0&İïeä§Ğ³(tÌ‹ËŒõ§Ö^’OæÆÓ{-#(†$E3,'ˆ’¬¨ç“üãïËYŠ_şEÿ<-TÛ  No0šÎ—ü'ş‹7ÎïÜ{Ğh!A1œ )ša9A”dEõøıÁÌk+µPmknüß¹÷ ÑpuzƒÑº…AP'HŠfXN%YQ=şÌ’ÿrpU~åOsïA£ı}WéWx‡B!„B!„ğ]<+¾|ÀÂöG‡Gå¯OöÏÏB†avª6X½ÿØ@A@·êgº×÷í(»©l†ûêŒŸLİæ~kÙQT
+ß6â+f%u…QÄ¥:lÓF2„Ÿå³«æ­NèêéX˜ÅOK–­ìjùç.—pF2Jcq	gä#˜º	ÂH‰|SxÒÒ+)«¨ª©kì/–(ÁÒU¥BjH;í7]ßêú£)º1ıÙ=kH¯Şe‰‰!‚ãâBNññmÜjòİÎ AQ+Õa›Î.CÙMøTŞ*PÑ¶TYU5uiutõô,ÌFÅŠáIÑË­ç
+ˆ’¬¨µïáÜ‘;ÙK±+–@I†Ê€^F›qÄWÂœh¤dİõ- (¼ÌOPÚ>îg¸azn·ÙÆäÜô³˜Â”¾•UTÕÔ5Z}%t¬pG@]Ã0æ®0&m)#_Á:½u®(Ğ±à^?RşŸ(””'Ge€¸w ”œuşsp“
+Å5öŠõôêS$   jé´«¥|~ /e=;^!_}r   €vJÊÁ¬O‹û~ú=€_qæxšA6*³š´gzîgHLÍ–Që[pôà]˜*¡\U5uV÷QB/c–åmî:löíÙwøG»ê+¹]ü¿¸É³	ÖÏæÜŞ^xÉÃ7?
+»HÇqÇğ/Œ¢ }XŠáIÑË	¢$+ªÇyå›O»?ı–¿şeÿùcß¡YjÍå^:_jE#TòP“VİøûÜ“í¡eÈdRåë˜âh×4Ä—¸@Ç-hŒwã9½å_®2™r`=À^ğ]q­*;¥ä«fdÿïÇÔx,ö® €û1Tù{d`Ğ…ÌqDÌ‡=`~ÏºšªËÿë‘›WóQ>YÀ 0Q,&ÃÄ
+û£±XØÿòeÃØLkšÀ1¡˜ˆ´ŒLú·şæ¢iuÿüûéß·Ï‡ŞsÄAû,š’øüè¯ä¦éÒ”w7~ôˆÏ‚-n·¬™cÉÔx‹Ú¾²´Ï=xqçî>î’‡_¼Â†ÛE7Öä·;¸™áX•1 A»Ï`À›ÄsCy†÷.jEë`DÔBô{ä†ÂîÌjüÖ‚KÎå.	¶âÿ‰o–fã³}"Jmi©ÀÀY«Ba®“tQÖL/&ØÏO¤ğá,ÿ.O"N¯áßw#Q¥£y­)^–“1xNIµç¥›úÂ%NÙ”R¦íU6¾dQäi˜ó‘”¼M¬†égcşƒÈ¾‚2Ñİ:™TO‹)“ˆ9hê­¹d\Ã&È=cxl@‚octMk£>á¼F k¬RByL­'Ği¢ä@>çÂÔ(qµÃ‡Ì¸%ie"Ë0.ÛœÇ“pthd»v¨ØŸ¸«@ğ‹E…f«Ù¦­å19µ=*WK¯”©DQÇ!5«ÙŒï©ŠÓ7Äºcê‚Î31{…S…&] ÃùlÀ2„D…Ì:\†³r€ÂÔE­…è/œé2P5®3`.ö«O ?÷vœÖÉ®„å
+J×ùø7‰ºYùÀ‘—ğh!&É=˜g Í±´¨~åò!â.óAµG;¹¬•gâ@¸ÍÓğ²³,¾Qæ¹làÓV®óæ)äZˆ‘g ©dÁy úm»²Wæ†¦Vû9G¾9—,ë¤×DŞ¹‡kZV„‘Ü°1Š’KÎ tÂ71*»VVÿ;"•fCo{^hæd\°<ƒ’;p8‡vv)s{,ù;•V¢ru=ùù~wÓ{¦jD[s †§µ±&+¸µ<—%*OTlI~Ş‡cÌr—™ÓÎ'e«Œ_2š¾ïå*V÷öÆ±„Éš!€ìR&®?ƒ¥şËTŞYš‘xÀ¤É	—ì…–I/àœÊ,¼îÃÍ (¾ŸÒE[\û@¥>V^ŒìĞT5ŞàwÜ#2jÁ“%¦:XQ~Ç¦ë/ W!Œ¹(&ë˜MsºêA™ò­ò­†Ş¾Ã-åz±Ë„Ÿ’ã%v yıÍøßò±D ¡Š†ÇSóŸ”lqKÔu0ø¡Î®Ù¡EÁäXŒÒ^•Î!“Š¸/+SÔÏ¥İ­Ü·ı!œ‘c–‚ª4Öi54X=°œ¯„F]î­-ÏÕWúÌ7A„çé÷ã2–B|õ)•ÖXXh®Í7Vû‹P\’¸÷ès–‡2åÈ8á?`Üªâ$,Á¨Íª{ã,Å‡›ĞFÔ¦£s­.{ñÔ]‡Q4âüöÚüûå°1x–IØ—u6¦µÇ‚ïÛ^eÇ)â@Ìyïp?ğÃg*Üi»á$*£Dø¿Q&ß"zÚÖş? õ™fR1fu%*/°¸Ebµí•ÇBæÂp…€æé¡“c‘óãs5Åä}Ar3Ì‹ğF¢Jm˜¬l]|sGÕÚzcÅB|_l-Ïu7^³rı†È×Û&Dİ>g.Ä•Ùi	ÌÆY1˜¬Ä¥«P÷µ;jx:5ËTéÅŞ´D¾ÌÖ"Àã÷…ƒPÁŞy1¹¼‘’q4tÛ­Á/ihiçµ.ÙıMÆ&!ÃÚI;'~–Zñ^Îcñ;'Ã:Áäğ9†ÇÉ»u–á^T©¶ÜŠ	¿Š´%=ü7AS`ZŒ­rd5Ş/&â¥ïXˆ,¦¨ìîuü[ŠË%ZA¼®²¢“¯|dâ+by”ÌÜcÛzC»u.Tº(]ÔqŠ}â^UßÌExEÇj—©²2.%ãe`¾IpÓt¿A»Àv¶•-ÕP2WiQ2_vk‡îo"s%@f8?±ğyZ¾ßãbÔÏÏÒÁ¯İÙH}+T|~˜ôW-ğ€>İÔ©w5•yÈeÁ¼m<+š‰!ú/]ßÕq€æTù†õØF‡T9è™¾hÚ4Åm yó:hàÂšˆ¬&hÒ<kÑ™xÃ3ĞÃ¡»¶¶Lâ¯ŒºŒ­ä/H±Ld"ûÓ/àÁ‚AL?”§#–­tìà(¢”)´—.`CaK˜d!ó©ù¬]å U…Kâ¥aÎsu¹©1CãVnË.Y˜]±{OgÁ”pÍœ¢ˆ=88½Ñ¸Å»6q£v`ĞÄRü#¯2
+ÇÃà1H< 8(T?ãgN_Qù	¦¡Yšˆ˜g·Õºà9b~—“Y\J¿Y‘A… R2”%Fò‰v‘ æ¦i(şÁôÅA42¼£æc¤ÔL 	”ñ™*q1ƒ*Ñ3†ºŞĞ†}ƒâW-{ík£6Êyûj!’&Bt îÄ(ğuœ
+OÅó))?xWp±
+á·A	–"ŒÙ29üCA]¤>qèzænV)pµ˜0¨7õ*yµÎNÔÿ*$4(Å¬\ÃÒ‚Ná›©m½ê—‡D9(;“ªª×©ëã¼é¦ßGZ¥ ©pØ4‹Òû†O`„!¥¹l”8ªPê öÇW‡ı}7ÉšyÑÂ$´ÓŸå´…xè‹l×÷5—7©•¼ìøÂ3<Óa3ğ”×n¿*‹™=÷\v(EŠãÌïòdåóø×ÂµSÁ³	Ü(=@®{$p=ûg„=ë)cÀ–‡ƒØ¾o:‚Á¤ƒ‡’.íú¾•Úà.=:­ô•2ó!YÖÊï~_M¹p*©˜ºÅ0Ç§å¿WÏë´$^²{—L–nc÷!í'X.Nmô º+¬`´•ÖeöÂb«õ€õ9«¯'÷ğ‘WÃåÚÿÍ¯z7ˆàÊkøSr[ˆ(0í¯'“§æ0´2x“ñ›˜å'Ã¿J\ÎPJ4¾3kıìŸçUÜÚœÆø¦/6(dxßAº\éiŠ¡ü­n0¸ÒıÒ7>­èËãÏc/n;guœ’+¿‘ñ“^İ&²ß”“Zİûà×òsRå3ZM’i
+Zeà.ePˆh»a»òøÌQÿ›qzßkEÎ2İ>yu0®úëÜÇ)VöªŸkŠYôcGƒÖ×Æ—Uû˜WgSê¼ Û®Êa#˜Í¢ô<,ÊMâlØÆ[ì)øYÌ»çn>ç’éd_‡ÚixŒ†WÇŸ‚-U°AQgÿ™¡¿(¤£SdòB±ä»Wì­¹ƒp¶SLÒŞQ?®+üÜIŸi{¡–ÕÛ£>5j·cwÔÌáŒÍÎrËMæÔÁŞa<lù¸«$ ãÙøòŒÆ°˜Œõê´Œ¢³„ƒy¢;³òRx¿)­÷éfœv3˜H˜ñºQ•R¸qš“™RdÎbZ=’Á!ô’a9”ä—„qñÀ»í—ÚP„–jV"kªÓÌ›MÿÂp+Æi„ƒ•pëÙÍ(:¨;³Â–Öpñš1 ‰šÚéé
+ÃüDÈqä!ñf,šO¬s„Æ¼ÃíŠ7´ğçPçÛ‰zÏ$Ú¤ü1<ŒyŒ¢hó@$™’—åÕn‘¹[œÊË›0.Ë9lË0ea“9îåÚG©½˜ŒåjmM8ìùvÅwP?zPs½ù]x«<°â\Åo…UxZ;|ã¯µ´¡šÓ/ùs#5è±2Ò”‰0?—©¤Y>¾0:gõ…ÎCX”ƒ£ÀdcÊnL	,….tõS„È<€+Eƒƒ‚g‡™C¤$R›Á,87WÃNiã'# aÿ&tg‰M<ñWgû«‘âZ÷ÄÊ]Íf:¥RQ’Œ¾ŠTtw1ï§Ù~µÊ3Rìê­É¡53~+íïªñ+{¾`5>~Wƒ9õ`NÁõ2êæ
+ş'@)Ú§BîÊ¨poœrş!–áD¸:SÀŒğ¿ÁÔb‚é~s©tó¾}†h+Î<*Œck¸ƒâ¶_®."y¤„Ã9Gû7Òº¡­z°¤"TÀ†"1ªfmè¢U2š¦zT¾êN{g=¸¬L1@M4¥A2¥´3ºŒş;™ê‰lKõÇÿ©F­}ƒ¶»ù9bV	V’•`¢§G*ošVpi²6ß"ØıìšğÎgñ4	‹‘Xç:{Dó"='×Şñ		ñ¾SL~†|·ı.àµxi¼ğ6 ãXf˜´Ayğüe—‡{¾gHkfø“Q·Ká¨P*½
+¿è†ÂRb0ÑKÕ/#Qjô:æö¯ŸR ùÂîá]9ˆ‘à@V­ù¯ÇÖÿ"Ã»f“¼‰a_ÜqÊ¾FˆÚq[\åë?ŒÌY½ë¯Õ»ÁÇ`º«ôS¤¨İ;é”CÔ#½£ËëúÛ)û8nò;Y”)c+¢`;8ä|"ß»$ü~Ù,£Wkr¹‹íÍ‡åÕáSÔ'Nìåğ„*éÿƒ›ARµlşæ]'¥X’Q¡,îí8¥iE¡ÜBr¾ŞˆælR`Ïş-ÕS”9	¥/·%ıÀã&u7Ä^åx?Z.·Ø˜‹…Î¶4.İ’ÀËÆU‹l©KæòtÑùVTÄÖ‰©q†WD‚(š&ªWSà¶gd¼“"ŠªmÒî=Ò!¶¯¿‹èREÛK…eíi\º¹s¨°S¯ÀÕÒÊ¢O*Ô¥åTqø„»DuÉjŞ™éò´Ã8E‘Eææ±S‰4u,“‡6¥0ˆÍQÜµ	ÜÔ± 	oª7=~ŸC¾içŸ)lµèŞ:z5«ÈVSj¯Z™2jnìÈ£ã¸¸î,}ªÌ9›úGÇênåFQ
+wå	…Ù»ë3êŞÓ÷V È6¢6%.¢xşPÄ1!1y,ö8t9wí£˜jÜ""6ö‡|,­«{¥ø1Á€ÏR¤›"6%L …WtÌ÷@[37`.rË
+	®s`è'’ºú/ïÜàYkèhm×şßİ6Œd·=…JıxÊA•LÙÿrt7‡€À Ğ«Ú+°©—û ûÅí·od§ñ”íë†N[ğ4B®„Ëã)û—‚z—RN–ƒˆ…Ôı ¥Äá¦E}òÅ/Q„Ğ"rĞxå»[ÿ•¹8Ó?…# ê7İ€M_ğU(ôR8ê4Î†^D…_„âsèÿÓKR‚ğÚS2F
+$»vn’ÔOqÍ<·Êv=|VŞUô›š¥¤s÷¼Üİ+V»ÆP»Ì…lÁï–;í$ú‚>J•ıÚ ~íOó^şš{‰ê'Ë>©óó
+êÿÀ¿¿+wŒè0Ò{4ùôyë`_§”wpÕˆ÷êTˆ%ÒşA9„öº+áÔ5æÔ'4Ó°êO´áÔÚõ8Çşø0¯Ã*]`¨µx~Ğ±‘»´#«6µYªLlÉ6V2yĞVlÛRmeŞşé¶óÜrû<Á™Ï*PFêağCÊ?“u\F~WÓ®3êXäH•‚Ù]ÔvÆãÄÒPj´òãÜ0jı:W¬}|¨×f¾#jÛÿ^ ßw`"ÚÖÛšHˆ—º¼yçVÈ±’« €EÁ'¦_«ï©1;×ÓËl´au—ùö†Éû9®¬š‚EêS¶Tÿ‡+ˆâç¤Ûìic:FŒYÌ«Š‘Së!|hIÔåuÛäÙJå0Å^ÈX­¯É=3;z]ÙT¼Èª¨¢/f†7Ñ[t,ÁŞo^ÄG-~z_nëK°=cÅóÅ¶xr ¥È’ÚW,Øq™ÊştKAJ' ÷Zñn“Ş|²Å2ABìüò+ìÏP!Ä3°ğ
+²m¦ÖY2Ô[ößX—P[4]l¯íª=”å4MÒì¦Ô6QÿÈ™A|¶}ÑåTíšhº”Y<œÓI0ªI"Ş(§£Ry­1rzSnjŒN˜iÃÎQ×ÒD´ƒFˆP,é£Y’j¼\WÊLSp@J¶¼—T˜Ÿ6 uªM]PÔÌ1Ké³IdÓ•ëJå®ÿóåoQÿ`­ÿ„q{Š¨¼ÁÄğù8¦´b4PÛd®ŞegŠÁHrûxA|_ÈaÂ/h6„ä½ş®+4ëtP„ÎxòZöÃ|ã¡Ä¯¾üì–(*Œ¿?¬g›‚úLŒ}F€Eí8ğSÖGâ/£éâ‹ƒé¢ÚD¥4ÑÎÒ]b.3‡ùán±Ùo)E*çè2$b²)#§À¨¦«#·U„ÎïŠ}ÚßKÌI‘Zê‘©HÈ"ìã`5™îÌl4•6)&ñÚ,¼¿¿4"¿?à§	e]„CÎFş¡V×n–cÕ/ÇîU ÷+NÌ\‘7’!'íüÕÇ…±Ş+{ª7OÿX°ÿ½‚ÿ6w³¾*¿>¿}¹ñVV•ënÎÒ¼ñ³‘nÁ§®õëwÃ—gÒu!¼òø„Di¯¨¨>!ePÄÀú©°ø
+‹d›¥W2“¼²x&"fèÛ~•1€+ü$‚w°‚‘‹»k7ãK5”&)× µVË¥Á=½Sµ6ÑöÁæóÜÖ[™¡”Í‰JE|•°°»¶×§ÿKuK’*;¾‚[Ú^Ò÷°sŠç@*Ğ%“ïƒ}¥pTÇ»Úm=·òÇ¶Ë^¯>Õzó´mcv{˜ƒ¢2³­ì X³€X¯o¼aİ¯]Y¬a*iç¹(ÇkñW?…¹¶şF.ş0ğ±qv«òÕ¹ÑÊ´%-³Õçr9µåŠi|oÎ;€÷h`½ú6ó7ûglF.’6Ÿùob!Xî<sq[?7”bôËAJ¢hqükĞè@Àìøä,ñ°ºzFwÜ8LÓwß<¿SõåÈ‰zêÍ'Á­;rW…WQ|1K±^ıÓ,‘áœ(yûmËÌõÊBs¹¢sÌŸQŸRw Îé;õ¹uŸ2Nû­,¦E|ÿÃ?WÓ,ÿ¼‹ğ›mHÉ–*¨~ùŞ¹O¡¯±¼˜‹¢ÑÎ÷¢6±*D9ôV¬ï¡[`ƒ¾gÍ¬ßÉjÕôI¿•ÅS qC:lÃ/~ÍhÜwÚ‚°¦Úà§×ÃFÁ^‹Û}Rbàãìƒ¾%Šè‡œğ„ûàâvÜãÕa×›Ëƒ@HìbXÅrÜvq0æã‰Øñ$nAÈ³mqs/78L¸Å/¯©m´‡Íî,½˜^1pß2·3çíêãuÔëOaí[¶³[0·+ç‹scUé‡KÚçø–¦+ã‡”,êPy³<KËËøÁœ?€ª0nİki´~Wj¥-uTW'==¶ênö`Ã·RıGy½4½™Ğ“ÍŒÎçsJ±Â.ßŞ´R?³˜SÓ0ÃX^èeˆªÊî»¶Ë 5Üë[ëw’*)]9zÚ¼µiµF_¦°vRÄ×á±Äı|Üñ¼^’A‡oW×¯oNÈ„jvçb³8¶x &?5…$RPíq¥	vŠBJ*••ö­:¡lì¹nçäqmğÓü4^.¬NÎV$VòÒI¥W[Lº¼JCÖ–æö}ÒÊêC¹t	 _„¯ßå{ùŸ“¸æöÀÖ®ÕP†½’³àg-;O¶9ÛŠï¯[º«o¯Ù'nêÉ8RN(hp§·¸2x,L×.3V“ï+‹óa'xï€îÀléÃ(ùOQs@wvèüüâÀ¹8öyŒï¶ß"ãa^ Mò=¨¿Õ²B“Ã>§i¿IèM¾‹aÓ½§¨"t÷şâœ’$„Û®ÔD"”»_ÿQ­ÛƒŒ¬ú	\¨X9táİlÈ6¯İˆsLmíúƒšYÜ)à [Ä>%b†l+Ø¶¶şûŒõ¤'.ùwd‡®dï/¶GM»<÷
+¾ğ¬-r‡ş‹cşl-€‰
+ø=\ïÍƒ?D.øëè‹pÔÁú@ Ğ•}RÌ–àùk’h7€üÇènğáÁo¯õÑ×"J …@ÌÛÅú’Á>hCç¥Â«IöÇåç;ÃÀÀ®À†O€ ¯]èåùòŸmˆöƒ ÀÀÓ‚ŞÎÒ”š%øt¶•(0ÅèLø½š…†®	ó6ª‰Û†8}C±°s+$sá†¤|íV$»&Î*TÑĞ}ÂŸ%8öÂ!ı-³Ş^(,Kë<õ¾&z[æœ¡§² ;U¤îãoôç´®Š¢¹ÈV–É©œĞ¡AyN|zJ~²\Æ²'Ô#ÛØÍyí |Œn–[ğv(Ó0Ä2U×šÛ³_®>p¦´Ş¾JDå§óôaàÀİ9¡4a›,¿7åHIf¸=]¤ŠK#aù=à­ˆŞŞÅô£`÷c9Fg±¬<!½oâôQjÀ<°üM kcìà®ö‹˜¦²œ©ˆ<XëLNSvYs¤ãÆæ¼ ÁK­4üÍ½÷C‚‡ÇšÈ2øş‹æ_!°ÇpE2¥:˜£_Í(,§-ä`–2GMÍº1ŠZQ“,æcÕn–“¦61Ú‚D‹°dÍÅÁ~#5!6+(—C¸‘ÉE>z›¿'ê­˜[ıtœ¡bsIšÉ,ùrü“%¡Í±FoØü/¤ ¹?qVFóÛÃ«c“ødq‚–)ævµZÒ«ô1vnš™®T×J÷Fq"/\ßîP4Œk0ZÂÙL{¬\š\-“¤Œ8*ç¹ÅÕ*¼’ŒíD®^ÛKMSéÙ‘…ƒÁ˜“¦NN—FXh&ùµ¾ÁPà¤iP
+°’y¯›ÍHR¨|¿§Ù—ã:ßâhh_˜F âäïÉà8¨†­ä
+ÈF£¢+BÁ	BûW¼gVáVû9•]Yvg£P°£!¡ËØL ´aÅgÓ/“+Êğü˜°Vhaö§Ş X,øª|´œïIê^
+	İ¶İöĞ5{´Í†F,ı”£ûÿl~ÃĞØ7}ÿ.ÜJúu1øĞV·—Æ#°Ì×‡Áy 8õÂ!zÄŞÛ~3²ÙGeGzl¥Ö±~ùÈé²ÚêéÕ!”$ùÀ!ù€*AN±’ó’”AJÉ‰;œ=”…ù,²”câ÷…«3ƒ ±÷l+<ğ’jğæªªº…D÷Ë›Ã%Óòr†Â5wà\‡´Y™;@8P8V5^&kÊù¯Ê	ÃHîjº­"}½GùrdÏikõïÊëmİ¯Ñ3Å@¸Î/Oad³!ŸÅråÅòŠúøJ*og®I=áy›\ÌÊ¯È™5=pÓ•¿Á’ÕúZÌ\˜éÎü4Ii1ò¬1)cş1%›Y¹NñL¸_,X`)~Güîv8Îİ¼`LšFï}…·.œ¦Kÿ ĞrÛÿò^ßğƒÉihşÍhÒg–„ÊX#Ã(¥u—M1LÖ9ÁÛd~‡
+ùûI8’iàÅÑ[â+°–´½”Cm*ÌNÓå°áÀÆ³ ÷cAæ_uh\¼ß:„Œ©$›ı{ÀìŸ%\Øƒö"Õu!ÓÇg•§ı«ƒœe­qÁ1+ò~x0‹(¦|Eo„23ğˆ™+:<ÒíR©z®”×u,Ni2¿ğ\^©ÿeé"®mIáÛB$HÆh÷Qè(úÒÊ<à_DôCÌ£<€t.”s1Y°*CäFÕNj@\Ì&ïşÿÙ:
+ëAÍ®¬
+Q·$‘ÑœME¸÷P}@)æ—›~U{òeÛÚŞDlq~€Ş„ĞV›?¯ÙĞ [°’Ä¾G3Û‰Y¤ kk§ÀˆğÛÕÕ}1hHõØƒ?|T¿é#p?'{ödô,°árJ:7Õ¿T&iêÆÅá‚­øCYšâ“ÿÑÏ$
+ÂªÕV ®ˆ.¡r6q²LYìÈ:l}dc–ˆ§Í€ûUC="ÃİR¨BG<OmeòĞÍ±õèZÀïıG oí€Zë¤Ôwıõ^çûJ8;…È.íSv®D§ø¸Ò‘ÌIq âò0¸FÕ\@dµã¹&Ì\ ³z^¤Ù_¨ƒæÏ–!<ó½JmçËtó<cšËß|_òâÖÒ–Šº²?ÜğQ~¿{ôÑ2×(şkµ_GæO¬6Ÿ@ÿ{»®­ñ¥yüjŠz¹	¨p×¤Æ–!5˜ÃÔÛHÎÚm›ˆéÿ7Ú0ßì"mÒ·ÎC¾Ùõ¿MuşyåXäAIÄMÇè•€šÄ‰ƒ(%†°Í[ı6¤ã¶(·÷´ViÛbõ\º	!Kf [;ıHp1<…[¤Ê¡ÖxĞ¾Ÿƒ„€×&Æ~kíZ“qÍÂÙÒh&Ã9°±LÖo£K†Â8n.¬1å/´[Â0vÌi«Ñ´pÂ”ô3ˆXÕU‰¤‰¹£"’bÔw4XI…}ŠU[kÒà¶ø©Ğc¶ûìÃ‹¬Ñò¬öæ°Ğiôëø4¿b½™\¬‹ãìãh`ôºÿâA GÂG€TÜ¯oC‚@ßpƒÉ$Y¸å–Èç8Ò]é)ß&É7L$pğZ†,µÇQ8“V`]Ë_!qÇòa0ğÏ’p&5'¢8B˜8Ê%iã‰Z73AM7–Äq	úL.ÕUdIÑçf¼µ•“\cz…°’—JIåkÓJH`–®à+è{ÑR÷T	{V'ó{ÿ+	Öäû“”^Ğ{Ëü!àyä;(8Gçn—4oæ×·fî²;ø»[[vòŠ«ÖğV8Â¿Áâ-*;˜)®Á+s›åŠÄ™º$)3+/tÌ'ó‹ƒv²pëÀÀ–Â4‡ã$­hƒ[²Ã‚-ƒ-ê¤ÉÇ³[¸…vÂn7&oSMÔ7Œh¶à†­ø1Í2mõ~›q¨ø›½¿´¶Fœ‹}^NŞD÷K tgàù
+ÍU	8Ys<Öé.ùƒˆ.2öç”{Aÿ2¼ÕÍõ:D”àãæMìøOIÅRı+¹nùĞñÕ(ì`À+ÙÏ¬F¼:úã¯ÅÕ K æ¿½æû) ËÏói[fcĞ×fåzYnqiŞ
+‘ßÊ^Ù[Œ-ÆeõD]ÃèÎm¡¾¸¼µï9hıæíóâõ˜ı;:Ú
+Êû¡¾]_)æ¢ÿ¸NC)ëèÙˆ/¥q±ñÛ„Ğ”Àû-P|Ş”ñ©.½ÎE›(¥%Š‹Ï£4¶ÔD
+\Ô¸ÔÆNR”$O•”„î¼H‰Í”ê~Í¦.J
+Ş"¶­ê[‡¯Ã×­	ì[Z4üÉ™Ãëi *Î^TiËÅ‡‹Iœo£®Lº	‹G„GEş+?uóÏÇßè[œQ„Â¤$N’õi´g-‡pÎ•è;Q–}76‚ïI¤³IfE¦“BW…E‹&ŞD4e|´nk4V(ÈBQ„dŸÁä¦agâ³ñÔ;Ìg‘µœ¿¤(Å4
+HîúxvQ²ãçOàh yéWÍNÜO“gP‹ú¥l®ùû}Şz—Â¬°J¡xˆ§âZˆ 8Oq•‡QFzx»û¾uó‹°µOÀy76€7¸X@Û,–yJ™‘Ş©0‰×÷5çÕ³*té*}”l¹¹åj)¹Õê†€àĞ}‘°+*FÁõaŒU ÕR/“ˆóÙ©Bã¸ƒöZ Èãålêòº–üÁ_¥®¼;]¦èhõ3‘İL3#ˆ.bkHıZs3EÂ²lkb­lõ§±ÎÜBñõ4†]r6‹*ˆMâÁ-tyV.ğ0‰•‡B®ışèÖpÈ€	Ü{£Óú”÷ÕŞÔ³€<Äáräa”Î˜¾İœ~q›òM¤ˆq%Ÿ-–¼×Ná^?÷Ä™/ÎÀÚõHÁWÀLÊ¡ÊcÚŸ!JNåñ2È'÷œ–»7Z¿œ é’aÒõ<oÛurR9l1Õöõ'~Ø8Çû˜’v6òÿoö:=7ÿâsšC~°aHŸ²ûËiº8k]P§'—pÕÄz‰FÇR¤Ì÷Ç,¹|váÉ\1C“.äóX‰oîˆN×D.Wùo‡ à¥»w ²pñ$tíÑ7 læûŸ“àWGÿ¼mÙb
+ş¶çûÏı¿Læ©Šäªó;jëÜÂ}ØSÖŠ’7?vyt–gÕÓŞFà­/šï²rò‡Æ¹­9¯†×à¯}
+qmıAµ´,><S™vÀQ{'¥eünö¯2gzP[.›Æ÷*ŞüÙ?úéÅ3İ6íPš§ì$S‰™”ßoœÓYë6
+X9Üy-\vß';WıÕØìÊŠ—d
+R5`IvHÑ¹¹Òg¢#ÙÖ¤£øÙîÈ^²r¶e&ÌÃI†˜ßºÒ')¸hèÆñ{´âÔªâÔ‘¼:ééñá;òÁ{Hùª„ºQª½7ëó j\Õ7;SUšX;I@,ŠU©Bê—q1ÿ%ı“¤çê2†Ë
+F©Jãj‰;Z…F\ø‡œ$ŠŠ$‘Ÿñ	ªx> ¦g’õR!Í"+é²%‘)™•<mc­¯t©,ı\Çúª€ÆhïìmÁù–ıİÛd€ğc¶'ã&hŒ´Šaí×iGÜ}~ëZ—*)ùïg”×ÄGÇbŠäruÇ¹±.®î_ƒÎ–î¥N6µˆ³º'‹¿ÎØë™)FŞËKl-æ«Ÿ‚au–ê°²¬²µ©eåî·4Å4{îÀ•°ğ*ªD!à¦˜q2)­ÚGúğ¶/É¥¸Àâ^Ğî˜bj7!ã!{ª¦´H}kyòò¸qmàú¼ÊçâuÁîæõ/RÄ\".ÔşUeU!®HP?¤Úš%¤h¿nğ‡j5ª\ËO;vW]¸VŞ§YM·—§¯)¬œï˜< uZ×™Hùn«ä—å‚3«İáÍÜjª¾"cwk4VuVË7±ÔeIcj~´“-ÑÄ}ÏÏõ]3¡ÎCF„ZïüY”‹§Ğ/ş]òàP@‡‘M¶¬ä÷mL7dŒ3è4eE&¯`LİûíI£ú¼qî2vÃ¸'Œ9²V¹a€¼übLÚ–ıñ‚+ÅûËÎĞW 8]Àg¡‡37	åmÌ„ÖDGÆó6±å;söãWlLğ”@7rº¶ùúwÈÌìŸê`¡á/u¿u®qÊïÛ*|µêDiêñuÎÈ{bËEû34PZTN<hlïåçV½_ÜTòïº
+Ò~S{/·ê¨µoYü}Ùƒ[-ÍŒÓ§&ËÓyùÌQÒ™ØNğº–¥*2 kÃ_ƒ›jîñqõ‚ª;-½êV¦ÊĞ/Ù®ıgjßY}EÅ„kÊ4p$7Œ¨;ÚÑ¤3uæ!kN»\?B¼ÔJ‚ç¸Òø”~–ƒ 4¤wUSĞcÔRF,':4±è"ğñt=8]hëÆ–àMÔn­Á¿ù¯Í x>&	Í·ŠQ	‰T]m˜”ˆæw7LL£jîş¶¼D(ÅJ	$=5˜ÈĞ;0ÙÁÜ¨XLöÅ1$¦#¿Ü­ˆçDÅF³/v ÛG_v¼¶Şê¸,ÿá)¤±vç	‹ü‡|Æ÷ıd‚°¨ù[ñ Ğ'@ˆ×ó]Ûÿ·Û¦ƒbRã¼èëoOÆ¤İ#¾?±Ó]=„W'ŒõY†Æ~„,şc•İ>ÈÌV¬b–!˜«
+æİ¶ÈŠì#dG€1ô¯Ûá¹¡NˆûIS·(Ôî~=A÷İğásH±Ê!7~ıxñ{Ç1]M·6_–×)fêxÜSŸ‚){MR(M±ŠVíÈ+$ë07Ã@ùÈù6d=èÖÎO§5ÕxIê˜Ï6=‡¯±?­¨Û¯vÍeÜsï¯r—‚E §jK3_ë8M÷‚”ˆ„º ÑÕ_‘Ğˆ¥µdÃ9å—B¼/áşöí¬¯Z˜_m°Çø3ê5¬†—Ş³/ƒ–‹úA¶yÈ?g(7Æ€ræJıÌ’ÅÖª]ì
+X±=î2Ä˜,‚‚§ ¹­1Z1¹ÊG¦B¬ ®ï°¬à[ˆj¦Ä7—;_U³À±ŠGıS›ÁÈü¼p—
+|“]S3Cº»hÓ
+úô/;oN!Ìß~s@‚z'sâÉ_Èw§IßI*O{êˆ_Of"‘™¸¬z‡Ê:ı —¬ ïÇÓo®õÖ@ |“_?x°©®|¼|h‡ßÊG{€€cíñ‘ÜL~X\¼ ,3Š÷c† ,>–ñÜ›l Ê’§^ÜècQ«ÒHÑÇOD¢6ô#dT¥À*¯_èVô€û:8€Ñ£P:éúIF>¥İùÌÇU…JJˆ/ææSú1À“á¡™öIÚ§æÇ…ŒyI¢¦~v…ù„ù”ùœ~,Ñcó	ó)ıXbû²±;³ÀÊ'‹®›"¹ë+e^c–W¹ifI×|ÿtİä)ó
+].–ø¿UŞSÓWi¯˜Ë%5›wI“bøŠîºÉ'Ì+Ìkt¹Ë@›‚Ì+t¹ÙÜu“S¦òhº¾M›o<fèGõ‰aeB?¦?JùªÖH`å¶l~lıŠ.#'Mz/ ŒÒN>¿5êä«”5NÛ1|ÄŞ?ÚÄHÑhõ+3ıÇ\ Ğ!µê?£ï"÷Ï²§íıa•Cm¡ÊÅ6”s½Mû±=Ãu€Å÷¯šH¿ô@Ü3¡#›\)ä`äÈ­	WSâ¾ÊÇmXúö¸µ=zÑ©l³ŠÀ'@/B©ÿ?(_9 ÎJªÌã¢gt¿îÎ±ÿ÷¿ğÅıÛÆŒ~XúõÚ»-sçË0Cïü]Àå©ıÖmç› iÜÈëmÊÕaiOÜö35(Fì=µLĞFFÿyËæ®±5{Ys	y¼²”æ-2§h´ù{~íèÄšld<ç´3_h)ê'ıÂğ.ÖzŸ½9’,
+šÑ„ªƒLÓ[(ıOıZ}Yf6Ï¤FCŸ`¯eêÛI¶ë¾zİ¤½e™©ßêMzëî~rx\kí ÉÑyLe&ô:ì³ü´o¤S”_"We)Æ®RËVZd•-ıì02¾T{éĞ99ñ˜a@×âò½ôê/"lFísêÇ/ßTXQŠÊäm”ºìéwf<Ü€’ûú{Æ°;¶)‘}Æw™ç¨lÂJº‚!ƒ%[L–
+ƒ¿CÙOR0ëµÅË:-×ê¨dôğ®	ÚX*2ÆÜ„øM7Q*4·K.¸Q0›/û—6
+ßè¾›Ì«0ˆĞJKzÛ~BÄ0uXeû ™?`ô[æ`•¢Ù,¨òµĞ
+qà§ì@!À–Ê?±ÈMíÉƒxğÓ¾Š«Q<	ÇÇìƒbÒ©œh¹¬º[Ó¾«#Nu:û¸åNQk’ô'ÃÃ¾lRgğÑ›“ÛÏ‚¤F²™ŸN*ZfË\wy†"D‰Ç¹ü¨·bÜa0 Şr7	«Éyp«1°hæÆ'æ4sçKšyĞDB3OÁÑÖÌ‹*¦h¢_ô(%~‹/ÓMZ=™S©20Ø$¦NEF	‰Ğ"”ÓS¬õh$ªWÉ*YU³ÃÈæRÑlÚˆ@…NöJ#ŒfO£2'š‰4„·^“±‘Õ©ê9¬ªşèXÙEGQÈƒ86RCŞ•*Ö<&V¬õ\RÙò*Õúcãà]Ho§â¥ œ©éÇkU‰€ƒ¹5–—	gøpLïdíÜ
+,«	z»	•œjÉdˆóDV•jrL¾½.õ9u¦À `IãRg"!9±Aœ4–@L™T&©Hé-‘’H6w@ÿ§»[£jŞ€hr~
+G¾óÄß]•e…C@
+"T”p"EAÃˆ†¡b+$Á‹’$ÃËÑ#›±’ô±Ò*qpñğ	‰ˆ%ê‰ÌÏ¦C)UO´^ª£g¬'_Ó…ŠXÃÃ6±ÆW†LµÁÛÃÓˆGúÍúå×qouØ%Ïü<ô^+ï~ÛÊ‚ŞpÍAÅl¦ØİâpİMÊÕ~­Äƒfß‡”úiÚ–õcŸ(ó­ï­VÎ©B•JÕ6«Q§Ö&îÒ¨I³o´hÔ'¾u?°E·.=z}ç'}æ°#>÷ÔCïYvÌq—õ¾+VÙç¬sN‡—1?6' cBLŒI1¹şW&#y».w’ÉÜÁD¹x~iH¿_ÀÈ;~“á©ìç?†¯ùYOº·Fıçÿ]+¼ï‡\àb‘_ãùJ»  
+------MultipartBoundary--jYONWjpiUr8Y4lr9okAORprXSyDCKOFGx5bjlwSeW3----
+Content-Type: font/woff2
+Content-Transfer-Encoding: binary
+Content-Location: https://fonts.gstatic.com/s/lato/v17/S6uyw4BMUTPHjx4wXiWtFCc.woff2
+
+wOF2     6Ü     nø  6…                       ¤zp` D
+hƒƒB 6$†v …„E€^EbÆ8 Ì†œ¢ÈQÂH„m“¶dÿŸÔ²ë p®T¸îV¦|Ì
+…:½îVïw•6ÅƒÖv¥Ci?•a¹‰›¸Åp,”óGi1Ñ|	î\`PÌŞ¹û™Œ)ÌƒL¦ó0öøVâ:ÜaEŒ;å~ÿİ$÷}à’%2¢%‡ÈVUÈQ‰0©Æ‡öWof¤İ;7°Ó!I(í:ˆ/	şCà¶Î”´¨ˆ((‚q1–°eŠE¨à3ÓÒ¬´4³l/××ÿnşûWı÷«ïëmüŠâŞ|—V©h§µñ˜¤[@C<Q×x¨Zî¯Š2}T²VÊ8@º µ™Wa¦l³Xû'KŒF·D ¤Üc‘#Š´ş+—ø"±oÑÄ_ûà£xˆÌğûvpÛ÷ƒóíiûÑšxöd66äÔ“r+¬Bµ!'ÆãÔV”ÓôMîI¸ä`Æ	å|+bs œo­ßølÿn¡Bæ."¯Ãëb¡}óóÕ3‘ÄÿwM]_8!û*G
+øT%}yo
+(¢¤2 N	å o‘İ€Rš^ü‡÷½Ó_VÛÿ/é@(¬ùcNhz&±ÏÃi4r]Ù,Óé¶nŸ%ãù# }f’_sHAD‘CG­™•vgWû7·w>îu'=é¤IOÒêAğD‚ˆuFÉ„2"#…€) §Ÿ¹œ…„¡ƒ03ÏÇO¿Ù¨ÁÈáÖÊüí—ªéz(U=GkÖD®˜Z­¦ÊMÂq[-/˜¬`òø¬©5»±^eÌ’å"Ë%|öÎªpôîİbˆb‹$°yøo<9I–l‚P”æÎon• L Óº˜-9p)ßk-pvÀE!u1#-;XY\F€‹FÕ(#¾æ(y|ŞÇİÇ‘®u®OæFãÚ™+“ÿ¯Ü¨qqaêï…Ú¬}°2Ì–SÛ[°QAß23•î5ùÿº`Ö;:şÌ&ªäQKú
++–ƒ€#˜âØ(KoÀŒÜ#>RĞuêo¶ãXJ¦ÚQ7É@s8xÁõ	É]‘˜ğ³şŒĞ×1caã€ğL›1gÁ¢%°ï	¬Z·AHd“Ø–H ISô¢W½í}R¶İnªÔiÒöSºôúØQ'†fÊœ%+;'¿øø…\»qëÎ½aQ1q	I8‰’–‘•“WPôOõ5kÕ®S·^ı5n	—ÉÊÖKXrz'_pû.Şq\X'³/E½wñ!JdÛìØÍ—µ×ÆÎÁÉÅ]Ø}DI%=““¥œ¼‚b•^”UTSgwXû˜K£ pd¶†µ-ã³·Ğü4ğÁ¯wƒ¨*n’xË|ÉAAi§UæÕÙhmÔzuæÈûDÕ)‚¶11æ>Ä“Où…\-ï›°_8‰’’‘•“WPLm&uvC]“ÕÚİiM×ÒCúAœ!2î·æĞ0ÙÇÃÃöB@ÜÊåJAi§¬lìœ\Ü~—,lG QR2²rò
+ŠêÕaìÏ¿}œÆŒëÅFİÃøÀ/ (äª®ë7nİ¥Ö?Ø9†gÇğB73mák/¬–ƒŒYN±|©ù=üe›mÚ±[{ÜÛ*Vµ>.­÷†õˆ9AcÁ7Ÿí¹éS~A!WnˆˆŠ‰KHÖŒ#(©NÇe“ƒ¼‚b•bYEµk6ëQ7X›8=—2€¡ÑÖÑZFG ˆ‘©ušp¢ç2Ïâ†
+^Ÿi_z¡
+#b\FNÑ/_æò~.eŸm³cwÜ³¸O?À¨r¯!´ØşQV×2½iƒæÈû$‘Sä<´IÊÜ2K[›°sprq—§ğñ
+¹ªğñˆ¨˜¸„$@¢¤:=lrWP¬ÒxYEµkD=ê†é&ªÕ²vwÔwEO?ƒ8CeÜßCÌ8ÈP]£~æWqY¹RôK›JfO÷<ªH^•–Wm™$1Ã0lE‡Ç#"*&.!YX‰#()Y9yEuÍOÔ8HQ’¼,·±jĞâ4ğÁŸ]ÏŸ¿ ®éÛû²*Çj\k+h«BYÊ³èãrõƒ¯İW‹´†F/°î[ÕĞ«iàƒ	JæCNAig¹§¬ò¦-½}”¥<¯|ü‚B®
+û#()Y9yÅÔòêİ°ß„¡Ñœƒ ,&?»t!ÕItÊTæZÚéŒuõÒgÆ–‰IŞUñ—¬o?_¦i+tôç2r
+J;08‰’’‘•“WPTû]6˜p<<–ÌŸœ‚ÒNYgmìœ\ÜÁFÁ@¢¤ddåäÕO#{ÿ1èÛ4ğÁŸ»§çm<Q|Â/ (äê‡o©åÕßgF×Î!Şc!QÖb³$k›°sprqç~ü¾   n³Šg9TŸVü^ ƒ-ôzïÆh[˜ˆ¦Å¡’Õ^İo b'&0ißKĞ6&)3°´§î#¿€ «ºÎoÜºëûÎZ”ÆLš¬hëêe@ÃŒ1ŞbíÔƒÊ¢¡i`h´Åˆ3İ²5¬lìœ\ÜÕqÛïß¢Å|è, G&•Ù'êÉ”Ëã+ÄÃ<¯?}–=~z‘—„r (D!*ˆZæ­u]\¸j¼O‚"ç¹ }LRæ¸,mí´	;'÷7?ÿvx0Q1q	ÉÂ"@¢¤:fD69È+(V)-«¨?+C¸Ã)îw¢î©§¿Âîû-Í#XMx›‰³µ8uŞ¸~SXlÊ(ßº/ió<›_¤t˜cEl`çàäâÎı\Zã´Ù¼ké!}7~Ÿf pT‘jÿN‰®Í8ebÖÒÖÕ3‹&db* ´ğ¸È#çK•?í_„…WeÖÒÖÕ3‡F€KVåÓø`‚Zo¢T\•È¨âUÓ´İ}’#Æ,w,Ïc8ã8~xöRq¡P(A¶•§hìt`@-&Â¾ÃyJ½'‚4}‘Ü¬‰ãÖGI]6GÊ+Øb'÷íû#lb_±ÇLì{¤ïÆ#ÑS«õ¶…s:|ç	_|ïi¡e"m1.	GÄ©LX
+J;¥g7@ïX‚   şŞ¡Æ{\á§ŠŠ‰KH6Œ#()Y9yÅÃw°ÔíeCsD}¬Æcÿë¶ğ"}uª+?Z¨%£4Ô²5ãdP
+.Ä¸ó¥¸G-½f¹D¶lZsƒn<z.ZVÕÆ_¶ë\!ë®ŠÎÇ¶XØÕ»pU" T`åÂzŞÿ›‰Ëx PŞf'Ë­P¡‹«FØn‡ißzÈŠøU›F§÷ä8dy-ïçÃåP$‰@¢$ÉD
+B¡<ŞK)»Én>½¯'Òé?xÂ&#æ¯»­Ø¬fâïÇäócÿ'øøñş(?'?Û?Óßœúª t›¥P²g¬£ï>±­OXöKX¹KÈUÌ£®Z¦»(H6 ª³Êº7¤z[Hd—éns·<’Dä|îjB<EìL ›”áØÙL·ò10qâĞæ°ìÊM×İœi"–I99âZVš®Q1¿×ÀQõ×‹—”’ü4±<›–"óÙ/»zØ3eìNa"@ŞğŸåêEõĞZ#çíYuŞ"½ØÑ‡z7oúÅ9q	²-¿kùEctÃĞGØµ8oÜOÛù°ß
+Ï_õsÎ€ïD"²½5¥Ta¬i'"ipğ C°aØU–sU9ª²e®şÅh¦F£~¿9m8g¶èT¤xxÔÕ1= ÓE,R²|ê˜Å™‰§ø>Ïİ®ö24V
+,Õ4¦i[Ó¡\Ï‚^‡T×ŠˆX“Æ¶„äñºÅx[|ø^6KoÊ¬ÄªÊºZ8¯·D%÷åRK¥_J2ë}'7„‘—%Ué¼U+ıeÀNG°$/³¨¶´ãÆ^qÓ ^aÊ™P:'ÜÇÏÊMÿé”2ZŠ´ü»ÚŞPØ¯œ¢4úóÚÄ¢d7=§şıg ^ŒC°çz¼ÒÿŒ|¶´XjÈıÑ$ï~k3$D*¾	ú©Ö$°4[*h$2¬—Òu"¸YåµŞ:ì–0ÏFÁnŠ*=›êú…ŒµåGÅ]²—èa¦³ïìÕJa.ŒuŸS%ùTöÖ7â Ç89tÜIıçë=ÿN£Íg=5Ÿ#êÿ.y•maBO7Óè¡Êñtt	¹f”IªàÅğØRd\Á$•É)IN™ Oe›ûı6zlËO^ô¡§Ÿ/tÚI¯÷EªPÛ¢LI*t(Z_Èå=?D†r–4JJ3…kÂy>ñ÷±ëät$éA6Ï
+)’>Ëot(Kâ–Ùß_×x+…hşC’¨7åvmáD†Åfã\b$Æ; ÂŞäGWÿ³Q ¹® @f$³„¡wp#E´òĞtÜÇÍÜ6NWsl§!u´G#«ù<XOÜBzóİ¸ é½'qàÎñ	‘–Ü,¾Ù‚-C~|„|Mq\óÌCVÁ›BÇÕÜØJ³VvÊö«¥/êµF2êµĞÍêÜ˜H¡ç×Oş‚w<Ö
+»Ú–N@Æ–2`UéËK%6ÙQ‰M¦Ñ‰öôrpuÊ1Éh%†­™%ZâFPë·2z¤½³uê¶§uLı,Á„äùfy‘åÏßEıo´°¸v]f9sZ‰3D¥ğ}XfõBG’Œ¨,vÌ‰ZŠX~²²¦FÃœ¾ì	g?lĞ!Aÿq„½—“M3‡šúfXÿl©ÑÔ8ã ùç=
+ö›)(¸Ş?Q¡HÕ7õÿı“:å;÷2‘v‡ÉaTÌµCêe¥æ¹8l\t‰ŞøD#
+©ÙÕ¦Y|l)3=
+‰çÉ~_æ£îWçc¯âÃ ‡8µ¼…uoá&ÖĞÂdh?‡ƒ‹1Ù—¨Èmƒ'|¶_€‘Ù¦MwşùzNx3lé–„n)äÖ5Ûõó”ÍÓÄÇó}ºW’±zr²4;eëÒj•Ó±ğì4üÎ‡0`jP7ü,ÄúØGà?ˆøqÀJ2§´ª£†­’j)".ÁBÛ{gGşlŞ6‘j–°Šî‰s|îûQp}17(˜ŞôA’É~A÷º"‚÷jˆ*¾Fßº:´Åö‹Gà¦&Ê€#ñYV’4–}Ô~Ó ú29Ã˜ºÕ
+§ˆZmÏh=ò²Éœú² Ø¢(Ç«eî•¼U79(DXªñ¡!7mšõ:ÖD‡ôGˆS2„H5Ë²LÂ	B[ÅòE:îî#J6õfDkæìG»Y¶ï‘jK¶íYƒUiO¢®P=JDÙ/#kÆdòab«¸Ø÷L(i¥2äšÙø'X8Ñj@fbt´1îÖğø£fi ÃÕtE 'mÉå&¹ûßxÖL¦˜û «`<ê]l!ÉMILštÕÕN‹«±’¾ß«‡¾°é]ıPmÕfuªKz…ëW)µ¿Àõ€!i!Ä±%‰é
+lİ@0fjJt¸«œ÷†ìÃã…Ë¿šg«¯3cšRİ3&
+MQãR»ì1×mËÜ’Õ¿·&”:íIg°²öO¡Ib&kÃQ“¦#¥y
+ZÑ¶\·s¢#D›Sôn¶Ù®EN`´Qá”iå(ÄÁ`şJÖ’×èLO\º+ÑGÜ@ş­iB-)¢
+ÜyQt¯9ºdÅ9İ˜ Øw;vO-5¬N·¨ê2åUûoëˆ¾ğ¢«…‹¶Îñ‘"ËRAe|Êû\‡\€òrH²C¤åF“îwl2@x:K€¤<G®-aÀı‚Ì,6TŠŒtí×)=ÊÌ¶ŸôâA +¤¦'ÆeÍ¯@šƒM¡j]/ô:Ğî…Ø†ßûá.â>,´ø—i¹Ó²½/é¶’íBO“_qÃœºR©¡œ¹cqØVŒ{a~2zUN‰2f^ŸÒ	ƒÍAG+İĞ™{ºÜÕ·Š¦ã|ÀµL5ŞğÖcóÌ°h»=7ˆbjÊÚÁŠá¯Ğ¬Õ—`ß ªh'zñ³!ğÁn’
+¿y8¦3’²Ã[”}’<¯ªê;/±·Ä+ÇR±póÉw©·)’ë!¨”%Ò]ù‚·†Şç³xİÙİÔ‡Yh'¯ş>r1®“ÎÁ+w¥ş#Ü«÷í×>=4jŒ–rê1Ê¢O,æT†$oY’­oeuŸßú1V6‚Ù·Á"Ë­	È¬ù4TÕX–Ñ%6™5ÚŠ+1ÇÒ&0\ëjI’€Ñ®4J’¸nÌz6@0®~¥Æ{’”ÀBJ±l½É|Æä1uÁM©úBvÆpÔ6=¥ÙZ"`!æ,LÔ]1åZ(4LÀŸ®Cjšƒ&çÀåÂBz9Y¦¨A›F7ßŠß!ùŠù <D¥™	ôü!¦^ö8õ8Îˆ)ŸÕ£rr'Ÿh`:58ãöŸ)ÜOïAUI–[8²§¢óP¸¦œ²†<Ì{z0ãR6
+\7™¨¡¨	\>©I^,£ÿ‹yWŒnñ³^à“³ÏµtH=ĞsWhY>«L-Ê3< u ³t:¯Î.ÜİIzºiWO¢£µ#guı|¦‘®zhï·WËufÇ¿qN|j\Ë€Hèè]nh
+Z½á\xA³Ì®APIÕÅ¤ş8¾s­®×+E·U…¬ú^¤±©kÖÎYàTàrÈD÷2GªšKÚ›sı]àB?IOô¹T†ºõW#ô¾ŒáŸn„GÏ Å&bÏ3½pHeÀêyUğŒR¸jKzËj3×V°m2PÏ¥VsoŠ¶PŠâ˜45/Í'„vŒHƒÌZjfbºxıu 9'OQŠÂûğ¹xû@¥_ ’o âö‡Ó,nÓF¶ÑçNî>
+‘5ÜëE$Èáo„t²Œja bgƒ=Û‘KÆ…Ûo´.ålø¹òÚ¨ØrCïVäuÔÎ›Å¡ğŸÿ§‚-kZFƒÉTİ¢7™7ì>>ûfÈÕÿÕJâ)2kÄÅçØÏsà3‘ÿM`X%Vá•I!×_ ·py'DpFÁ¦È¶*Ğ6Tdˆn6Øá3€kÕ,›kÒš’BçÅ f‰i'ŞÇ0ğİ¤ÜˆÏpM#ßU3Ñb­‹Û2ÎNäãg«OºøQji["(TãßB9ò‚ Œ´Ã Š>>y]çªººş"·ˆÔ75LC¢Y‰s3Ö;Z#G?)üïİT471[QuÜÑ÷ôúhñ’WùçŞŞöŸ—{‘Ãşšû@&¿€é ¯ğ§“I„u
+ˆÒA#«“9h Êu
+BÒºÓáp‚Ím8ü¶;î‡w¿õ(yË<c'Q®Û‰'á+¹e)Ô³¥? R»O6/õşÓÏn½;ã;ßúE€X>?ê=îq„Ô~Fe=sJ$†NsÙ3‰lïÙ^±¯³ƒ7ÿOÀÃôSY'}Æ !½ºö7TÖğåX»ñZ‡#5M¹x®±Hy†}ˆÚc’S[µiäş’â]ÌBÛ›<¦¼èÎWNÒó8Z2Ü¥w„\üˆ6K™õYšÄ©Êšy	âxÔãŒ>ÑÂy¥@»ıI…èñL*wÄ>-ı#`…
+É	ı4€ğ1©òèN¥ÆBLeVb§\IìRdV™+QIêêWĞı27R}Ñhíàox&×¼¥ún…ƒŸ¦¥ziÅ§•VÕ¸sÑ³S&M—Gw(5•2¨£¦›YˆNûØ5kƒı<«6ã[lÀ²ÄmQ9²¸²Ä2ÕÎ¹”Vô“33 "JØ‹‚]ƒ¨±LÅY4?jŸæëQfSÉzDË'
+HVlÉÖüU4&™Œ­-HËfG4¦UÈI‚„Í¢´˜]Îpœ'3€FÌ2t¨˜òãRcş@Ù4mx… iıªt´ğŒ&ÕÁåæ¼ˆÈ«4~Gı!àÇúº€Ÿ¨ß³4Ï""Íßtq5.XëW+Q×rvÏ¢|ŸauõYÈ;Å^)"Vèª)<S:
+¼‚s¯zÒÌdÛƒùá¼ƒºz$ÎïşÉé>W›zM}ûøÈŞÉ6:º»oÜ˜®ÂO}z„>8Ñ3qdôÈÖ­Av½·ÃóãpÄÓ_"¾yÄvÆÕ‡Ÿº9?ÚşäıøÌ¾ù['Ğ1û|â9P•êí†ŞÒğÑ[ï]ÿ3ˆ˜+Ÿ]’xœ¼¢*-»¤²8±Ç¥KbÏSÎÊJ{`q‰ç¹‹sq³zê(tº²ÌQæÚn2¹¬	 ¢'æ&ÿş#ˆÛàÚ¨,”o(¼ ôÖ…Ì©ØÊÚX„Ø#m4Y/Õ¶ÕK0ß¸û•\Jöü	|òY_¶‰^\–ššÃJÎFÄÅe²É$átã;8dw^–«³V<^o˜˜«™“Ñe¹É=2&ÊD•dÆ·„îĞñ¦ÚÊQt•3d³Óë#æraĞo+<ÉĞ‡¡\Fª>œÏ/'ñ„è\"‘+a‡–·i@+ZJÉ$§`2‰YmDÑåÍñı“E®„Ü+pCCOÔMÕ5@¯‘Ü5ácSó;™ğp±Ã6à6šy‘°B«1{ç– Y,”©ìJñÙşö‹¬ÒT‹«ˆuåû"<#8è<ƒ_C”«	B¦XÄ¯ÂŠã,î·ÍHËÔ>¶§L9I¶”0¦tœ…Ö¦ÓœÒ’#Ì†fú©òÙmMéÙMäô+ªƒ=É
+­HËğ®….Å›éìğr±ÈŒep-$I:®0®NJP¿6£¡‡?¾Ú‚›şhaİoîÜë İµø8¹¥ˆ5Ó¿éDº[9o'÷U¦òµ»$BlµÌ›±1Œ*éÏa7'›†Øe;,?‰G2¦ÓŠ‰‰
+ÎxI=ÄW†u”KfûeFF!UTZšJU…&,*Rh²¬•‚¾t$¶ÔHİ¦Ëaíiª;Ì2îcÔÔQ
+S¼ÊÂ‹’Œ…YoV^Î¤dÉ6÷|f¸>ß–J/Á	øØ¢T&ÆÄM3¢iÜ²¾0Ô Zª›v¡§•]ö²\È?w•»JÒnnq›°ôå‹®ÎëÖö}Â;·Ö	£`krfOæW~ÿ¹Õí]cÛÑÎ®#”ÔÚdÂ[÷’t3¬CûşÆ‹V‡x%‰»	ZY|_€/e¦K“Ø±h’û¶zÇ½8<•I‘™L¼*)<ˆ5"ò%$+N
+|¿Ú Ï›ÎDÜDZ“0AÒÃ%©Â(\EA=ÔÒEÕÄĞCW³Œ¼ÈÄ/}Ş‘ªxº3¬êW_ßŞ‹Yßı³áğIİÚæ&pîğ[Õ¦mÏhò¨gN°	š‰ã&=|[zÿ‹Æğ+¥qëŒ,¸J.É:ºSØQ™³%æLqIÒS×ÿ¿šÀfH
+7*cŒà7¦d¢:X\šÈGÀ8ü¥+££+Cëç;üåäU¯º¼¿e+ ’ıPæ$8 “w^‰®Ï¥ô«b‘ZºLOc@w"víéÎ¤om-¾@©%¾Š“U£ÌàœóÎÖ]1} ½&X”ŠÖÄ5OTí¶mÂÜ>ã§«Wßñéø’ÖyvÖè|yÙÁ´{ú‰V-KQù»;¯4ä¦ùi=¨–+¢¾Í‚›íİ‚›#§ùETƒ‹2G’º µı³ƒıù‹¶Ó> 2é3m[pş’ÁşÚîNÎõMùE®Âr‘ß1Ì¹è°Ééc	Û?›¶ Èä?Qk‚iq•>\£nQò6*`|„,é±§Á­ìFiMèÄLxdì´5]\2:ÏÎ8_Yr)Ú¯ØìÓQD¿§Úèç†úZRë+«[õ¦İhïÜ[Y+X´ä›°Úb×²
+¶¬<A=¯¥\®lßÇ*ÕıüÕánL˜Çñ(zA([Ò®9²|¢Ñi˜•¸‡~êNäŞ #[œvnÌ”0¿ßs+ö=yN>ˆ°óQ,Èä20Ï–ì‰`Y6îåú¯™Ûw¤ßCÈ*®‡oúpåÀ}'[	ş„Á@]6p`wÕ6ÁÏ_C¼ªîèIøà«è'd¬›÷›§sÊ÷şãûè;ñ>Ğÿş,©9ŸÍœÎ/Û™¦§mM®Îüm[±-fvÅ`1GŞì¹(´Z”u¸Ò)ÂN¯Àb%D AĞîí3Í¿¯÷£”uAÏÚÛ]ó!½íéä²æp…(¼”Ş·òà=½92„î4·°"Ìƒ»C,ÆÜÛê=ƒvV(”·ö^k-LÍ;4Æö´t˜³3äC±½–÷óõa£ƒŸ*ZÃ”¼ğÂÔÖımûî òç‡SÜÜ—™ayA,šEO’“(¢¼øú°Öğú¸<¥.#'u®¾î«rà‰^¢ˆÏ¬/seIb+ñ2V1šÇÍM¤QÒsãë1­aõ±¹
+Jk®€2d.£×^å§q çéäë¯W^ßÜîOf$æGmÕ.6Šnn¿­êìT6¶İ•ÆwV 	aPÙ` ]“;àï,¾²W7½Äú¡â›¾Ñ¯òü}w†ì»ğtrî+óèxRÿ¹Tû¸æùD‚÷%Ã7è ¯x:Ó%;ê<ÆĞÂ}'üÖ&xbéetŠ¼î°€¿¿¹{n–ÜX•¬¿›ç8Du=ÿè/Ï–¼º›ZÔúÙ*ÒPìø2²LAŞÎ= ¿7ËÁG>|d*’ßô›ï!Æšä¢„Q§,QÓ$õAµï4B{D9Ûk¿×X½àµß›lXË‚ ?¯£·ŞãT¬€ŒûĞƒÇà(»üÖ¢ Éš´ºÚÜ-M«¹×pú¦åÜ&´DR÷ÖBkÓô×W[ş,€í|ü³˜Ãßwxf[ød&Ç“’X€äÓğzV­lTñ{ÜA[qµ¾VGS#©aßz{Ì6½•I–ÅÕŠøaHñ9œ(ô`¢¾ûæv½íADq$‰›<ulå“9)ÜYu‘zˆ¦k]j.O\*œ•ä÷ò£™U˜gª]Çı…H³Ær‡'>¾¨CÑ4¹X#£Õÿãê–-ğ!ó*b:Ì:;ÌÏ+‰bÒdˆªïİ‘Tšä*¯,w–UÓÉ\n¬HY¬í?.´˜ö0ŸƒLÌ×zªh>§D5D×µÅ.÷|IC3’ÂìrÔ	 Y^i#©K§KĞàßyT$s2É\™²¿çç;k“K’åX"¸Œ<+ø¹»×±Hª}&Åˆ6{Äc·ör>î0QÏÖuT´·mqïM	* ñrÂÀ…l³sš¶;_EêÖdµ%Ì1[µí›ÉÀ·Â_EËF·æ„u=½ÒÿWOzĞ¶J× ª„G®Õ+ú	2Î·¯œ½B¶äºÖÙ6;ÔÁr#Tlµ®.ç(Ùl/M‹Ë‹åçÓ{¢èd¯ÿßıXy6\k|í’1SŸlÇB»bˆ}?[‡Âqp%><n…¯ˆˆ¥%
+ãÒªüx„ìòÒ’âòÒl‚?¯J Fdù„œÊœJ/”5ÇÉõáCÊ®]cs‰¸—Ÿ@ıÀ:ÖÖ‚k÷’áÔm8|•‡§ VáğÛ(Qók59ĞÈ–àAö¹ş_¹:¸9‹h\)õæjBO/ë" Û_¤*ÿ¸í;k¼±°Áï‹ÕW»½¾½)˜~òõä$€,X×ò¨ğ¯;ztÍ„ÙâTÏìWe6Wøå±™bEtw”¤1J©%guèª)¬×áEˆ‹(MÒnÆzmM½œıÛ«ÇNçRw6£xn%P@Ì'Ò{èK5µôEk9Á5›5®©‡±X[ÃXÄU\ÿÊ=>öÑ©ÓcÌÑ<mÈ°F2ÄË3GƒÍJ ˜0[\j¨¢ùÜRÃ«iWÍ Ÿ)§39lÉúÅ;øÁ‡|I²µ_Oî‰ßSÓf3ŠŒö¼ò{Y¹¢-Ø˜å°×÷çqäwt­ @AqœŠ.ÚV]ˆcx,yu}\Fc²‹±]€ öuU˜ø^1Wè\`èj:Û?™š–ˆW&³#«µÊ¡ÈlÓAæi,£1ÛÃ£¡Mâ—#„' p×Ò09şù9aiÉxB4eJºˆJıtÊ8øÀµ¶µ«¹¤Ş-ÊÙ##Òİ5Ù¨6TõQ¤ÿğM‘ƒËîhùı6ğX]ë¶5‹úÒh¿ĞWbß£6Ù:Ü_­n`¼6
+;n»rò+İ9·mrç ¾·×f øamĞë´hyÀâL§UxÒ÷|¹IÔá)„‰nlšuc”S]9ÃWÄ§<»¡kCğÍß©f³wUxÑš×Ë?è•Üø¦aÀñ^êÉuNşC¾ÛA¯î¦ÿK¾úU=U İ.à:öùwÛ¾°İ{<Û¥©ëSvÁƒîõ¹¸ƒXÙ‚ç­ÃÁ÷°ÿğœW1ƒ_€Çı©,	£˜ÁS£\µZW]+Ì’.«'¤ÇŠ¡Ç Bµ^Iv.tÏwÖFa`Ôv½ƒƒ¾#å¬}¯V!Y¥Ö	¡NÇ¡’ØôúˆtY˜…ãšï‘ïª.†ÿú½¼Ìîç
+PòaÃZ¤\D¤»NåGçv1í0*æ¸®R­Gâ©kÓyhƒQT–x²HÀk=+¬Fˆ™)6„Sc92$XOØ6=fAFˆ2€°N¾™ûH(óa+'8Ë¿ñÃ»¯øÁWÜ“üàÉî«p¿Uw mÌÜ°]TŞ‘rºÒL»ĞÔwVR½Îñ„ç!İõ™Ô±#Eò¨ş'ğş§ñèw?È3™n>ìÿ9çÒLë”o”?>™í^¬õŠ~Ã‡T’…ù˜½ş* ’;WZ¿‡]&ªÅd3˜a+s£Kÿaò0Š%¤æbS…¥Lûó\G^]¯øäÿºs—q—=>°øŞ|éÏŒZw% õŸnÛ¦ÉŸ¸RDI0 7‚Zcû5¨ ÒğÉÄ¸&sbârÜ/!A¼Ä=¸‚	(ÉCI0‘˜üY°$‚,ı<…;R‚z„’‚ÍåQ¾a[áÏÆ<co%””ÀozÄ–;úû…EÈ‹ä…òÄ“‰+<ˆr/ ŞØï×¢¡:f•HŸ´³Q„g$âDlRf²TØ,CÛ%kYìÈê<åpd–raB©{5Få~©Q"Ÿ¬ËB$MUˆ-/Œ’²"³¨"Ec
+–bä[«U|;&s3£YìrGÌã"òu2-BÉPZ@,¸¬Ñ½½ÿkóöªøİŠxû>¯ğònûß· 0ïß?ÀS}tT¿zĞ>÷TíuëüzÇ*Åu2m/×š¿›QY—²Oo`î¯«§ç—L0º	TÖ?N.Oá|¯Dv9^$ÃÕğ…¸Z¾´—B¢9¾’S¾Û`ˆ¾3ÛÕ9“{>Ú`¸màĞBß`ĞG–t¡æ|E3ÑçuúŒğ=Òá
+Ë@ú^İù£îÀ¡ügİø½*«„YÂw%OõG´¿ 4ƒ›ä¯8fıÆ«…¡z¾=ˆE¡éª˜”Éº#ãÎ\rsIIË ÕÒâdA;dÑlt:ªˆe“çva†‹}ï·;¾úÒÙ}×´İ×¿:mÇ¡9ø_ÚÑùz&0ö}Öş‰ «e§ï%ãÓÙUúô›üÈC{ësLE>†öü Üôö#Âà\\a½T
+ı)ƒİÃré6,fJU
+°Ó‘U*eu$‹¥`à#ôHk‹¢PT	k3ÀUp8¡8*¸£=MÉNQòç„:Q;Ñ;Q>Z¾µwk­¯ìÁ•+ 6oˆ‘œF
+ˆa>Ì©ŒG3s†Ÿ`«0Tøş0¿ãâÃû½'ÿ
+ñ‹>CˆØt¯‰èn×Je;ºõ/Œ!Zê?Èk­ÆÓ<˜Â”x¬ŒIÖø“d>K8ÎóÂ§.óYf‘?üÿ†@l,¦:UJÀNŒ‰#‘†Ï¶¸¸ÚµRéúp5FhÅÂ3›Ç‡`¦±?¿²Cn6;--®)º¡tÎ CÅ3G•A”ïLO€  5LN> §Á*šÊ6îM²S†¤Ê”A«~o¼4H{TˆÀšk[ ¢ª¶úğ`SöÀÁ×ë_¼†ávÃ=3Ú.ÊqƒåŞâO	3ù²CìAÂ¦¹ı¾^
+6Ş¾7vbRsñ*|t¹¤»]1¼Ÿ.°Ëqbqx%‡nKÜÍ©ÀI$ŒËé™DŒbìuòt£^Ÿ^(W©ÓJÁ¯­;.ù»LÛ}øàÂÏ¥ƒwÿK;Şvz‡zı/fh|ÅÉŸ¥4ÇÇÎéÇJEyˆı¶)n7r¨‰Óø O-_õôÃ¼`ÿöÇ—§Ñè,ÿoBÀÎÿN­{Gf¿Ô/}\—#µÕ(ñû¡0”<· ñ¯É$äßxÑªĞÂRTïp­4¾jcEL¾4–MDr“EçğŸ3#EÌD¼øŞÄ|u:³\M>¹>_Nş7ı{ââ6ÿ¤gÚi;Rş„f¾åçÍìçü™A;L^Èƒ«ú¿³N_Q¼(Ù¨n…ŸS’÷Ì<y¶élƒ®yOÛíâh3¥În
+ïíW…­Q%™­ŠM•Mÿ)¬eâ©c¯U*m^N®V«×­u:ZÍÔ}Zñâ:”\$‰ˆº¬É Ñ[³¶>ğd1á[>LH•–Q^#õ)Ğšaü{x·˜\ltÇù1œjoárR[;›©%rÂ^5ZX;]İöÛ²ÃÅ+ƒ)OÔfE”F'á©4^ä{¶Êã»Ë³b"¹N'ïÆ‹µSëão–ç‹gÁw¡Éñ,Y”+KˆO§ÇâEôa,=Ï&!}¨52•Y†ÉpMòû'¿52ZêNÒ ÷	$}0µ r¤û¯¯ÅVCèdÃi¬LÿÕ,7ÕoöJJ>ºÈ#¦êJyœå°RU_í“Èª@¥³ğEÜ$še4ówÊAÛ¨j}“¦FQ±ßcèoŒSâŠÚÍ¤&Vu¨ QowUOâàT:±4!?˜›†-å]|œÆ†™×³ş¥!ÊÅJ<Ø §R›¾qPdèH8]‘ÿ.ÌèÙëè Úœ
+g!-Ï~pşo‚C±q‚õ^eœU}Ğ´ßÛU˜œëz2QBœ¯kt„åæÑå7°¶cÎ•mJş¡~×Emş­±s¼<'yŞÒ4—fÔSP•=ÖËÙ©g»!¯N8•±’ÂÜº²¿£%¼”ü~y$_‰©fJ	Íb…tß_é¹¢İ'Ø¬úÁWİ“á~Iî+p¿üáê¬ ÁÖšÄ ]©ÎĞ.]Ğ”—–µ?€1²Jc²–±Ú`w£+Êk¤&ºR¼›’wRÈ7,±"]èHÜ~eÌ¿äaÍDtî1.‹ˆßâí}Nä¦¤íQm­viWæv0#>—²â5À]ÕîhÉ¬²šÿºf†6í[Êtš™Ñ+¸oåçâá™ÿºeµ/¼>ëL½U=¶_d4ªCÍõVg§CÍè~¡ÑÈªGã}ÄLØ]@²ñêØ±(êáÎ¨¹RWk^ªëÓïáZ{RkkR—ª{æÓ
+:.×Æ”F/4¡Çzz>:¥	fh£Y2¦Öc5§z?Š“ALL„½0ÌÍ50BKxÑÚ$W;5<¶Ÿë÷ãZ<Ë…W+JzaÃ8psœ.¯"
+ñû;€@T8ŒRäXBôıDE„&ı×›k£2“|EoiˆĞ¶ıo`Ç0²¹*²…¶ëíìƒÿºÏ#iÔsb¦ÖÊ_ï2ùêAù—¤Ã`ròY nkO®ûæ’2G¼¨ûË‡§²£Ïàò‚ÌëÕ¶ŞóÊì×üº³Ôõt!¥G§ï¦„=½Ş„BJ·^ç tStº9øïæ>Q%~Ë['såîğÄ?®È‰YOfÖwŒy6å|28|–_Ò}YÇR%1jÿuqg=ÊCóG—>\÷8äó¯­=Ìár›ì~ÉgÜïóÅÏGã¤ĞÅ¹÷ö‡3Õ<Ëp½|“õ¼¨gTyËµ}¸ Ûáu°íI1ŠìıÉÂÚ¦ıƒoÜL’²RŞñ§Ï
+ì9¥e“û×‡^A‹NıÔüÓ©¢ô{‰¬½··Œœ°İb>”lÁˆ6|Éòót,w=¾{tK´ş»y‡ònºsãäÑã…æ4£l›W ûN NZ	kØÒç0Â´e7¶ÿ£Ÿ>qŠª1ïÓáb¯G­%°¼GÖ‘·Ï#í†wÛ#zÁëƒCù¦wù£98<:»åUQ)À®}~wœXÒ«"ïî ôÎÆ©3·yóqtUäZ‘c1×ós°ì¯‡"h_L(ÓW@Å|#Üàí|¨ÂÕD‚1ÜÂŠ=o¸vù›`œ-–¥Ä»#BÏV¿É‹»çyòõ%MÁ:?!€¢[¶kj±]ü¸®-,z¿ìxAˆ-€l:øG„?Ğ€‡Ùà–mYKçÇÔ#ƒ±Ş×£<fÿÀb û9ÄvşQ'dOAldïÿ¨'•²&X™kF{q£ø@|$.]÷Ğc+w»Ñş7ŠøR´r Ñ¯²Á·uğR+İå‘Ó%ÖYÓ×Œö‹Åâ#¾ÔªŞn´5q£ø€/µfm·ÑTjŞnŞüÍ®:K'oh‰Ãë	ÿ¿Uó2aDp¨æŒ	jç±qÛY¢Á«(m#¡¿²S‘5Ü’Õÿlßı™ÿĞM/Ûİ_gafàz; Õsò²ú‹RßÀOò}|Ãî{Œ×_–Û?Ù¾¡¿b½&€pèŒpèÎ@
+F#ŠµõáfYuó“n86¨ï/ÊU3ğ“€Ş.ÿã/^H¸il a|ªKí™I¿|G7 ^<8ú8¹}¾]íz3Üu~D Œƒ`´øŸãôı)ÆÀü—ı?ÕP„ò¢ÈI÷Ü¶Ú+NË›†ÜÖ,=>³-Õº5Ä+Hyq¬>öËÉ3“Üêü¥ÿÕ'I|Â¨DØÕeònn‰·µîa‹ñÿy^ü¡†Ê&±‘ã&›†¦}ïHíGJZ—Ô¹g%²À­R+©¥[©vlDŞ•4$Éª×¬L„æp‡Õ”º“;ew“pà½Î…³HÙ¿p`K™jÃù¼ÿf%4µ×tYS2‰Y5Ç¶2·ú\©œ/ÿUÕFàFüë8¢Û<ôl0@JÄ™gc	E/%‡P_Ú¿¹°^ä/À–ØIŠWôãDuíeÕİé´(†v‚¸¯Fy®2¸p“0ó¬2ı§n!²9hhc‡ô¹MºR9Ôü&4
+\¢4¶´3:÷Úü;n™6ŞF¢G1‹?¼æäÑû3ˆ2a°şÛ;õ?&¾p¢`Š`íÕ<Á6¤¶+XW\Ğ<#Cá<>¨KÀ|	xÒ‰¹˜äœI'°ÀX')•âú ÀŒ]NÃ6v86"k¸†›€ “£GUÛ9˜6Šı(M]ŞEÁD›ÄíuÖêgh<:³‡j»QíöVğ:İ·w¼0ÛŸªgø®=rÙÂAàîğÔ:À
+Ù‚°7 „Xô'àh
+)ñïÏBNàú³¡æşdÄ8å‚ÿ1VŠ°ø?ÆO‡i]-W¤‘R¬…¢DªNhA!å«[‘•J¦Ê•Ğ*£‡$P¥¸±[ÔS&Ç1ĞOzë Õø¬Œ•¦GÔ¢JÕÎX$6³2¯!­Òc	EàÔÚQ"45dtKµÊ+a)J8$“FÀ€Xy9YÖ¼6ÂkÊšÔiærH—Wd PU„y+ãMËÌ3J[ 2Ç»e-çÄ='A…Hb$6šJ=ÍÊÃÊ„(bÑV7ÇM-%P¥2^·Í!«©5¢ "VMwĞò®Eø¦%FÍ-M'Æ&°İ]ìõÕjıÄP¥ã^0Ğ
+>Úl*¦^ÊMõãÅ›_p~ü@„¥ÖÖĞĞ0Æã„ÃK¶ñØdÑv¡8.Š†‰…£İ¦<¦ë·©œIJ*j÷¹gË‘+6lÁ„….÷Ìî˜a¦,˜;0ê¾c^¾2¡×ªÇşœÎí×şz=ëËìCGäÓ¡÷)ƒƒÄ_÷ı¬ üŞpÓQ…^lö•;¾dô«ßõ1)R¬T‰2»™U(WÉ¢ŠUµ¿¨U¯Nƒ&Î™Ñ¢Y«6¿yî‚¯sÜ]ÜsÂIgœõSN»ªÇAW,º0îK–c½½ƒÍ›6v¢=}Õ©"‰F*Ón#ŠÜÏı©†wóê¬?j¸ôŠTã7j÷WY›¹®'æ»ù@P7Lğ'qüFëÑ} 
+------MultipartBoundary--jYONWjpiUr8Y4lr9okAORprXSyDCKOFGx5bjlwSeW3----
+Content-Type: font/woff2
+Content-Transfer-Encoding: binary
+Content-Location: https://fonts.gstatic.com/s/lato/v17/S6u9w4BMUTPHh6UVSwiPGQ3q5d0.woff2
+
+wOF2     7`     oÜ  7                       ¦Bp` D
+ŸƒƒB 6$†v … „E_E#bØ8€Ìİ/Šš G#ÂÆ
+a³ÿÏ	¡àí!]k•`ği´Çhµ´#kg¯Õµ#ıF*ÌœvÛãg‰%–8ä2Èz]{é>`˜úúNßç£€2°GbÁ‚ëHlGhì“\ÒÂëı3“™$›õSÁ[Ø[zÿ/à”P
+ñÁÜ:äµh–Ä`£6Ô¢ÙØè%Ñ#j°IJ…„…Q`LQQ|E1AÿÍüò£Œü×ÿ6±ÍO°´ÇÌí=‚ïï_÷|_&’I€
+\‚×¬Â%®qI:½há&€¿Ë¤Ó¸ÜŸ'kiÃ–9—e’[}¾OiX‹XŸÕ­}ã[ëaÎ¤]mÚdæ‹†`0W½TB)Ë7v/‚`¤6kOx@ŠüªL”ª>3íË¨ g
+vûˆıµbøØgĞ˜<D	ğ_ä÷Í½©ï*	•©#Ü»¸W¦4b·)¨ËAò	7%ze}—€ ‹k™ÜqÒ>=iäAFµ©0svÓs¨Ì¦têÊ¯¨epjyÚêµp{{;ĞÚÙÄ‰™^òXNXP˜Òù·©®÷%]rNÉÚâ„·Â°øZŞhêÜ­#ıòı§‹N§€tn^”s@²óœ³]HX:9yŠ"¤ÚIJ<!O@0®ÙúºW¦aÚ¹<ÿı²fç{…Ã>P#[¸µ²‡|	É…dy
+õ)Kßr%ÆJà1¿¦û$Àä&£€Ç¨^e{ıö¿Ïr†v)¯ºL¯b„ÙãÉæÃØÊ¡şİwmFI
+Hº«À@vbN¥ËjÒ©y°Ğœ»BdŞ=ïØºG@L°²&sèò‹cı]Ÿ7ßU”»ÕR×ùkt¦Fxî:¸n·ÎØi·ĞÏòqWUÙ,AQO¬ïáDÕvAwQÇŒ2,½|ßU£‘«Æ+s•ÂÖcçıf#;§pCĞÿÈŸòbí¾@C5¸Itñ Qp€[¢¨ánrİ;}4Z§®Ph`îSş³ÀtåN¸á…_d£c)
+OŒXqâ%“SH”D+YŠTéôŒL²”)W¡JµZuê5hÒ¬E‡N]ºõèÕouÖ³ÁF›m±Õ6Ûí0n§]vÛÃa¯}ö;à )G3ã¸f2gŞy}î²+®ºæºnºå»ç–àé`*gÛœ³c¸g¤'Œ Gş<\'<§9#çNè"×âcv™˜YXÙ
+é@ap2‘-‰Jb".!)UéŒ¬œR*ÒMå¶¢}d¶†µ’­ãD‹[ŸÀÂÑË«W“µòÆ¸íhĞØa‹ÌŠ«‘:Ù(…J¥DÕ{ÓïÄ¿'ê1Zè#öYÆÉÅÍãvş4y‡Âà¤¨˜¸„¤TåÏ»L¯ĞU•5ª>n¶¦åi“N¤›§'úŒk³¨˜Ë&œÀ:?9`^¡ìŒ°ŒLÌ,¬låmùø…„ùŠÂà¤¨˜¸„¤”J5·³ıî“)<ãòÀJ!#*Ø98¹¸yÜÖ]qïÁcÊãm‘xÿÈqp¸?gÊÃ³æOæ¢@	¸•ÔsJÎúœ;¡‹ºÔİ"åâ(‰Aéü'32ŸQJTäc…:zùlY‰½‡qrqó¸-ï(¿€ p!PìHˆª˜xHJU:ddå*¿¼˜]ö¹2O•Ôô²Ü¥‹şÚQšCEi:#Së<›p²¾>"ã„iÜ`Ì”†'Í_/ ÔI¼SN¶å”œ9wBã¥WÎ®E¼†”£²/7Ga^iQõŞô»~ô|¬G•¶é¢6¤Febfae+û€ƒ“‹›ÇmyOúø…„!PìÈõ(b‰#!)UéëY¹Ê÷S¢Ë•yWÍ×¤êÍitSFK´uÒÍÓıÆ›:¬áß×&Œ|ÿİuĞ5¤à>¶uF„<¾&*¼‰5·HÔ=íEbBF£ÑÚ{İ§ü‚BÂ…¼FapRTL\BRJ¥ª°ö1sÂã¸&Àjr¿NG`¡@—¸Î”pıÊ¾È±ˆÔ#«µ‚©Ô¨‚š=8¹¸yÜò…ÁHQ1q	I©ÊÿQLy›JW™5tõô_üˆÕÁºæ>ÀBŞ °3Âù¥"ÒÈæ­àPUPÓ³Ç'7ÛB¾¡08)*&.!)UùÅ”·©t•£†®ş6¥hèÅ4Á.y;½©wıÙ{ÚÒµS]#Í¹–v:a¡ÔEëÀ›—_@PH8MM‡|YökASg›äÀÎ!P—”RÙÇ}3…G`¡@F¦TìqÂÅÍã¶ˆÂà¤¨˜¸„¤TÊu•}fTI µêGk½aÆ¶Ç0Æ(LÌ,¬lyšï¯  4Ğ×Y‰Nn1µàİã3œÄÂ¿-ïXYM×®l,İ"ûR½¼ƒ±2IÚIÔc´Ñû,ãäâæq[w#÷<ÎŸ–æïS¦«ŒUGZÚÕeôô¯Öµk·JjzU5]=ıûŒ¨4“Å&œ #3+[5Yş'JÀÆû¥4]F&™Ø„“õp>"åø¾Œ—ØK®	®  Çp¸5[ÔkNíA 8SÀÔÊÎò±um”.€¾KÊÄÌÂÊöÙNo{wùà.$ 08Ù‘<ªb‰#!)Ué<#+WùkÅ”¸è$°)`
+˜È;´u ØÀn|ÆEáE%h5ä†ŞL¶§ ÆåŸWÖuÜ¨ovl÷Ù©æW-¹«7t1#LÌ,¬lyÚ–ú<é¦HËÓ&0Øÿ
+ÅWè£Šı—jä}ŞˆwŞÓÒU>SG#-´ŞŒ¡Ú×ˆáD )ĞvFX†ûF&fV¶B>¡08)*&.!)¥rY»î‹b‹FAº«'×^o{vÆˆŠ-á‘Êõ_×hk1ºäÇI­´1Øş…DCŸ³2îÈ…Z^¾:®ååíET±_Rl>ÊI
+L©QõŞPG§ô±kÊÉÅÍsıVç©T#‘H$ÃÖ¥q”Ê ièRLŒ]œpqÖæÂõæFØ|²=F^Í¥‹Æ˜`fae»ö$z€nØ„Nè.Ş£"LÒİ§loNÂÕ ˜
+Ï,Ôª9k½°ÍxÀmA€Îe®¨2ª ¾®Ÿ%‚ ‚,Ä^‰Ã8¹¸yÜÎŸ ¼M¿€ p!·P—”ê²«
+/ªh(¥{Pô/ÓÃ³3º}Ûæ¦ŠŞ¢AE!Ç}4É¡Â…›€Ç"Wí¹¥
+–ŠÔ|/@ö•{wLšRÙm<¾è
+÷êüD&e(Tt½¿ª@ R¾ÔŠÿú³I×öXı0 — “ÀñB#šˆ é®@¿¾Üì6e5ùq~›ß5¡fœ™d¦4ÓšÍÒæÚ)S†GU6³5êù™1fBöš0úJÏá3Y÷Oßü}no³7Û›ìõö{¶=ÉÎğÍÊıcXrX74"x ;hŒÆEÿq)ß9¾›c[s¸q"sãÔ+à`ñ<Ü­+Öµ#dâ>ËíÖûÅPèDÄŞSL‚iˆ&+bEE…ñä 3Å^4µR;|PTGAÅ&ÎÃ‰kV)Ã¯ñs1”:ÒÎS w­ŠÅ….4OïbJˆ*!*PæAOõñ}Æ£yª)]¶{Y 0EäÔÉÍE½bøìÇÄ]?'Ã¬´¼ÒaŠ ”i˜ƒÎHAÒ§z.Óá“ÆÄÙ5P'ú…À éiÀ¦B&eĞ4:q(È˜T–]y(,'»ØşŠè†RbŞ¯%ª)®—*bª½¨µ/e;Òò§ìRµâ~<3å“ì^#op	®[g;<†½f¥s`.CG÷F‘ŠQs óBæì|Ñ_T§¼Ê´‹¥O~C¥~¦2÷«á¯q	¡Ïb§®^g!W‰«ù¥\x%à)¡sqa8¨ïBfpçEcØou¨Ç:­Äòm€nR§tL+Àã'óòŸ¢´¤Ef²1üï”	œ`´¶q{WÙ‹ËI¤X»+
+¼®
+Ácg*¢³YŞWÖÖ:ÍKí½Âğ‰xØbUpmŒ‹6Í‹«ñ`Ó³ƒç—©æ¦3[R(.óMé#­%^ŒÅù_;#-VóuºõrEJ½Êì±fµÅßg¡Æãi– SÚ?üKÜ8-y«¿óEò¡œùRğ I/Lê¡ñ//3æ_Z….ÃÑk?)¦	ù8ç_B!)Ÿ”1ÓñÆ²]_òÍjc)¦„ÈÀı|)³ühÂ£Uyõ^,b§Ù
+ˆ‰$‘Bƒ6ìÓCÕ;~ØY~©P¨HÌÛ[(T¶g+g›UD2€Xøïe2oî¸¯œRœ.\«5k="§îÖ#³³1ÌeTf­fË=™uYß©‚YY×ŸWÀ™.Œ£Àq#RÚâ"Ëü”:¶„YÃFCûğïÛ²ûåBÀ“ˆ
+ŠEÂĞÀ´¢»dá:4ƒ™GBÍ¬¢óÊìÃéğšÄ}3™»i¦O[ˆå$½m®ÖpQ8àEşïÌ!$qê%¯½Z‹ƒ*i;jYŞÄa_Ûpä€H·O°(®¸ÏÃ«ÉLèÎÓéBL0 Ÿb²1Ù¹|ïğD²7ÍËı–•£Ó„±Ybr,ÊÅı@õØËJWXNo?±µ¤”‡X¶=aMØZJ+ş\&Y¥2YÊ›#¨¢¡„4·FÓSk R5¼[sßÁÊÇ)/h/?­ÿ«·>ÊéMOÃÖÄtâÃö}W*CÊ@Ç¤¹”GU3®­G §Üÿç€QN¢eŒ¾BşËùq ¼)Àà|ò˜„Ì*«”øÌwÓŸ?•¯ƒ3×Mb+r9P6«Ñ•ı@÷+nÓàı4í.Ò4D}şQc0§dF_šZ¾Î¥¸O9jÆÖºRˆ®Ô¤³šùÁ.[jùyº>=G|˜PåÕ½Ìn¨Xì™Ò õ”Ö3Ø}Y&È–•ÎJ™D‚â
+¦n[ú[n¢fæ\#†Â¹b±c°÷"M¤\ı¨ÚZ®‚×=a¼dk¼Œ:!b
+{ŒÅJëÚù5³È‰€tœ÷¦ğem7T-­s
+£D'dhd­Ÿã!‘Ôj)³·í¡~%p„©Ãäï¤ô$}Ğ/L(]·cÖˆu3nÍJ˜“*ä”ÂoğomÑ–	•—¡®Å²ŸÿÏ=²	İ%§ÏSöĞ-±eíy7)'‰ÛÄu?-;û eë7åÀ7şúà`†8¦àÉÀUDUÅ*êF¦A:=(¸k	ª%İVÌ¸uª–År‘ÀİúU@˜Õ4¨õµŸÉƒ““I˜brÉ7å.É.š±&÷ÏéÂ*ÉÒ?SıéWıÉMÛÛ‰|kÔñ]eÊ|—H 1O{>•^qHãsô^%3%¡JªRõÑê] Œ[àwï <Nß)Æ\RÕ°,É= ´gcˆœ\™g¸<„ªŸ½@’W,£T<)ãJd-áÇÀì_Åzw [çvÛƒräm–M¢¥%‹6Û›„ºÛóÑÂ\V÷¾R›PìW®Æ…ìqKå{-èšfÂX¡q­%†i˜lÀ6Ä{ÙZB
+O+o&Ty,'d©¥wVã;bP˜çÎÙ_Ñ¦O0K–/Vhi‹ïæî†À²œe‹sÖgíhº!n²â†¡T‰b0f†´]Cù˜úµ¦Påš‹/uağ.ïÜ•Æ¦?Ş-J„mæÈi
+PoÍ¤•Gæ%‘hor0äXÓjı°‡”±ÉıÚC>q‚%Œv#¸Û¼öÚïáŒô*™˜«7©^¤;*‘•ã5ÿckØ££Oh»‡ôj¬m¡0©£–Ñ‰ò‚µ4²¼ÑÇÍBu¹”¶JWç¦İ§„h%"Ô*ü|^ä»d[ÊZï•°Şi	/®©$wïì bä„FÁêÿK°Å"9å´Üs¼„Î§ı#`	>¯í®.MŠÜà\/DæŠ0	<ÒÅõÆ=Ş]Õç¹iñQ²œÙOúÁ;@”í%ñRä\ßë¹!<Í¸AâŸf0ˆİ$o..[S†Ï 
+±¬¸^á &p²‰ZÂúÜ\†!m*feªmg¤Ô5<»’F6&NÊ0èœÉl±È>óÈŠØ´…;•2HÀò.ŠFPBEpæhÓ³™óĞñ.‡"R{ú·ƒ°=.Mõ“IÙº= î8ŸZÛF—KÒ÷)@+ép:Zkú·ıätû“İ$n œ3l}3Ë×uFgèÅãâ‡‰fs¨ï›îìÑªÍZ³ßoÈüPëDMk½ÆÚX ô¨á²\´
+p‡óZÜoË#Oe@ÇçUbH¤Ôz\ÇrBğ˜·*ÆÎ	ñ¸>PÜh5…à¹KaËeè-FùV¾ÒïáØ³e§àñ	*)²·¥Óƒ]¯\Syw£ĞÉG§ƒ¶\^kyÔn<©˜ºÓ™ıdµÕî¤Ù\ÓÀDQ¿¦Pª¨ÒîM¨ªaÀ»<¹ h@±¸”ŞdşÂx®Á%»­ÙUÄrÄbcI:“R˜hİ‡âÎ‹hí3
+p>¼q–©F’¶Ïî3Fˆ5ÎÃÙ¹=¢AÌ·JÏL=Kw¨(MûŒ	ëña˜ÛR µîÏ	®[5/×3kD¥µÏ2%{S˜âèÕ†²4şNQ·ğƒv3—Áw{õSï­å³2”A
+ú@õJÀ.ó–Ìƒeô3ñuïØ“Àïè)ÇÁ‡ÛğEÎ‰IüœÉ†2YÜ™!z'Íêü*MŠgtHc/ÇGk~A¨óúºÄ;7zÖeÓ¬ûkÓ ³«lYØâáØ3Óò­
+TOaO{Ağ¿ ,dº¦¸µ¶ôs:ÌtÁuÅnÜ)“v« Øİ{«auÇ TVk²Õ{Sºujß4›ğ?Ì5B•Ùän?.W„o¹^ü¨MÓ…‚ìd:·$=ËAHµ¶ï,‹Œ?(­ 6ın'mÜ©De.}Nû”ïÒÄKä˜Fz«‰„C¡“"ÂÄšEWâµ%à9~IŸ4åô ¼ïjlŞN“j4F¢ËrïI)éwí»ÜêX ™ÚİIUŸİ3?Î@¥2;˜ÛšÎg³aÀÈ, ·™‹„á/:!Û,+3«İ=½°tp¬†şH¥¬Ş:i|O‹É3±òGô1¦¹©ó=TËj‚QQÁu2vÈÜ8Sß~´f?˜33ÂR1(D­å§Y% ÔB’ïÓGö3ÈŒšH±í¬¥@ÄO#dªUH§‰{P"èóRÚ,+Ñ‡OÎø-  ½GzŒÑlÛbq6Åxvå:&ygJQ,G6ûI OuõK	h·¬³ÂÊT|Ÿ!Œš¡HÀ"æÂey¡5”ÛcØ¿ôoÆçK«¨jqPN“´u,eOz×¤P>ÿLş›AñL˜ò"ı£y„0¡8¬³X€ÅñEÎX4Š«x¤ã_l.8ÀGç±FŸCÜ½ÜKJc¬S!Ş¿¸×Nğ·ŸÂş›İöürôØ¾¥,‰FÙn„m!È~İÀ êíFÕ†üÙåQ0â:7näÏÀŠÄV!z$‹ò{à[Tø[tUœÀ¾%°:qı5ÕúJò	ÿåÎE®¦›ufDú TÑ]yä:¿ ®z×µl™4±z»“/ÿgrpuNê7ÀªÔ‰z‹T±£ÖšIE…óòAÎè}Ñâ½)½;Æp÷(Ô«Cùw	i›¶ŠY*iÎ2Çí´5O©«\İ§À£qÆ5-ûÜşåÄõÏòÚŸlzñ®1¾¦HMğ/ôuò”èN£©!B(oˆĞ™":SÒ"zuæ†H¹¼1Roè=—Êƒ©«Äx<3ªæq Js/ª€)wTcŠ¨ísbô¬Î'ˆ<ÂHæ¬¡U…%ª?³ÂApıqİ +OÏ±ª·®Kı;­ıçjÓÈ4ö‚OÁvâÊ’•ÃÀA|bè¬ğZ\Àà¾ó[Ø\s=¿([ı,³?m§¥Lµ1G²B]\šú/S>,KŒî)ÉßÀóºeS3±„İhôtS·&JŞÎÚKjoä™•KÜ œ‡BEMñ‚_ñ¯[Zğo\-ş¡O_!xÈñó»l<”?+Éğ•\gÀàx~d„!¨›¤Ü¤—dÀD’P‰vêşòmF^şv#šN"†¡·›¸±MóòŸ¦r$Ğ“¶0iÎÔte	šA‚¥gû‚&ôı³7i³€V°~s÷‰î­Ÿoí<Ñ¹hfbùii„€Æ,,)ka[’ó<ü“]öïşÙmö–I@şáe7–â1b}=æ=G¢›üJ(İÜşÉb’wÏjáÃ3t55óº¡üì9Ìé|G˜•Mûïì6úuUC~x4+/<±!ôú¶m†ÊŠaóÿ|Àc–šA½9ue¯'4V.µ]}í|’ ¨{ìáÕ—	6˜µŒŞ¤&‹u‹Dõ¯B³½ ®{š‚’?QœQÈËÇq™¸¤z:\_«‡'î™&yù¶Ã!Åé[ÛJL;^0Î©)ˆíÕHğ%<u+¹=håŞ•åš=½ÕŸr*&"ì¹©C8Syèiº{·/MtLKà$˜ƒâxm0–&‰é VN€=YÊÁhÂ‹«JruV\>3Jòå‡ï;âñèVTgî£Ü<T–ÙL»»öÙÃƒ„¥
+Ù|é,ˆ»Ç
+’†£è¹~ÉµEõö˜q³U{v¤ç¢¢NÜ€)eb#Kj‚Pa"ªŞŸ/.'‘Êù¶¾®n‹…º)Ä~ö
+ş¾7e3«¾\6Q^¨˜îî<“X[wBÑŞ%>U[”ò Ãª»é_ô¸54·.A˜%äñ%Ù	1yRY`7š'ç’cb²ÅRJr”…+×’˜%N·XGÉÎÉ$Ñø1„b/y«gc:+ä[rÚZ¦»h–’‰Úá½ÄÁ+(pğì%aJ©µL”„œ©m9XƒÕÍTÍÇI/ıÓ#íuu¦Ú#ƒ¼6»%6™Š‡jC‚Q
+†ÈfKHT‡@ğÙ¾'ğá'DU—ˆ6—äÊ&ÛWÎ(*«¦%Í-ÂÃÜN«Œ)+º
+	!ßÏ‡;?¼ëo'@¦cÈ&A‚ÍÑSâDCtCs«5ÖDMô Zp“ıšN`—†¡.{Ôi³W"Ú·MCÃËJO–.]"ø*‡NG´o½•l³6¤í„üp©V?53•9Nî#n+ Nédœ–e¬€ó3‡Ã
+uì–$UH¥0Y#a’4ğÕ“Ş;]eæ¾€“ÈÄ‡h¢)ûşÂ¹IÈJå_×£Ìùü$·gÅ¥	P)OÖ§J0…Ä«ğ%ñ\l·<#«^º:H¯®@P³kÿ‰ú¹—£)™ìlBgR‡vq´ë²pEçÓ¼İL¿öî.üãˆãMê*u·wÖHaò ¸9¢®XKÿt&ªæé½Öˆ¹²èË…Ó#k[®ñª‡³>Ÿ¶ÿ7^ªºcÒÇhÍ¢rÔï¤ø2V’‘nãó£¥@7	ÜJuaSY@fY€íGÒmr·Ã±´ëúá§sØŒ;wĞ™ó`\ï‡?gµåÇé£p¦xm@şo’lé®^Hh…6ìóI, _Ekèa8åoù™×É‡ıCù5+³û~²éğ7–ÚÌr`İ:*¶-äxMì*ƒ,,x—ï™xS”¦onj‡#Ş+‚«É™Eû¥â3¶FñÙúöb[ç®D	ƒ<7€¾Åİ·¹9OËî àâÚíY:wÎâæ»İp¦¾cŸ¤õªtŸ¤¾#á¦q<h_ıçÍ?g·?.ŠÄ=Ä©½Nw¾ÈñKÆÂ5×ô—°ß*Šm¼ê&_ıv·Šóå^»,^`eSGœJô©ê†‚ äÈ;!U‹)ğ–”5tN×µH.´tOIAz3àµÂ±a^•J/àôÜ¾ò àš5Æ,Øú(lÑÅC;`W°>4n&'ÃÕ¦ì÷Ñò„ (|ø‘Ú/?éÊÖ7¹'¶ÿ¾ûUø³?gÁ¸pFz³'°íõ÷D_k‹Ã$uè¼°â;wq/ô±u‰lµïUàâxé@ÓÃ0©Ìçÿ™TÂÏ1GÙáŒã%pq\õ]-óiÅ,%Ÿß¾µAŞSaÖÏ"„¸ªšµÖrÃDaôŠ´C ûòİÈÜ¢gåîİÊùÅ ; Sµ<«æ.–Åo»=şL}ç>Iié¤ÄÖ™pÆn·€­c„u&ş:İûç_OØWßõ7&-’Cƒ-·%C—o_QVPdbr^l–	*HÊ+ƒ½IÊœVn*k‡W|®B½»û+½Ô“7t¥Ü¬ûÕÉuwb{*â7š´v­Å¦ID„J,°wdw·l7Üºƒjç÷©ª©r!ÙÈ®­_p×íØs
+Å‹¨|<'=‚EqDæ0;µ™fç˜38-†<áş¶Ö“ò’ntcD©d³ºmê;?ÔÆ¤¸ÄA‰Ö–ò".Gf·›íl³Ó“¯‰_¿ÂzXRÓökJä×_½ìyyæ+ğğfRcTš9´;5Ï3¯=åÉ–í_é¿ÒmŞiÿêÍMMIÖô@ë1ùÈ~˜¨v9¾è¼–˜	‹ªí¹OzLév¼8f}G~Úä•Ÿ;QZ|•‡}rm?’4ä[ƒ>»r³½ÔEYëñ¿jÉ{Ò],ÌñŞoáË”«:İÕ¿÷_¾Ç›ç×Îz`‡Gå¾ªÙæĞ'id§ÛŸ~ıÎï>‘³NÎ_„òñ™3§;§ù9ø–Ü~KÔ¸ºhªÚ«–o‹{?öHÖéY[Å¼s*•F\õftáî< µ¹€kÂæ\´7 \şÀ‰Ñ¹`ÉâÒP~¨¥şAI ’î	Jséæõ¿æ¿”Ûâ³Ñí„çí)Ï¶Ú¢ÏÕmüqè8€.ıuøİ–á÷ÁG]Éu;`ò<%SCÖû°¤$IH±„[=dxshilqF^j¬³ƒGqw†&MOüeXÅË-‰\ùÍË€å¦ÊœGÑ™Á2¢@Å½p¹ñ±b,“ª8m@\Ğ}¾Õ·P;²S[¦ö}›3´\¬_DùİMQ—óŸ][›ÄãèƒãÓ‰z¶™¥V‘+5xJõ‹ÆŠáQ‚\?Ó¿Y“BZ)È0‡ÆÄÈ±¾*ş'©~$›_Pá½WÚÜ+¿ØZÃŸoYuRÓ`=¨‹AFö~yï%\m°	6()èŠ^h­[°Lh3¢ÿÅòÆ7ÇÔe	][“Ìå‚ãÓ&ğåŸ¤&ÒEßÜqõ6ÁÁ*¬ø¢Î§qù¶µkc30|¢;ÂËØ(Óò+j½¢ËNH{Ô×z-¢ÙÖ¾ãûtyCƒwÕ­pTZv2L—×y^¤c
+7©tÌÁ¼Ü¡(½ì‚sGûş‡TqÅîÓK _ZÑšŞ›&	ªØÆÒô5Œ^é?ÿU&÷z§&·z¤‰Å1)ÄÂ•­ù'bmõB«•ì\–<3WM£K8ˆ7^qŞê`İ`ÖÆ«<c^'Ä³î¥¸™œóœï1‚1‡&Ì¾bI>”O¹)dˆW+¨*ƒÎh4èT”Škb$è¢ÜShvD’›ÖÎÉ(
+Îú8”•Q”É¯âúüÇœœ¾óxaÃäF"¡oS/Ø¿©@Ü8¹©üµ‚*"Õ«tÍ‘òì¯®]äÍT*ãébµíuøñF*uöİ¼¥şßÅ7;Gª’>~HûÎúÑyäO_á9èÓ gn\ğ÷ÍÛÅ7„¿ğJœš’UPFns	>£V&O§çÀ"Ò;£ôùŒóĞÇ¡¼ô¼Ô >
+`áC§˜“Y&fËë²·öµ8JEÍôc..%y·¯õ”¢³W¶ĞĞhjg¤°ZO+ºúå¨]½\7®QùmÆ©¶¦C{ö4U€Kò$Lê—'Ï,Oà5Ïï)só¿İuÜÄ,<£ñ÷œ€-ùã­§b¦š’	ÕçXx’·Ğ¿iËçRºV}õMÙÅW|!€4Eg­­0©|ıg‰ñ>^q!êŠ4jòJÀHåí0ùøvêÄ~aŠÔ¸HâA)Q6ûëƒ¤ñ´Ìx%«¹Ø°12ŸUàk"&ÑŸpÌã·ˆ~³Å	ı¡=I™’è,M* e‹"jrÒF#³K§$Á=o÷ÈXw\	ô2:o7:
+µoA¦!¡á¿!•¡İÜo7*ì¦A:€8­"4Ã‘?RcÉÿ‹˜*Š•ÖÆÉ,^~÷®=6ªËé:F‘¿Hö‚‡†àFÿ+ä|.j€ ¿ˆÕ‹ÖÏ@ÒK÷#Ó¿œ¤¦r‘nêŞ°+PíÆRïôëÈ"=ê44Íé3Â³ÚUÏTæ'C§’¾:l>í›W˜í£2øßôütµß÷É?fc^aÜ't~œÿùx;I£ÌÎmF½?şÿwÍ¿ÉÆfêë¾VâˆŞµM˜ÿ¹ı¯s¨bŸÿœ_÷½9»|œÇQ%Œ$pTqa&o³GV„*¤Ù ÏbUzît‡¹º•UdªÙîYîÆ° ¨¨§ŸËëë…Š¨aîF,÷¶J‘)ustßåYÁÊ7èBšUYŞf3ğ¸ä>\óàÂì03l›®z…ç®
+*†Ú˜}#»ÉV!€UWİéYYQßÂ6ïà—1œ8™à3uPş¨êªÂä¬L!C(˜|¨„EŠ:‡yÿv•Pd·>@o¦­·XµÛÙM´«Îcƒ¶ª+şXM…àLÛà™ÔgÏy/×šßI+…É	Ûâ /óßä‹¥Xz&ÿ›(3(•kÈ‡F¹¯A¬»núº'w·ËÙÜâe?¤ÑàòYì}5­uÚÖ <‰<k,/şTâ<U<I'ö¬x¹)YìŸzA^t@á­P–øşx.9·ñå‹3Á.sàÎ":«ã†æ†õë's±ÑÌlôÆÇÆ6cs£s›vÁõ›r1ÔÊBmÜHšpR†V VLáÅ8N„ˆÌ®_ĞÕŠü~<}êÉÏ±ˆÄº:¸*æÑÏc¤›È÷tè@BvB‚ëG­x??›OÓmÏ»ÍÍƒ¨c_í0ûømÌËK{7^†"¼VÓò‹CóXj	Ã›¬ìH	¼ÈÉ+™[´BÃçoÇ-jTLŠAô§&´€R\©‘„e5)Íi”ÜRUBxunúHdvé!I'‡¶Õní·ÆRB›õÕ!Ÿ­ Ş?z`µù,Æ9U‹Å¥¤»`°ÔÂ”zì&µ
+*Ê”À°·Ëô°¸#3“3ØÒI¥µ`BZÛ·/¿H2ÙÔèåUoWøºÌŸ»ŞGÅšørb±@L*“¦Q"#^ÏÀxO1ÏdïêéÙ•}šYTt†é0`GoQafÛ	Î8N_#;™§{
+;Lßît|‘½råWÙ»æo;2i;Ô•ÕİÚ-!éé›C\-¯ÖÏƒ‚w€€ï©È3¶£Ö³wDš¶üP0‘(NeQÊœPÑ/è¤³>_ÁüÖ–ÿRÛÍHâèÉñ|b&“	ØüeòD¢çE´7A„ÿµTÆ¶Øÿì±ÿ¿÷?_„“’µTù`i ÷—íÎmÌØÒ2áÎêş¿úì¦äA»àôTw‹ŞØ•ƒ/ğë±Ètï‘eÛ†QÑõQoÁm‚ÿ9È!FX"1elÏ KëòeÌf“±…©P´2ÍFV³LÂj2›ZY
+EËdb6Rw¼zF¥şõj5 Åıwêó×(> <ÎëíNÿ<½s¶3uçÖ‰[ öSÏ@üÕ?‰Œé¯¯l?¡C´c_¢,8®Ïâÿ¶H¯J9™X}c¢á2“ñ®][à=5ÜLÂ}15!*£÷hœ<&®SğÌ˜ğèt¨¡
+Tá3}©_>Öş£¿%cîºôÑêhå?‡QKÉm“µP÷ïŒ4	[ÁëpNÅÀ®z÷kcY¹´)¯N=ºÄd“ù–™ƒß42»"Ÿôå›€Ë¾Gïæ#YÉ^¾­’¿6ÕÈ_o+ÛS5%<$ÆÖ
+Ä	9lƒ½İ	ÁñG®ßSó½‰ŸøâdH¥[èÚÍ~bL¦Œ"R×C£ƒ¥î4xbXî÷a°D¨ŠıÛ×«I­üåüz«µö0@ÎÊí!éZFBÉ°¥§DP®\â¦0›RV—AI¥x&â§éõüT‘Ìœš—–µMóüï¿şûŸ-Â(Ë<ı?H–¾GKe7N”2©é…Oè–%ëVeé<ı¼c'ÖM‘»Ã ‰Iw(Æ5³{8ü\€Œ»] Ûzˆ–YšwÈzú>S6Öèqú¾<¯#*˜hq‘Wåd#û×æµb“_.¨›(şUº–iŠLeÑÓÙ³•IQ:Ã6šŞMf=+K¤	˜!RæÎ&8½¨
+½7ù?ô÷Oß-ªJß:1úïÍ"6râBò?
+¼N¹Fÿİ¡IíZŸ~úIï…æ‰šÒ¸
+òÍŠ­ó©ÿEq$Ïƒ ¥ÓäW½Ùm–÷
+—¦RuDv<;{ò)ùrßtœuĞ²É2ƒ
+øSó§ş §¥v´¥¦¤¥MééRi{»&Ç3.Já‘`u`bÉgZÿ€Òîµù­ÄéØÂ•¯œHã%Ÿ×?€|ú{q~5TYí°rgØÊ]ZqüªXÃ¦¹áöbÆŞ›>‹Şo¨$\ÆßóÓÇ×mÈâ\ıQqaX}/ yJDŸ,ÇıôÌ(…2Â¢No+ËÕ2ô¾)DÅ.ÉŞşØ„û“ VÆ†™µáf†6¥—pƒ“_+"ÜF#–¢“PìÎñ-·>Ş,•éi?/ŠV¾™ë…å-qG«±âcrŸÏ5•â4ÔJ=Ì·©Q:’Ë/¨ğbVœÉ-¾Ÿ™h‰°ÃãmÔTyh¹Œ[7”ı<şĞRrq†%5Vƒß…Ÿ·¨ÓÎkmuk3TådF™èøÎÁgÒ‰u‚8"÷59_rwŞRÛå±âHÂ.MëøæáR[4)…]ÜcÕAïğğõa3‡/X{@it=Í1v$%`‡ş­’öVÚ³ïİ€M+ğ>—~¸&\3
+<¨¥w›ëIGŠ×
+jŸKm.9"loQ³šø{lÍ{%ÙÛÄ±¨%cgq¥ëûL¼Ü`™‰¶ÖÉòCğ&ËäçÄ\®" R˜¨ †_·NÜÒœó/¶o)[¯­wlö¢}ùï}K‚X|Öœm_ŞŠ-Ã_ÒŒ›n	Ä’ù?Íy÷ıÌJœ‘­<¯y oŒü®Àî¯¶ÿ[“Ò9pÌóÿ¶£¯ìëÿªU€+.^±¬C^_óg7Á#Ö1ºí´ò_7ÿÚlõÉó3Ëšuï*§.fAvì0uj1Ê´nõsKFÖIü;ûœ¥gƒ,;g“Ìƒœsv»¨–nQs²G¨0+ĞŒä¸p4˜óG£á2}–Y~&çÓ &g¾¸­h¿¢©_¼ĞØ Yhî=¤°4Ÿ*âeEëO”Q£òm5š)ÛŠšC{Õ˜NŸrÕ:¸kt?±$K<)•NŠK³lû½ü û,sÉÂ '.jp¡ôdÜ}J"ƒNQÜKÆÒC5Ø‹dEwhÀw¡Aïho‚BŸôŞ;dŒƒ7°øJòØü+çDÛô…a§%‡R~5?;×‡9·I»Û5ŒüÛ¢Êš‚‚ãÙ‰*ÆúêOÜ†Hn|Öú‘@‚©6A±À/ıŸ@BgZu&KUÌïÚK­?gÜæUÓ®LRÖ{ÈGğwğc-®ö§Üª‰˜¤®©‡«ÄÛêmÛDÃ‘ÃhÌ o­¯‡=³ÔSŠÿaM8O(Ì?+…››#‹îF,§‚õœRÇ»áùGúg”eƒ‹¥BC†y³
+©:ùùÿŒ…‰	ÿmT)á úx —ïKDHıu˜Û÷ÙäUR¸û²~¥¹’²‡µ#õ§’úG2¯ú´¬ì¯[ôğ!‚:Ä:Õ\$ßmëúo¶Ö8ÆX·‘N	DCÇ‚–›cÆµğÂµ>¨U»o¸¹k•>È	[Ìí­#fÅ·ÔÏ	;i™Ÿü©?"åvµBRÕüçGE‹¢Ù4$%r½¥vB\eÜé<\f? éQ¢À…\]ßly?ı\<–t§$áôÅË>µ7è1€<èÄd§úaÑßGi0>óG4–¦=ŒÆh¢–b1KEÿBÄ.¬“B?ü¨÷S—OktŸBí’çi/öŞaDa¤O½°@¸—íuúí“Ğ–M!Jj˜àDÌj¢$„F¯ND‡+Ğ5Dq}pà·¡Aoiÿe¼Ç.Äkt$*ùO	NÂ.K`˜7^¡T
+FB¥ˆ`—YÀ) P €îØ
+ğÿÀúøOüûª¬_	B|„ÄÓ {B'QÁİ‡Ÿìx¬²ß+³±/*‘#ÆßKù‰ÿğŸØ{…ƒ ~ ğ¿	°÷Jl+»Ğ.5ß¾Â÷òıüÖª>ü`—?ïù
+ßË¶‚“¨ ïæOv%»×ŞêNÍ~l©=eÔ<ü“ğ¾—ïg[íºãçá#_á{ÙV»éøŠõöt°~4Š}<h½øŠcs‚üoéƒ}áxyÀeœ¶Xˆ”*9^À
+G¼ìnÆSù8º¤ò53lÏC ¬£¾„è|‹ö…+qVé0@v‹ÔñÒı©˜êSRVÎvÀZìbvÖiû„óQy!·³VÑYçÀÖRgÀ»{Ï~²ºIë\&àt™—‹ÅUU‘«Ôa‰ ÉYªÎå­`-H–ë¿M”,€Ë7Ë ,nÑÅÑ¡ö¦ŞÂ_õXí" pú»I·òıfm£ª›é¾Ój`	à ĞRCÛşŸàÈDUU˜ \ôcá.àØğd•_Âí
+ ³CíhÉ–EÜLÃ»èÌz(]:±L¨òÑ‡¡Íó(ğV”JïÆDª=Ò ¨dÊ‘t¶#ÃP³Ã >²şX@İÎÍ8Ëd4ÖLÄÏõv?¡-{`1/:Ï VŒø·´z•VTfÚbõ£}p“TÎÎJ[³QûŒã¬g‡¬¢[K¤Ÿâ2â³¬å¦'k)w‡4V L$ÒHî zk·ÉŒë,åÎ}í„ÙİÑ•I¨Ë8:ŞUÑáu;MW†^`vTg]­ŞEu ­T¤#}UgDÍ
+W‘HíÒUYC”õ€3p­PÑ!ydwŠÒh%’{ıÔ'då`ú¥f+wJ®³¤¾ç›h¥;lÌ9$F•HgÔ‡M?sŒ´+[wvé(Rg1:“¨ü’“±«Â)† '<`DJàĞA—
+íÍX‚Ñ!¥1â!JC€ø2ú¦)©sÛë	²@­L¢ÖeĞşÂËİB,Qâ"¼*ÄâÅ¨›”·í5Äå`zfÈ¡KğïÚiÔÃÈYåA[´22o¡Èáš–ğh ªcuÖâ^ÖæÍ}5Óz­>qù«AÀ Ø:¸¢)gp¤DÇ0lŸÂiÏt´±L8  t8›Ğ@A•Hİ@ ,z4¨#©š±WKz;A$LÚ–,Š•¨C$_°‡#…‹0…nÂ&ÈÓpuT»iKårU*@ R¯¬«lÕHÅR`Q¨ ³òØuJMÉ¨Õµl‚Ô
+¤ªTN’«"zH•\uª$F×¸ZXQ¬
+´>@¨E"-œJAå¹ÕÇ‰İZ+ƒP9C±ÀÊ¢J×#0|qPY¸¸„2¬Ê#GÕC@g"Òg½§4S‡cŠéäLªä:lU)dÔ2""•ªERëA¯W»8±óŠtÄ)­+…yÂ„59ŸkZ}€!3¥åN«Z<ëFCJÅ	Î)R¨qy6Àrr1oêj^^?P0pH(hX8xşˆH‚ß2iPëH"TúQ%Ê'‹Æmñ	‰ˆIHÉÄÀ©²]PE-‰Fœ¦µN2éÄÁ©¹u›-Gn(X*~Ï;kÌ/z´Í¤İ!ğ¿':­õîıú,øÚÛíöûı·;M¹ì3‡äÉ7ªÀU…>wÅM#ü«"w_¾õn;¬Ø›Õ¸ç¾Ï½Ô¯”E™
+å*«R£Z-«zulìY¡Qƒ&-šÍš°R«6í^xå”‡¦ñÈWûÔQÇpÑ13õ:àœ9gBbœ×æ•iLgf0§¨R;ĞzuiŸ={‰ì±VZ|¬EßÆ·J­¿†orw«ö­B—:Í[ö
+6öí}şœ?Qr¼\ o:ÁöZ   
+------MultipartBoundary--jYONWjpiUr8Y4lr9okAORprXSyDCKOFGx5bjlwSeW3----
+Content-Type: text/css
+Content-Transfer-Encoding: binary
+Content-Location: https://nodejs.org/dist/latest-v4.x/docs/api/assets/style.css
+
+@charset "utf-8";
+
+html { -webkit-font-smoothing: antialiased; font-variant-ligatures: none; }
+
+body { font-family: Lato, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, Tahoma, sans-serif; font-size: 62.5%; margin: 0px; padding: 0px; color: rgb(51, 51, 51); background: rgb(255, 255, 255); }
+
+h1, h2, h3, h4 { margin: 0.8em 0px 0.5em; line-height: 1.2; }
+
+h5, h6 { margin: 1em 0px 0.8em; line-height: 1.2; }
+
+h1 { margin-top: 0px; font-size: 2.441em; }
+
+h2 { font-size: 1.953em; }
+
+h3 { font-size: 1.563em; }
+
+h4 { font-size: 1.25em; }
+
+h5 { font-size: 1em; }
+
+h6 { font-size: 0.8em; }
+
+pre, tt, code, .pre, span.type, a.type { font-family: Monaco, Consolas, "Lucida Console", monospace; }
+
+#content { font-size: 1.8em; position: relative; }
+
+a, a:link, a:active { color: rgb(67, 133, 61); text-decoration: none; border-radius: 2px; padding: 0.1em 0.2em; margin: -0.1em; }
+
+a:hover, a:focus { color: rgb(255, 255, 255); background-color: rgb(67, 133, 61); outline: none; }
+
+strong { font-weight: 700; }
+
+code a:hover { background: none; }
+
+em code { font-style: normal; }
+
+#changelog #gtoc { display: none; }
+
+#gtoc { font-size: 0.8em; }
+
+.line { width: calc(100% - 1em); display: block; padding-bottom: 1px; }
+
+.api_stability { margin: 0px 0px 1em; font-family: Lato, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, Tahoma, sans-serif; font-weight: 700; color: white !important; }
+
+.api_stability * { color: white !important; }
+
+.api_stability a { text-decoration: underline; }
+
+.api_stability a:hover, .api_stability a:active, .api_stability a:focus { background: rgba(255, 255, 255, 0.4); }
+
+.api_stability a code { background: none; }
+
+.api_stability_0 { background-color: rgb(214, 0, 39); }
+
+.api_stability_1 { background-color: rgb(236, 83, 21); }
+
+.api_stability_2 { background-color: rgb(78, 186, 15); }
+
+.api_stability_3 { background-color: rgb(0, 132, 182); }
+
+.api_metadata { font-size: 0.75em; margin-bottom: 1em; }
+
+.api_metadata span { margin-right: 1em; }
+
+.api_metadata span:last-child { margin-right: 0px; }
+
+ul.plain { list-style: none; }
+
+abbr { border-bottom: 1px dotted rgb(69, 69, 69); }
+
+p { position: relative; text-rendering: optimizeLegibility; margin: 0px 0px 1.125em; line-height: 1.5em; }
+
+#apicontent > :last-child { margin-bottom: 0px; padding-bottom: 2em; }
+
+table { border-collapse: collapse; margin: 0px 0px 1.5em; }
+
+th, td { border: 1px solid rgb(170, 170, 170); }
+
+th { text-align: left; }
+
+ol, ul, dl { margin: 0px 0px 0.6em; padding: 0px; }
+
+ol ul, ol ol, ol dl, ul ul, ul ol, ul dl, dl ul, dl ol, dl dl { margin-bottom: 0px; }
+
+ul, ol { margin-left: 2em; }
+
+dl dt { position: relative; margin: 1.5em 0px 0px; }
+
+dl dd { position: relative; margin: 0px 1em; }
+
+dd + dt.pre { margin-top: 1.6em; }
+
+h1, h2, h3, h4, h5, h6 { text-rendering: optimizeLegibility; font-weight: 700; position: relative; }
+
+header h1 { font-size: 2em; line-height: 2em; margin: 0px; }
+
+#apicontent { padding-top: 1em; }
+
+#apicontent .line { width: calc(50% - 1em); margin: 1em 1em 0.95em; background-color: rgb(204, 204, 204); }
+
+h2 + h2 { margin: 0px 0px 0.5em; }
+
+h3 + h3 { margin: 0px 0px 0.5em; }
+
+h2, h3, h4, h5 { position: relative; padding-right: 40px; }
+
+h1 span, h2 span, h3 span, h4 span { position: absolute; display: block; top: 0px; right: 0px; }
+
+h1 span:hover, h2 span:hover, h3 span:hover, h4 span:hover { opacity: 1; }
+
+h1 span a, h2 span a, h3 span a, h4 span a { font-size: 0.8em; color: rgb(0, 0, 0); text-decoration: none; font-weight: bold; }
+
+pre, tt, code { line-height: 1.5em; margin: 0px; padding: 0px; }
+
+.pre { line-height: 1.5em; font-size: 1.2em; }
+
+pre { padding: 1em; vertical-align: top; background: rgb(242, 242, 242); margin: 1em; overflow-x: auto; }
+
+pre > code { font-size: 0.8em; padding: 0px; }
+
+pre + h3 { margin-top: 2.225em; }
+
+code.pre { white-space: pre; }
+
+#intro { margin-top: 1.25em; margin-left: 1em; }
+
+#intro a { color: rgb(221, 221, 221); font-size: 1.25em; font-weight: bold; }
+
+hr { background: none; border-width: medium medium 1px; border-style: none none solid; border-top-color: initial; border-right-color: initial; border-left-color: initial; border-image: initial; border-bottom-color: rgb(122, 122, 122); margin: 0px 0px 1em; }
+
+#toc h2 { font-size: 1em; line-height: 0; margin: 1.5em 0px; }
+
+#toc ul { font-size: 0.8125em; }
+
+#toc ul ul { font-size: 1em; }
+
+#toc ul a { text-decoration: none; }
+
+#toc ul li { margin-bottom: 0.666em; list-style: square outside; }
+
+#toc li > ul { margin-top: 0.666em; }
+
+#toc .stability_0::after { background-color: rgb(213, 0, 39); color: rgb(255, 255, 255); }
+
+#toc .stability_0::after { content: "deprecated"; font-size: 0.8em; position: relative; top: -0.18em; left: 0.5em; padding: 0px 0.3em 0.2em; border-radius: 3px; }
+
+#apicontent li { margin-bottom: 0.5em; }
+
+#apicontent li:last-child { margin-bottom: 0px; }
+
+tt, code { font-size: 0.9em; color: rgb(4, 4, 4); background-color: rgb(242, 242, 242); border-radius: 2px; padding: 0.1em 0.3em; }
+
+a code { color: inherit; background: inherit; padding: 0px; }
+
+.type { font-size: 0.9em; line-height: 1.5em; }
+
+#column1.interior { margin-left: 234px; padding: 0px 2em; -webkit-padding-start: 1.5em; }
+
+#column2.interior { width: 234px; background: rgb(51, 51, 51); position: fixed; left: 0px; top: 0px; bottom: 0px; overflow-x: hidden; overflow-y: scroll; }
+
+#column2 ul { list-style: none; margin: 0.9em 0px 0.5em; background: rgb(51, 51, 51); }
+
+#column2 > :first-child { margin: 1.25em 1em; }
+
+#column2 > ul:nth-child(2) { margin: 1.25em 0px 0.5em; }
+
+#column2 > ul:last-child { margin: 0.9em 0px 1.25em; }
+
+#column2 ul li { padding-left: 1.4em; margin-bottom: 0.5em; padding-bottom: 0.5em; font-size: 0.8em; }
+
+#column2 .line { margin: 0px 0.5em; background-color: rgb(112, 112, 112); }
+
+#column2 ul li:last-child { margin-bottom: 0px; }
+
+#column2 ul li a { color: rgb(204, 204, 204); border-radius: 0px; }
+
+#column2 ul li a.active, #column2 ul li a.active:hover, #column2 ul li a.active:focus { color: rgb(67, 133, 61); border-radius: 0px; border-bottom: 1px solid rgb(67, 133, 61); background: none; }
+
+#intro a:hover, #intro a:focus, #column2 ul li a:hover, #column2 ul li a:focus { color: rgb(255, 255, 255); background: none; }
+
+span > .mark, span > .mark:visited { font-size: 1em; color: rgb(112, 112, 112); position: absolute; top: 0px; right: 0px; }
+
+span > .mark:hover, span > .mark:focus, span > .mark:active { color: rgb(67, 133, 61); background: none; }
+
+th, td { padding: 0.75em 1em; vertical-align: top; }
+
+th > :last-child, td > :last-child { margin-bottom: 0px; }
+
+.clearfix::after { content: "."; display: block; height: 0px; clear: both; visibility: hidden; }
+
+@media only screen and (max-width: 1024px) {
+  #content { font-size: 2.5em; overflow: visible; }
+  #column1.interior { margin-left: 0px; padding-left: 0.5em; padding-right: 0.5em; width: auto; overflow-y: visible; }
+  #column2 { display: none; }
+}
+
+@media only screen and (max-width: 1024px) and (orientation: portrait) {
+  #content { font-size: 3.5em; }
+}
+
+@media print {
+  html { height: auto; }
+  #column2.interior { display: none; }
+  #column1.interior { margin-left: auto; overflow-y: auto; }
+}
+------MultipartBoundary--jYONWjpiUr8Y4lr9okAORprXSyDCKOFGx5bjlwSeW3----
+Content-Type: text/css
+Content-Transfer-Encoding: binary
+Content-Location: https://nodejs.org/dist/latest-v4.x/docs/api/assets/sh.css
+
+@charset "utf-8";
+
+.sh_sourceCode { font-weight: normal; font-style: normal; }
+
+.sh_sourceCode .sh_symbol, .sh_sourceCode .sh_cbracket { color: rgb(51, 51, 51); }
+
+.sh_sourceCode .sh_keyword { color: rgb(51, 51, 136); }
+
+.sh_sourceCode .sh_string, .sh_sourceCode .sh_regexp, .sh_sourceCode .sh_number, .sh_sourceCode .sh_specialchar { color: rgb(229, 67, 5); }
+
+.sh_sourceCode .sh_comment { color: rgb(102, 102, 102); font-weight: lighter; }
+------MultipartBoundary--jYONWjpiUr8Y4lr9okAORprXSyDCKOFGx5bjlwSeW3------

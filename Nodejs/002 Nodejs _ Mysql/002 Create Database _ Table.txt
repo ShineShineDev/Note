@@ -1,0 +1,77 @@
+### Creating  Database 
+
+- `To create database Mysql use "CREATE DATABASE yourdbname" statement in connectio.query([statement],cb)`
+
+  ```js
+  const mysql = require('mysql');
+  //const mysql = require('mysql2');
+  const connection = mysql.createConnection({
+      host : 'localhost',
+      user : 'root',
+      password : 'password'
+  });
+  connection.connect((err)=>{
+     if (err) throw err;
+     console.log("DB Connected!");
+     const statement = "CREATE DATABASE nodedb";
+     connection.query(statement,(err,result)=>{
+         if (err) return console.log(err.message);
+         console.log("Database created");
+     })
+  })
+  ```
+
+  
+
+
+
+### Creating a Table
+
+- `To create table in Mysql use  CREATE TABLE tablname(id INT AUTO_INCREMENT PRIMARY KEY,name VARCHAR(255), address VARCHAR(255)) statement `
+
+  ```js
+  const mysql = require('mysql');
+  const connection = mysql.createConnection({
+      host : 'localhost',
+      user : 'root',
+      password : '',
+      database: "nodedb"
+  });
+  connection.connect((err)=>{
+     if (err) return console.log(err.message);;
+     console.log("DB Connected!");
+     const statement = "CREATE TABLE posts (id INT AUTO_INCREMENT PRIMARY KEY, title VARCHAR(255), text VARCHAR(255))";
+      connection.query(statement,(err,result)=>{
+          if (err) return console.log(err.message);;
+          console.log("Post Table created");
+      });
+  })
+  ```
+
+  
+
+
+
+### Primary Key
+
+- `When creating a table, you should also create a column with a unique key for each record.`
+
+- `This can be done by defining a column as "INT AUTO_INCREMENT PRIMARY KEY" which will insert a unique number for each record. Starting at 1, and increased by one for each record.`
+
+
+
+
+
+### ALTER  TABLE keyword:
+
+- `If the table already exists, use the ALTER TABLE keyword`
+
+  ```js
+  //Add primary key to an existing table:
+  const sql = "ALTER TABLE posts ADD COLUMN id INT AUTO_INCREMENT PRIMARY KEY";
+  ```
+
+  
+
+
+

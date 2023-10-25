@@ -1,0 +1,115 @@
+Image.asset()
+(new) Image Image.asset(
+  String name, {
+  Key? key,
+  AssetBundle? bundle,
+  Widget Function(BuildContext, Widget, int?, bool)? frameBuilder,
+  Widget Function(BuildContext, Object, StackTrace?)? errorBuilder,
+  String? semanticLabel,
+  bool excludeFromSemantics = false,
+  double? scale,
+  double? width,
+  double? height,
+  Color? color,
+  Animation<double>? opacity,
+  BlendMode? colorBlendMode,
+  BoxFit? fit,
+  AlignmentGeometry alignment = Alignment.center,
+  ImageRepeat repeat = ImageRepeat.noRepeat,
+  Rect? centerSlice,
+  bool matchTextDirection = false,
+  bool gaplessPlayback = false,
+  bool isAntiAlias = false,
+  String? package,
+  FilterQuality filterQuality = FilterQuality.low,
+  int? cacheWidth,
+  int? cacheHeight,
+})
+package:flutter/src/widgets/image.dart
+
+
+Image.network()
+(new) Image Image.network(
+  String src, {
+  Key? key,
+  double scale = 1.0,
+  Widget Function(BuildContext, Widget, int?, bool)? frameBuilder,
+  Widget Function(BuildContext, Widget, ImageChunkEvent?)? loadingBuilder,
+  Widget Function(BuildContext, Object, StackTrace?)? errorBuilder,
+  String? semanticLabel,
+  bool excludeFromSemantics = false,
+  double? width,
+  double? height,
+  Color? color,
+  Animation<double>? opacity,
+  BlendMode? colorBlendMode,
+  BoxFit? fit,
+  AlignmentGeometry alignment = Alignment.center,
+  ImageRepeat repeat = ImageRepeat.noRepeat,
+  Rect? centerSlice,
+  bool matchTextDirection = false,
+  bool gaplessPlayback = false,
+  FilterQuality filterQuality = FilterQuality.low,
+  bool isAntiAlias = false,
+  Map<String, String>? headers,
+  int? cacheWidth,
+  int? cacheHeight,
+})
+package:flutter/src/widgets/image.dart
+
+
+
+Image.memory()
+(new) Image Image.memory(
+  Uint8List bytes, {
+  Key? key,
+  double scale = 1.0,
+  Widget Function(BuildContext, Widget, int?, bool)? frameBuilder,
+  Widget Function(BuildContext, Object, StackTrace?)? errorBuilder,
+  String? semanticLabel,
+  bool excludeFromSemantics = false,
+  double? width,
+  double? height,
+  Color? color,
+  Animation<double>? opacity,
+  BlendMode? colorBlendMode,
+  BoxFit? fit,
+  AlignmentGeometry alignment = Alignment.center,
+  ImageRepeat repeat = ImageRepeat.noRepeat,
+  Rect? centerSlice,
+  bool matchTextDirection = false,
+  bool gaplessPlayback = false,
+  bool isAntiAlias = false,
+  FilterQuality filterQuality = FilterQuality.low,
+  int? cacheWidth,
+  int? cacheHeight,
+})
+package:flutter/src/widgets/image.dart
+
+
+## Image.file()
+(new) Image Image.file(
+  File file, {
+  Key? key,
+  double scale = 1.0,
+  Widget Function(BuildContext, Widget, int?, bool)? frameBuilder,
+  Widget Function(BuildContext, Object, StackTrace?)? errorBuilder,
+  String? semanticLabel,
+  bool excludeFromSemantics = false,
+  double? width,
+  double? height,
+  Color? color,
+  Animation<double>? opacity,
+  BlendMode? colorBlendMode,
+  BoxFit? fit,
+  AlignmentGeometry alignment = Alignment.center,
+  ImageRepeat repeat = ImageRepeat.noRepeat,
+  Rect? centerSlice,
+  bool matchTextDirection = false,
+  bool gaplessPlayback = false,
+  bool isAntiAlias = false,
+  FilterQuality filterQuality = FilterQuality.low,
+  int? cacheWidth,
+  int? cacheHeight,
+})
+package:flutter/src/widgets/image.dart

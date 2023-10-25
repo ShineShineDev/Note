@@ -1,0 +1,6 @@
+- Always begin a node project using **npm init**.
+- Always install dependencies with a **--save** or **--save-dev**. This will ensure that if you move to a different platform, you can just run *npm install* to install all dependencies.
+- Stick with lowercase file names and camelCase variables. If you look at any npm module, its named in lowercase and separated with dashes. Whenever you require these modules, use camelCase.
+- Don’t push node_modules to your repositories. Instead npm installs everything on development machines.
+- Use a **config** file to store variables
+- Group and isolate routes to their own file. For example, take the CRUD operations in the movies example we saw in the REST API page.

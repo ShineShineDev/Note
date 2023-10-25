@@ -1,0 +1,37 @@
+## Table+
+
+
+### Update Your Server
+```sudo apt update && sudo apt upgrade```
+
+
+###  Download GPG Key
+- Before installing TablePlus package, you need to download the GPG Key by using below wget command This will be used to check the integrity of the downloaded package.
+```wget -qO - https://deb.tableplus.com/apt.tableplus.com.gpg.key | sudo apt-key add -
+OK```
+
+
+### Add Repo
+- Since the package is not available on the default repository, you need to add the TablePlus repository by using below add-apt-repository command.
+```
+sudo add-apt-repository "deb [arch=amd64] https://deb.tableplus.com/debian/20 tableplus main"
+```
+
+
+### Update Package Cache
+- To update the repo information in the package cache, you need to run sudo apt update command as shown below. Without updating, system won't be able to find the repo to download the TablePlus packages.
+```
+ sudo apt update
+```
+
+
+###  Install TablePlus
+- In the next step, you can install TablePlus from the added repo by using sudo apt install tableplus command as shown below. This will download and install the package along with all its dependencies.
+```
+ sudo apt install tableplus
+```
+
+### remove tableplus
+```
+sudo apt remove tableplus
+```

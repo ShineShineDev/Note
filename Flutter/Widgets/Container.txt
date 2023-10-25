@@ -1,0 +1,17 @@
+(new) Container Container({
+  Key? key,
+  AlignmentGeometry? alignment,
+  EdgeInsetsGeometry? padding,
+  Color? color,
+  Decoration? decoration,
+  Decoration? foregroundDecoration,
+  double? width,
+  double? height,
+  BoxConstraints? constraints,
+  EdgeInsetsGeometry? margin,
+  Matrix4? transform,
+  AlignmentGeometry? transformAlignment,
+  Widget? child,
+  Clip clipBehavior = Clip.none,
+})
+package:flutter/src/widgets/container.dart
