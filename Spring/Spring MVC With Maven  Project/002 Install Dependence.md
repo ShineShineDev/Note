@@ -105,11 +105,7 @@
 
   
 
-### Run
 
-- ` Select Your Project `
-- `Click Start Icon `
-- `Broswe` => http://localhost:8080/
 
-![](Images/0005.png)
+
 

@@ -62,7 +62,7 @@
 
   
 
-- DispatcherServlet  ကို ServletConfig နဲ့  Initializer လုပ်ပါ
+- DispatcherServlet  ကို Register လုပ်၍ ထို Servlet ကို ServletConfig နဲ့  Initialize လုပ်ပါ
 
   ```js
   //AppInitilizer.js
@@ -72,13 +72,13 @@
   
   public class AppInitilizer extends AbstractAnnotationConfigDispatcherServletInitializer{
   
-      //RootConfig
+      //Root Application Context Config
   	@Override
   	protected Class<?>[] getRootConfigClasses() {
   		return null;
   	}
   
-  	//Config
+  	// Initialize ServletConfig
   	@Override
   	protected Class<?>[] getServletConfigClasses() {
   		return new Class<?>[] {ServletConfig.class};
