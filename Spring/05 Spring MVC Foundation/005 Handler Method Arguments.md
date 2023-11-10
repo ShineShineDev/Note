@@ -185,6 +185,46 @@ public class MultiActionController {
 
 
 
+### @RequestParam
+
+```java
+package com.shineshine.mapping.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+@Controller 
+@RequestMapping("product")
+public class MultiActionController {
+
+     /**
+     * Method : get
+     * Url : http://localhost:8080/product/detail?name="Product name"&c="Black"
+	 * 					or          
+     * 	      http://localhost:8080/product/detail?name="Product name"
+     * View will bet : /jsp/products.jsp
+     */
+    @GetMapping("detail") 
+	public String getDetail(
+        @RequestParam  String name,
+        @RequestParam( name = "c", required = false , defaultValue = "white" )  String color,
+        // or 
+      //@RequestParam( value = "c", required = false , defaultValue = "white" )  String color,
+        Model model 
+    ) {
+        var detail = "Product : %s,Color: %s".formatted(name,color)
+        model.addAttribute("detail",detail)
+        return "products";
+	}
+  
+}
+```
+
+
+
 
 
 ###  @MatrixVariable
@@ -282,48 +322,6 @@ public class MultiActionController {
   }
   ```
   
-
-
-
-### @RequestParam
-
-```java
-package com.shineshine.mapping.controller;
-
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-
-@Controller 
-@RequestMapping("product")
-public class MultiActionController {
-
-     /**
-     * Method : get
-     * Url : http://localhost:8080/product/detail?name="Product name"&c="Black"
-	 * 					or          
-     * 	      http://localhost:8080/product/detail?name="Product name"
-     * View will bet : /jsp/products.jsp
-     */
-    @GetMapping("detail") 
-	public String getDetail(
-        @RequestParam  String name,
-        @RequestParam( name = "c", required = false , defaultValue = "white" )  String color,
-        // or 
-      //@RequestParam( value = "c", required = false , defaultValue = "white" )  String color,
-        Model model 
-    ) {
-        var detail = "Product : %s,Color: %s".formatted(name,color)
-        model.addAttribute("detail",detail)
-        return "products";
-	}
-  
-}
-```
-
-
 
 
 
