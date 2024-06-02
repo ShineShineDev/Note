@@ -103,17 +103,45 @@
 ### Commonly used packages in Go
 
 - `Go's standard library is extensive and provides a wide range of packages that cover various aspects of programming.`
-  - **`fmt`** : `Implements formatted I/O with functions similar to` **`C's printf and scanf`**.
-  - **`os`** : `Provides a platform-independent interface to operating system functionality, such as file and process operations.`
-  - **`io`** :  `Provides basic interfaces to I/O primitives, including readers and writers.`
-  - **`strings`** :  `Contains functions to manipulate UTF-8 encoded strings.`
-  - **`strconv`** : `Implements conversions to and from string representations of basic data types.`
-  - **`net/http`** : `Provides HTTP client and server implementations`
-  - **`time`** :   `Provides functionality for measuring and displaying time.`
-  - **`math`** : `Provides basic constants and mathematical functions.`
-  - **`encoding/json`** : `Implements encoding and decoding of JSON objects.`
-  - **`log`** :  `Provides a simple logging package.`
-
+  - **`fmt`**: `For formatted I/O, similar to C's printf and scanf.`
+  
+  - **`os`**: `Provides operating system functions like file operations, environment variables, and command-line arguments.`
+  
+  - **`http`**: `HTTP client and server implementations.`
+  
+  - **`strings`** : 
+  
+  - **`time`**: `Time-related functions and utilities.`
+  
+  - **`encoding/json`**: `JSON encoding and decoding.`
+  
+  - **`database/sql`**: `SQL database interface (though drivers for specific databases may be separate).`
+  
+  -  **`context`** : `use to carry deadlines, cancellation signals, and other request-scoped values across API boundaries and between processes.`
+  
+  - **`io`**: `Basic I/O primitives.`
+  
+  - **`net`**: `Networking primitives such as TCP/IP, UDP, and DNS.`
+  
+  - **`strconv`**: `String conversion utilities.`
+  
+  - **`sync`**: `Synchronization primitives for concurrent programming.`
+  
+  - **`flag`**: `Command-line flag parsing.`
+  
+  - **`context`**: `Context management for cancellation and timeout propagation.`
+  
+  - **`log`**: `Simple logging package.`
+  
+  - **`testing`**: `Support for automated testing.`
+  
+  - **`regexp`**: `Regular expression support.`
+  
+  - **`crypto`**: `Cryptographic primitives and algorithms.`
+  
+    
+  
+    
 
 
 
