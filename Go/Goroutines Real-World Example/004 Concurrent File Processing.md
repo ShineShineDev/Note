@@ -47,3 +47,4 @@ func main() {
 
 ```
 
+> In this example, each file is processed concurrently by a separate goroutine, allowing for faster processing of multiple files.

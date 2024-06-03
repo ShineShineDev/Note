@@ -64,3 +64,8 @@ Title: ea molestias quasi exercitationem repellat qui ipsa sit aut
 Title: qui est esse
 ```
 
+
+
+> In this example, multiple HTTP requests are sent concurrently to fetch data from different APIs, and the responses are processed concurrently as well.
+>
+> These examples demonstrate how goroutines can be used to handle concurrent processing of files, database queries, and API requests, making Go a powerful language for building concurrent applications.

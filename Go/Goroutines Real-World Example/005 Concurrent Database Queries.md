@@ -55,3 +55,6 @@ func main() {
 //Total records: 386
 ```
 
+
+
+> In this example, multiple queries are executed concurrently on a database, and the results are aggregated to obtain the total count of records.
